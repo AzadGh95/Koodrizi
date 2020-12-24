@@ -20,7 +20,7 @@ namespace WindowsFormsApp_Koodrizi.DataBaseContext
         }
         public DbSet<Person> Persons { get; set; }
         public DbSet<Bar> Bars { get; set; }
-        public DbSet<Koodrizi> Koodrizis { get; set; }
+        public DbSet<Models.Koodrizi> Koodrizis { get; set; }
         public DbSet<FinalKoodrizi> FinalKoodrizis { get; set; }
 
 

@@ -14,6 +14,9 @@ namespace WindowsFormsApp_Koodrizi.Models
         [Key]
         public int PersonId { get; set; }
 
+        [StringLength(50)]
+        public string Code { get; set; }
+
         [Column(TypeName = "Nvarchar")]
         [StringLength(300)]
         public string Name { get; set; }

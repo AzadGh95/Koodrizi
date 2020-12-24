@@ -19,7 +19,7 @@ namespace WindowsFormsApp_Koodrizi.Models
         public string KoodName { get; set; }
         public string KoodNumber { get; set; }
         public decimal TotalPrice { get; set; }
-        public double TotalOunce { get; set; }
+        public string TotalOunce { get; set; }
 
         [Column(TypeName = "datetime2")]
         public DateTime CreateDate { get; set; }
