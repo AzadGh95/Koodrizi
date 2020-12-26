@@ -1,10 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace WindowsFormsApp_Koodrizi
+namespace PersianCalender
 {
     static class Program
     {
@@ -16,7 +15,7 @@ namespace WindowsFormsApp_Koodrizi
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Home());
+            Application.Run(new Form1());
         }
     }
 }

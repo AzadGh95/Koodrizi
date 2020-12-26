@@ -31,6 +31,6 @@ namespace WindowsFormsApp_Koodrizi.Models
 
         [Column(TypeName = "datetime2")]
         public DateTime CreateDate { get; set; }
-
+        public decimal Bedehi { get; set; }
     }
 }

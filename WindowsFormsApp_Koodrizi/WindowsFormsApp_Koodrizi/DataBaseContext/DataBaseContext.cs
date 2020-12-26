@@ -18,10 +18,10 @@ namespace WindowsFormsApp_Koodrizi.DataBaseContext
             System.Data.Entity.Database.SetInitializer(
             new System.Data.Entity.DropCreateDatabaseIfModelChanges<DataBaseContext>());
         }
-        public DbSet<Person> Persons { get; set; }
-        public DbSet<Bar> Bars { get; set; }
+        public DbSet<Person> People { get; set; }
+        public DbSet<Models.Bar> Bars { get; set; }
         public DbSet<Models.Koodrizi> Koodrizis { get; set; }
-        public DbSet<FinalKoodrizi> FinalKoodrizis { get; set; }
+        public DbSet<Models.FinalKoodrizi> FinalKoodrizis { get; set; }
 
 
     }

@@ -25,6 +25,7 @@ namespace WindowsFormsApp_Koodrizi.Models
         public DateTime CreateDate { get; set; }
 
         public double TotalWeight { get; set; }
+        public double Remining { get; set; }
 
         public int KoodId { get; set; }
         [ForeignKey("KoodId")]

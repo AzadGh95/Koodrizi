@@ -60,6 +60,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Bar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Bar.Designer.cs">
+      <DependentUpon>Bar.cs</DependentUpon>
+    </Compile>
     <Compile Include="Customer.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -67,27 +73,37 @@
       <DependentUpon>Customer.cs</DependentUpon>
     </Compile>
     <Compile Include="DataBaseContext\DataBaseContext.cs" />
+    <Compile Include="FinalKoodrizi.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FinalKoodrizi.Designer.cs">
+      <DependentUpon>FinalKoodrizi.cs</DependentUpon>
+    </Compile>
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\202012230751123_initial.cs" />
-    <Compile Include="Migrations\202012230751123_initial.designer.cs">
-      <DependentUpon>202012230751123_initial.cs</DependentUpon>
+    <Compile Include="Home.cs">
+      <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Migrations\202012240523140_edit.cs" />
-    <Compile Include="Migrations\202012240523140_edit.designer.cs">
-      <DependentUpon>202012240523140_edit.cs</DependentUpon>
+    <Compile Include="Home.Designer.cs">
+      <DependentUpon>Home.cs</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\202012240525257_edit1.cs" />
-    <Compile Include="Migrations\202012240525257_edit1.designer.cs">
-      <DependentUpon>202012240525257_edit1.cs</DependentUpon>
+    <Compile Include="Koodrizi.cs">
+      <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Migrations\202012240601479_edit2.cs" />
-    <Compile Include="Migrations\202012240601479_edit2.designer.cs">
-      <DependentUpon>202012240601479_edit2.cs</DependentUpon>
+    <Compile Include="Koodrizi.Designer.cs">
+      <DependentUpon>Koodrizi.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202012240656108_Initail.cs" />
+    <Compile Include="Migrations\202012240656108_Initail.designer.cs">
+      <DependentUpon>202012240656108_Initail.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202012260535437_EmptyMigration.cs" />
+    <Compile Include="Migrations\202012260535437_EmptyMigration.designer.cs">
+      <DependentUpon>202012260535437_EmptyMigration.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Bar.cs" />
@@ -100,20 +116,26 @@
     <Compile Include="Repositories\FinalKoodriziRepository.cs" />
     <Compile Include="Repositories\KoodriziRepository.cs" />
     <Compile Include="Repositories\PersonRepository.cs" />
+    <EmbeddedResource Include="Bar.resx">
+      <DependentUpon>Bar.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Customer.resx">
       <DependentUpon>Customer.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202012230751123_initial.resx">
-      <DependentUpon>202012230751123_initial.cs</DependentUpon>
+    <EmbeddedResource Include="FinalKoodrizi.resx">
+      <DependentUpon>FinalKoodrizi.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202012240523140_edit.resx">
-      <DependentUpon>202012240523140_edit.cs</DependentUpon>
+    <EmbeddedResource Include="Home.resx">
+      <DependentUpon>Home.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202012240525257_edit1.resx">
-      <DependentUpon>202012240525257_edit1.cs</DependentUpon>
+    <EmbeddedResource Include="Koodrizi.resx">
+      <DependentUpon>Koodrizi.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202012240601479_edit2.resx">
-      <DependentUpon>202012240601479_edit2.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\202012240656108_Initail.resx">
+      <DependentUpon>202012240656108_Initail.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202012260535437_EmptyMigration.resx">
+      <DependentUpon>202012260535437_EmptyMigration.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

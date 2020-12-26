@@ -25,6 +25,16 @@ namespace WindowsFormsApp_Koodrizi.Models
         public virtual Person Person { get; set; }
 
         public double Adl {get;set;}
+        public double Extra {get;set;}
+
+        public string PistachioName { get; set; }
+        /// <summary>
+        /// true:خندان
+        /// false:دهن بست
+        /// </summary>
+        public bool PistachioType { get; set; }
+
+        public double Gram { get; set; }
 
     }
 }

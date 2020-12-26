@@ -12,9 +12,6 @@ Enable-Migrations -ContextTypeName MVCproject.Models.UsersContext
 
 
 
-
-
-
 https://github.com/zzzprojects/EntityFramework.Extended
 Install-Package EntityFramework.Extended
 ...............

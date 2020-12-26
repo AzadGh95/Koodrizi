@@ -3,7 +3,7 @@
     using System;
     using System.Data.Entity.Migrations;
     
-    public partial class initial : DbMigration
+    public partial class Initail : DbMigration
     {
         public override void Up()
         {
@@ -19,6 +19,7 @@
                         IsLock = c.Boolean(nullable: false),
                         IdPerson = c.Int(nullable: false),
                         Adl = c.Double(nullable: false),
+                        Extra = c.Double(nullable: false),
                     })
                 .PrimaryKey(t => t.BarId)
                 .ForeignKey("dbo.People", t => t.IdPerson, cascadeDelete: true)
@@ -29,11 +30,13 @@
                 c => new
                     {
                         PersonId = c.Int(nullable: false, identity: true),
+                        Code = c.String(maxLength: 50),
                         Name = c.String(maxLength: 300),
                         PhoneNumber = c.String(maxLength: 50),
                         Total = c.Decimal(nullable: false, precision: 18, scale: 2),
                         AvgDate = c.DateTime(nullable: false, precision: 7, storeType: "datetime2"),
                         CreateDate = c.DateTime(nullable: false, precision: 7, storeType: "datetime2"),
+                        Bedehi = c.Decimal(nullable: false, precision: 18, scale: 2),
                     })
                 .PrimaryKey(t => t.PersonId);
             
@@ -45,9 +48,10 @@
                         KoodName = c.String(),
                         KoodNumber = c.String(),
                         TotalPrice = c.Decimal(nullable: false, precision: 18, scale: 2),
-                        TotalOunce = c.Double(nullable: false),
+                        TotalOunce = c.String(),
                         CreateDate = c.DateTime(nullable: false, precision: 7, storeType: "datetime2"),
                         TotalWeight = c.Double(nullable: false),
+                        Remining = c.Double(nullable: false),
                         KoodId = c.Int(nullable: false),
                     })
                 .PrimaryKey(t => t.FinalKoodId);
@@ -59,6 +63,7 @@
                         KoodId = c.Int(nullable: false),
                         Price = c.Decimal(nullable: false, precision: 18, scale: 2),
                         Weight = c.Double(nullable: false),
+                        Remining = c.Double(nullable: false),
                         SellDate = c.DateTime(nullable: false, precision: 7, storeType: "datetime2"),
                         ArrivedDate = c.DateTime(nullable: false, precision: 7, storeType: "datetime2"),
                         CreateDate = c.DateTime(nullable: false, precision: 7, storeType: "datetime2"),

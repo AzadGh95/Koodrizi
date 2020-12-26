@@ -20,6 +20,8 @@ namespace WindowsFormsApp_Koodrizi.Repositories
             try
             {
                 _baseContext.Koodrizis.Add(koodrizi);
+                _baseContext.SaveChanges();
+
                 return true;
             }
             catch (Exception)

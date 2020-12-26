@@ -15,11 +15,13 @@ namespace WindowsFormsApp_Koodrizi.Repositories
         {
             _baseContext = new DataBaseContext.DataBaseContext();
         }
-        public bool Insert(Bar bar)
+        public bool Insert(Models.Bar bar)
         {
             try
             {
                 _baseContext.Bars.Add(bar);
+                _baseContext.SaveChanges();
+
                 return true;
             }
             catch (Exception)
@@ -42,12 +44,12 @@ namespace WindowsFormsApp_Koodrizi.Repositories
             }
         }
 
-        public bool Update(Bar bar, int id)
+        public bool Update(Models.Bar bar, int id)
         {
             try
             {
                 _baseContext.Bars.Where(i => i.BarId == id)
-                    .Update(x => new Bar{});
+                    .Update(x => new Models.Bar { });
                 return true;
             }
             catch (Exception)
@@ -57,7 +59,7 @@ namespace WindowsFormsApp_Koodrizi.Repositories
             }
         }
 
-        public Bar Bar(int id)
+        public Models.Bar Bar(int id)
         {
             try
             {
@@ -70,7 +72,7 @@ namespace WindowsFormsApp_Koodrizi.Repositories
             }
         }
 
-        public List<Bar> Bars()
+        public List<Models.Bar> Bars()
         {
             try
             {

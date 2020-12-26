@@ -15,11 +15,13 @@ namespace WindowsFormsApp_Koodrizi.Repositories
         {
             _baseContext = new DataBaseContext.DataBaseContext();
         }
-        public bool Insert(FinalKoodrizi finalKoodrizi)
+        public bool Insert(Models.FinalKoodrizi finalKoodrizi)
         {
             try
             {
                 _baseContext.FinalKoodrizis.Add(finalKoodrizi);
+                _baseContext.SaveChanges();
+
                 return true;
             }
             catch (Exception)
@@ -42,7 +44,7 @@ namespace WindowsFormsApp_Koodrizi.Repositories
             }
         }
 
-        public bool Update(FinalKoodrizi finalKoodrizi, int id)
+        public bool Update(Models.FinalKoodrizi finalKoodrizi, int id)
         {
             try
             {
@@ -65,7 +67,7 @@ namespace WindowsFormsApp_Koodrizi.Repositories
             }
         }
 
-        public FinalKoodrizi FinalKoodrizi(int id)
+        public Models.FinalKoodrizi FinalKoodrizi(int id)
         {
             try
             {
@@ -78,7 +80,7 @@ namespace WindowsFormsApp_Koodrizi.Repositories
             }
         }
 
-        public List<FinalKoodrizi> FinalKoodrizis()
+        public List<Models.FinalKoodrizi> FinalKoodrizis()
         {
             try
             {

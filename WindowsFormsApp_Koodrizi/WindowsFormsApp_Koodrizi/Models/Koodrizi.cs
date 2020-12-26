@@ -14,6 +14,7 @@ namespace WindowsFormsApp_Koodrizi.Models
         public int KoodId { get; set; }
         public decimal Price { get; set; }
         public double Weight { get; set; }
+        public double Remining { get; set; }
 
         [Column(TypeName = "datetime2")]
         public DateTime SellDate { get; set; }

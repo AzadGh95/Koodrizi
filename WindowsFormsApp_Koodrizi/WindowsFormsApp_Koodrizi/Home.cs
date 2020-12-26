@@ -1,0 +1,38 @@
+﻿using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Drawing;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Windows.Forms;
+
+namespace WindowsFormsApp_Koodrizi
+{
+    public partial class Home : Form
+    {
+        public Home()
+        {
+            InitializeComponent();
+        }
+
+        private void Button1_Click(object sender, EventArgs e)
+        {
+            Customer customer = new Customer();
+            customer.Show();
+        }
+
+        private void BtnBar_Click(object sender, EventArgs e)
+        {
+            Bar bar = new Bar();
+            bar.Show();
+        }
+
+        private void BtnFinalKoodrizi_Click(object sender, EventArgs e)
+        {
+            FinallKoodrizi formFinalKoodrizi = new FinallKoodrizi();
+            formFinalKoodrizi.Show();
+        }
+    }
+}

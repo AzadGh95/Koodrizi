@@ -19,11 +19,13 @@ namespace WindowsFormsApp_Koodrizi.Repositories
         {
             try
             {
-                _baseContext.Persons.Add(person);
+                _baseContext.People.Add(person);
+                _baseContext.SaveChanges();
                 return true;
             }
-            catch (Exception)
+            catch (Exception e)
             {
+                var error = e.Message;
                 throw;
             }
            
@@ -34,7 +36,7 @@ namespace WindowsFormsApp_Koodrizi.Repositories
         {
             try
             {
-                _baseContext.Persons.Where(i => i.PersonId == id).Delete();
+                _baseContext.People.Where(i => i.PersonId == id).Delete();
                 return true;
             }
             catch (Exception)
@@ -47,7 +49,7 @@ namespace WindowsFormsApp_Koodrizi.Repositories
         public bool Update(Person person,int id) {
             try
             {
-                _baseContext.Persons.Where(i => i.PersonId == id).Update(x => new Person {
+                _baseContext.People.Where(i => i.PersonId == id).Update(x => new Person {
                     Name = person.Name,
                     AvgDate = person.AvgDate,
                     PhoneNumber = person.PhoneNumber,
@@ -66,7 +68,7 @@ namespace WindowsFormsApp_Koodrizi.Repositories
         {
             try
             {
-                return _baseContext.Persons.Where(i => i.PersonId == id).FirstOrDefault();
+                return _baseContext.People.Where(i => i.PersonId == id).FirstOrDefault();
             }
             catch (Exception)
             {
@@ -79,7 +81,7 @@ namespace WindowsFormsApp_Koodrizi.Repositories
         {
             try
             {
-                return _baseContext.Persons.AsNoTracking().ToList();
+                return _baseContext.People.AsNoTracking().ToList();
             }
             catch (Exception)
             {
