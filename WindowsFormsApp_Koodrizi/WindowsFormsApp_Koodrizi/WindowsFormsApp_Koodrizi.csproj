@@ -105,6 +105,10 @@
     <Compile Include="Migrations\202012260535437_EmptyMigration.designer.cs">
       <DependentUpon>202012260535437_EmptyMigration.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202012261002306_edit1.cs" />
+    <Compile Include="Migrations\202012261002306_edit1.designer.cs">
+      <DependentUpon>202012261002306_edit1.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Bar.cs" />
     <Compile Include="Models\FinalKoodrizi.cs" />
@@ -136,6 +140,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202012260535437_EmptyMigration.resx">
       <DependentUpon>202012260535437_EmptyMigration.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202012261002306_edit1.resx">
+      <DependentUpon>202012261002306_edit1.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

@@ -17,7 +17,8 @@ namespace WindowsFormsApp_Koodrizi.Models
         public DateTime CreateDate { get; set; }
         public double TotalWeight { get; set; }
         public double Remaining { get; set; }
-        public string Ounce { get; set; }
+        public double Ounce { get; set; }
+
         [DefaultValue(false)]
         public bool IsLock { get; set; }
         public int IdPerson { get; set; }
@@ -25,7 +26,11 @@ namespace WindowsFormsApp_Koodrizi.Models
         public virtual Person Person { get; set; }
 
         public double Adl {get;set;}
-        public double Extra {get;set;}
+        /// <summary>
+        /// درصد دهن بست
+        /// </summary>
+       // public double DahanBast {get;set;}
+        public double DhanBast {get;set;}
 
         public string PistachioName { get; set; }
         /// <summary>

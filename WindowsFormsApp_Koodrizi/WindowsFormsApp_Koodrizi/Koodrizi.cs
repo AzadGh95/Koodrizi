@@ -17,7 +17,7 @@ namespace WindowsFormsApp_Koodrizi
         private FinalKoodriziRepository _finalKoodriziRepo = new FinalKoodriziRepository();
         private PersonRepository _personRepo = new PersonRepository();
         private BarRepository _barRepo = new BarRepository();
-        
+
         public Koodrizi()
         {
             InitializeComponent();
@@ -30,6 +30,13 @@ namespace WindowsFormsApp_Koodrizi
 
         private void Button1_Click(object sender, EventArgs e)
         {
+            txtAdl.Text = "";
+            txtAsOunce.Text = "";
+            txtAsWeight.Text = "";
+            txtDahanBast.Text = "";
+            txtGrams.Text = "";
+            txtToOunce.Text = "";
+            txtToOunce.Text = "";
 
         }
 
@@ -47,7 +54,24 @@ namespace WindowsFormsApp_Koodrizi
         {
             try
             {
-                
+                var bars = _barRepo.SearchBar(double.Parse(txtAsWeight.Text), double.Parse(txtToWeight.Text),
+                   double.Parse(txtAsOunce.Text), double.Parse(txtToOunce.Text),
+                   double.Parse(txtAdl.Text), double.Parse(txtGrams.Text), double.Parse(txtDahanBast.Text));
+                foreach (var bar in bars)
+                {
+                    comCustomerBar.Items.Add(bar.Person.Name + "| انس:" + bar.Ounce + "| موجودی:" + bar.Remaining 
+                        + "| 'گرم:" + bar.Gram + "| نوع پسته:" + bar.PistachioName + "| درصددهن بست:" + bar.DhanBast +"| عدل"+bar.Adl);
+                }
+                if (bars.Count() > 0)
+                {
+                    comCustomerBar.Enabled = true;
+                    txtWeightBar.Enabled = true;
+                    txtPercentageOfVisibility.Enabled = true;
+                    dateTimeSell.Enabled = true;
+                    dateTimeDueDate.Enabled = true;
+                    btnSave.Enabled = true;
+                }
+                //comCustomerBar
             }
             catch (Exception ex)
             {

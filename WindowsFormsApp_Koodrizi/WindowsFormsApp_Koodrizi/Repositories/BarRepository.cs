@@ -78,12 +78,28 @@ namespace WindowsFormsApp_Koodrizi.Repositories
             {
                 return _baseContext.Bars.AsNoTracking().ToList();
             }
-            catch (Exception)
+            catch (Exception ex)
             {
                 return null;
                 throw;
             }
         }
+        public List<Models.Bar> SearchBar(double weight1, double weight2,
+            double ounce1, double ounce2,
+            double adl, double gram, double dahanbast)
+        {
 
+            var bars =
+            _baseContext.Bars
+                .Where(x => x.IsLock == false)
+                .Where(x => gram == 0.0 || x.Gram == gram)
+                .Where(x => adl == 0.0 || x.Adl == adl)
+                .Where(x => dahanbast == 0.0 || x.DhanBast == dahanbast)
+                .Where(x => weight2 == 0 || (x.Remaining >= weight1 && x.Remaining <= weight2))
+                .Where(x => ounce2 == 0 || (x.Ounce >= ounce1 && x.Ounce <= ounce2))
+                .ToList();
+            return bars;
+
+        }
     }
 }

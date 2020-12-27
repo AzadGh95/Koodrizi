@@ -28,7 +28,8 @@ namespace WindowsFormsApp_Koodrizi
             {
                 Models.Bar bar = new Models.Bar()
                 {
-                    Ounce = txtOunce.Text,
+                    DhanBast = double.Parse(txtPercent.Text),
+                    Ounce = double.Parse(txtOunce.Text),
                     Adl = double.Parse(txtAdl.Text),
                     Remaining = double.Parse(txtWeight.Text),
                     TotalWeight = double.Parse(txtWeight.Text),
@@ -37,8 +38,8 @@ namespace WindowsFormsApp_Koodrizi
                     PistachioName = comboType.Text,
                     PistachioType = radioKhandan.Checked,
                     Gram = double.Parse(txtGrams.Text),
-
                 };
+
                 var result = _barRepo.Insert(bar);
 
                 txtOunce.Text = "";
@@ -46,6 +47,7 @@ namespace WindowsFormsApp_Koodrizi
                 txtWeight.Text = "";
                 txtWeight.Text = "";
                 txtGrams.Text = "";
+                txtPercent.Text = "";
 
                 if (result)
                     MessageBox.Show("بار جدید با موفقیت ثبت شد.");

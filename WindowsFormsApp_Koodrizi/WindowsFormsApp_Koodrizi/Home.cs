@@ -34,5 +34,10 @@ namespace WindowsFormsApp_Koodrizi
             FinallKoodrizi formFinalKoodrizi = new FinallKoodrizi();
             formFinalKoodrizi.Show();
         }
+
+        private void Home_Load(object sender, EventArgs e)
+        {
+            lblTime.Text = "dualp.ir";
+        }
     }
 }
