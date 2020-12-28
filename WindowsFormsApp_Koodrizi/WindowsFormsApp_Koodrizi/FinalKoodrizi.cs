@@ -7,11 +7,19 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using WindowsFormsApp_Koodrizi.Repositories;
 
 namespace WindowsFormsApp_Koodrizi
 {
     public partial class FinallKoodrizi : Form
     {
+        private BarRepository _barRepository = new BarRepository();
+        public int BarId;
+        public double WeightKood;
+        public double PersentRoyat;
+        public DateTime SellDate;
+        public DateTime DueDate;
+
         public FinallKoodrizi()
         {
             InitializeComponent();
@@ -54,13 +62,28 @@ namespace WindowsFormsApp_Koodrizi
 
         private void BtnCancel_Click(object sender, EventArgs e)
         {
-
+            DialogResult dialogResult = MessageBox.Show("آیا می‌خواهید این فرم را بدون ذخیره کردن ببندید ؟", "هشدار", MessageBoxButtons.YesNo);
+            if (dialogResult == DialogResult.Yes)
+            {
+                Close();
+            }
+            else if (dialogResult == DialogResult.No)
+            {
+                //do something else
+            }
         }
 
         private void BtnAdd_Click(object sender, EventArgs e)
         {
             Koodrizi formKoodrizi = new Koodrizi();
             formKoodrizi.Show();
+
+            //var bar = _barRepository.Bar(BarId);
+
+            //dataGridFinalKood.Rows.Add(bar.Person.Name,
+            //    bar.Remaining, WeightKood, bar.Ounce,
+            //    PercentRoyat, SellDate.ToString("YYYY/MM/DD"),
+            //    DueDate.ToString("YYYY/MM/DD"));
         }
 
         private void TxtKoodOnc_TextChanged(object sender, EventArgs e)

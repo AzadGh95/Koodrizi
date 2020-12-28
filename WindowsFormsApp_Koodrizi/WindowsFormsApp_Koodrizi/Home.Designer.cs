@@ -60,6 +60,7 @@
             this.btnListPerson.TabIndex = 1;
             this.btnListPerson.Text = "لیست تمام مشتری ها";
             this.btnListPerson.UseVisualStyleBackColor = false;
+            this.btnListPerson.Click += new System.EventHandler(this.BtnListPerson_Click);
             // 
             // btnListBar
             // 

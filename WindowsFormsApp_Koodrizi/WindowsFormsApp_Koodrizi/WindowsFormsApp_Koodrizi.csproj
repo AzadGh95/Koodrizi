@@ -49,6 +49,7 @@
     <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
     <Reference Include="System.Data.Entity" />
+    <Reference Include="System.DirectoryServices" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -97,6 +98,12 @@
     <Compile Include="Koodrizi.Designer.cs">
       <DependentUpon>Koodrizi.cs</DependentUpon>
     </Compile>
+    <Compile Include="ListCustomer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ListCustomer.Designer.cs">
+      <DependentUpon>ListCustomer.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\202012240656108_Initail.cs" />
     <Compile Include="Migrations\202012240656108_Initail.designer.cs">
       <DependentUpon>202012240656108_Initail.cs</DependentUpon>
@@ -134,6 +141,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Koodrizi.resx">
       <DependentUpon>Koodrizi.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ListCustomer.resx">
+      <DependentUpon>ListCustomer.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202012240656108_Initail.resx">
       <DependentUpon>202012240656108_Initail.cs</DependentUpon>

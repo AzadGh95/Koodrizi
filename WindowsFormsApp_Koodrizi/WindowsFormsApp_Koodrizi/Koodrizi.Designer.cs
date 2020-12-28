@@ -212,6 +212,7 @@
             // 
             // comCustomerBar
             // 
+            this.comCustomerBar.BackColor = System.Drawing.SystemColors.ScrollBar;
             this.comCustomerBar.Enabled = false;
             this.comCustomerBar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.comCustomerBar.Font = new System.Drawing.Font("Vazir FD", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -223,6 +224,7 @@
             this.comCustomerBar.Size = new System.Drawing.Size(600, 27);
             this.comCustomerBar.TabIndex = 15;
             this.comCustomerBar.Text = "انتخاب بار مشتری";
+            this.comCustomerBar.SelectedIndexChanged += new System.EventHandler(this.ComCustomerBar_SelectedIndexChanged);
             // 
             // label9
             // 
@@ -308,7 +310,7 @@
             // btnCancel
             // 
             this.btnCancel.Font = new System.Drawing.Font("Vazir FD", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCancel.Location = new System.Drawing.Point(49, 392);
+            this.btnCancel.Location = new System.Drawing.Point(49, 387);
             this.btnCancel.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnCancel.Name = "btnCancel";
             this.btnCancel.Size = new System.Drawing.Size(63, 33);
@@ -320,10 +322,10 @@
             // 
             this.btnSave.Enabled = false;
             this.btnSave.Font = new System.Drawing.Font("Vazir FD", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSave.Location = new System.Drawing.Point(133, 392);
+            this.btnSave.Location = new System.Drawing.Point(124, 387);
             this.btnSave.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnSave.Name = "btnSave";
-            this.btnSave.Size = new System.Drawing.Size(185, 33);
+            this.btnSave.Size = new System.Drawing.Size(106, 33);
             this.btnSave.TabIndex = 27;
             this.btnSave.Text = "ثبت";
             this.btnSave.UseVisualStyleBackColor = true;
@@ -345,7 +347,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 19F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(688, 460);
+            this.ClientSize = new System.Drawing.Size(688, 457);
             this.Controls.Add(this.btnClearSearch);
             this.Controls.Add(this.btnSave);
             this.Controls.Add(this.btnCancel);

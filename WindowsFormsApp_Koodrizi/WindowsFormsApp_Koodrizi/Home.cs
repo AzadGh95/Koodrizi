@@ -39,5 +39,11 @@ namespace WindowsFormsApp_Koodrizi
         {
             lblTime.Text = "dualp.ir";
         }
+
+        private void BtnListPerson_Click(object sender, EventArgs e)
+        {
+            ListCustomer listCustomer = new ListCustomer();
+            listCustomer.Show();
+        }
     }
 }
