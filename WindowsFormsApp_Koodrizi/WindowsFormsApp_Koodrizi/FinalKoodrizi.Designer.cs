@@ -40,17 +40,17 @@
             this.txtKoodOnc = new System.Windows.Forms.TextBox();
             this.btnAdd = new System.Windows.Forms.Button();
             this.dataGridFinalKood = new System.Windows.Forms.DataGridView();
-            this.label5 = new System.Windows.Forms.Label();
-            this.btnSave = new System.Windows.Forms.Button();
-            this.btnCancel = new System.Windows.Forms.Button();
-            this.label6 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
             this.Customer = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Weight = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Onc = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.PercentRoyat = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Saledate = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.DateDue = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.label5 = new System.Windows.Forms.Label();
+            this.btnSave = new System.Windows.Forms.Button();
+            this.btnCancel = new System.Windows.Forms.Button();
+            this.label6 = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridFinalKood)).BeginInit();
             this.SuspendLayout();
             // 
@@ -68,7 +68,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Vazir FD", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(395, 35);
+            this.label1.Location = new System.Drawing.Point(392, 34);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(74, 19);
             this.label1.TabIndex = 1;
@@ -89,7 +89,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Vazir FD", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(622, 35);
+            this.label2.Location = new System.Drawing.Point(600, 35);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(61, 19);
             this.label2.TabIndex = 3;
@@ -99,7 +99,7 @@
             // txtKoodName
             // 
             this.txtKoodName.Font = new System.Drawing.Font("Vazir FD", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtKoodName.Location = new System.Drawing.Point(497, 31);
+            this.txtKoodName.Location = new System.Drawing.Point(477, 31);
             this.txtKoodName.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtKoodName.Name = "txtKoodName";
             this.txtKoodName.Size = new System.Drawing.Size(114, 26);
@@ -110,7 +110,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Vazir FD", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(614, 100);
+            this.label3.Location = new System.Drawing.Point(592, 100);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(71, 19);
             this.label3.TabIndex = 5;
@@ -120,7 +120,7 @@
             // txPriceperkilo
             // 
             this.txPriceperkilo.Font = new System.Drawing.Font("Vazir FD", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txPriceperkilo.Location = new System.Drawing.Point(497, 96);
+            this.txPriceperkilo.Location = new System.Drawing.Point(477, 96);
             this.txPriceperkilo.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txPriceperkilo.Name = "txPriceperkilo";
             this.txPriceperkilo.Size = new System.Drawing.Size(114, 26);
@@ -131,7 +131,7 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Vazir FD", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(395, 96);
+            this.label4.Location = new System.Drawing.Point(392, 95);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(68, 19);
             this.label4.TabIndex = 7;
@@ -174,15 +174,47 @@
             this.dataGridFinalKood.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.dataGridFinalKood.Name = "dataGridFinalKood";
             this.dataGridFinalKood.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.dataGridFinalKood.Size = new System.Drawing.Size(663, 219);
+            this.dataGridFinalKood.Size = new System.Drawing.Size(639, 219);
             this.dataGridFinalKood.TabIndex = 10;
             this.dataGridFinalKood.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DataGridView1_CellContentClick_1);
+            // 
+            // Customer
+            // 
+            this.Customer.HeaderText = "مشتری";
+            this.Customer.Name = "Customer";
+            this.Customer.Width = 150;
+            // 
+            // Weight
+            // 
+            this.Weight.HeaderText = "وزن";
+            this.Weight.Name = "Weight";
+            // 
+            // Onc
+            // 
+            this.Onc.HeaderText = "انس";
+            this.Onc.Name = "Onc";
+            this.Onc.Width = 50;
+            // 
+            // PercentRoyat
+            // 
+            this.PercentRoyat.HeaderText = "درصد رویت";
+            this.PercentRoyat.Name = "PercentRoyat";
+            // 
+            // Saledate
+            // 
+            this.Saledate.HeaderText = "تاریخ فروش";
+            this.Saledate.Name = "Saledate";
+            // 
+            // DateDue
+            // 
+            this.DateDue.HeaderText = "تاریخ سررسید";
+            this.DateDue.Name = "DateDue";
             // 
             // label5
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Vazir FD", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(635, 438);
+            this.label5.Location = new System.Drawing.Point(615, 441);
             this.label5.Name = "label5";
             this.label5.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.label5.Size = new System.Drawing.Size(50, 19);
@@ -228,50 +260,18 @@
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Vazir FD", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(574, 438);
+            this.label7.Location = new System.Drawing.Point(554, 441);
             this.label7.Name = "label7";
             this.label7.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.label7.Size = new System.Drawing.Size(39, 19);
             this.label7.TabIndex = 16;
             this.label7.Text = "00000";
             // 
-            // Customer
-            // 
-            this.Customer.HeaderText = "مشتری";
-            this.Customer.Name = "Customer";
-            this.Customer.Width = 150;
-            // 
-            // Weight
-            // 
-            this.Weight.HeaderText = "وزن";
-            this.Weight.Name = "Weight";
-            // 
-            // Onc
-            // 
-            this.Onc.HeaderText = "انس";
-            this.Onc.Name = "Onc";
-            this.Onc.Width = 50;
-            // 
-            // PercentRoyat
-            // 
-            this.PercentRoyat.HeaderText = "درصد رویت";
-            this.PercentRoyat.Name = "PercentRoyat";
-            // 
-            // Saledate
-            // 
-            this.Saledate.HeaderText = "تاریخ فروش";
-            this.Saledate.Name = "Saledate";
-            // 
-            // DateDue
-            // 
-            this.DateDue.HeaderText = "تاریخ سررسید";
-            this.DateDue.Name = "DateDue";
-            // 
             // FinallKoodrizi
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 19F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(723, 503);
+            this.ClientSize = new System.Drawing.Size(694, 503);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.btnCancel);
@@ -312,7 +312,7 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.TextBox txtKoodOnc;
         private System.Windows.Forms.Button btnAdd;
-        private System.Windows.Forms.DataGridView dataGridFinalKood;
+        public System.Windows.Forms.DataGridView dataGridFinalKood;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Button btnSave;
         private System.Windows.Forms.Button btnCancel;

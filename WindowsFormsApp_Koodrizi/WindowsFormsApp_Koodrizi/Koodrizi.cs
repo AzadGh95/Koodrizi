@@ -72,13 +72,13 @@ namespace WindowsFormsApp_Koodrizi
             Program.WeightKood = double.Parse(txtWeightBar.Text);
 
 
-            var bar = _barRepository.Bar(BarId);
+            var bar = _barRepository.Bar(Program.BarId);
             finallKoodrizi.dataGridFinalKood.Rows.Add(bar.Person.Name,
-                bar.Remaining, WeightKood, bar.Ounce,
-                PercentRoyat, SellDate.ToString("YYYY/MM/DD"),
-                DueDate.ToString("YYYY/MM/DD"));
-
-            finallKoodrizi.Show();
+                Program.WeightKood, bar.Ounce,
+                 Program.PersentRoyat, Program.SellDate.ToString("YYYY/MM/DD"),
+                Program.DueDate.ToString("YYYY/MM/DD"));
+            Close();
+            //finallKoodrizi.Show();
         }
 
         private void BtnSearch_Click(object sender, EventArgs e)

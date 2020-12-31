@@ -31,8 +31,10 @@ namespace WindowsFormsApp_Koodrizi
 
         private void BtnFinalKoodrizi_Click(object sender, EventArgs e)
         {
-            FinallKoodrizi formFinalKoodrizi = new FinallKoodrizi();
-            formFinalKoodrizi.Show();
+            //FinallKoodrizi formFinalKoodrizi = new FinallKoodrizi();
+            //formFinalKoodrizi.Show();
+            AddKoodrizi addKood = new AddKoodrizi();
+            addKood.Show();
         }
 
         private void Home_Load(object sender, EventArgs e)
@@ -44,6 +46,12 @@ namespace WindowsFormsApp_Koodrizi
         {
             ListCustomer listCustomer = new ListCustomer();
             listCustomer.Show();
+        }
+
+        private void BtnListBar_Click(object sender, EventArgs e)
+        {
+            ListBars listBars = new ListBars();
+            listBars.Show();
         }
     }
 }

@@ -34,8 +34,7 @@
             this.name = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.bedehi = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.avgdate = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.btnSearchCustomer = new System.Windows.Forms.Button();
-            this.txtSearchCustomer = new System.Windows.Forms.TextBox();
+            this.btnDelete = new System.Windows.Forms.DataGridViewButtonColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridListCustomer)).BeginInit();
             this.SuspendLayout();
             // 
@@ -47,14 +46,15 @@
             this.code,
             this.name,
             this.bedehi,
-            this.avgdate});
-            this.dataGridListCustomer.Location = new System.Drawing.Point(12, 73);
+            this.avgdate,
+            this.btnDelete});
+            this.dataGridListCustomer.Location = new System.Drawing.Point(22, 13);
             this.dataGridListCustomer.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.dataGridListCustomer.Name = "dataGridListCustomer";
             this.dataGridListCustomer.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.dataGridListCustomer.Size = new System.Drawing.Size(555, 454);
+            this.dataGridListCustomer.Size = new System.Drawing.Size(593, 264);
             this.dataGridListCustomer.TabIndex = 0;
-            this.dataGridListCustomer.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DataGridListCustomer_CellContentClick);
+            this.dataGridListCustomer.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DataGridListCustomer_CellContentClick_1);
             // 
             // row
             // 
@@ -69,8 +69,10 @@
             // 
             // name
             // 
+            this.name.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
             this.name.HeaderText = "نام و نام خانوادگی";
             this.name.Name = "name";
+            this.name.Width = 113;
             // 
             // bedehi
             // 
@@ -82,35 +84,18 @@
             this.avgdate.HeaderText = " راس تاریخ";
             this.avgdate.Name = "avgdate";
             // 
-            // btnSearchCustomer
+            // btnDelete
             // 
-            this.btnSearchCustomer.Font = new System.Drawing.Font("Vazir FD", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSearchCustomer.Location = new System.Drawing.Point(12, 18);
-            this.btnSearchCustomer.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.btnSearchCustomer.Name = "btnSearchCustomer";
-            this.btnSearchCustomer.Size = new System.Drawing.Size(117, 28);
-            this.btnSearchCustomer.TabIndex = 1;
-            this.btnSearchCustomer.Text = "جستجو";
-            this.btnSearchCustomer.UseVisualStyleBackColor = true;
-            this.btnSearchCustomer.Click += new System.EventHandler(this.Button1_Click_1);
-            // 
-            // txtSearchCustomer
-            // 
-            this.txtSearchCustomer.Font = new System.Drawing.Font("Vazir FD", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtSearchCustomer.Location = new System.Drawing.Point(135, 19);
-            this.txtSearchCustomer.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.txtSearchCustomer.Name = "txtSearchCustomer";
-            this.txtSearchCustomer.Size = new System.Drawing.Size(432, 26);
-            this.txtSearchCustomer.TabIndex = 2;
-            this.txtSearchCustomer.TextChanged += new System.EventHandler(this.TextBox1_TextChanged);
+            this.btnDelete.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader;
+            this.btnDelete.HeaderText = "حذف";
+            this.btnDelete.Name = "btnDelete";
+            this.btnDelete.Width = 38;
             // 
             // ListCustomer
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 19F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(579, 664);
-            this.Controls.Add(this.txtSearchCustomer);
-            this.Controls.Add(this.btnSearchCustomer);
+            this.ClientSize = new System.Drawing.Size(633, 302);
             this.Controls.Add(this.dataGridListCustomer);
             this.Font = new System.Drawing.Font("Vazir FD", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
@@ -119,7 +104,6 @@
             this.Load += new System.EventHandler(this.ListCustomer_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridListCustomer)).EndInit();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
@@ -131,7 +115,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn name;
         private System.Windows.Forms.DataGridViewTextBoxColumn bedehi;
         private System.Windows.Forms.DataGridViewTextBoxColumn avgdate;
-        private System.Windows.Forms.Button btnSearchCustomer;
-        private System.Windows.Forms.TextBox txtSearchCustomer;
+        private System.Windows.Forms.DataGridViewButtonColumn btnDelete;
     }
 }

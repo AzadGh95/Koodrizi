@@ -61,6 +61,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AddKoodrizi.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddKoodrizi.Designer.cs">
+      <DependentUpon>AddKoodrizi.cs</DependentUpon>
+    </Compile>
     <Compile Include="Bar.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -74,6 +80,12 @@
       <DependentUpon>Customer.cs</DependentUpon>
     </Compile>
     <Compile Include="DataBaseContext\DataBaseContext.cs" />
+    <Compile Include="DetailFinalKoodrizi.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DetailFinalKoodrizi.Designer.cs">
+      <DependentUpon>DetailFinalKoodrizi.cs</DependentUpon>
+    </Compile>
     <Compile Include="FinalKoodrizi.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -97,6 +109,12 @@
     </Compile>
     <Compile Include="Koodrizi.Designer.cs">
       <DependentUpon>Koodrizi.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ListBars.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ListBars.Designer.cs">
+      <DependentUpon>ListBars.cs</DependentUpon>
     </Compile>
     <Compile Include="ListCustomer.cs">
       <SubType>Form</SubType>
@@ -127,11 +145,17 @@
     <Compile Include="Repositories\FinalKoodriziRepository.cs" />
     <Compile Include="Repositories\KoodriziRepository.cs" />
     <Compile Include="Repositories\PersonRepository.cs" />
+    <EmbeddedResource Include="AddKoodrizi.resx">
+      <DependentUpon>AddKoodrizi.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Bar.resx">
       <DependentUpon>Bar.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Customer.resx">
       <DependentUpon>Customer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DetailFinalKoodrizi.resx">
+      <DependentUpon>DetailFinalKoodrizi.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FinalKoodrizi.resx">
       <DependentUpon>FinalKoodrizi.cs</DependentUpon>
@@ -141,6 +165,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Koodrizi.resx">
       <DependentUpon>Koodrizi.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ListBars.resx">
+      <DependentUpon>ListBars.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ListCustomer.resx">
       <DependentUpon>ListCustomer.cs</DependentUpon>

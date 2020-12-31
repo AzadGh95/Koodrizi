@@ -29,9 +29,9 @@ namespace WindowsFormsApp_Koodrizi.Models
         /// <summary>
         /// درصد دهن بست
         /// </summary>
-       // public double DahanBast {get;set;}
+        // public double DahanBast {get;set;}
+        [DefaultValue(100)]
         public double DhanBast {get;set;}
-
         public string PistachioName { get; set; }
         /// <summary>
         /// true:خندان

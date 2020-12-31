@@ -58,7 +58,7 @@
             this.btnListPerson.Name = "btnListPerson";
             this.btnListPerson.Size = new System.Drawing.Size(146, 38);
             this.btnListPerson.TabIndex = 1;
-            this.btnListPerson.Text = "لیست تمام مشتری ها";
+            this.btnListPerson.Text = "لیست مشتری ها";
             this.btnListPerson.UseVisualStyleBackColor = false;
             this.btnListPerson.Click += new System.EventHandler(this.BtnListPerson_Click);
             // 
@@ -72,6 +72,7 @@
             this.btnListBar.TabIndex = 3;
             this.btnListBar.Text = "لیست بارها";
             this.btnListBar.UseVisualStyleBackColor = false;
+            this.btnListBar.Click += new System.EventHandler(this.BtnListBar_Click);
             // 
             // btnBar
             // 
@@ -132,7 +133,7 @@
             this.Controls.Add(this.btnListPerson);
             this.Controls.Add(this.btnPerson);
             this.Name = "Home";
-            this.Text = "Home";
+            this.Text = "صفحه اصلی";
             this.Load += new System.EventHandler(this.Home_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
