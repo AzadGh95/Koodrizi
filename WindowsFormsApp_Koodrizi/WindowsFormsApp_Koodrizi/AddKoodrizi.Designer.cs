@@ -29,18 +29,6 @@
         private void InitializeComponent()
         {
             this.DataGridAddKood = new System.Windows.Forms.DataGridView();
-            this.txtKoodNumber = new System.Windows.Forms.TextBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.txtKoodName = new System.Windows.Forms.TextBox();
-            this.button1 = new System.Windows.Forms.Button();
-            this.btnSave = new System.Windows.Forms.Button();
-            this.label3 = new System.Windows.Forms.Label();
-            this.txt = new System.Windows.Forms.TextBox();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
             this.GridBarPerson = new System.Windows.Forms.DataGridViewComboBoxColumn();
             this.GridPercentRoyat = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.GridWeight = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -48,6 +36,22 @@
             this.GridDueDate = new System.Windows.Forms.DataGridViewButtonColumn();
             this.GridPrice = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.GridTotalPrice = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.txtKoodNumber = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.txtKoodName = new System.Windows.Forms.TextBox();
+            this.button1 = new System.Windows.Forms.Button();
+            this.btnSave = new System.Windows.Forms.Button();
+            this.label3 = new System.Windows.Forms.Label();
+            this.txtOunceBase = new System.Windows.Forms.TextBox();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
+            this.label8 = new System.Windows.Forms.Label();
+            this.txtPriceBase = new System.Windows.Forms.TextBox();
+            this.label9 = new System.Windows.Forms.Label();
+            this.txtDahanBastBase = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.DataGridAddKood)).BeginInit();
             this.SuspendLayout();
             // 
@@ -68,110 +72,6 @@
             this.DataGridAddKood.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.DataGridAddKood.Size = new System.Drawing.Size(851, 263);
             this.DataGridAddKood.TabIndex = 0;
-            // 
-            // txtKoodNumber
-            // 
-            this.txtKoodNumber.Location = new System.Drawing.Point(639, 22);
-            this.txtKoodNumber.Name = "txtKoodNumber";
-            this.txtKoodNumber.Size = new System.Drawing.Size(100, 26);
-            this.txtKoodNumber.TabIndex = 1;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(742, 26);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(74, 19);
-            this.label1.TabIndex = 2;
-            this.label1.Text = "شماره کودریزی";
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(461, 26);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(61, 19);
-            this.label2.TabIndex = 4;
-            this.label2.Text = "نام کودریزی";
-            // 
-            // txtKoodName
-            // 
-            this.txtKoodName.Location = new System.Drawing.Point(358, 22);
-            this.txtKoodName.Name = "txtKoodName";
-            this.txtKoodName.Size = new System.Drawing.Size(100, 26);
-            this.txtKoodName.TabIndex = 3;
-            // 
-            // button1
-            // 
-            this.button1.Location = new System.Drawing.Point(20, 375);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 33);
-            this.button1.TabIndex = 5;
-            this.button1.Text = "لغو";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.Button1_Click);
-            // 
-            // btnSave
-            // 
-            this.btnSave.Location = new System.Drawing.Point(101, 374);
-            this.btnSave.Name = "btnSave";
-            this.btnSave.Size = new System.Drawing.Size(112, 34);
-            this.btnSave.TabIndex = 6;
-            this.btnSave.Text = "ذخیره";
-            this.btnSave.UseVisualStyleBackColor = true;
-            this.btnSave.Click += new System.EventHandler(this.BtnSave_Click);
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(172, 26);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(68, 19);
-            this.label3.TabIndex = 8;
-            this.label3.Text = "انس کودریزی";
-            // 
-            // txt
-            // 
-            this.txt.Location = new System.Drawing.Point(69, 22);
-            this.txt.Name = "txt";
-            this.txt.Size = new System.Drawing.Size(100, 26);
-            this.txt.TabIndex = 7;
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(785, 384);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(50, 19);
-            this.label4.TabIndex = 9;
-            this.label4.Text = "قیمت کل";
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(734, 384);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(33, 19);
-            this.label5.TabIndex = 10;
-            this.label5.Text = "0000";
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(597, 383);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(44, 19);
-            this.label6.TabIndex = 11;
-            this.label6.Text = "جمع کل";
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(540, 384);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(33, 19);
-            this.label7.TabIndex = 12;
-            this.label7.Text = "0000";
             // 
             // GridBarPerson
             // 
@@ -213,17 +113,157 @@
             this.GridTotalPrice.Resizable = System.Windows.Forms.DataGridViewTriState.True;
             this.GridTotalPrice.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
             // 
+            // txtKoodNumber
+            // 
+            this.txtKoodNumber.Location = new System.Drawing.Point(701, 22);
+            this.txtKoodNumber.Name = "txtKoodNumber";
+            this.txtKoodNumber.Size = new System.Drawing.Size(100, 26);
+            this.txtKoodNumber.TabIndex = 1;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(804, 26);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(74, 19);
+            this.label1.TabIndex = 2;
+            this.label1.Text = "شماره کودریزی";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(636, 26);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(61, 19);
+            this.label2.TabIndex = 4;
+            this.label2.Text = "نام کودریزی";
+            // 
+            // txtKoodName
+            // 
+            this.txtKoodName.Location = new System.Drawing.Point(535, 22);
+            this.txtKoodName.Name = "txtKoodName";
+            this.txtKoodName.Size = new System.Drawing.Size(100, 26);
+            this.txtKoodName.TabIndex = 3;
+            // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(20, 375);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(75, 33);
+            this.button1.TabIndex = 5;
+            this.button1.Text = "لغو";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.Button1_Click);
+            // 
+            // btnSave
+            // 
+            this.btnSave.Location = new System.Drawing.Point(101, 374);
+            this.btnSave.Name = "btnSave";
+            this.btnSave.Size = new System.Drawing.Size(112, 34);
+            this.btnSave.TabIndex = 6;
+            this.btnSave.Text = "ذخیره";
+            this.btnSave.UseVisualStyleBackColor = true;
+            this.btnSave.Click += new System.EventHandler(this.BtnSave_Click);
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(300, 26);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(49, 19);
+            this.label3.TabIndex = 8;
+            this.label3.Text = "انس پایه";
+            // 
+            // txtOunceBase
+            // 
+            this.txtOunceBase.Location = new System.Drawing.Point(197, 22);
+            this.txtOunceBase.Name = "txtOunceBase";
+            this.txtOunceBase.Size = new System.Drawing.Size(100, 26);
+            this.txtOunceBase.TabIndex = 7;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(785, 384);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(50, 19);
+            this.label4.TabIndex = 9;
+            this.label4.Text = "قیمت کل";
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(734, 384);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(33, 19);
+            this.label5.TabIndex = 10;
+            this.label5.Text = "0000";
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(597, 383);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(44, 19);
+            this.label6.TabIndex = 11;
+            this.label6.Text = "جمع کل";
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(540, 384);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(33, 19);
+            this.label7.TabIndex = 12;
+            this.label7.Text = "0000";
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Location = new System.Drawing.Point(474, 27);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(54, 19);
+            this.label8.TabIndex = 14;
+            this.label8.Text = "قیمت پایه";
+            // 
+            // txtPriceBase
+            // 
+            this.txtPriceBase.Location = new System.Drawing.Point(371, 23);
+            this.txtPriceBase.Name = "txtPriceBase";
+            this.txtPriceBase.Size = new System.Drawing.Size(100, 26);
+            this.txtPriceBase.TabIndex = 13;
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Location = new System.Drawing.Point(129, 26);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(55, 19);
+            this.label9.TabIndex = 16;
+            this.label9.Text = "دهن بست";
+            // 
+            // txtDahanBastBase
+            // 
+            this.txtDahanBastBase.Location = new System.Drawing.Point(26, 22);
+            this.txtDahanBastBase.Name = "txtDahanBastBase";
+            this.txtDahanBastBase.Size = new System.Drawing.Size(100, 26);
+            this.txtDahanBastBase.TabIndex = 15;
+            // 
             // AddKoodrizi
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 19F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(904, 437);
+            this.Controls.Add(this.label9);
+            this.Controls.Add(this.txtDahanBastBase);
+            this.Controls.Add(this.label8);
+            this.Controls.Add(this.txtPriceBase);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
-            this.Controls.Add(this.txt);
+            this.Controls.Add(this.txtOunceBase);
             this.Controls.Add(this.btnSave);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.label2);
@@ -252,7 +292,7 @@
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button btnSave;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox txt;
+        private System.Windows.Forms.TextBox txtOunceBase;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label6;
@@ -264,5 +304,9 @@
         private System.Windows.Forms.DataGridViewButtonColumn GridDueDate;
         private System.Windows.Forms.DataGridViewTextBoxColumn GridPrice;
         private System.Windows.Forms.DataGridViewTextBoxColumn GridTotalPrice;
+        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.TextBox txtPriceBase;
+        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.TextBox txtDahanBastBase;
     }
 }

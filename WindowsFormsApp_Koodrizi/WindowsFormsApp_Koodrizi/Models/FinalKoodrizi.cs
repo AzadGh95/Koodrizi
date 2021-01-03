@@ -12,7 +12,7 @@ namespace WindowsFormsApp_Koodrizi.Models
     {
         public FinalKoodrizi()
         {
-            KoodNumber = "K-" + DateTime.UtcNow.ToString("dMmss");
+            CreateDate = DateTime.UtcNow;
         }
         [Key]
         public int FinalKoodId { get; set; }
@@ -26,9 +26,6 @@ namespace WindowsFormsApp_Koodrizi.Models
 
         public double TotalWeight { get; set; }
         public double Remining { get; set; }
-
-        public int KoodId { get; set; }
-        [ForeignKey("KoodId")]
         public virtual List<Koodrizi> Koodrizi { get; set; }
     }
 }

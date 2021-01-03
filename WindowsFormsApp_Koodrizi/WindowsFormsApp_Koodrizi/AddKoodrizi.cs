@@ -30,11 +30,13 @@ namespace WindowsFormsApp_Koodrizi
 
         private void BtnSave_Click(object sender, EventArgs e)
         {
-
+            
         }
 
         private void AddKoodrizi_Load(object sender, EventArgs e)
         {
+
+
             // var peoples = _personRepo.Peoples();
             var peoplesBar = _barRepository.Bars();
 

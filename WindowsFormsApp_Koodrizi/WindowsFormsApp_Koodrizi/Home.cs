@@ -31,10 +31,10 @@ namespace WindowsFormsApp_Koodrizi
 
         private void BtnFinalKoodrizi_Click(object sender, EventArgs e)
         {
-            //FinallKoodrizi formFinalKoodrizi = new FinallKoodrizi();
-            //formFinalKoodrizi.Show();
-            AddKoodrizi addKood = new AddKoodrizi();
-            addKood.Show();
+            FinallKoodrizi formFinalKoodrizi = new FinallKoodrizi();
+            formFinalKoodrizi.Show();
+            //AddKoodrizi addKood = new AddKoodrizi();
+            //addKood.Show();
         }
 
         private void Home_Load(object sender, EventArgs e)

@@ -35,7 +35,6 @@
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.comCustomerSelection = new System.Windows.Forms.ComboBox();
-            this.dateTimeCreateDate = new System.Windows.Forms.DateTimePicker();
             this.txtWeight = new System.Windows.Forms.TextBox();
             this.radioKhandan = new System.Windows.Forms.RadioButton();
             this.radioDahanBast = new System.Windows.Forms.RadioButton();
@@ -48,6 +47,7 @@
             this.btnCancel = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
+            this.faDataTimeCreateDate = new FarsiLibrary.Win.Controls.FADatePicker();
             this.SuspendLayout();
             // 
             // label1
@@ -111,14 +111,6 @@
             this.comCustomerSelection.TabIndex = 6;
             this.comCustomerSelection.Text = "انتخاب مشتری";
             this.comCustomerSelection.SelectedIndexChanged += new System.EventHandler(this.ComCustomerSelection_SelectedIndexChanged);
-            // 
-            // dateTimeCreateDate
-            // 
-            this.dateTimeCreateDate.Font = new System.Drawing.Font("Vazir FD", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dateTimeCreateDate.Location = new System.Drawing.Point(244, 39);
-            this.dateTimeCreateDate.Name = "dateTimeCreateDate";
-            this.dateTimeCreateDate.Size = new System.Drawing.Size(129, 26);
-            this.dateTimeCreateDate.TabIndex = 7;
             // 
             // txtWeight
             // 
@@ -242,11 +234,22 @@
             this.label7.Text = "نوع پسته";
             this.label7.Click += new System.EventHandler(this.Label7_Click);
             // 
+            // faDataTimeCreateDate
+            // 
+            this.faDataTimeCreateDate.IsNull = false;
+            this.faDataTimeCreateDate.Location = new System.Drawing.Point(241, 40);
+            this.faDataTimeCreateDate.Name = "faDataTimeCreateDate";
+            this.faDataTimeCreateDate.SelectedDateTime = new System.DateTime(2020, 12, 24, 0, 0, 0, 0);
+            this.faDataTimeCreateDate.Size = new System.Drawing.Size(132, 20);
+            this.faDataTimeCreateDate.TabIndex = 30;
+            this.faDataTimeCreateDate.Theme = FarsiLibrary.Win.Enums.ThemeTypes.WindowsXP;
+            // 
             // Bar
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(681, 302);
+            this.Controls.Add(this.faDataTimeCreateDate);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.btnCancel);
@@ -259,7 +262,6 @@
             this.Controls.Add(this.radioDahanBast);
             this.Controls.Add(this.radioKhandan);
             this.Controls.Add(this.txtWeight);
-            this.Controls.Add(this.dateTimeCreateDate);
             this.Controls.Add(this.comCustomerSelection);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label5);
@@ -283,7 +285,6 @@
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.ComboBox comCustomerSelection;
-        private System.Windows.Forms.DateTimePicker dateTimeCreateDate;
         private System.Windows.Forms.TextBox txtWeight;
         private System.Windows.Forms.RadioButton radioKhandan;
         private System.Windows.Forms.RadioButton radioDahanBast;
@@ -296,5 +297,6 @@
         private System.Windows.Forms.Button btnCancel;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label7;
+        private FarsiLibrary.Win.Controls.FADatePicker faDataTimeCreateDate;
     }
 }

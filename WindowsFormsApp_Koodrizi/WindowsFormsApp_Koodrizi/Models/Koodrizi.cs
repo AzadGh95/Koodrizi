@@ -24,12 +24,11 @@ namespace WindowsFormsApp_Koodrizi.Models
 
         [Column(TypeName = "datetime2")]
         public DateTime CreateDate { get; set; }
-
+        public double PercentRoyat { get; set; }
 
         public int BarId { get; set; }
         [ForeignKey("BarId")]
-        public  virtual Bar Bar{get;set;}
-
+        public virtual Bar Bar{get;set;}
 
     }
 }

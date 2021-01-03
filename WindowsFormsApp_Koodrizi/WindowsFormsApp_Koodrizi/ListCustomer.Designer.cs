@@ -40,6 +40,8 @@
             // 
             // dataGridListCustomer
             // 
+            this.dataGridListCustomer.AllowUserToAddRows = false;
+            this.dataGridListCustomer.AllowUserToDeleteRows = false;
             this.dataGridListCustomer.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridListCustomer.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.row,
@@ -51,6 +53,7 @@
             this.dataGridListCustomer.Location = new System.Drawing.Point(22, 13);
             this.dataGridListCustomer.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.dataGridListCustomer.Name = "dataGridListCustomer";
+            this.dataGridListCustomer.ReadOnly = true;
             this.dataGridListCustomer.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.dataGridListCustomer.Size = new System.Drawing.Size(593, 264);
             this.dataGridListCustomer.TabIndex = 0;
@@ -66,29 +69,34 @@
             // 
             this.code.HeaderText = "کدمشتری";
             this.code.Name = "code";
+            this.code.ReadOnly = true;
             // 
             // name
             // 
             this.name.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
             this.name.HeaderText = "نام و نام خانوادگی";
             this.name.Name = "name";
+            this.name.ReadOnly = true;
             this.name.Width = 113;
             // 
             // bedehi
             // 
             this.bedehi.HeaderText = "بدهی کل";
             this.bedehi.Name = "bedehi";
+            this.bedehi.ReadOnly = true;
             // 
             // avgdate
             // 
             this.avgdate.HeaderText = " راس تاریخ";
             this.avgdate.Name = "avgdate";
+            this.avgdate.ReadOnly = true;
             // 
             // btnDelete
             // 
             this.btnDelete.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader;
             this.btnDelete.HeaderText = "حذف";
             this.btnDelete.Name = "btnDelete";
+            this.btnDelete.ReadOnly = true;
             this.btnDelete.Width = 38;
             // 
             // ListCustomer

@@ -50,36 +50,31 @@ namespace WindowsFormsApp_Koodrizi
 
         private void BtnSave_Click(object sender, EventArgs e)
         {
+            try
+            {
+                string[] token = comCustomerBar.Text.Split('>');
+                var a = token[0].ToString();
+                Koodrizi_model = new Models.Koodrizi()
+                {
+                    BarId = int.Parse(a),
+                    ArrivedDate = fadateTimeDueDate.SelectedDateTime,
+                    SellDate = fadateTimeSell.SelectedDateTime,
+                    Weight = double.Parse(txtWeightBar.Text),
+                    PercentRoyat = double.Parse(txtPercentageOfVisibility.Text)
+                };
 
+                Close();
 
-
-            string[] token = comCustomerBar.Text.Split('>');
-
-
-
-            FinallKoodrizi finallKoodrizi = new FinallKoodrizi();
-
-            //  finallKoodrizi.WeightKood = double.Parse(txtWeightBar.Text);
-            // finallKoodrizi.PersentRoyat = double.Parse(txtPercentageOfVisibility.Text);
-            // finallKoodrizi.BarId = int.Parse(token[0]);
-            //   finallKoodrizi.SellDate = DateTime.Parse(dateTimeSell.Text);
-            //  finallKoodrizi.DueDate = DateTime.Parse(dateTimeDueDate.Text);
-
-            Program.BarId = int.Parse(token[0]);
-            Program.DueDate = DateTime.Parse(dateTimeDueDate.Text);
-            Program.SellDate = DateTime.Parse(dateTimeSell.Text);
-            Program.PersentRoyat = double.Parse(txtPercentageOfVisibility.Text);
-            Program.WeightKood = double.Parse(txtWeightBar.Text);
-
-
-            var bar = _barRepository.Bar(Program.BarId);
-            finallKoodrizi.dataGridFinalKood.Rows.Add(bar.Person.Name,
-                Program.WeightKood, bar.Ounce,
-                 Program.PersentRoyat, Program.SellDate.ToString("YYYY/MM/DD"),
-                Program.DueDate.ToString("YYYY/MM/DD"));
-            Close();
-            //finallKoodrizi.Show();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("ثبت با مشکل مواجه شد");
+                //throw;
+            }
         }
+
+
+        public Models.Koodrizi Koodrizi_model { get; set; }
 
         private void BtnSearch_Click(object sender, EventArgs e)
         {
@@ -89,6 +84,10 @@ namespace WindowsFormsApp_Koodrizi
                 var bars = _barRepo.SearchBar(double.Parse(txtAsWeight.Text), double.Parse(txtToWeight.Text),
                     double.Parse(txtAsOunce.Text), double.Parse(txtToOunce.Text),
                     double.Parse(txtAdl.Text), double.Parse(txtGrams.Text), double.Parse(txtDahanBast.Text));
+                if (bars.Count == 0)
+                {
+                    MessageBox.Show("هیچ باری با این مشخصات موجود نیست.");
+                }
                 foreach (var bar in bars)
                 {
                     comCustomerBar.Items.Add(bar.BarId + ">  " + bar.Person.Name + " | انس: " + bar.Ounce + " | موجودی:" + bar.Remaining
@@ -100,10 +99,12 @@ namespace WindowsFormsApp_Koodrizi
                     comCustomerBar.Enabled = true;
                     txtWeightBar.Enabled = true;
                     txtPercentageOfVisibility.Enabled = true;
-                    dateTimeSell.Enabled = true;
-                    dateTimeDueDate.Enabled = true;
+                    //dateTimeSell.Enabled = true;
+                    //dateTimeDueDate.Enabled = true;
                     btnSave.Enabled = true;
                 }
+
+
             }
             catch (Exception ex)
             {
@@ -115,6 +116,11 @@ namespace WindowsFormsApp_Koodrizi
         private void ComCustomerBar_SelectedIndexChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void BtnCancel_Click(object sender, EventArgs e)
+        {
+            Close();
         }
     }
 }

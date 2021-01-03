@@ -33,7 +33,7 @@ namespace WindowsFormsApp_Koodrizi
                     Adl = double.Parse(txtAdl.Text),
                     Remaining = double.Parse(txtWeight.Text),
                     TotalWeight = double.Parse(txtWeight.Text),
-                    CreateDate = dateTimeCreateDate.Value,
+                    CreateDate = faDataTimeCreateDate.SelectedDateTime,
                     IdPerson = personId,
                     PistachioName = comboType.Text,
                     PistachioType = radioKhandan.Checked,
