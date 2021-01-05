@@ -91,9 +91,10 @@ namespace WindowsFormsApp_Koodrizi
 
             foreach (var item in detailkoods)
             {
+                item.FinalKoodId = _finalKoodriziRepo.LastIdFinalKoodrizi()+1;
                 _koodriziRepo.Insert(item);
                 var bar = _barRepository.Bar(item.BarId);
-                bar.Remaining = bar.Remaining - item.Weight;
+                bar.Remaining -= item.Weight;
                 _barRepository.Update(bar, item.BarId);
             }
 

@@ -11,6 +11,10 @@ namespace WindowsFormsApp_Koodrizi.Models
 {
     public class Bar
     {
+        public Bar()
+        {
+            CreateDate = DateTime.UtcNow;
+        }
         [Key]
         public int BarId { get; set; }
         [Column(TypeName = "datetime2")]

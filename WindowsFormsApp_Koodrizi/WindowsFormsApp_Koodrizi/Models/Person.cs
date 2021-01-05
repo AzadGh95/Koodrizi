@@ -11,6 +11,10 @@ namespace WindowsFormsApp_Koodrizi.Models
 {
     public class Person
     {
+        public Person()
+        {
+            CreateDate = DateTime.UtcNow;
+        }
         [Key]
         public int PersonId { get; set; }
 

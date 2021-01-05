@@ -43,12 +43,10 @@ namespace WindowsFormsApp_Koodrizi
                 }
                 else
                     MessageBox.Show("خطا در ذخیره سازی، لطفا مجددا تلاش کنید", "خطا");
-
-
             }
             catch (Exception ex)
             {
-                MessageBox.Show(ex.Message);
+            //    MessageBox.Show(ex.Message);
                 MessageBox.Show("خطا در ذخیره سازی، لطفا مجددا تلاش کنید", "خطا");
                 throw;
             }

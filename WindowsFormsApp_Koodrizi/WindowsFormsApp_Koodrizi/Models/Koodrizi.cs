@@ -10,6 +10,13 @@ namespace WindowsFormsApp_Koodrizi.Models
 {
     public class Koodrizi
     {
+
+        public Koodrizi()
+        {
+            CreateDate = DateTime.UtcNow;
+        }
+
+
         [Key]
         public int KoodId { get; set; }
         public decimal Price { get; set; }

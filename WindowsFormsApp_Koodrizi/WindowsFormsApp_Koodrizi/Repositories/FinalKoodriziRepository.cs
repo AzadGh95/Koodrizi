@@ -51,7 +51,7 @@ namespace WindowsFormsApp_Koodrizi.Repositories
                 _baseContext.FinalKoodrizis.Where(i => i.FinalKoodId == id)
                     .Update(x => new FinalKoodrizi
                     {
-                       // FinalKoodId = finalKoodrizi.FinalKoodId,
+                        // FinalKoodId = finalKoodrizi.FinalKoodId,
                         KoodName = finalKoodrizi.KoodName,
                         KoodNumber = finalKoodrizi.KoodNumber,
                         TotalOunce = finalKoodrizi.TotalOunce,
@@ -79,7 +79,18 @@ namespace WindowsFormsApp_Koodrizi.Repositories
                 throw;
             }
         }
-
+        public int LastIdFinalKoodrizi()
+        {
+            try
+            {
+                var f = _baseContext.FinalKoodrizis.Count();
+                return f;
+            }
+            catch (Exception ex)
+            {
+                throw;
+            }
+        }
         public List<Models.FinalKoodrizi> FinalKoodrizis()
         {
             try
