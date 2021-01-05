@@ -8,9 +8,9 @@ using System.Threading.Tasks;
 
 namespace WindowsFormsApp_Koodrizi.Models
 {
-    public class FinalKoodrizi
+    public class FinalKoodriziModel
     {
-        public FinalKoodrizi()
+        public FinalKoodriziModel()
         {
             CreateDate = DateTime.UtcNow;
         }
@@ -25,7 +25,7 @@ namespace WindowsFormsApp_Koodrizi.Models
         public DateTime CreateDate { get; set; }
 
         public double TotalWeight { get; set; }
-        public virtual List<DetailsKood> DetailKoodrizis { get; set; }
+        public virtual List<DKood> DetailKoodrizis { get; set; }
 
 
         public decimal PriceDahanBast { get; set; }

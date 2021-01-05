@@ -15,16 +15,17 @@ namespace WindowsFormsApp_Koodrizi.Repositories
         {
             _baseContext = new DataBaseContext.DataBaseContext();
         }
-        public bool Insert(Models.Koodrizi koodrizi)
+        public bool Insert(Models.DKood koodrizi)
         {
             try
             {
-                _baseContext.Koodrizis.Add(koodrizi);
+               // koodrizi.DId=_baseContext.DKoods.Count() + 1;
+                _baseContext.DKoods.Add(koodrizi);
                 _baseContext.SaveChanges();
 
                 return true;
             }
-            catch (Exception)
+            catch (Exception ex)
             {
                 throw;
             }
@@ -34,7 +35,7 @@ namespace WindowsFormsApp_Koodrizi.Repositories
         {
             try
             {
-                _baseContext.Koodrizis.Where(i => i.BarId == id).Delete();
+                _baseContext.DKoods.Where(i => i.BarId == id).Delete();
                 return true;
             }
             catch (Exception)
@@ -44,12 +45,12 @@ namespace WindowsFormsApp_Koodrizi.Repositories
             }
         }
 
-        public bool Update(Models.Koodrizi koodrizi, int id)
+        public bool Update(Models.DKood koodrizi, int id)
         {
             try
             {
-                _baseContext.Koodrizis.Where(i => i.KoodId == id)
-                    .Update(x => new Models.Koodrizi
+                _baseContext.DKoods.Where(i => i.DId == id)
+                    .Update(x => new Models.DKood
                     {
                         Price = koodrizi.Price,
                         SellDate = koodrizi.SellDate,
@@ -58,7 +59,6 @@ namespace WindowsFormsApp_Koodrizi.Repositories
                         BarId = koodrizi.BarId,
                         FinalKoodId = koodrizi.FinalKoodId,
                         PercentRoyat = koodrizi.PercentRoyat,
-                        
                     });
                 return true;
             }
@@ -69,11 +69,11 @@ namespace WindowsFormsApp_Koodrizi.Repositories
             }
         }
 
-        public Models.Koodrizi Koodrizi(int id)
+        public Models.DKood Koodrizi(int id)
         {
             try
             {
-                return _baseContext.Koodrizis.Where(i => i.KoodId == id).FirstOrDefault();
+                return _baseContext.DKoods.Where(i => i.DId == id).FirstOrDefault();
             }
             catch (Exception)
             {
@@ -82,11 +82,11 @@ namespace WindowsFormsApp_Koodrizi.Repositories
             }
         }
 
-        public List<Models.Koodrizi> Koodrizis()
+        public List<Models.DKood> Koodrizis()
         {
             try
             {
-                return _baseContext.Koodrizis.AsNoTracking().ToList();
+                return _baseContext.DKoods.AsNoTracking().ToList();
             }
             catch (Exception)
             {

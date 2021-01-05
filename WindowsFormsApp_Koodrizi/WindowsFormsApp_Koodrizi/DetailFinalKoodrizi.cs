@@ -32,7 +32,7 @@ namespace WindowsFormsApp_Koodrizi
             int i = 0;
             if (finalListKood != null)
             {
-                foreach (var item in finalListKood.Koodrizis)
+                foreach (var item in finalListKood.DetailKoodrizis)
                 {
                     dataGridDetailKoods.Rows[i].Cells[0].Value = item.Bar.Person.Name + " [" + item.Bar.Person.Code + "] ";
                     dataGridDetailKoods.Rows[i].Cells[1].Value = item.Bar.Ounce;
@@ -54,7 +54,6 @@ namespace WindowsFormsApp_Koodrizi
 
         private void DataGridDetailKoods_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-
         }
     }
 }

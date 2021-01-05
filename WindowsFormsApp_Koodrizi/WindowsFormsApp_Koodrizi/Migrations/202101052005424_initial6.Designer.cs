@@ -7,13 +7,13 @@ namespace WindowsFormsApp_Koodrizi.Migrations
     using System.Resources;
     
     [GeneratedCode("EntityFramework.Migrations", "6.4.4")]
-    public sealed partial class addnew : IMigrationMetadata
+    public sealed partial class initial6 : IMigrationMetadata
     {
-        private readonly ResourceManager Resources = new ResourceManager(typeof(addnew));
+        private readonly ResourceManager Resources = new ResourceManager(typeof(initial6));
         
         string IMigrationMetadata.Id
         {
-            get { return "202012311035589_add-new"; }
+            get { return "202101052005424_initial6"; }
         }
         
         string IMigrationMetadata.Source

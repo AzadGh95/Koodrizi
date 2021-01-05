@@ -15,11 +15,11 @@ namespace WindowsFormsApp_Koodrizi.Repositories
         {
             _baseContext = new DataBaseContext.DataBaseContext();
         }
-        public bool Insert(Models.Bar bar)
+        public bool Insert(Models.BarModel bar)
         {
             try
             {
-                _baseContext.Bars.Add(bar);
+                _baseContext.BarModels.Add(bar);
                 _baseContext.SaveChanges();
 
                 return true;
@@ -34,7 +34,7 @@ namespace WindowsFormsApp_Koodrizi.Repositories
         {
             try
             {
-                _baseContext.Bars.Where(i => i.BarId == id).Delete();
+                _baseContext.BarModels.Where(i => i.BarId == id).Delete();
                 return true;
             }
             catch (Exception)
@@ -44,12 +44,12 @@ namespace WindowsFormsApp_Koodrizi.Repositories
             }
         }
 
-        public bool Update(Models.Bar bar, int id)
+        public bool Update(Models.BarModel bar, int id)
         {
             try
             {
-                _baseContext.Bars.Where(i => i.BarId == id)
-                    .Update(x => new Models.Bar { });
+                _baseContext.BarModels.Where(i => i.BarId == id)
+                    .Update(x => new Models.BarModel { });
                 return true;
             }
             catch (Exception)
@@ -59,11 +59,11 @@ namespace WindowsFormsApp_Koodrizi.Repositories
             }
         }
 
-        public Models.Bar Bar(int id)
+        public Models.BarModel Bar(int id)
         {
             try
             {
-                return _baseContext.Bars.Where(i => i.BarId == id).FirstOrDefault();
+                return _baseContext.BarModels.Where(i => i.BarId == id).FirstOrDefault();
             }
             catch (Exception)
             {
@@ -72,11 +72,11 @@ namespace WindowsFormsApp_Koodrizi.Repositories
             }
         }
 
-        public List<Models.Bar> Bars()
+        public List<Models.BarModel> Bars()
         {
             try
             {
-                return _baseContext.Bars.AsNoTracking().ToList();
+                return _baseContext.BarModels.AsNoTracking().ToList();
             }
             catch (Exception ex)
             {
@@ -84,13 +84,13 @@ namespace WindowsFormsApp_Koodrizi.Repositories
                 throw;
             }
         }
-        public List<Models.Bar> SearchBar(double weight1, double weight2,
+        public List<Models.BarModel> SearchBar(double weight1, double weight2,
             double ounce1, double ounce2,
             double adl, double gram, double dahanbast)
         {
 
             var bars =
-            _baseContext.Bars
+            _baseContext.BarModels
                 .Where(x => x.IsLock == false)
                 .Where(x => gram == 0.0 || x.Gram == gram)
                 .Where(x => adl == 0.0 || x.Adl == adl)

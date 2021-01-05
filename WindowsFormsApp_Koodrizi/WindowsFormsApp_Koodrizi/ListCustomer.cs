@@ -26,25 +26,6 @@ namespace WindowsFormsApp_Koodrizi
             var people = _personRepository.Peoples();
             foreach (var prop in people)
                 dataGridListCustomer.Rows.Add(prop.PersonId, prop.Code, prop.Name, prop.Total, prop.AvgDate.ToString("yyyy/MM/dd"));
-
-
-
-            //DataGridViewButtonColumn btnDelete = new DataGridViewButtonColumn();
-            //dataGridListCustomer.Columns.Add(btnDelete);
-            //btnDelete.HeaderText = "حذف";
-            //btnDelete.Text = "حذف";
-            //btnDelete.Name = "btnDelete";
-            //btnDelete.UseColumnTextForButtonValue = true;
-            //btnDelete.AutoSizeMode = DataGridViewAutoSizeColumnMode.ColumnHeader;
-            ////................
-            //DataGridViewButtonColumn btnEdit = new DataGridViewButtonColumn();
-            //dataGridListCustomer.Columns.Add(btnEdit);
-            //btnEdit.HeaderText = "ویرایش";
-            //btnEdit.Text = "ویرایش";
-            //btnEdit.Name = "btnEdit";
-            //btnEdit.UseColumnTextForButtonValue = true;
-            //btnEdit.AutoSizeMode = DataGridViewAutoSizeColumnMode.ColumnHeader;
-
         }
 
 

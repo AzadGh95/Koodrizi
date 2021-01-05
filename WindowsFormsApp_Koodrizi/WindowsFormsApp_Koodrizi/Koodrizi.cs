@@ -54,7 +54,7 @@ namespace WindowsFormsApp_Koodrizi
             {
                 string[] token = comCustomerBar.Text.Split('>');
                 var a = token[0].ToString();
-                Koodrizi_model = new Models.Koodrizi()
+                Koodrizi_model = new Models.DKood()
                 {
                     BarId = int.Parse(a),
                     ArrivedDate = fadateTimeDueDate.SelectedDateTime,
@@ -74,7 +74,7 @@ namespace WindowsFormsApp_Koodrizi
         }
 
 
-        public Models.Koodrizi Koodrizi_model { get; set; }
+        public Models.DKood Koodrizi_model { get; set; }
 
         private void BtnSearch_Click(object sender, EventArgs e)
         {
@@ -121,6 +121,11 @@ namespace WindowsFormsApp_Koodrizi
         private void BtnCancel_Click(object sender, EventArgs e)
         {
             Close();
+        }
+
+        private void Koodrizi_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

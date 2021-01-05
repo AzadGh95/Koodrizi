@@ -26,7 +26,7 @@ namespace WindowsFormsApp_Koodrizi
         {
             try
             {
-                Models.Bar bar = new Models.Bar() { };
+                Models.BarModel bar = new Models.BarModel() { };
 
                 string[] token = comCustomerSelection.Text.Split('[');
                 var a = token[1].ToString();

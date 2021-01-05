@@ -15,11 +15,11 @@ namespace WindowsFormsApp_Koodrizi.Repositories
         {
             _baseContext = new DataBaseContext.DataBaseContext();
         }
-        public bool Insert(Models.FinalKoodrizi finalKoodrizi)
+        public bool Insert(Models.FinalKoodriziModel finalKoodrizi)
         {
             try
             {
-                _baseContext.FinalKoodrizis.Add(finalKoodrizi);
+                _baseContext.FinalKoodriziModels.Add(finalKoodrizi);
                 _baseContext.SaveChanges();
 
                 return true;
@@ -34,7 +34,7 @@ namespace WindowsFormsApp_Koodrizi.Repositories
         {
             try
             {
-                _baseContext.Koodrizis.Where(i => i.BarId == id).Delete();
+                _baseContext.FinalKoodriziModels.Where(i => i.FinalKoodId == id).Delete();
                 return true;
             }
             catch (Exception)
@@ -44,12 +44,12 @@ namespace WindowsFormsApp_Koodrizi.Repositories
             }
         }
 
-        public bool Update(Models.FinalKoodrizi finalKoodrizi, int id)
+        public bool Update(Models.FinalKoodriziModel finalKoodrizi, int id)
         {
             try
             {
-                _baseContext.FinalKoodrizis.Where(i => i.FinalKoodId == id)
-                    .Update(x => new FinalKoodrizi
+                _baseContext.FinalKoodriziModels.Where(i => i.FinalKoodId == id)
+                    .Update(x => new FinalKoodriziModel
                     {
                         // FinalKoodId = finalKoodrizi.FinalKoodId,
                         KoodName = finalKoodrizi.KoodName,
@@ -67,11 +67,11 @@ namespace WindowsFormsApp_Koodrizi.Repositories
             }
         }
 
-        public Models.FinalKoodrizi FinalKoodrizi(int id)
+        public Models.FinalKoodriziModel FinalKoodrizi(int id)
         {
             try
             {
-                return _baseContext.FinalKoodrizis.Where(i => i.FinalKoodId == id).FirstOrDefault();
+                return _baseContext.FinalKoodriziModels.Where(i => i.FinalKoodId == id).FirstOrDefault();
             }
             catch (Exception)
             {
@@ -83,7 +83,7 @@ namespace WindowsFormsApp_Koodrizi.Repositories
         {
             try
             {
-                var f = _baseContext.FinalKoodrizis.Count();
+                var f = _baseContext.FinalKoodriziModels.Count();
                 return f;
             }
             catch (Exception ex)
@@ -91,11 +91,11 @@ namespace WindowsFormsApp_Koodrizi.Repositories
                 throw;
             }
         }
-        public List<Models.FinalKoodrizi> FinalKoodrizis()
+        public List<Models.FinalKoodriziModel> FinalKoodrizis()
         {
             try
             {
-                return _baseContext.FinalKoodrizis.AsNoTracking().ToList();
+                return _baseContext.FinalKoodriziModels.AsNoTracking().ToList();
             }
             catch (Exception)
             {
@@ -104,11 +104,11 @@ namespace WindowsFormsApp_Koodrizi.Repositories
             }
         }
 
-        public Models.FinalKoodrizi FinalKoodrizi(string search)
+        public Models.FinalKoodriziModel FinalKoodrizi(string search)
         {
             try
             {
-                return _baseContext.FinalKoodrizis.Where(i => i.KoodNumber == search).FirstOrDefault();
+                return _baseContext.FinalKoodriziModels.Where(i => i.KoodNumber == search).FirstOrDefault();
             }
             catch (Exception)
             {

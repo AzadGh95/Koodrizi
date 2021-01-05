@@ -385,6 +385,7 @@
             this.Name = "Koodrizi";
             this.StartPosition = System.Windows.Forms.FormStartPosition.Manual;
             this.Text = "کودریزی";
+            this.Load += new System.EventHandler(this.Koodrizi_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

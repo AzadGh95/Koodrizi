@@ -3,30 +3,33 @@
     using System;
     using System.Data.Entity.Migrations;
     
-    public partial class Initail : DbMigration
+    public partial class initial6 : DbMigration
     {
         public override void Up()
         {
             CreateTable(
-                "dbo.Bars",
+                "dbo.BarModels",
                 c => new
                     {
                         BarId = c.Int(nullable: false, identity: true),
                         CreateDate = c.DateTime(nullable: false, precision: 7, storeType: "datetime2"),
                         TotalWeight = c.Double(nullable: false),
                         Remaining = c.Double(nullable: false),
-                        Ounce = c.String(),
+                        Ounce = c.Double(nullable: false),
                         IsLock = c.Boolean(nullable: false),
                         IdPerson = c.Int(nullable: false),
                         Adl = c.Double(nullable: false),
-                        Extra = c.Double(nullable: false),
+                        DhanBast = c.Double(nullable: false),
+                        PistachioName = c.String(),
+                        PistachioType = c.Boolean(nullable: false),
+                        Gram = c.Double(nullable: false),
                     })
                 .PrimaryKey(t => t.BarId)
-                .ForeignKey("dbo.People", t => t.IdPerson, cascadeDelete: true)
+                .ForeignKey("dbo.PersonModels", t => t.IdPerson, cascadeDelete: true)
                 .Index(t => t.IdPerson);
             
             CreateTable(
-                "dbo.People",
+                "dbo.PersonModels",
                 c => new
                     {
                         PersonId = c.Int(nullable: false, identity: true),
@@ -41,7 +44,7 @@
                 .PrimaryKey(t => t.PersonId);
             
             CreateTable(
-                "dbo.FinalKoodrizis",
+                "dbo.FinalKoodriziModels",
                 c => new
                     {
                         FinalKoodId = c.Int(nullable: false, identity: true),
@@ -51,44 +54,33 @@
                         TotalOunce = c.String(),
                         CreateDate = c.DateTime(nullable: false, precision: 7, storeType: "datetime2"),
                         TotalWeight = c.Double(nullable: false),
-                        Remining = c.Double(nullable: false),
-                        KoodId = c.Int(nullable: false),
+                        PriceDahanBast = c.Decimal(nullable: false, precision: 18, scale: 2),
+                        PriceOunce = c.Decimal(nullable: false, precision: 18, scale: 2),
+                        BasePrice = c.Decimal(nullable: false, precision: 18, scale: 2),
                     })
                 .PrimaryKey(t => t.FinalKoodId);
             
-            CreateTable(
-                "dbo.Koodrizis",
-                c => new
-                    {
-                        KoodId = c.Int(nullable: false),
-                        Price = c.Decimal(nullable: false, precision: 18, scale: 2),
-                        Weight = c.Double(nullable: false),
-                        Remining = c.Double(nullable: false),
-                        SellDate = c.DateTime(nullable: false, precision: 7, storeType: "datetime2"),
-                        ArrivedDate = c.DateTime(nullable: false, precision: 7, storeType: "datetime2"),
-                        CreateDate = c.DateTime(nullable: false, precision: 7, storeType: "datetime2"),
-                        BarId = c.Int(nullable: false),
-                    })
-                .PrimaryKey(t => t.KoodId)
-                .ForeignKey("dbo.Bars", t => t.BarId, cascadeDelete: true)
-                .ForeignKey("dbo.FinalKoodrizis", t => t.KoodId)
-                .Index(t => t.KoodId)
-                .Index(t => t.BarId);
-            
+            AddColumn("dbo.DKoods", "BarId", c => c.Int(nullable: false));
+            AddColumn("dbo.DKoods", "FinalKoodId", c => c.Int(nullable: false));
+            CreateIndex("dbo.DKoods", "BarId");
+            CreateIndex("dbo.DKoods", "FinalKoodId");
+            AddForeignKey("dbo.DKoods", "BarId", "dbo.BarModels", "BarId", cascadeDelete: true);
+            AddForeignKey("dbo.DKoods", "FinalKoodId", "dbo.FinalKoodriziModels", "FinalKoodId", cascadeDelete: true);
         }
         
         public override void Down()
         {
-            DropForeignKey("dbo.Koodrizis", "KoodId", "dbo.FinalKoodrizis");
-            DropForeignKey("dbo.Koodrizis", "BarId", "dbo.Bars");
-            DropForeignKey("dbo.Bars", "IdPerson", "dbo.People");
-            DropIndex("dbo.Koodrizis", new[] { "BarId" });
-            DropIndex("dbo.Koodrizis", new[] { "KoodId" });
-            DropIndex("dbo.Bars", new[] { "IdPerson" });
-            DropTable("dbo.Koodrizis");
-            DropTable("dbo.FinalKoodrizis");
-            DropTable("dbo.People");
-            DropTable("dbo.Bars");
+            DropForeignKey("dbo.DKoods", "FinalKoodId", "dbo.FinalKoodriziModels");
+            DropForeignKey("dbo.DKoods", "BarId", "dbo.BarModels");
+            DropForeignKey("dbo.BarModels", "IdPerson", "dbo.PersonModels");
+            DropIndex("dbo.DKoods", new[] { "FinalKoodId" });
+            DropIndex("dbo.DKoods", new[] { "BarId" });
+            DropIndex("dbo.BarModels", new[] { "IdPerson" });
+            DropColumn("dbo.DKoods", "FinalKoodId");
+            DropColumn("dbo.DKoods", "BarId");
+            DropTable("dbo.FinalKoodriziModels");
+            DropTable("dbo.PersonModels");
+            DropTable("dbo.BarModels");
         }
     }
 }

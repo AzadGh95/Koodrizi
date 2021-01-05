@@ -8,17 +8,17 @@ using System.Threading.Tasks;
 
 namespace WindowsFormsApp_Koodrizi.Models
 {
-    public class Koodrizi
+    public class DKood
     {
-
-        public Koodrizi()
+        public DKood()
         {
             CreateDate = DateTime.UtcNow;
         }
 
-
         [Key]
-        public int KoodId { get; set; }
+        public int DId { get; set; }
+
+
         public decimal Price { get; set; }
         public double Weight { get; set; }
 
@@ -34,15 +34,17 @@ namespace WindowsFormsApp_Koodrizi.Models
 
         public int BarId { get; set; }
         [ForeignKey("BarId")]
-        public virtual Bar Bar{get;set;}
+        public virtual BarModel Bar { get; set; }
 
         public int FinalKoodId { get; set; }
         [ForeignKey("FinalKoodId")]
-        public virtual FinalKoodrizi FinalKoodrizi { get; set; }
+        public virtual FinalKoodriziModel FinalKoodrizi { get; set; }
 
-        public double zarib { get; set; }
-        public double baseOunce { get; set; }
-        public double baseDahanBast { get; set; }
-        public double basePercentRoyat { get; set; }
+        public double Zarib { get; set; }
+        public double BaseOunce { get; set; }
+        public double BaseDahanBast { get; set; }
+        public double BasePercentRoyat { get; set; }
+        public string extra { get; set; }
+
     }
 }

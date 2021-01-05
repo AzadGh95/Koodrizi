@@ -26,7 +26,7 @@ namespace WindowsFormsApp_Koodrizi
         {
             try
             {
-                Person person = new Person()
+                PersonModel person = new PersonModel()
                 {
                     CreateDate = DateTime.UtcNow,
                     Name = txtName.Text,

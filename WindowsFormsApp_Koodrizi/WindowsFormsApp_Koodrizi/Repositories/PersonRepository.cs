@@ -15,11 +15,11 @@ namespace WindowsFormsApp_Koodrizi.Repositories
         {
             _baseContext = new DataBaseContext.DataBaseContext();
         }
-        public bool Insert(Person person)
+        public bool Insert(PersonModel person)
         {
             try
             {
-                _baseContext.People.Add(person);
+                _baseContext.PersonModels.Add(person);
                 _baseContext.SaveChanges();
                 return true;
             }
@@ -36,7 +36,7 @@ namespace WindowsFormsApp_Koodrizi.Repositories
         {
             try
             {
-                _baseContext.People.Where(i => i.PersonId == id).Delete();
+                _baseContext.PersonModels.Where(i => i.PersonId == id).Delete();
                 return true;
             }
             catch (Exception)
@@ -46,10 +46,10 @@ namespace WindowsFormsApp_Koodrizi.Repositories
             }
         }
 
-        public bool Update(Person person,int id) {
+        public bool Update(PersonModel person,int id) {
             try
             {
-                _baseContext.People.Where(i => i.PersonId == id).Update(x => new Person {
+                _baseContext.PersonModels.Where(i => i.PersonId == id).Update(x => new PersonModel {
                     Name = person.Name,
                     AvgDate = person.AvgDate,
                     PhoneNumber = person.PhoneNumber,
@@ -64,11 +64,11 @@ namespace WindowsFormsApp_Koodrizi.Repositories
             }
         }
 
-        public Person People(int id)
+        public PersonModel People(int id)
         {
             try
             {
-                return _baseContext.People.Where(i => i.PersonId == id).FirstOrDefault();
+                return _baseContext.PersonModels.Where(i => i.PersonId == id).FirstOrDefault();
             }
             catch (Exception)
             {
@@ -81,7 +81,7 @@ namespace WindowsFormsApp_Koodrizi.Repositories
         {
             try
             {
-                return _baseContext.People.Where(i => i.Code == code).FirstOrDefault().PersonId;
+                return _baseContext.PersonModels.Where(i => i.Code == code).FirstOrDefault().PersonId;
             }
             catch (Exception)
             {
@@ -89,11 +89,11 @@ namespace WindowsFormsApp_Koodrizi.Repositories
             }
         }
 
-        public List<Person> Peoples()
+        public List<PersonModel> Peoples()
         {
             try
             {
-                return _baseContext.People.AsNoTracking().ToList();
+                return _baseContext.PersonModels.AsNoTracking().ToList();
             }
             catch (Exception)
             {
