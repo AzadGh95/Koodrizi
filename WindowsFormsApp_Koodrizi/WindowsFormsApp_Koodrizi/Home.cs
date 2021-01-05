@@ -53,5 +53,11 @@ namespace WindowsFormsApp_Koodrizi
             ListBars listBars = new ListBars();
             listBars.Show();
         }
+
+        private void BtnListKoodrizi_Click(object sender, EventArgs e)
+        {
+            DetailFinalKoodrizi detailFinalKoodrizi = new DetailFinalKoodrizi();
+            detailFinalKoodrizi.Show();
+        }
     }
 }

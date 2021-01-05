@@ -32,5 +32,10 @@ namespace WindowsFormsApp_Koodrizi.Models
         public int FinalKoodId { get; set; }
         [ForeignKey("FinalKoodId")]
         public virtual FinalKoodrizi FinalKoodrizi { get; set; }
+
+        public double zarib { get; set; }
+        public double baseOunce { get; set; }
+        public double baseDahanBast { get; set; }
+        public double basePercentRoyat { get; set; }
     }
 }

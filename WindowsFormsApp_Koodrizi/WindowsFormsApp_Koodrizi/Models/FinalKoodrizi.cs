@@ -26,5 +26,10 @@ namespace WindowsFormsApp_Koodrizi.Models
 
         public double TotalWeight { get; set; }
         public virtual List<Koodrizi> Koodrizis { get; set; }
+
+
+        public decimal PriceDahanBast { get; set; }
+        public decimal PriceOunce { get; set; }
+        public decimal BasePrice { get; set; }
     }
 }

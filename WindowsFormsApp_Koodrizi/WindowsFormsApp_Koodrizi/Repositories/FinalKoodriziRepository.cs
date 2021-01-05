@@ -93,5 +93,18 @@ namespace WindowsFormsApp_Koodrizi.Repositories
             }
         }
 
+        public Models.FinalKoodrizi FinalKoodrizi(string search)
+        {
+            try
+            {
+                return _baseContext.FinalKoodrizis.Where(i => i.KoodNumber == search).FirstOrDefault();
+            }
+            catch (Exception)
+            {
+                return null;
+                throw;
+            }
+        }
+
     }
 }

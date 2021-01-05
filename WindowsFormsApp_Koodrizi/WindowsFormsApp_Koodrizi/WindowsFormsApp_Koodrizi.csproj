@@ -146,6 +146,14 @@
     <Compile Include="Migrations\202101040613316_delete-migration.designer.cs">
       <DependentUpon>202101040613316_delete-migration.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202101050627073_add-to-finalkood.cs" />
+    <Compile Include="Migrations\202101050627073_add-to-finalkood.designer.cs">
+      <DependentUpon>202101050627073_add-to-finalkood.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202101050854181_add-to-kood.cs" />
+    <Compile Include="Migrations\202101050854181_add-to-kood.designer.cs">
+      <DependentUpon>202101050854181_add-to-kood.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Bar.cs" />
     <Compile Include="Models\FinalKoodrizi.cs" />
@@ -198,6 +206,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202101040613316_delete-migration.resx">
       <DependentUpon>202101040613316_delete-migration.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202101050627073_add-to-finalkood.resx">
+      <DependentUpon>202101050627073_add-to-finalkood.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202101050854181_add-to-kood.resx">
+      <DependentUpon>202101050854181_add-to-kood.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

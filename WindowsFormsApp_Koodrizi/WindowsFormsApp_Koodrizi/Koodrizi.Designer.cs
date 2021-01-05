@@ -265,7 +265,7 @@
             this.txtPercentageOfVisibility.Name = "txtPercentageOfVisibility";
             this.txtPercentageOfVisibility.Size = new System.Drawing.Size(181, 26);
             this.txtPercentageOfVisibility.TabIndex = 12;
-            this.txtPercentageOfVisibility.Text = "1";
+            this.txtPercentageOfVisibility.Text = "0";
             // 
             // label11
             // 

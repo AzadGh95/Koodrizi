@@ -22,6 +22,8 @@ namespace WindowsFormsApp_Koodrizi
         private List<Models.Koodrizi> detailkoods = new List<Models.Koodrizi>();
         private double sumPrice = 0;
         private double sumOunce = 0;
+        private double sumDahanBst = 0;
+        private double sumPercentRoyat = 0;
         private double sumWeight = 0;
         private KoodriziRepository _koodriziRepo = new KoodriziRepository();
         private FinalKoodriziRepository _finalKoodriziRepo = new FinalKoodriziRepository();
@@ -33,6 +35,7 @@ namespace WindowsFormsApp_Koodrizi
         private DateTime dateTimeKood;
         private double ounceKood;
         private decimal priceKood;
+        private decimal basePriceCalculate;
 
 
         public FinallKoodrizi()
@@ -71,26 +74,32 @@ namespace WindowsFormsApp_Koodrizi
         private void BtnSave_Click(object sender, EventArgs e)
         {
             //save to db
-            foreach (var item in detailkoods)
-            {
-                _koodriziRepo.Insert(item);
-                var bar = _barRepository.Bar(item.BarId);
-                bar.Remaining = bar.Remaining - item.Weight;
-                _barRepository.Update(bar, item.BarId);
-                var person = bar.Person;
-                //راس گیری
-                //
-                // _personRepo.Update(bar.Person , bar.IdPerson);
 
-            }
-            _finalKoodriziRepo.Insert(new Models.FinalKoodrizi()
+            var finalkood = new Models.FinalKoodrizi()
             {
                 KoodNumber = txtKoodNumber.Text,
                 KoodName = txtKoodName.Text,
                 TotalOunce = lblTtalOunce.Text,
                 TotalWeight = sumWeight,
                 TotalPrice = (decimal)sumPrice,
-            });
+                BasePrice = decimal.Parse(txPriceperkilo.Text),
+                PriceOunce = decimal.Parse(txtOuncePrice.Text),
+                PriceDahanBast = decimal.Parse(txtDahanBastprice.Text),
+                
+            };
+
+
+            foreach (var item in detailkoods)
+            {
+                _koodriziRepo.Insert(item);
+                var bar = _barRepository.Bar(item.BarId);
+                bar.Remaining = bar.Remaining - item.Weight;
+                _barRepository.Update(bar, item.BarId);
+            }
+
+            finalkood.Koodrizis = detailkoods;
+            _finalKoodriziRepo.Insert(finalkood);
+
         }
 
         private void BtnCancel_Click(object sender, EventArgs e)
@@ -143,7 +152,7 @@ namespace WindowsFormsApp_Koodrizi
         private void BtnCalculateKood_Click(object sender, EventArgs e)
         {
             detailkoods.Clear();
-            btnCalculateKood.Enabled = false;
+            //btnCalculateKood.Enabled = false;
             double priceOunce = double.Parse(txtOuncePrice.Text);
             double priceDahanBast = double.Parse(txtDahanBastprice.Text);
             nameKood = txtKoodName.Text;
@@ -174,32 +183,47 @@ namespace WindowsFormsApp_Koodrizi
             foreach (var item in detailkoods)
             {
                 var bar = _barRepository.Bar(item.BarId);
-                var zarib = Zarib(detailkoods, item.Weight);
+                item.zarib = Zarib(detailkoods, item.Weight);
                 //var baseOunce = BaseOunce(detailkoods, zarib);
-                var baseOunce = bar.Ounce * zarib;
+                item.baseOunce = bar.Ounce * item.zarib;
                 //var baseDahanBast = BaseDahanBast(detailkoods, zarib);
-                var baseDahanBast = bar.DhanBast * zarib;
+                item.baseDahanBast = bar.DhanBast * item.zarib;
+                item.basePercentRoyat = item.PercentRoyat * item.zarib;
+                ////var priceElement = CalculateKoodRizi(basePriceCalculate, item.PercentRoyat, baseOunce,
+                ////     baseDahanBast, bar.Ounce, bar.DhanBast, priceOunce, priceDahanBast);
+                ////item.Price = (decimal)priceElement;
+                ////dataGridFinalKood.Rows[j].Cells[7].Value = priceElement.ToString("#,###");
+                ////dataGridFinalKood.Rows[j].Cells[8].Value = (item.Weight * priceElement).ToString("#,###");
+                ////j++;
 
-                var priceElement = CalculateKoodRizi(priceKood, item.PercentRoyat, baseOunce,
-                     baseDahanBast, bar.Ounce, bar.DhanBast, priceOunce, priceDahanBast);
+
+                ////sumPrice += priceElement;
+                sumPercentRoyat += item.basePercentRoyat;
+                sumWeight += item.Weight;
+
+                sumOunce += item.baseOunce;
+                sumDahanBst += item.baseDahanBast;
+            }
+            //sumPrice *= sumWeight;
+            basePriceCalculate = (decimal)(double.Parse(txPriceperkilo.Text) * (1 - sumPercentRoyat));
+
+            foreach (var item in detailkoods)
+            {
+                var bar = _barRepository.Bar(item.BarId);
+                var priceElement = CalculateKoodRizi(basePriceCalculate, item.PercentRoyat, sumOunce,
+                     sumDahanBst, bar.Ounce, bar.DhanBast, priceOunce, priceDahanBast);
                 item.Price = (decimal)priceElement;
                 dataGridFinalKood.Rows[j].Cells[7].Value = priceElement.ToString("#,###");
                 dataGridFinalKood.Rows[j].Cells[8].Value = (item.Weight * priceElement).ToString("#,###");
                 j++;
 
-                //ذخیره کردن در مدل ها
 
-                sumOunce += baseOunce;
-                sumPrice += priceElement;
-                sumWeight += item.Weight;
+                sumPrice += (item.Weight * priceElement);
 
             }
-            sumPrice *= sumWeight;
 
             lblTotalPrice.Text = sumPrice.ToString("#,###");
             lblTtalOunce.Text = sumOunce.ToString();
-            //ذخیره در لیست مدل
-            //کم کردن از موجودی
 
         }
         private double Zarib(List<Models.Koodrizi> koodmodel, double weightBar)
@@ -210,38 +234,40 @@ namespace WindowsFormsApp_Koodrizi
             {
                 sum += item.Weight;
             }
-            return weightBar / sum;
-        }
-
-        private double BaseOunce(List<Models.Koodrizi> detailKood, double zarib)
-        {
-            double sum = 0;
-            foreach (var item in detailKood)
-            {
-                var bar = _barRepository.Bar(item.BarId);
-                sum += bar.Ounce;
-            }
-            var result = sum * zarib;
+            var result = weightBar / sum;
             return result;
         }
 
-        private double BaseDahanBast(List<Models.Koodrizi> detailKood, double zarib)
+        //private double BaseOunce(List<Models.Koodrizi> detailKood, double zarib)
+        //{
+        //    double sum = 0;
+        //    foreach (var item in detailKood)
+        //    {
+        //        var bar = _barRepository.Bar(item.BarId);
+        //        sum += bar.Ounce;
+        //    }
+        //    var result = sum * zarib;
+        //    return result;
+        //}
+
+        //private double BaseDahanBast(List<Models.Koodrizi> detailKood, double zarib)
+        //{
+        //    double sum = 0;
+        //    foreach (var item in detailKood)
+        //    {
+        //        var bar = _barRepository.Bar(item.BarId);
+        //        sum += bar.DhanBast;
+        //    }
+        //    var result = sum * zarib;
+        //    return result;
+        //}
+        private double CalculateKoodRizi(decimal bacePriceCalculate, double percentRoyat, double baceOunce,
+            double baseDahanBast, double ounce, double dahanBast, double priceOunce,double priceDahanBast  )
         {
-            double sum = 0;
-            foreach (var item in detailKood)
-            {
-                var bar = _barRepository.Bar(item.BarId);
-                sum += bar.DhanBast;
-            }
-            var result = sum * zarib;
-            return result;
-        }
-        private double CalculateKoodRizi(decimal bacePrice, double percentRoyat,
-            double baceOunce, double baseDahanBast, double ounce, double dahanBast, double priceOunce,
-            double priceDahanBast)
-        {
-            var price = (percentRoyat / 100) *
-                (double.Parse(bacePrice.ToString()) - (ounce - baceOunce) * priceOunce + (dahanBast - baseDahanBast));
+            var price = ((percentRoyat / 100) + 1) *
+                ((double)bacePriceCalculate - ((ounce - baceOunce) * priceOunce)
+                +
+                ((baseDahanBast - dahanBast) * priceDahanBast));
             return price;
         }
     }
