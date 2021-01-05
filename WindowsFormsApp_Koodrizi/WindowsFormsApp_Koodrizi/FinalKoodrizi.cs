@@ -22,6 +22,7 @@ namespace WindowsFormsApp_Koodrizi
         private List<Models.Koodrizi> detailkoods = new List<Models.Koodrizi>();
         private double sumPrice = 0;
         private double sumOunce = 0;
+        private double sumWeight = 0;
         private KoodriziRepository _koodriziRepo = new KoodriziRepository();
         private FinalKoodriziRepository _finalKoodriziRepo = new FinalKoodriziRepository();
         private PersonRepository _personRepo = new PersonRepository();
@@ -73,12 +74,22 @@ namespace WindowsFormsApp_Koodrizi
             foreach (var item in detailkoods)
             {
                 _koodriziRepo.Insert(item);
+                var bar = _barRepository.Bar(item.BarId);
+                bar.Remaining = bar.Remaining - item.Weight;
+                _barRepository.Update(bar, item.BarId);
+                var person = bar.Person;
+                //راس گیری
+                //
+                // _personRepo.Update(bar.Person , bar.IdPerson);
+
             }
             _finalKoodriziRepo.Insert(new Models.FinalKoodrizi()
             {
-               KoodNumber = txtKoodNumber.Text,
-               KoodName = txtKoodName.Text,
-              /////////////////////////////////////////////////////////////////////countinue
+                KoodNumber = txtKoodNumber.Text,
+                KoodName = txtKoodName.Text,
+                TotalOunce = lblTtalOunce.Text,
+                TotalWeight = sumWeight,
+                TotalPrice = (decimal)sumPrice,
             });
         }
 
@@ -131,6 +142,8 @@ namespace WindowsFormsApp_Koodrizi
 
         private void BtnCalculateKood_Click(object sender, EventArgs e)
         {
+            detailkoods.Clear();
+            btnCalculateKood.Enabled = false;
             double priceOunce = double.Parse(txtOuncePrice.Text);
             double priceDahanBast = double.Parse(txtDahanBastprice.Text);
             nameKood = txtKoodName.Text;
@@ -160,10 +173,13 @@ namespace WindowsFormsApp_Koodrizi
 
             foreach (var item in detailkoods)
             {
-                var zarib = Zarib(detailkoods, item.Weight);
-                var baseOunce = BaseOunce(detailkoods, zarib);
-                var baseDahanBast = BaseDahanBast(detailkoods, zarib);
                 var bar = _barRepository.Bar(item.BarId);
+                var zarib = Zarib(detailkoods, item.Weight);
+                //var baseOunce = BaseOunce(detailkoods, zarib);
+                var baseOunce = bar.Ounce * zarib;
+                //var baseDahanBast = BaseDahanBast(detailkoods, zarib);
+                var baseDahanBast = bar.DhanBast * zarib;
+
                 var priceElement = CalculateKoodRizi(priceKood, item.PercentRoyat, baseOunce,
                      baseDahanBast, bar.Ounce, bar.DhanBast, priceOunce, priceDahanBast);
                 item.Price = (decimal)priceElement;
@@ -175,8 +191,10 @@ namespace WindowsFormsApp_Koodrizi
 
                 sumOunce += baseOunce;
                 sumPrice += priceElement;
+                sumWeight += item.Weight;
 
             }
+            sumPrice *= sumWeight;
 
             lblTotalPrice.Text = sumPrice.ToString("#,###");
             lblTtalOunce.Text = sumOunce.ToString();
@@ -203,7 +221,8 @@ namespace WindowsFormsApp_Koodrizi
                 var bar = _barRepository.Bar(item.BarId);
                 sum += bar.Ounce;
             }
-            return sum * zarib;
+            var result = sum * zarib;
+            return result;
         }
 
         private double BaseDahanBast(List<Models.Koodrizi> detailKood, double zarib)
@@ -214,7 +233,8 @@ namespace WindowsFormsApp_Koodrizi
                 var bar = _barRepository.Bar(item.BarId);
                 sum += bar.DhanBast;
             }
-            return sum * zarib;
+            var result = sum * zarib;
+            return result;
         }
         private double CalculateKoodRizi(decimal bacePrice, double percentRoyat,
             double baceOunce, double baseDahanBast, double ounce, double dahanBast, double priceOunce,

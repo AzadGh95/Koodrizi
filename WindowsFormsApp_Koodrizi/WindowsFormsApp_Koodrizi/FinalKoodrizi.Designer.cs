@@ -37,6 +37,15 @@
             this.txPriceperkilo = new System.Windows.Forms.TextBox();
             this.btnAdd = new System.Windows.Forms.Button();
             this.dataGridFinalKood = new System.Windows.Forms.DataGridView();
+            this.IdBar = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Customer = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Weight = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Onc = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.PercentRoyat = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Saledate = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.DateDue = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.gridElementPrice = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.GridTotalPrice = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.label5 = new System.Windows.Forms.Label();
             this.btnSave = new System.Windows.Forms.Button();
             this.btnCancel = new System.Windows.Forms.Button();
@@ -49,15 +58,6 @@
             this.label8 = new System.Windows.Forms.Label();
             this.txtDahanBastprice = new System.Windows.Forms.TextBox();
             this.label9 = new System.Windows.Forms.Label();
-            this.IdBar = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Customer = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Weight = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Onc = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.PercentRoyat = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Saledate = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.DateDue = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.gridElementPrice = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.GridTotalPrice = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.lblTtalOunce = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridFinalKood)).BeginInit();
@@ -72,7 +72,6 @@
             this.label1.Size = new System.Drawing.Size(74, 19);
             this.label1.TabIndex = 1;
             this.label1.Text = "شماره کودریزی";
-   
             // 
             // txtKoodNumber
             // 
@@ -82,7 +81,6 @@
             this.txtKoodNumber.Name = "txtKoodNumber";
             this.txtKoodNumber.Size = new System.Drawing.Size(118, 26);
             this.txtKoodNumber.TabIndex = 2;
-
             // 
             // label2
             // 
@@ -93,7 +91,6 @@
             this.label2.Size = new System.Drawing.Size(61, 19);
             this.label2.TabIndex = 3;
             this.label2.Text = "نام کودریزی";
-       
             // 
             // txtKoodName
             // 
@@ -114,7 +111,6 @@
             this.label3.Size = new System.Drawing.Size(71, 19);
             this.label3.TabIndex = 5;
             this.label3.Text = "قیمت هر کیلو";
-       
             // 
             // txPriceperkilo
             // 
@@ -124,7 +120,6 @@
             this.txPriceperkilo.Name = "txPriceperkilo";
             this.txPriceperkilo.Size = new System.Drawing.Size(114, 26);
             this.txPriceperkilo.TabIndex = 4;
-     
             // 
             // btnAdd
             // 
@@ -141,7 +136,6 @@
             // dataGridFinalKood
             // 
             this.dataGridFinalKood.AllowUserToAddRows = false;
-            this.dataGridFinalKood.AllowUserToDeleteRows = false;
             this.dataGridFinalKood.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridFinalKood.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.IdBar,
@@ -161,6 +155,68 @@
             this.dataGridFinalKood.Size = new System.Drawing.Size(826, 219);
             this.dataGridFinalKood.TabIndex = 10;
             this.dataGridFinalKood.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DataGridView1_CellContentClick_1);
+            // 
+            // IdBar
+            // 
+            this.IdBar.HeaderText = "شماره بار";
+            this.IdBar.Name = "IdBar";
+            this.IdBar.ReadOnly = true;
+            this.IdBar.Visible = false;
+            // 
+            // Customer
+            // 
+            this.Customer.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.Customer.HeaderText = "مشتری";
+            this.Customer.Name = "Customer";
+            this.Customer.ReadOnly = true;
+            // 
+            // Weight
+            // 
+            this.Weight.HeaderText = "وزن";
+            this.Weight.Name = "Weight";
+            this.Weight.ReadOnly = true;
+            // 
+            // Onc
+            // 
+            this.Onc.HeaderText = "انس";
+            this.Onc.Name = "Onc";
+            this.Onc.ReadOnly = true;
+            this.Onc.Width = 50;
+            // 
+            // PercentRoyat
+            // 
+            this.PercentRoyat.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader;
+            this.PercentRoyat.HeaderText = "درصد رویت";
+            this.PercentRoyat.Name = "PercentRoyat";
+            this.PercentRoyat.ReadOnly = true;
+            this.PercentRoyat.Width = 83;
+            // 
+            // Saledate
+            // 
+            this.Saledate.HeaderText = "تاریخ فروش";
+            this.Saledate.Name = "Saledate";
+            this.Saledate.ReadOnly = true;
+            this.Saledate.Visible = false;
+            // 
+            // DateDue
+            // 
+            this.DateDue.HeaderText = "تاریخ سررسید";
+            this.DateDue.Name = "DateDue";
+            this.DateDue.ReadOnly = true;
+            this.DateDue.Visible = false;
+            // 
+            // gridElementPrice
+            // 
+            this.gridElementPrice.HeaderText = "قیمت هرکیلو";
+            this.gridElementPrice.Name = "gridElementPrice";
+            this.gridElementPrice.ReadOnly = true;
+            // 
+            // GridTotalPrice
+            // 
+            this.GridTotalPrice.HeaderText = "قیمت کل بار";
+            this.GridTotalPrice.Name = "GridTotalPrice";
+            this.GridTotalPrice.ReadOnly = true;
+            this.GridTotalPrice.Width = 130;
             // 
             // label5
             // 
@@ -226,7 +282,7 @@
             this.faDateKoodFinal.Name = "faDateKoodFinal";
             this.faDateKoodFinal.SelectedDateTime = new System.DateTime(2020, 12, 24, 0, 0, 0, 0);
             this.faDateKoodFinal.Size = new System.Drawing.Size(112, 20);
-            this.faDateKoodFinal.TabIndex = 3;
+            this.faDateKoodFinal.TabIndex = 30;
             this.faDateKoodFinal.Theme = FarsiLibrary.Win.Enums.ThemeTypes.WindowsXP;
             // 
             // btnCalculateKood
@@ -236,7 +292,7 @@
             this.btnCalculateKood.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnCalculateKood.Name = "btnCalculateKood";
             this.btnCalculateKood.Size = new System.Drawing.Size(638, 34);
-            this.btnCalculateKood.TabIndex = 18;
+            this.btnCalculateKood.TabIndex = 11;
             this.btnCalculateKood.Text = "محاسبه کودریزی";
             this.btnCalculateKood.UseVisualStyleBackColor = true;
             this.btnCalculateKood.Click += new System.EventHandler(this.BtnCalculateKood_Click);
@@ -248,7 +304,7 @@
             this.btnClear.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnClear.Name = "btnClear";
             this.btnClear.Size = new System.Drawing.Size(182, 34);
-            this.btnClear.TabIndex = 19;
+            this.btnClear.TabIndex = 12;
             this.btnClear.Text = "پاک کردن لیست";
             this.btnClear.UseVisualStyleBackColor = true;
             this.btnClear.Click += new System.EventHandler(this.BtnClear_Click);
@@ -290,68 +346,6 @@
             this.label9.Size = new System.Drawing.Size(83, 19);
             this.label9.TabIndex = 22;
             this.label9.Text = "قیمت دهن بست";
-            // 
-            // IdBar
-            // 
-            this.IdBar.HeaderText = "شماره بار";
-            this.IdBar.Name = "IdBar";
-            this.IdBar.ReadOnly = true;
-            this.IdBar.Visible = false;
-            // 
-            // Customer
-            // 
-            this.Customer.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.Customer.HeaderText = "مشتری";
-            this.Customer.Name = "Customer";
-            this.Customer.ReadOnly = true;
-            // 
-            // Weight
-            // 
-            this.Weight.HeaderText = "وزن";
-            this.Weight.Name = "Weight";
-            this.Weight.ReadOnly = true;
-            // 
-            // Onc
-            // 
-            this.Onc.HeaderText = "انس";
-            this.Onc.Name = "Onc";
-            this.Onc.ReadOnly = true;
-            this.Onc.Width = 50;
-            // 
-            // PercentRoyat
-            // 
-            this.PercentRoyat.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader;
-            this.PercentRoyat.HeaderText = "درصد رویت";
-            this.PercentRoyat.Name = "PercentRoyat";
-            this.PercentRoyat.ReadOnly = true;
-            this.PercentRoyat.Width = 83;
-            // 
-            // Saledate
-            // 
-            this.Saledate.HeaderText = "تاریخ فروش";
-            this.Saledate.Name = "Saledate";
-            this.Saledate.ReadOnly = true;
-            this.Saledate.Visible = false;
-            // 
-            // DateDue
-            // 
-            this.DateDue.HeaderText = "تاریخ سررسید";
-            this.DateDue.Name = "DateDue";
-            this.DateDue.ReadOnly = true;
-            this.DateDue.Visible = false;
-            // 
-            // gridElementPrice
-            // 
-            this.gridElementPrice.HeaderText = "قیمت هرکیلو";
-            this.gridElementPrice.Name = "gridElementPrice";
-            this.gridElementPrice.ReadOnly = true;
-            // 
-            // GridTotalPrice
-            // 
-            this.GridTotalPrice.HeaderText = "قیمت کل بار";
-            this.GridTotalPrice.Name = "GridTotalPrice";
-            this.GridTotalPrice.ReadOnly = true;
-            this.GridTotalPrice.Width = 130;
             // 
             // lblTtalOunce
             // 

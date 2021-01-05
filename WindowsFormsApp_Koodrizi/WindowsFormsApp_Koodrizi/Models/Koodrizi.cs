@@ -14,7 +14,6 @@ namespace WindowsFormsApp_Koodrizi.Models
         public int KoodId { get; set; }
         public decimal Price { get; set; }
         public double Weight { get; set; }
-        public double Remining { get; set; }
 
         [Column(TypeName = "datetime2")]
         public DateTime SellDate { get; set; }
@@ -30,5 +29,8 @@ namespace WindowsFormsApp_Koodrizi.Models
         [ForeignKey("BarId")]
         public virtual Bar Bar{get;set;}
 
+        public int FinalKoodId { get; set; }
+        [ForeignKey("FinalKoodId")]
+        public virtual FinalKoodrizi FinalKoodrizi { get; set; }
     }
 }

@@ -14,7 +14,7 @@ namespace WindowsFormsApp_Koodrizi
     public partial class ListBars : Form
     {
         private PersonRepository _personRepository = new PersonRepository();
-        private  BarRepository _barRepository = new BarRepository();
+        private BarRepository _barRepository = new BarRepository();
 
         public ListBars()
         {
@@ -26,7 +26,7 @@ namespace WindowsFormsApp_Koodrizi
             if (e.ColumnIndex == 9)
             {
                 DialogResult message;
-                string text = "آبا می خواهید ، " + dataGridListBars.Rows[e.RowIndex].Cells[2].Value + " را حذف کنید؟";
+                string text = "آبا می خواهید ، بار  " + dataGridListBars.Rows[e.RowIndex].Cells[1].Value + " را حذف کنید؟";
                 message = MessageBox.Show(text, "هشدار", MessageBoxButtons.YesNo);
 
                 if (message == DialogResult.Yes)
@@ -44,10 +44,9 @@ namespace WindowsFormsApp_Koodrizi
         {
             var bars = _barRepository.Bars();
             foreach (var prop in bars)
-                dataGridListBars.Rows.Add(prop.BarId, prop.Person.Name, prop.CreateDate.ToString("yyyy/MM/dd") , prop.Remaining , 
-                    prop.TotalWeight , prop.DhanBast,prop.Gram,prop.Ounce,prop.Adl);
-
-
+                dataGridListBars.Rows.Add(prop.BarId, prop.Person.Name,
+                    prop.CreateDate.ToString("yyyy/MM/dd"), prop.Remaining,
+                    prop.TotalWeight, prop.DhanBast, prop.Gram, prop.Ounce, prop.Adl);
         }
     }
 }

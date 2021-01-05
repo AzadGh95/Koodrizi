@@ -51,7 +51,7 @@ namespace WindowsFormsApp_Koodrizi.Repositories
                 _baseContext.FinalKoodrizis.Where(i => i.FinalKoodId == id)
                     .Update(x => new FinalKoodrizi
                     {
-                        KoodId = finalKoodrizi.FinalKoodId,
+                       // FinalKoodId = finalKoodrizi.FinalKoodId,
                         KoodName = finalKoodrizi.KoodName,
                         KoodNumber = finalKoodrizi.KoodNumber,
                         TotalOunce = finalKoodrizi.TotalOunce,

@@ -108,7 +108,7 @@
             this.comCustomerSelection.Name = "comCustomerSelection";
             this.comCustomerSelection.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.comCustomerSelection.Size = new System.Drawing.Size(163, 27);
-            this.comCustomerSelection.TabIndex = 6;
+            this.comCustomerSelection.TabIndex = 1;
             this.comCustomerSelection.Text = "انتخاب مشتری";
             this.comCustomerSelection.SelectedIndexChanged += new System.EventHandler(this.ComCustomerSelection_SelectedIndexChanged);
             // 
@@ -118,7 +118,7 @@
             this.txtWeight.Location = new System.Drawing.Point(36, 38);
             this.txtWeight.Name = "txtWeight";
             this.txtWeight.Size = new System.Drawing.Size(121, 26);
-            this.txtWeight.TabIndex = 8;
+            this.txtWeight.TabIndex = 2;
             // 
             // radioKhandan
             // 
@@ -154,7 +154,7 @@
             this.txtPercent.Location = new System.Drawing.Point(241, 100);
             this.txtPercent.Name = "txtPercent";
             this.txtPercent.Size = new System.Drawing.Size(132, 26);
-            this.txtPercent.TabIndex = 11;
+            this.txtPercent.TabIndex = 3;
             // 
             // comboType
             // 
@@ -164,7 +164,7 @@
             this.comboType.Name = "comboType";
             this.comboType.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.comboType.Size = new System.Drawing.Size(121, 27);
-            this.comboType.TabIndex = 12;
+            this.comboType.TabIndex = 4;
             this.comboType.Text = "نوع پسته";
             // 
             // txtGrams
@@ -173,7 +173,7 @@
             this.txtGrams.Location = new System.Drawing.Point(482, 166);
             this.txtGrams.Name = "txtGrams";
             this.txtGrams.Size = new System.Drawing.Size(119, 26);
-            this.txtGrams.TabIndex = 13;
+            this.txtGrams.TabIndex = 5;
             // 
             // txtOunce
             // 
@@ -181,7 +181,7 @@
             this.txtOunce.Location = new System.Drawing.Point(241, 166);
             this.txtOunce.Name = "txtOunce";
             this.txtOunce.Size = new System.Drawing.Size(132, 26);
-            this.txtOunce.TabIndex = 14;
+            this.txtOunce.TabIndex = 6;
             // 
             // txtAdl
             // 
@@ -189,7 +189,7 @@
             this.txtAdl.Location = new System.Drawing.Point(36, 166);
             this.txtAdl.Name = "txtAdl";
             this.txtAdl.Size = new System.Drawing.Size(121, 26);
-            this.txtAdl.TabIndex = 15;
+            this.txtAdl.TabIndex = 7;
             // 
             // btnSave
             // 
@@ -197,7 +197,7 @@
             this.btnSave.Location = new System.Drawing.Point(117, 239);
             this.btnSave.Name = "btnSave";
             this.btnSave.Size = new System.Drawing.Size(199, 30);
-            this.btnSave.TabIndex = 16;
+            this.btnSave.TabIndex = 7;
             this.btnSave.Text = "ذخیره";
             this.btnSave.UseVisualStyleBackColor = true;
             this.btnSave.Click += new System.EventHandler(this.BtnSave_Click);
@@ -208,7 +208,7 @@
             this.btnCancel.Location = new System.Drawing.Point(36, 239);
             this.btnCancel.Name = "btnCancel";
             this.btnCancel.Size = new System.Drawing.Size(75, 30);
-            this.btnCancel.TabIndex = 17;
+            this.btnCancel.TabIndex = 8;
             this.btnCancel.Text = "لغو";
             this.btnCancel.UseVisualStyleBackColor = true;
             this.btnCancel.Click += new System.EventHandler(this.BtnCancel_Click);
@@ -239,7 +239,7 @@
             this.faDataTimeCreateDate.IsNull = false;
             this.faDataTimeCreateDate.Location = new System.Drawing.Point(241, 40);
             this.faDataTimeCreateDate.Name = "faDataTimeCreateDate";
-            this.faDataTimeCreateDate.SelectedDateTime = new System.DateTime(2020, 12, 24, 0, 0, 0, 0);
+            this.faDataTimeCreateDate.SelectedDateTime = new System.DateTime(2021, 1, 4, 0, 0, 0, 0);
             this.faDataTimeCreateDate.Size = new System.Drawing.Size(132, 20);
             this.faDataTimeCreateDate.TabIndex = 30;
             this.faDataTimeCreateDate.Theme = FarsiLibrary.Win.Enums.ThemeTypes.WindowsXP;
@@ -248,7 +248,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(681, 302);
+            this.ClientSize = new System.Drawing.Size(681, 288);
             this.Controls.Add(this.faDataTimeCreateDate);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.label2);

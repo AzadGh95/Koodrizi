@@ -40,9 +40,9 @@
             // 
             // btnPerson
             // 
-            this.btnPerson.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.btnPerson.BackColor = System.Drawing.SystemColors.ControlLight;
             this.btnPerson.Font = new System.Drawing.Font("Vazir FD", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnPerson.Location = new System.Drawing.Point(424, 24);
+            this.btnPerson.Location = new System.Drawing.Point(444, 31);
             this.btnPerson.Name = "btnPerson";
             this.btnPerson.Size = new System.Drawing.Size(146, 39);
             this.btnPerson.TabIndex = 0;
@@ -52,9 +52,9 @@
             // 
             // btnListPerson
             // 
-            this.btnListPerson.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.btnListPerson.BackColor = System.Drawing.SystemColors.ControlLight;
             this.btnListPerson.Font = new System.Drawing.Font("Vazir FD", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnListPerson.Location = new System.Drawing.Point(424, 74);
+            this.btnListPerson.Location = new System.Drawing.Point(444, 93);
             this.btnListPerson.Name = "btnListPerson";
             this.btnListPerson.Size = new System.Drawing.Size(146, 38);
             this.btnListPerson.TabIndex = 1;
@@ -64,9 +64,9 @@
             // 
             // btnListBar
             // 
-            this.btnListBar.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.btnListBar.BackColor = System.Drawing.SystemColors.ControlLight;
             this.btnListBar.Font = new System.Drawing.Font("Vazir FD", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnListBar.Location = new System.Drawing.Point(235, 74);
+            this.btnListBar.Location = new System.Drawing.Point(255, 93);
             this.btnListBar.Name = "btnListBar";
             this.btnListBar.Size = new System.Drawing.Size(146, 38);
             this.btnListBar.TabIndex = 3;
@@ -76,9 +76,9 @@
             // 
             // btnBar
             // 
-            this.btnBar.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.btnBar.BackColor = System.Drawing.SystemColors.ControlLight;
             this.btnBar.Font = new System.Drawing.Font("Vazir FD", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnBar.Location = new System.Drawing.Point(235, 24);
+            this.btnBar.Location = new System.Drawing.Point(255, 31);
             this.btnBar.Name = "btnBar";
             this.btnBar.Size = new System.Drawing.Size(146, 39);
             this.btnBar.TabIndex = 2;
@@ -88,9 +88,9 @@
             // 
             // btnFinalKoodrizi
             // 
-            this.btnFinalKoodrizi.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.btnFinalKoodrizi.BackColor = System.Drawing.SystemColors.ControlLight;
             this.btnFinalKoodrizi.Font = new System.Drawing.Font("Vazir FD", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnFinalKoodrizi.Location = new System.Drawing.Point(50, 24);
+            this.btnFinalKoodrizi.Location = new System.Drawing.Point(70, 31);
             this.btnFinalKoodrizi.Name = "btnFinalKoodrizi";
             this.btnFinalKoodrizi.Size = new System.Drawing.Size(146, 39);
             this.btnFinalKoodrizi.TabIndex = 4;
@@ -100,9 +100,9 @@
             // 
             // btnListKoodrizi
             // 
-            this.btnListKoodrizi.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.btnListKoodrizi.BackColor = System.Drawing.SystemColors.ControlLight;
             this.btnListKoodrizi.Font = new System.Drawing.Font("Vazir FD", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnListKoodrizi.Location = new System.Drawing.Point(50, 74);
+            this.btnListKoodrizi.Location = new System.Drawing.Point(70, 93);
             this.btnListKoodrizi.Name = "btnListKoodrizi";
             this.btnListKoodrizi.Size = new System.Drawing.Size(146, 38);
             this.btnListKoodrizi.TabIndex = 5;
@@ -113,18 +113,19 @@
             // 
             this.lblTime.AutoSize = true;
             this.lblTime.Font = new System.Drawing.Font("Vazir FD", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTime.Location = new System.Drawing.Point(23, 374);
+            this.lblTime.Location = new System.Drawing.Point(558, 417);
             this.lblTime.Name = "lblTime";
             this.lblTime.Size = new System.Drawing.Size(21, 20);
             this.lblTime.TabIndex = 6;
             this.lblTime.Text = "...";
+            this.lblTime.Visible = false;
             // 
             // Home
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
-            this.ClientSize = new System.Drawing.Size(600, 407);
+            this.ClientSize = new System.Drawing.Size(650, 446);
             this.Controls.Add(this.lblTime);
             this.Controls.Add(this.btnListKoodrizi);
             this.Controls.Add(this.btnFinalKoodrizi);

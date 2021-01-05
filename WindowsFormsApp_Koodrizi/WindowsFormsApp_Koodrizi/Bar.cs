@@ -26,19 +26,25 @@ namespace WindowsFormsApp_Koodrizi
         {
             try
             {
-                Models.Bar bar = new Models.Bar()
-                {
-                    DhanBast = double.Parse(txtPercent.Text),
-                    Ounce = double.Parse(txtOunce.Text),
-                    Adl = double.Parse(txtAdl.Text),
-                    Remaining = double.Parse(txtWeight.Text),
-                    TotalWeight = double.Parse(txtWeight.Text),
-                    CreateDate = faDataTimeCreateDate.SelectedDateTime,
-                    IdPerson = personId,
-                    PistachioName = comboType.Text,
-                    PistachioType = radioKhandan.Checked,
-                    Gram = double.Parse(txtGrams.Text),
-                };
+                Models.Bar bar = new Models.Bar() { };
+
+                string[] token = comCustomerSelection.Text.Split('[');
+                var a = token[1].ToString();
+                string[] token2 = a.Split(']');
+                a = token2[0].ToString();
+                personId =_personRepository.People(a);
+
+
+                bar.DhanBast = double.Parse(txtPercent.Text);
+                bar.Ounce = double.Parse(txtOunce.Text);
+                bar.Adl = double.Parse(txtAdl.Text);
+                bar.Remaining = double.Parse(txtWeight.Text);
+                bar.TotalWeight = double.Parse(txtWeight.Text);
+                bar.CreateDate = faDataTimeCreateDate.SelectedDateTime;
+                bar.IdPerson = personId;
+                bar.PistachioName = comboType.Text;
+                bar.PistachioType = radioKhandan.Checked;
+                bar.Gram = double.Parse(txtGrams.Text);
 
                 var result = _barRepo.Insert(bar);
 
@@ -90,7 +96,6 @@ namespace WindowsFormsApp_Koodrizi
                 foreach (var person in listPeople)
                 {
                     comCustomerSelection.Items.Add(person.Name + " [" + person.Code + "]");
-                    personId = person.PersonId;
                 }
 
                 List<string> listPistachio = new List<string>() {
@@ -127,6 +132,7 @@ namespace WindowsFormsApp_Koodrizi
         private void RadioDahanBast_CheckedChanged(object sender, EventArgs e)
         {
             txtPercent.Enabled = false;
+            txtPercent.Text = "100";
         }
     }
 }

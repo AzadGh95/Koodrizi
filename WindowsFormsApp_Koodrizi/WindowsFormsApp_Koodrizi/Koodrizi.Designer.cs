@@ -95,7 +95,7 @@
             this.txtToWeight.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtToWeight.Name = "txtToWeight";
             this.txtToWeight.Size = new System.Drawing.Size(103, 26);
-            this.txtToWeight.TabIndex = 3;
+            this.txtToWeight.TabIndex = 2;
             this.txtToWeight.Text = "0.0";
             // 
             // label3
@@ -115,7 +115,7 @@
             this.txtAsOunce.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtAsOunce.Name = "txtAsOunce";
             this.txtAsOunce.Size = new System.Drawing.Size(100, 26);
-            this.txtAsOunce.TabIndex = 5;
+            this.txtAsOunce.TabIndex = 3;
             this.txtAsOunce.Text = "0.0";
             // 
             // label4
@@ -135,7 +135,7 @@
             this.txtToOunce.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtToOunce.Name = "txtToOunce";
             this.txtToOunce.Size = new System.Drawing.Size(100, 26);
-            this.txtToOunce.TabIndex = 7;
+            this.txtToOunce.TabIndex = 4;
             this.txtToOunce.Text = "0.0";
             // 
             // label5
@@ -155,7 +155,7 @@
             this.txtDahanBast.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtDahanBast.Name = "txtDahanBast";
             this.txtDahanBast.Size = new System.Drawing.Size(115, 26);
-            this.txtDahanBast.TabIndex = 9;
+            this.txtDahanBast.TabIndex = 5;
             this.txtDahanBast.Text = "0.0";
             // 
             // label6
@@ -175,7 +175,7 @@
             this.txtAdl.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtAdl.Name = "txtAdl";
             this.txtAdl.Size = new System.Drawing.Size(100, 26);
-            this.txtAdl.TabIndex = 11;
+            this.txtAdl.TabIndex = 6;
             this.txtAdl.Text = "0.0";
             // 
             // label7
@@ -195,7 +195,7 @@
             this.txtGrams.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtGrams.Name = "txtGrams";
             this.txtGrams.Size = new System.Drawing.Size(117, 26);
-            this.txtGrams.TabIndex = 13;
+            this.txtGrams.TabIndex = 7;
             this.txtGrams.Text = "0.0";
             // 
             // btnSearch
@@ -205,7 +205,7 @@
             this.btnSearch.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnSearch.Name = "btnSearch";
             this.btnSearch.Size = new System.Drawing.Size(524, 34);
-            this.btnSearch.TabIndex = 14;
+            this.btnSearch.TabIndex = 8;
             this.btnSearch.Text = "جستجو";
             this.btnSearch.UseVisualStyleBackColor = true;
             this.btnSearch.Click += new System.EventHandler(this.BtnSearch_Click);
@@ -222,7 +222,7 @@
             this.comCustomerBar.Name = "comCustomerBar";
             this.comCustomerBar.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.comCustomerBar.Size = new System.Drawing.Size(599, 27);
-            this.comCustomerBar.TabIndex = 15;
+            this.comCustomerBar.TabIndex = 10;
             this.comCustomerBar.Text = "انتخاب بار مشتری";
             this.comCustomerBar.SelectedIndexChanged += new System.EventHandler(this.ComCustomerBar_SelectedIndexChanged);
             // 
@@ -244,7 +244,7 @@
             this.txtWeightBar.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtWeightBar.Name = "txtWeightBar";
             this.txtWeightBar.Size = new System.Drawing.Size(181, 26);
-            this.txtWeightBar.TabIndex = 19;
+            this.txtWeightBar.TabIndex = 11;
             // 
             // label10
             // 
@@ -264,7 +264,8 @@
             this.txtPercentageOfVisibility.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtPercentageOfVisibility.Name = "txtPercentageOfVisibility";
             this.txtPercentageOfVisibility.Size = new System.Drawing.Size(181, 26);
-            this.txtPercentageOfVisibility.TabIndex = 21;
+            this.txtPercentageOfVisibility.TabIndex = 12;
+            this.txtPercentageOfVisibility.Text = "1";
             // 
             // label11
             // 
@@ -294,7 +295,7 @@
             this.btnCancel.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnCancel.Name = "btnCancel";
             this.btnCancel.Size = new System.Drawing.Size(63, 33);
-            this.btnCancel.TabIndex = 26;
+            this.btnCancel.TabIndex = 14;
             this.btnCancel.Text = "لغو";
             this.btnCancel.UseVisualStyleBackColor = true;
             this.btnCancel.Click += new System.EventHandler(this.BtnCancel_Click);
@@ -308,7 +309,7 @@
             this.btnSave.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnSave.Name = "btnSave";
             this.btnSave.Size = new System.Drawing.Size(106, 33);
-            this.btnSave.TabIndex = 27;
+            this.btnSave.TabIndex = 13;
             this.btnSave.Text = "ثبت";
             this.btnSave.UseVisualStyleBackColor = true;
             this.btnSave.Click += new System.EventHandler(this.BtnSave_Click);
@@ -320,7 +321,7 @@
             this.btnClearSearch.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnClearSearch.Name = "btnClearSearch";
             this.btnClearSearch.Size = new System.Drawing.Size(63, 34);
-            this.btnClearSearch.TabIndex = 28;
+            this.btnClearSearch.TabIndex = 9;
             this.btnClearSearch.Text = "پاک کردن";
             this.btnClearSearch.UseVisualStyleBackColor = true;
             this.btnClearSearch.Click += new System.EventHandler(this.Button1_Click);
@@ -330,7 +331,7 @@
             this.fadateTimeSell.IsNull = false;
             this.fadateTimeSell.Location = new System.Drawing.Point(395, 327);
             this.fadateTimeSell.Name = "fadateTimeSell";
-            this.fadateTimeSell.SelectedDateTime = new System.DateTime(2020, 12, 24, 0, 0, 0, 0);
+            this.fadateTimeSell.SelectedDateTime = new System.DateTime(2021, 1, 4, 0, 0, 0, 0);
             this.fadateTimeSell.Size = new System.Drawing.Size(182, 20);
             this.fadateTimeSell.TabIndex = 29;
             this.fadateTimeSell.Theme = FarsiLibrary.Win.Enums.ThemeTypes.WindowsXP;
@@ -340,7 +341,7 @@
             this.fadateTimeDueDate.IsNull = false;
             this.fadateTimeDueDate.Location = new System.Drawing.Point(33, 327);
             this.fadateTimeDueDate.Name = "fadateTimeDueDate";
-            this.fadateTimeDueDate.SelectedDateTime = new System.DateTime(2020, 12, 24, 0, 0, 0, 0);
+            this.fadateTimeDueDate.SelectedDateTime = new System.DateTime(2021, 1, 4, 0, 0, 0, 0);
             this.fadateTimeDueDate.Size = new System.Drawing.Size(182, 20);
             this.fadateTimeDueDate.TabIndex = 30;
             this.fadateTimeDueDate.Theme = FarsiLibrary.Win.Enums.ThemeTypes.WindowsXP;

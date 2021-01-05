@@ -77,6 +77,18 @@ namespace WindowsFormsApp_Koodrizi.Repositories
             }
         }
 
+        public int People(string code)
+        {
+            try
+            {
+                return _baseContext.People.Where(i => i.Code == code).FirstOrDefault().PersonId;
+            }
+            catch (Exception)
+            {
+                throw;
+            }
+        }
+
         public List<Person> Peoples()
         {
             try

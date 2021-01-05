@@ -25,7 +25,6 @@ namespace WindowsFormsApp_Koodrizi.Models
         public DateTime CreateDate { get; set; }
 
         public double TotalWeight { get; set; }
-        public double Remining { get; set; }
-        public virtual List<Koodrizi> Koodrizi { get; set; }
+        public virtual List<Koodrizi> Koodrizis { get; set; }
     }
 }

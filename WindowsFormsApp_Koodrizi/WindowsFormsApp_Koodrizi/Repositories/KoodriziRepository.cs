@@ -51,12 +51,14 @@ namespace WindowsFormsApp_Koodrizi.Repositories
                 _baseContext.Koodrizis.Where(i => i.KoodId == id)
                     .Update(x => new Models.Koodrizi
                     {
-                    Price = koodrizi.Price,
-                    SellDate = koodrizi.SellDate,
-                    Weight = koodrizi.Weight,
-                    ArrivedDate = koodrizi.ArrivedDate,
-                    BarId = koodrizi.BarId,
-                    
+                        Price = koodrizi.Price,
+                        SellDate = koodrizi.SellDate,
+                        Weight = koodrizi.Weight,
+                        ArrivedDate = koodrizi.ArrivedDate,
+                        BarId = koodrizi.BarId,
+                        FinalKoodId = koodrizi.FinalKoodId,
+                        PercentRoyat = koodrizi.PercentRoyat,
+                        
                     });
                 return true;
             }
