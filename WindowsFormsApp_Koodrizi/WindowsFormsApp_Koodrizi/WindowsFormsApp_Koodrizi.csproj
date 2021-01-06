@@ -131,6 +131,12 @@
       <DependentUpon>202101052005424_initial6.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
+    <Compile Include="ModalBaseTime.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ModalBaseTime.Designer.cs">
+      <DependentUpon>ModalBaseTime.cs</DependentUpon>
+    </Compile>
     <Compile Include="Models\BarModel.cs" />
     <Compile Include="Models\Bar.cs" />
     <Compile Include="Models\DKood.cs" />
@@ -180,6 +186,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202101052005424_initial6.resx">
       <DependentUpon>202101052005424_initial6.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ModalBaseTime.resx">
+      <DependentUpon>ModalBaseTime.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

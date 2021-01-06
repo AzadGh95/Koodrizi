@@ -25,17 +25,18 @@ namespace WindowsFormsApp_Koodrizi
             //int row = 1;
             var people = _personRepository.Peoples();
             foreach (var prop in people)
-                dataGridListCustomer.Rows.Add(prop.PersonId, prop.Code, prop.Name, prop.Total, prop.AvgDate.ToString("yyyy/MM/dd"));
+                dataGridListCustomer.Rows.Add(prop.PersonId, prop.Code, prop.Name, prop.Total,
+                    prop.BaseDate.ToString("yyyy/MM/dd"), prop.AvgDate.ToString("yyyy/MM/dd"));
         }
 
 
 
         private void DataGridListCustomer_CellContentClick_1(object sender, DataGridViewCellEventArgs e)
         {
-            if (e.ColumnIndex == 5)
+            if (e.ColumnIndex == 6)
             {
                 DialogResult message;
-                string text = "آبا می خواهید ، " + dataGridListCustomer.Rows[e.RowIndex].Cells[2].Value + " را حذف کنید؟";
+                string text = "آیا می خواهید ، " + dataGridListCustomer.Rows[e.RowIndex].Cells[2].Value + " را حذف کنید؟";
                 message = MessageBox.Show(text, "هشدار", MessageBoxButtons.YesNo);
 
                 if (message == DialogResult.Yes)
@@ -48,9 +49,29 @@ namespace WindowsFormsApp_Koodrizi
                 }
             }
 
-        
-        }
+            if (e.ColumnIndex == 7)
+            {
+                var pId = int.Parse(dataGridListCustomer.Rows[e.RowIndex].Cells[0].Value.ToString());
+                var person =_personRepository.People(pId);
+                ModalBaseTime formBaseTime = new ModalBaseTime();
+                var basetime = formBaseTime.BaseTime;
+                var avgdate=AvgDateTime(basetime, pId);
 
+                person.AvgDate = avgdate;
+                person.BaseDate = basetime;
+                _personRepository.Update(person, pId);
+
+                
+                //ویرایش گرید ویو
+                //dataGridview.clear();
+                //نمایش داده های جدید
+            }
+
+        }
+        private DateTime AvgDateTime(DateTime dateTime, int id)
+        {
+            return dateTime;
+        }
 
     }
 }

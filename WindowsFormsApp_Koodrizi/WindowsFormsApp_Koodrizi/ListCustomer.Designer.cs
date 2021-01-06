@@ -29,12 +29,14 @@
         private void InitializeComponent()
         {
             this.dataGridListCustomer = new System.Windows.Forms.DataGridView();
-            this.row = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.code = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.name = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.bedehi = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.avgdate = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.btnDelete = new System.Windows.Forms.DataGridViewButtonColumn();
+            this.CalculateAvg = new System.Windows.Forms.DataGridViewButtonColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridListCustomer)).BeginInit();
             this.SuspendLayout();
             // 
@@ -44,26 +46,29 @@
             this.dataGridListCustomer.AllowUserToDeleteRows = false;
             this.dataGridListCustomer.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridListCustomer.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.row,
+            this.Column2,
             this.code,
             this.name,
             this.bedehi,
+            this.Column1,
             this.avgdate,
-            this.btnDelete});
+            this.btnDelete,
+            this.CalculateAvg});
             this.dataGridListCustomer.Location = new System.Drawing.Point(22, 13);
             this.dataGridListCustomer.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.dataGridListCustomer.Name = "dataGridListCustomer";
             this.dataGridListCustomer.ReadOnly = true;
             this.dataGridListCustomer.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.dataGridListCustomer.Size = new System.Drawing.Size(593, 264);
+            this.dataGridListCustomer.Size = new System.Drawing.Size(699, 264);
             this.dataGridListCustomer.TabIndex = 0;
             this.dataGridListCustomer.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DataGridListCustomer_CellContentClick_1);
             // 
-            // row
+            // Column2
             // 
-            this.row.HeaderText = "ردیف";
-            this.row.Name = "row";
-            this.row.ReadOnly = true;
+            this.Column2.HeaderText = "ای دی";
+            this.Column2.Name = "Column2";
+            this.Column2.ReadOnly = true;
+            this.Column2.Visible = false;
             // 
             // code
             // 
@@ -73,17 +78,22 @@
             // 
             // name
             // 
-            this.name.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.name.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
             this.name.HeaderText = "نام و نام خانوادگی";
             this.name.Name = "name";
             this.name.ReadOnly = true;
-            this.name.Width = 113;
             // 
             // bedehi
             // 
             this.bedehi.HeaderText = "بدهی کل";
             this.bedehi.Name = "bedehi";
             this.bedehi.ReadOnly = true;
+            // 
+            // Column1
+            // 
+            this.Column1.HeaderText = "تاریخ مبنا";
+            this.Column1.Name = "Column1";
+            this.Column1.ReadOnly = true;
             // 
             // avgdate
             // 
@@ -97,13 +107,19 @@
             this.btnDelete.HeaderText = "حذف";
             this.btnDelete.Name = "btnDelete";
             this.btnDelete.ReadOnly = true;
-            this.btnDelete.Width = 38;
+            this.btnDelete.Visible = false;
+            // 
+            // CalculateAvg
+            // 
+            this.CalculateAvg.HeaderText = "محاسبه راس گیری";
+            this.CalculateAvg.Name = "CalculateAvg";
+            this.CalculateAvg.ReadOnly = true;
             // 
             // ListCustomer
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 19F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(633, 302);
+            this.ClientSize = new System.Drawing.Size(733, 296);
             this.Controls.Add(this.dataGridListCustomer);
             this.Font = new System.Drawing.Font("Vazir FD", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
@@ -118,11 +134,13 @@
         #endregion
 
         private System.Windows.Forms.DataGridView dataGridListCustomer;
-        private System.Windows.Forms.DataGridViewTextBoxColumn row;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
         private System.Windows.Forms.DataGridViewTextBoxColumn code;
         private System.Windows.Forms.DataGridViewTextBoxColumn name;
         private System.Windows.Forms.DataGridViewTextBoxColumn bedehi;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
         private System.Windows.Forms.DataGridViewTextBoxColumn avgdate;
         private System.Windows.Forms.DataGridViewButtonColumn btnDelete;
+        private System.Windows.Forms.DataGridViewButtonColumn CalculateAvg;
     }
 }

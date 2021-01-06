@@ -34,6 +34,9 @@ namespace WindowsFormsApp_Koodrizi.Models
         public DateTime AvgDate { get; set; }
 
         [Column(TypeName = "datetime2")]
+        public DateTime BaseDate { get; set; }
+
+        [Column(TypeName = "datetime2")]
         public DateTime CreateDate { get; set; }
         public decimal Bedehi { get; set; }
     }
