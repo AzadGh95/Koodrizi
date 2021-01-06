@@ -2,7 +2,7 @@ https://ably.ir/Post/203/Understanding-Entity-Framework-Code-First-Migrations/-1
 
 Enable-Migrations
 
-Add-Migration MigrationsName
+
 
 Update-Database
 

@@ -130,6 +130,10 @@
     <Compile Include="Migrations\202101052005424_initial6.designer.cs">
       <DependentUpon>202101052005424_initial6.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202101061021306_add-basetime.cs" />
+    <Compile Include="Migrations\202101061021306_add-basetime.designer.cs">
+      <DependentUpon>202101061021306_add-basetime.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="ModalBaseTime.cs">
       <SubType>Form</SubType>
@@ -186,6 +190,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202101052005424_initial6.resx">
       <DependentUpon>202101052005424_initial6.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202101061021306_add-basetime.resx">
+      <DependentUpon>202101061021306_add-basetime.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ModalBaseTime.resx">
       <DependentUpon>ModalBaseTime.cs</DependentUpon>

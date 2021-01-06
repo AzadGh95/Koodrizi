@@ -52,19 +52,23 @@ namespace WindowsFormsApp_Koodrizi
             if (e.ColumnIndex == 7)
             {
                 var pId = int.Parse(dataGridListCustomer.Rows[e.RowIndex].Cells[0].Value.ToString());
-                var person =_personRepository.People(pId);
+                var person = _personRepository.People(pId);
                 ModalBaseTime formBaseTime = new ModalBaseTime();
-                var basetime = formBaseTime.BaseTime;
-                var avgdate=AvgDateTime(basetime, pId);
+                formBaseTime.Show();
+                if (formBaseTime.ShowDialog() == DialogResult.OK)
+                {
+                    var basetime = formBaseTime.BaseTime;
+                    var avgdate = AvgDateTime(basetime, pId);
 
-                person.AvgDate = avgdate;
-                person.BaseDate = basetime;
-                _personRepository.Update(person, pId);
+                    person.AvgDate = avgdate;
+                    person.BaseDate = basetime;
+                    _personRepository.Update(person, pId);
 
-                
-                //ویرایش گرید ویو
-                //dataGridview.clear();
-                //نمایش داده های جدید
+
+                    //ویرایش گرید ویو
+                    //dataGridview.clear();
+                    //نمایش داده های جدید
+                }
             }
 
         }
