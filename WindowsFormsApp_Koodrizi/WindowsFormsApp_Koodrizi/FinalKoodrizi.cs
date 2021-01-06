@@ -99,6 +99,9 @@ namespace WindowsFormsApp_Koodrizi
                 _barRepository.Update(bar, item.BarId);
             }
 
+            MessageBox.Show("کود ریزی نهایی با موفقیت ثبت شد .");
+            Close();
+
         }
 
         private void BtnCancel_Click(object sender, EventArgs e)
@@ -152,7 +155,8 @@ namespace WindowsFormsApp_Koodrizi
         {
             btnSave.Enabled = true;
             detailkoods.Clear();
-            //btnCalculateKood.Enabled = false;
+            btnCalculateKood.Enabled = false;
+            btnClear.Enabled = false;
             double priceOunce = double.Parse(txtOuncePrice.Text);
             double priceDahanBast = double.Parse(txtDahanBastprice.Text);
             nameKood = txtKoodName.Text;

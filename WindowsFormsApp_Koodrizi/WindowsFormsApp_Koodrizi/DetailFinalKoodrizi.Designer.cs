@@ -30,13 +30,13 @@
         {
             this.btnShowListDetailKood = new System.Windows.Forms.Button();
             this.dataGridDetailKoods = new System.Windows.Forms.DataGridView();
-            this.txtKoodNumber = new System.Windows.Forms.TextBox();
-            this.label1 = new System.Windows.Forms.Label();
             this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.txtKoodNumber = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.lblOunce = new System.Windows.Forms.Label();
             this.lblBasePrice = new System.Windows.Forms.Label();
@@ -80,25 +80,6 @@
             this.dataGridDetailKoods.TabIndex = 2;
             this.dataGridDetailKoods.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DataGridDetailKoods_CellContentClick);
             // 
-            // txtKoodNumber
-            // 
-            this.txtKoodNumber.Font = new System.Drawing.Font("Vazir FD", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtKoodNumber.Location = new System.Drawing.Point(133, 15);
-            this.txtKoodNumber.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.txtKoodNumber.Name = "txtKoodNumber";
-            this.txtKoodNumber.Size = new System.Drawing.Size(413, 26);
-            this.txtKoodNumber.TabIndex = 3;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Vazir FD", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(552, 18);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(74, 19);
-            this.label1.TabIndex = 4;
-            this.label1.Text = "شماره کودریزی";
-            // 
             // Column1
             // 
             this.Column1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
@@ -129,6 +110,26 @@
             this.Column5.HeaderText = "قیمت کل";
             this.Column5.Name = "Column5";
             this.Column5.ReadOnly = true;
+            // 
+            // txtKoodNumber
+            // 
+            this.txtKoodNumber.Font = new System.Drawing.Font("Vazir FD", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtKoodNumber.Location = new System.Drawing.Point(133, 15);
+            this.txtKoodNumber.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.txtKoodNumber.Name = "txtKoodNumber";
+            this.txtKoodNumber.Size = new System.Drawing.Size(413, 26);
+            this.txtKoodNumber.TabIndex = 3;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Vazir FD", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(552, 18);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(74, 19);
+            this.label1.TabIndex = 4;
+            this.label1.Text = "شماره کودریزی";
+            this.label1.Click += new System.EventHandler(this.Label1_Click);
             // 
             // label2
             // 

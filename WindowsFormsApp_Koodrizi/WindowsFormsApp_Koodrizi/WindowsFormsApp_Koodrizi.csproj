@@ -145,6 +145,12 @@
     <Compile Include="Repositories\FinalKoodriziRepository.cs" />
     <Compile Include="Repositories\KoodriziRepository.cs" />
     <Compile Include="Repositories\PersonRepository.cs" />
+    <Compile Include="ShowFinalKoodRizi.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ShowFinalKoodRizi.Designer.cs">
+      <DependentUpon>ShowFinalKoodRizi.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="AddKoodrizi.resx">
       <DependentUpon>AddKoodrizi.cs</DependentUpon>
     </EmbeddedResource>
@@ -184,6 +190,9 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="ShowFinalKoodRizi.resx">
+      <DependentUpon>ShowFinalKoodRizi.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

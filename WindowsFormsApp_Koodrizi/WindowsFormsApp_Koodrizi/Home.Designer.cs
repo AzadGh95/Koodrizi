@@ -106,7 +106,7 @@
             this.btnListKoodrizi.Name = "btnListKoodrizi";
             this.btnListKoodrizi.Size = new System.Drawing.Size(146, 38);
             this.btnListKoodrizi.TabIndex = 5;
-            this.btnListKoodrizi.Text = "نمایش جزئیات کودریزی نهایی";
+            this.btnListKoodrizi.Text = "لیست کودریزی";
             this.btnListKoodrizi.UseVisualStyleBackColor = false;
             this.btnListKoodrizi.Click += new System.EventHandler(this.BtnListKoodrizi_Click);
             // 

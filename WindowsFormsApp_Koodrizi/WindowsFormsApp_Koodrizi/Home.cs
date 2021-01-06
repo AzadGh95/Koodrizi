@@ -56,8 +56,10 @@ namespace WindowsFormsApp_Koodrizi
 
         private void BtnListKoodrizi_Click(object sender, EventArgs e)
         {
-            DetailFinalKoodrizi detailFinalKoodrizi = new DetailFinalKoodrizi();
-            detailFinalKoodrizi.Show();
+            //DetailFinalKoodrizi detailFinalKoodrizi = new DetailFinalKoodrizi();
+            //detailFinalKoodrizi.Show();
+            ShowFinalKoodRizi showFinalKoodRizi = new ShowFinalKoodRizi();
+            showFinalKoodRizi.Show();
         }
     }
 }

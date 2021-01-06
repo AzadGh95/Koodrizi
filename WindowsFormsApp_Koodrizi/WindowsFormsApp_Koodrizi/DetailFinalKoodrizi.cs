@@ -29,16 +29,14 @@ namespace WindowsFormsApp_Koodrizi
         {
             string search = txtKoodNumber.Text;
             var finalListKood = _finalKoodriziRepository.FinalKoodrizi(search);
-            int i = 0;
+
             if (finalListKood != null)
             {
                 foreach (var item in finalListKood.DetailKoodrizis)
                 {
-                    dataGridDetailKoods.Rows[i].Cells[0].Value = item.Bar.Person.Name + " [" + item.Bar.Person.Code + "] ";
-                    dataGridDetailKoods.Rows[i].Cells[1].Value = item.Bar.Ounce;
-                    dataGridDetailKoods.Rows[i].Cells[2].Value = item.Weight;
-                    dataGridDetailKoods.Rows[i].Cells[3].Value = item.Price;
-                    dataGridDetailKoods.Rows[i].Cells[4].Value = ((double)item.Price * item.Weight).ToString("#,###");
+                    dataGridDetailKoods.Rows.Add(item.Bar.Person.Name,
+                        item.Bar.Ounce, item.Weight, item.Price.ToString("#,###")
+                        , (item.Weight * (double)item.Price).ToString("#,###"));
 
                 }
                 lblBasePrice.Text = finalListKood.BasePrice.ToString("#,###");
@@ -54,6 +52,11 @@ namespace WindowsFormsApp_Koodrizi
 
         private void DataGridDetailKoods_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
+        }
+
+        private void Label1_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
