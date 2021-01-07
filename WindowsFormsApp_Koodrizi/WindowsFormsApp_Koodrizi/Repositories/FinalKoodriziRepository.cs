@@ -71,7 +71,8 @@ namespace WindowsFormsApp_Koodrizi.Repositories
         {
             try
             {
-                return _baseContext.FinalKoodriziModels.Where(i => i.FinalKoodId == id).FirstOrDefault();
+                return _baseContext.FinalKoodriziModels
+                    .Where(i => i.FinalKoodId == id).FirstOrDefault();
             }
             catch (Exception)
             {

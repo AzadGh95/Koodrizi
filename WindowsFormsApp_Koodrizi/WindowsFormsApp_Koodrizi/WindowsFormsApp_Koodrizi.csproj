@@ -45,6 +45,10 @@
     <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
       <HintPath>..\packages\EntityFramework.6.4.4\lib\net45\EntityFramework.SqlServer.dll</HintPath>
     </Reference>
+    <Reference Include="FarsiLibrary.Utils, Version=1.9.0.0, Culture=neutral, PublicKeyToken=def7c46cace23f8f, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\FarsiLibrary\FarsiLibrary.Utils.dll</HintPath>
+    </Reference>
     <Reference Include="FarsiLibrary.Win">
       <HintPath>..\FarsiLibrary\FarsiLibrary.Win.dll</HintPath>
     </Reference>
@@ -149,6 +153,7 @@
     <Compile Include="Models\FinalKoodrizi.cs" />
     <Compile Include="Models\PersonModel.cs" />
     <Compile Include="Models\Person.cs" />
+    <Compile Include="Models\PersonsKood.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Repositories\BarRepository.cs" />

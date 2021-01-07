@@ -49,7 +49,19 @@ namespace WindowsFormsApp_Koodrizi.Repositories
             try
             {
                 _baseContext.BarModels.Where(i => i.BarId == id)
-                    .Update(x => new Models.BarModel { });
+                    .Update(x => new Models.BarModel
+                    {
+                        Adl = bar.Adl,
+                        DhanBast = bar.DhanBast,
+                        Gram = bar.Gram,
+                        IdPerson = bar.IdPerson,
+                        TotalWeight = bar.TotalWeight,
+                        IsLock = bar.IsLock,
+                        Ounce = bar.Ounce,
+                        PistachioName = bar.PistachioName,
+                        PistachioType = bar.PistachioType,
+                        Remaining = bar.Remaining
+                    });
                 return true;
             }
             catch (Exception)

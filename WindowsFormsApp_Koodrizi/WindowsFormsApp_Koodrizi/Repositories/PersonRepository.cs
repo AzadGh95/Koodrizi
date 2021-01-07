@@ -49,9 +49,13 @@ namespace WindowsFormsApp_Koodrizi.Repositories
         public bool Update(PersonModel person,int id) {
             try
             {
-                _baseContext.PersonModels.Where(i => i.PersonId == id).Update(x => new PersonModel {
+                _baseContext.PersonModels.Where(i => i.PersonId == id)
+                    .Update(x => new PersonModel {
                     Name = person.Name,
                     AvgDate = person.AvgDate,
+                    BaseDate = person.BaseDate,
+                    Bedehi = person.Bedehi,
+                    Code = person.Code,
                     PhoneNumber = person.PhoneNumber,
                     Total = person.Total,
                 });
@@ -59,7 +63,6 @@ namespace WindowsFormsApp_Koodrizi.Repositories
             }
             catch (Exception)
             {
-                return false;
                 throw;
             }
         }

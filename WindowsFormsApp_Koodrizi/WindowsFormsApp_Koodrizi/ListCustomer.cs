@@ -1,4 +1,5 @@
-﻿using System;
+﻿using FarsiLibrary.Utils;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -7,6 +8,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using WindowsFormsApp_Koodrizi.Models;
 using WindowsFormsApp_Koodrizi.Repositories;
 
 namespace WindowsFormsApp_Koodrizi
@@ -14,6 +16,10 @@ namespace WindowsFormsApp_Koodrizi
     public partial class ListCustomer : Form
     {
         private PersonRepository _personRepository = new PersonRepository();
+        private KoodriziRepository _koodriziRepository = new KoodriziRepository();
+        private decimal totalBedehi;
+        private DateTime Basetime;
+
         public ListCustomer()
         {
             InitializeComponent();
@@ -25,8 +31,9 @@ namespace WindowsFormsApp_Koodrizi
             //int row = 1;
             var people = _personRepository.Peoples();
             foreach (var prop in people)
-                dataGridListCustomer.Rows.Add(prop.PersonId, prop.Code, prop.Name, prop.Total,
-                    prop.BaseDate.ToString("yyyy/MM/dd"), prop.AvgDate.ToString("yyyy/MM/dd"));
+                dataGridListCustomer.Rows.Add(prop.PersonId, prop.Code, prop.Name, prop.Bedehi,
+                    PersianDateConverter.ToPersianDate(prop.BaseDate).ToString("yyyy/MM/dd"),
+                    PersianDateConverter.ToPersianDate(prop.AvgDate).ToString("yyyy/MM/dd"));
         }
 
 
@@ -53,28 +60,48 @@ namespace WindowsFormsApp_Koodrizi
             {
                 var pId = int.Parse(dataGridListCustomer.Rows[e.RowIndex].Cells[0].Value.ToString());
                 var person = _personRepository.People(pId);
+
                 ModalBaseTime formBaseTime = new ModalBaseTime();
-                formBaseTime.Show();
                 if (formBaseTime.ShowDialog() == DialogResult.OK)
                 {
-                    var basetime = formBaseTime.BaseTime;
-                    var avgdate = AvgDateTime(basetime, pId);
+                    Basetime = formBaseTime.BaseTime;
+                    var avgdate = AvgDateTime(Basetime, pId);
 
                     person.AvgDate = avgdate;
-                    person.BaseDate = basetime;
+                    person.BaseDate = Basetime;
+                    person.Bedehi = totalBedehi;
                     _personRepository.Update(person, pId);
 
-
-                    //ویرایش گرید ویو
-                    //dataGridview.clear();
-                    //نمایش داده های جدید
+                    dataGridListCustomer.Rows[e.RowIndex].Cells[3].Value = totalBedehi;//بدهی کل
+                    dataGridListCustomer.Rows[e.RowIndex].Cells[4].Value = PersianDateConverter.ToPersianDate(Basetime).ToString("yyyy/MM/dd");//تاریخ مبنا
+                    dataGridListCustomer.Rows[e.RowIndex].Cells[5].Value = PersianDateConverter.ToPersianDate(avgdate).ToString("yyyy/MM/dd");//راس تاریخ
                 }
             }
 
         }
-        private DateTime AvgDateTime(DateTime dateTime, int id)
+        private DateTime AvgDateTime(DateTime dateTime, int personId)
         {
-            return dateTime;
+            var listPersonsKood = _koodriziRepository.PersonsKood(personId);
+            var listPersonsKoodModel = new List<PersonsKood>();
+            totalBedehi = 0;
+            foreach (var item in listPersonsKood)
+            {
+                totalBedehi += (decimal)((double)item.Price * item.Weight);//بدهی کل برای این مشتری
+                listPersonsKoodModel.Add(new PersonsKood()
+                {
+                    DueDate = item.ArrivedDate,
+                    Bedehi = (decimal)((double)item.Price * item.Weight)
+                });
+
+            }
+            decimal sum = 0;
+            foreach (var item in listPersonsKoodModel)
+                sum = (decimal)(item.DueDate - Basetime).TotalDays * (item.Bedehi);
+
+            var avg = sum / totalBedehi;
+            DateTime avgdatetime = Basetime.AddDays((int)avg);
+            return avgdatetime;
+
         }
 
     }

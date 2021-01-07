@@ -1,4 +1,5 @@
-﻿using System;
+﻿using FarsiLibrary.Utils;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -44,6 +45,7 @@ namespace WindowsFormsApp_Koodrizi
             //Application.CurrentCulture = new CultureInfo("fa-IR");
             //dateTimePicker1.Format = DateTimePickerFormat.Custom;
             //dateTimePicker1.CustomFormat = Application.CurrentCulture.DateTimeFormat.ShortDatePattern;
+             
         }
 
         private void DataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)

@@ -23,5 +23,10 @@ namespace WindowsFormsApp_Koodrizi
             BaseTime = faDatePicker1.SelectedDateTime;
             Close();
         }
+
+        private void ModalBaseTime_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

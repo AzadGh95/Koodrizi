@@ -19,7 +19,7 @@ namespace WindowsFormsApp_Koodrizi.Repositories
         {
             try
             {
-               // koodrizi.DId=_baseContext.DKoods.Count() + 1;
+                // koodrizi.DId=_baseContext.DKoods.Count() + 1;
                 _baseContext.DKoods.Add(koodrizi);
                 _baseContext.SaveChanges();
 
@@ -95,5 +95,19 @@ namespace WindowsFormsApp_Koodrizi.Repositories
             }
         }
 
+        public List<Models.DKood> PersonsKood(int personId)
+        {
+            try
+            {
+                var list = _baseContext.DKoods.Where(i => i.Bar.Person.PersonId == personId).ToList();
+                return list;
+            }
+            catch (Exception ex)
+            {
+
+                throw;
+            }
+
+        }
     }
 }
