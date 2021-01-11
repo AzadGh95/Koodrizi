@@ -56,6 +56,8 @@
             this.btnClearSearch = new System.Windows.Forms.Button();
             this.fadateTimeSell = new FarsiLibrary.Win.Controls.FADatePicker();
             this.fadateTimeDueDate = new FarsiLibrary.Win.Controls.FADatePicker();
+            this.txtadlbar = new System.Windows.Forms.TextBox();
+            this.label8 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // label1
@@ -230,7 +232,7 @@
             // 
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Vazir FD", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(591, 275);
+            this.label9.Location = new System.Drawing.Point(591, 276);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(26, 19);
             this.label9.TabIndex = 18;
@@ -240,17 +242,17 @@
             // 
             this.txtWeightBar.Enabled = false;
             this.txtWeightBar.Font = new System.Drawing.Font("Vazir FD", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtWeightBar.Location = new System.Drawing.Point(396, 271);
+            this.txtWeightBar.Location = new System.Drawing.Point(469, 272);
             this.txtWeightBar.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtWeightBar.Name = "txtWeightBar";
-            this.txtWeightBar.Size = new System.Drawing.Size(181, 26);
+            this.txtWeightBar.Size = new System.Drawing.Size(108, 26);
             this.txtWeightBar.TabIndex = 11;
             // 
             // label10
             // 
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("Vazir FD", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.Location = new System.Drawing.Point(231, 275);
+            this.label10.Location = new System.Drawing.Point(147, 276);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(58, 19);
             this.label10.TabIndex = 20;
@@ -260,12 +262,13 @@
             // 
             this.txtPercentageOfVisibility.Enabled = false;
             this.txtPercentageOfVisibility.Font = new System.Drawing.Font("Vazir FD", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtPercentageOfVisibility.Location = new System.Drawing.Point(33, 271);
+            this.txtPercentageOfVisibility.Location = new System.Drawing.Point(33, 272);
             this.txtPercentageOfVisibility.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtPercentageOfVisibility.Name = "txtPercentageOfVisibility";
-            this.txtPercentageOfVisibility.Size = new System.Drawing.Size(181, 26);
+            this.txtPercentageOfVisibility.Size = new System.Drawing.Size(108, 26);
             this.txtPercentageOfVisibility.TabIndex = 12;
             this.txtPercentageOfVisibility.Text = "0";
+            this.txtPercentageOfVisibility.TextChanged += new System.EventHandler(this.TxtPercentageOfVisibility_TextChanged);
             // 
             // label11
             // 
@@ -346,11 +349,32 @@
             this.fadateTimeDueDate.TabIndex = 30;
             this.fadateTimeDueDate.Theme = FarsiLibrary.Win.Enums.ThemeTypes.WindowsXP;
             // 
+            // txtadlbar
+            // 
+            this.txtadlbar.Font = new System.Drawing.Font("Vazir FD", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtadlbar.Location = new System.Drawing.Point(261, 272);
+            this.txtadlbar.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.txtadlbar.Name = "txtadlbar";
+            this.txtadlbar.Size = new System.Drawing.Size(108, 26);
+            this.txtadlbar.TabIndex = 31;
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Font = new System.Drawing.Font("Vazir FD", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.Location = new System.Drawing.Point(375, 276);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(29, 19);
+            this.label8.TabIndex = 32;
+            this.label8.Text = "عدل";
+            // 
             // Koodrizi
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 19F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(666, 444);
+            this.Controls.Add(this.txtadlbar);
+            this.Controls.Add(this.label8);
             this.Controls.Add(this.fadateTimeDueDate);
             this.Controls.Add(this.fadateTimeSell);
             this.Controls.Add(this.btnClearSearch);
@@ -420,5 +444,7 @@
         private System.Windows.Forms.Button btnClearSearch;
         private FarsiLibrary.Win.Controls.FADatePicker fadateTimeSell;
         private FarsiLibrary.Win.Controls.FADatePicker fadateTimeDueDate;
+        private System.Windows.Forms.TextBox txtadlbar;
+        private System.Windows.Forms.Label label8;
     }
 }

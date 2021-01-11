@@ -127,5 +127,10 @@ namespace WindowsFormsApp_Koodrizi
         {
 
         }
+
+        private void TxtPercentageOfVisibility_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

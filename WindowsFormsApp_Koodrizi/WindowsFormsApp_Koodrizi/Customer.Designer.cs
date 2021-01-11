@@ -77,6 +77,7 @@
             this.txtName.Name = "txtName";
             this.txtName.Size = new System.Drawing.Size(195, 26);
             this.txtName.TabIndex = 3;
+            this.txtName.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // txtPhone
             // 

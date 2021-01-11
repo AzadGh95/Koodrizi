@@ -43,6 +43,7 @@ namespace WindowsFormsApp_Koodrizi.Models
         public double baseOunce { get; set; }
         public double baseDahanBast { get; set; }
         public double basePercentRoyat { get; set; }
+        public double Adl { get; set; }
 
     }
 }

@@ -30,6 +30,7 @@ namespace WindowsFormsApp_Koodrizi.Models
         public virtual PersonModel Person { get; set; }
 
         public double Adl {get;set;}
+        public double AdlRem {get;set;}
         /// <summary>
         /// درصد دهن بست
         /// </summary>

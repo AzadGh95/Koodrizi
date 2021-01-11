@@ -26,27 +26,34 @@ namespace WindowsFormsApp_Koodrizi
         {
             try
             {
-                PersonModel person = new PersonModel()
+                if (_personRepo.IsExist(txtCod.Text))
                 {
-                    CreateDate = DateTime.UtcNow,
-                    Name = txtName.Text,
-                    PhoneNumber = txtPhone.Text,
-                    Code = txtCod.Text,
-                };
-                var result = _personRepo.Insert(person);
-                if (result)
-                {
-                    MessageBox.Show("مشتری با موفقیت ذخیره شد", "");
-                    txtName.Text = "";
-                    txtCod.Text = "";
-                    txtPhone.Text = "";
+                    MessageBox.Show("کد وارد شده تکراری است");
                 }
                 else
-                    MessageBox.Show("خطا در ذخیره سازی، لطفا مجددا تلاش کنید", "خطا");
+                {
+                    PersonModel person = new PersonModel()
+                    {
+                        CreateDate = DateTime.UtcNow,
+                        Name = txtName.Text,
+                        PhoneNumber = txtPhone.Text,
+                        Code = txtCod.Text,
+                    };
+                    var result = _personRepo.Insert(person);
+                    if (result)
+                    {
+                        MessageBox.Show("مشتری با موفقیت ذخیره شد", "");
+                        txtName.Text = "";
+                        txtCod.Text = "";
+                        txtPhone.Text = "";
+                    }
+                    else
+                        MessageBox.Show("خطا در ذخیره سازی، لطفا مجددا تلاش کنید", "خطا");
+                }
             }
             catch (Exception ex)
             {
-            //    MessageBox.Show(ex.Message);
+                //    MessageBox.Show(ex.Message);
                 MessageBox.Show("خطا در ذخیره سازی، لطفا مجددا تلاش کنید", "خطا");
                 throw;
             }

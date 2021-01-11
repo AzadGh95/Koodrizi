@@ -98,6 +98,7 @@ namespace WindowsFormsApp_Koodrizi
                 _koodriziRepo.Insert(item);
                 var bar = _barRepository.Bar(item.BarId);
                 bar.Remaining -= item.Weight;
+            //    bar.AdlRem -=item.
                 _barRepository.Update(bar, item.BarId);
             }
 

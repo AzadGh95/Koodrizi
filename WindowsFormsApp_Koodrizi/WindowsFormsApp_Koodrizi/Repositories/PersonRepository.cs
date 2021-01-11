@@ -104,6 +104,13 @@ namespace WindowsFormsApp_Koodrizi.Repositories
                 throw;
             }
         }
-
+        public bool IsExist(string newCode)
+        {
+            var p = _baseContext.People.FirstOrDefault(i => i.Code == newCode);
+            if (p == null)
+                return false;
+            else
+                return true;
+        }
     }
 }
