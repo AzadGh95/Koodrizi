@@ -177,6 +177,7 @@ namespace WindowsFormsApp_Koodrizi
                     PercentRoyat = double.Parse(dataGridFinalKood.Rows[i].Cells[4].Value.ToString()),
                     SellDate = DateTime.Parse(dataGridFinalKood.Rows[i].Cells[5].Value.ToString()),
                     ArrivedDate = DateTime.Parse(dataGridFinalKood.Rows[i].Cells[6].Value.ToString()),
+
                 });
             }
 

@@ -60,7 +60,9 @@ namespace WindowsFormsApp_Koodrizi
                     ArrivedDate = fadateTimeDueDate.SelectedDateTime,
                     SellDate = fadateTimeSell.SelectedDateTime,
                     Weight = double.Parse(txtWeightBar.Text),
-                    PercentRoyat = double.Parse(txtPercentageOfVisibility.Text)
+                    PercentRoyat = double.Parse(txtPercentageOfVisibility.Text),
+                    Adl = double.Parse(txtadlbar.Text),
+
                 };
 
                 Close();

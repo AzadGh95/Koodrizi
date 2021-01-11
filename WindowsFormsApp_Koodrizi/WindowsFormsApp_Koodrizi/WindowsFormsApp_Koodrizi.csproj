@@ -146,6 +146,10 @@
     <Compile Include="Migrations\202101110855080_Adl-kood.designer.cs">
       <DependentUpon>202101110855080_Adl-kood.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202101110904147_Adl-kood2.cs" />
+    <Compile Include="Migrations\202101110904147_Adl-kood2.designer.cs">
+      <DependentUpon>202101110904147_Adl-kood2.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="ModalBaseTime.cs">
       <SubType>Form</SubType>
@@ -212,6 +216,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202101110855080_Adl-kood.resx">
       <DependentUpon>202101110855080_Adl-kood.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202101110904147_Adl-kood2.resx">
+      <DependentUpon>202101110904147_Adl-kood2.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ModalBaseTime.resx">
       <DependentUpon>ModalBaseTime.cs</DependentUpon>

@@ -45,6 +45,7 @@ namespace WindowsFormsApp_Koodrizi.Models
         public double BaseDahanBast { get; set; }
         public double BasePercentRoyat { get; set; }
         public string extra { get; set; }
+        public double Adl { get; set; }
 
     }
 }
