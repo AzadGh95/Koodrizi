@@ -106,7 +106,7 @@ namespace WindowsFormsApp_Koodrizi.Repositories
         }
         public bool IsExist(string newCode)
         {
-            var p = _baseContext.People.FirstOrDefault(i => i.Code == newCode);
+            var p = _baseContext.PersonModels.FirstOrDefault(i => i.Code == newCode);
             if (p == null)
                 return false;
             else

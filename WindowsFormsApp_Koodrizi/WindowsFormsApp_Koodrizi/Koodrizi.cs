@@ -18,9 +18,6 @@ namespace WindowsFormsApp_Koodrizi
         private PersonRepository _personRepo = new PersonRepository();
         private BarRepository _barRepo = new BarRepository();
         private BarRepository _barRepository = new BarRepository();
-
-        private int BarId;
-
         public Koodrizi()
         {
             InitializeComponent();
@@ -62,13 +59,11 @@ namespace WindowsFormsApp_Koodrizi
                     Weight = double.Parse(txtWeightBar.Text),
                     PercentRoyat = double.Parse(txtPercentageOfVisibility.Text),
                     Adl = double.Parse(txtadlbar.Text),
-
                 };
 
                 Close();
-
             }
-            catch (Exception ex)
+            catch (Exception)
             {
                 MessageBox.Show("ثبت با مشکل مواجه شد");
                 //throw;
@@ -94,7 +89,7 @@ namespace WindowsFormsApp_Koodrizi
                 {
                     comCustomerBar.Items.Add(bar.BarId + ">  " + bar.Person.Name + " | انس: " + bar.Ounce + " | موجودی:" + bar.Remaining
                         + " | گرم:" + bar.Gram + " | نوع پسته:" + bar.PistachioName + " | درصددهن بست:" +
-                        bar.DhanBast + " | عدل: " + bar.Adl);
+                        bar.DhanBast + " | عدل: " + bar.AdlRem);
                 }
                 if (bars.Count() > 0)
                 {

@@ -14,6 +14,8 @@ namespace WindowsFormsApp_Koodrizi.Models
         public PersonModel()
         {
             CreateDate = DateTime.UtcNow;
+            AvgDate = DateTime.UtcNow;
+            BaseDate = DateTime.UtcNow;
         }
         [Key]
         public int PersonId { get; set; }

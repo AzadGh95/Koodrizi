@@ -54,7 +54,7 @@
             this.avgdate,
             this.btnDelete,
             this.CalculateAvg});
-            this.dataGridListCustomer.Location = new System.Drawing.Point(22, 13);
+            this.dataGridListCustomer.Location = new System.Drawing.Point(22, 12);
             this.dataGridListCustomer.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.dataGridListCustomer.Name = "dataGridListCustomer";
             this.dataGridListCustomer.ReadOnly = true;

@@ -1,11 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using FarsiLibrary.Utils;
+using System;
 using System.Windows.Forms;
 using WindowsFormsApp_Koodrizi.Repositories;
 
@@ -45,8 +39,9 @@ namespace WindowsFormsApp_Koodrizi
             var bars = _barRepository.Bars();
             foreach (var prop in bars)
                 dataGridListBars.Rows.Add(prop.BarId, prop.Person.Name,
-                    prop.CreateDate.ToString("yyyy/MM/dd"), prop.Remaining,
-                    prop.TotalWeight, prop.DhanBast, prop.Gram, prop.Ounce, prop.Adl);
+                    PersianDateConverter.ToPersianDate(prop.CreateDate).ToString("yyyy/MM/dd"),
+                    prop.Remaining, prop.TotalWeight, prop.DhanBast,
+                    prop.Gram, prop.Ounce, prop.Adl);
         }
     }
 }

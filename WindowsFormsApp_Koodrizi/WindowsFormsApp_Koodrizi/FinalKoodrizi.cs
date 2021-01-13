@@ -45,7 +45,7 @@ namespace WindowsFormsApp_Koodrizi
             //Application.CurrentCulture = new CultureInfo("fa-IR");
             //dateTimePicker1.Format = DateTimePickerFormat.Custom;
             //dateTimePicker1.CustomFormat = Application.CurrentCulture.DateTimeFormat.ShortDatePattern;
-             
+
         }
 
         private void DataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
@@ -98,7 +98,7 @@ namespace WindowsFormsApp_Koodrizi
                 _koodriziRepo.Insert(item);
                 var bar = _barRepository.Bar(item.BarId);
                 bar.Remaining -= item.Weight;
-            //    bar.AdlRem -=item.
+                bar.AdlRem -= item.Adl;
                 _barRepository.Update(bar, item.BarId);
             }
 
@@ -137,6 +137,7 @@ namespace WindowsFormsApp_Koodrizi
                 newRow.Cells[4].Value = formKoodrizi.Koodrizi_model.PercentRoyat;
                 newRow.Cells[5].Value = formKoodrizi.Koodrizi_model.SellDate;
                 newRow.Cells[6].Value = formKoodrizi.Koodrizi_model.ArrivedDate;
+                newRow.Cells[7].Value = formKoodrizi.Koodrizi_model.Adl;
                 dataGridFinalKood.Rows.Add(newRow);
 
             }
@@ -177,7 +178,7 @@ namespace WindowsFormsApp_Koodrizi
                     PercentRoyat = double.Parse(dataGridFinalKood.Rows[i].Cells[4].Value.ToString()),
                     SellDate = DateTime.Parse(dataGridFinalKood.Rows[i].Cells[5].Value.ToString()),
                     ArrivedDate = DateTime.Parse(dataGridFinalKood.Rows[i].Cells[6].Value.ToString()),
-
+                    Adl = double.Parse(dataGridFinalKood.Rows[i].Cells[7].ToString()),
                 });
             }
 
@@ -203,7 +204,8 @@ namespace WindowsFormsApp_Koodrizi
                 sumDahanBst += item.BaseDahanBast;
             }
             //sumPrice *= sumWeight;
-            basePriceCalculate = (decimal)(double.Parse(txPriceperkilo.Text) * (1 - sumPercentRoyat));
+            basePriceCalculate = (decimal)(double.Parse(txPriceperkilo.Text) *
+                (1 - sumPercentRoyat));
 
             foreach (var item in detailkoods)
             {
@@ -211,8 +213,8 @@ namespace WindowsFormsApp_Koodrizi
                 var priceElement = CalculateKoodRizi(basePriceCalculate, item.PercentRoyat, sumOunce,
                      sumDahanBst, bar.Ounce, bar.DhanBast, priceOunce, priceDahanBast);
                 item.Price = (decimal)priceElement;
-                dataGridFinalKood.Rows[j].Cells[7].Value = priceElement.ToString("#,###");
-                dataGridFinalKood.Rows[j].Cells[8].Value = (item.Weight * priceElement).ToString("#,###");
+                dataGridFinalKood.Rows[j].Cells[8].Value = priceElement.ToString("#,###");
+                dataGridFinalKood.Rows[j].Cells[9].Value = (item.Weight * priceElement).ToString("#,###");
                 j++;
 
 

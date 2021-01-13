@@ -37,15 +37,6 @@
             this.txPriceperkilo = new System.Windows.Forms.TextBox();
             this.btnAdd = new System.Windows.Forms.Button();
             this.dataGridFinalKood = new System.Windows.Forms.DataGridView();
-            this.IdBar = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Customer = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Weight = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Onc = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.PercentRoyat = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Saledate = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.DateDue = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.gridElementPrice = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.GridTotalPrice = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.label5 = new System.Windows.Forms.Label();
             this.btnSave = new System.Windows.Forms.Button();
             this.btnCancel = new System.Windows.Forms.Button();
@@ -60,6 +51,16 @@
             this.label9 = new System.Windows.Forms.Label();
             this.lblTtalOunce = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
+            this.IdBar = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Customer = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Weight = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Onc = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.PercentRoyat = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Saledate = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.DateDue = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.adl = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.gridElementPrice = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.GridTotalPrice = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridFinalKood)).BeginInit();
             this.SuspendLayout();
             // 
@@ -145,6 +146,7 @@
             this.PercentRoyat,
             this.Saledate,
             this.DateDue,
+            this.adl,
             this.gridElementPrice,
             this.GridTotalPrice});
             this.dataGridFinalKood.Location = new System.Drawing.Point(22, 136);
@@ -155,68 +157,6 @@
             this.dataGridFinalKood.Size = new System.Drawing.Size(826, 219);
             this.dataGridFinalKood.TabIndex = 10;
             this.dataGridFinalKood.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DataGridView1_CellContentClick_1);
-            // 
-            // IdBar
-            // 
-            this.IdBar.HeaderText = "شماره بار";
-            this.IdBar.Name = "IdBar";
-            this.IdBar.ReadOnly = true;
-            this.IdBar.Visible = false;
-            // 
-            // Customer
-            // 
-            this.Customer.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.Customer.HeaderText = "مشتری";
-            this.Customer.Name = "Customer";
-            this.Customer.ReadOnly = true;
-            // 
-            // Weight
-            // 
-            this.Weight.HeaderText = "وزن";
-            this.Weight.Name = "Weight";
-            this.Weight.ReadOnly = true;
-            // 
-            // Onc
-            // 
-            this.Onc.HeaderText = "انس";
-            this.Onc.Name = "Onc";
-            this.Onc.ReadOnly = true;
-            this.Onc.Width = 50;
-            // 
-            // PercentRoyat
-            // 
-            this.PercentRoyat.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader;
-            this.PercentRoyat.HeaderText = "درصد رویت";
-            this.PercentRoyat.Name = "PercentRoyat";
-            this.PercentRoyat.ReadOnly = true;
-            this.PercentRoyat.Width = 83;
-            // 
-            // Saledate
-            // 
-            this.Saledate.HeaderText = "تاریخ فروش";
-            this.Saledate.Name = "Saledate";
-            this.Saledate.ReadOnly = true;
-            this.Saledate.Visible = false;
-            // 
-            // DateDue
-            // 
-            this.DateDue.HeaderText = "تاریخ سررسید";
-            this.DateDue.Name = "DateDue";
-            this.DateDue.ReadOnly = true;
-            this.DateDue.Visible = false;
-            // 
-            // gridElementPrice
-            // 
-            this.gridElementPrice.HeaderText = "قیمت هرکیلو";
-            this.gridElementPrice.Name = "gridElementPrice";
-            this.gridElementPrice.ReadOnly = true;
-            // 
-            // GridTotalPrice
-            // 
-            this.GridTotalPrice.HeaderText = "قیمت کل بار";
-            this.GridTotalPrice.Name = "GridTotalPrice";
-            this.GridTotalPrice.ReadOnly = true;
-            this.GridTotalPrice.Width = 130;
             // 
             // label5
             // 
@@ -369,6 +309,76 @@
             this.label7.TabIndex = 23;
             this.label7.Text = "انس کل :";
             // 
+            // IdBar
+            // 
+            this.IdBar.HeaderText = "شماره بار";
+            this.IdBar.Name = "IdBar";
+            this.IdBar.ReadOnly = true;
+            this.IdBar.Visible = false;
+            // 
+            // Customer
+            // 
+            this.Customer.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.Customer.HeaderText = "مشتری";
+            this.Customer.Name = "Customer";
+            this.Customer.ReadOnly = true;
+            // 
+            // Weight
+            // 
+            this.Weight.HeaderText = "وزن";
+            this.Weight.Name = "Weight";
+            this.Weight.ReadOnly = true;
+            // 
+            // Onc
+            // 
+            this.Onc.HeaderText = "انس";
+            this.Onc.Name = "Onc";
+            this.Onc.ReadOnly = true;
+            this.Onc.Width = 50;
+            // 
+            // PercentRoyat
+            // 
+            this.PercentRoyat.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader;
+            this.PercentRoyat.HeaderText = "درصد رویت";
+            this.PercentRoyat.Name = "PercentRoyat";
+            this.PercentRoyat.ReadOnly = true;
+            this.PercentRoyat.Width = 83;
+            // 
+            // Saledate
+            // 
+            this.Saledate.HeaderText = "تاریخ فروش";
+            this.Saledate.Name = "Saledate";
+            this.Saledate.ReadOnly = true;
+            this.Saledate.Visible = false;
+            // 
+            // DateDue
+            // 
+            this.DateDue.HeaderText = "تاریخ سررسید";
+            this.DateDue.Name = "DateDue";
+            this.DateDue.ReadOnly = true;
+            this.DateDue.Visible = false;
+            // 
+            // adl
+            // 
+            this.adl.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader;
+            this.adl.HeaderText = "عدل";
+            this.adl.Name = "adl";
+            this.adl.ReadOnly = true;
+            this.adl.Width = 54;
+            // 
+            // gridElementPrice
+            // 
+            this.gridElementPrice.HeaderText = "قیمت هرکیلو";
+            this.gridElementPrice.Name = "gridElementPrice";
+            this.gridElementPrice.ReadOnly = true;
+            // 
+            // GridTotalPrice
+            // 
+            this.GridTotalPrice.HeaderText = "قیمت کل بار";
+            this.GridTotalPrice.Name = "GridTotalPrice";
+            this.GridTotalPrice.ReadOnly = true;
+            this.GridTotalPrice.Width = 130;
+            // 
             // FinallKoodrizi
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 19F);
@@ -429,6 +439,8 @@
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.TextBox txtDahanBastprice;
         private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.Label lblTtalOunce;
+        private System.Windows.Forms.Label label7;
         private System.Windows.Forms.DataGridViewTextBoxColumn IdBar;
         private System.Windows.Forms.DataGridViewTextBoxColumn Customer;
         private System.Windows.Forms.DataGridViewTextBoxColumn Weight;
@@ -436,9 +448,8 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn PercentRoyat;
         private System.Windows.Forms.DataGridViewTextBoxColumn Saledate;
         private System.Windows.Forms.DataGridViewTextBoxColumn DateDue;
+        private System.Windows.Forms.DataGridViewTextBoxColumn adl;
         private System.Windows.Forms.DataGridViewTextBoxColumn gridElementPrice;
         private System.Windows.Forms.DataGridViewTextBoxColumn GridTotalPrice;
-        private System.Windows.Forms.Label lblTtalOunce;
-        private System.Windows.Forms.Label label7;
     }
 }

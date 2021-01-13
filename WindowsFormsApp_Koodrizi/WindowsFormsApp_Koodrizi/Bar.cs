@@ -38,6 +38,7 @@ namespace WindowsFormsApp_Koodrizi
                 bar.DhanBast = double.Parse(txtPercent.Text);
                 bar.Ounce = double.Parse(txtOunce.Text);
                 bar.Adl = double.Parse(txtAdl.Text);
+                bar.AdlRem = double.Parse(txtAdl.Text);
                 bar.Remaining = double.Parse(txtWeight.Text);
                 bar.TotalWeight = double.Parse(txtWeight.Text);
                 bar.CreateDate = faDataTimeCreateDate.SelectedDateTime;
@@ -92,7 +93,8 @@ namespace WindowsFormsApp_Koodrizi
                     txtPercent.Enabled = false;
                 }
 
-                var listPeople = _personRepository.Peoples();
+                var listPeople = _personRepository?.Peoples()??new List<Models.PersonModel>();
+
                 foreach (var person in listPeople)
                 {
                     comCustomerSelection.Items.Add(person.Name + " [" + person.Code + "]");
@@ -103,7 +105,6 @@ namespace WindowsFormsApp_Koodrizi
                 "احمدآقایی",
                 "فندقی",
                 "اکبری",
-                //"",
             };
 
                 foreach (var pistah in listPistachio)
@@ -127,6 +128,7 @@ namespace WindowsFormsApp_Koodrizi
         private void RadioKhandan_CheckedChanged(object sender, EventArgs e)
         {
             txtPercent.Enabled = true;
+            txtPercent.Text = "0";
         }
 
         private void RadioDahanBast_CheckedChanged(object sender, EventArgs e)
