@@ -266,8 +266,8 @@
             this.txtPercentageOfVisibility.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtPercentageOfVisibility.Name = "txtPercentageOfVisibility";
             this.txtPercentageOfVisibility.Size = new System.Drawing.Size(108, 26);
-            this.txtPercentageOfVisibility.TabIndex = 12;
-            this.txtPercentageOfVisibility.Text = "0";
+            this.txtPercentageOfVisibility.TabIndex = 13;
+            this.txtPercentageOfVisibility.Text = "1";
             this.txtPercentageOfVisibility.TextChanged += new System.EventHandler(this.TxtPercentageOfVisibility_TextChanged);
             // 
             // label11
@@ -298,7 +298,7 @@
             this.btnCancel.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnCancel.Name = "btnCancel";
             this.btnCancel.Size = new System.Drawing.Size(63, 33);
-            this.btnCancel.TabIndex = 14;
+            this.btnCancel.TabIndex = 15;
             this.btnCancel.Text = "لغو";
             this.btnCancel.UseVisualStyleBackColor = true;
             this.btnCancel.Click += new System.EventHandler(this.BtnCancel_Click);
@@ -312,7 +312,7 @@
             this.btnSave.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnSave.Name = "btnSave";
             this.btnSave.Size = new System.Drawing.Size(106, 33);
-            this.btnSave.TabIndex = 13;
+            this.btnSave.TabIndex = 14;
             this.btnSave.Text = "ثبت";
             this.btnSave.UseVisualStyleBackColor = true;
             this.btnSave.Click += new System.EventHandler(this.BtnSave_Click);
@@ -356,7 +356,7 @@
             this.txtadlbar.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtadlbar.Name = "txtadlbar";
             this.txtadlbar.Size = new System.Drawing.Size(108, 26);
-            this.txtadlbar.TabIndex = 31;
+            this.txtadlbar.TabIndex = 12;
             // 
             // label8
             // 

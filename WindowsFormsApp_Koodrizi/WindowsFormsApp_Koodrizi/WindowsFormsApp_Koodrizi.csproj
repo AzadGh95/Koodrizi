@@ -145,8 +145,8 @@
     <Compile Include="ModalBaseTime.Designer.cs">
       <DependentUpon>ModalBaseTime.cs</DependentUpon>
     </Compile>
-    <Compile Include="Models\BarModel.cs" />
     <Compile Include="Models\Bar.cs" />
+    <Compile Include="Models\BarModel.cs" />
     <Compile Include="Models\DKood.cs" />
     <Compile Include="Models\DetailsKood.cs" />
     <Compile Include="Models\FinalKoodriziModel.cs" />

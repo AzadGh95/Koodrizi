@@ -67,6 +67,7 @@ namespace WindowsFormsApp_Koodrizi
             txtKoodNumber.Text = "K-" + DateTime.UtcNow.ToString("dMmss");
             btnSave.Enabled = false;
             txtKoodNumber.Enabled = false;
+            
         }
 
         private void Label5_Click(object sender, EventArgs e)
@@ -178,7 +179,7 @@ namespace WindowsFormsApp_Koodrizi
                     PercentRoyat = double.Parse(dataGridFinalKood.Rows[i].Cells[4].Value.ToString()),
                     SellDate = DateTime.Parse(dataGridFinalKood.Rows[i].Cells[5].Value.ToString()),
                     ArrivedDate = DateTime.Parse(dataGridFinalKood.Rows[i].Cells[6].Value.ToString()),
-                    Adl = double.Parse(dataGridFinalKood.Rows[i].Cells[7].ToString()),
+                   // Adl = double.Parse(dataGridFinalKood.Rows[i].Cells[9].ToString()),
                 });
             }
 
@@ -213,8 +214,8 @@ namespace WindowsFormsApp_Koodrizi
                 var priceElement = CalculateKoodRizi(basePriceCalculate, item.PercentRoyat, sumOunce,
                      sumDahanBst, bar.Ounce, bar.DhanBast, priceOunce, priceDahanBast);
                 item.Price = (decimal)priceElement;
-                dataGridFinalKood.Rows[j].Cells[8].Value = priceElement.ToString("#,###");
-                dataGridFinalKood.Rows[j].Cells[9].Value = (item.Weight * priceElement).ToString("#,###");
+                dataGridFinalKood.Rows[j].Cells[7].Value = priceElement.ToString("#,###");
+                dataGridFinalKood.Rows[j].Cells[8].Value = (item.Weight * priceElement).ToString("#,###");
                 j++;
 
 

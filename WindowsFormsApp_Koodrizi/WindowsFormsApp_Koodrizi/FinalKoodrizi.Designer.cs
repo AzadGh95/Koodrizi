@@ -314,7 +314,6 @@
             this.IdBar.HeaderText = "شماره بار";
             this.IdBar.Name = "IdBar";
             this.IdBar.ReadOnly = true;
-            this.IdBar.Visible = false;
             // 
             // Customer
             // 
@@ -349,14 +348,12 @@
             this.Saledate.HeaderText = "تاریخ فروش";
             this.Saledate.Name = "Saledate";
             this.Saledate.ReadOnly = true;
-            this.Saledate.Visible = false;
             // 
             // DateDue
             // 
             this.DateDue.HeaderText = "تاریخ سررسید";
             this.DateDue.Name = "DateDue";
             this.DateDue.ReadOnly = true;
-            this.DateDue.Visible = false;
             // 
             // adl
             // 

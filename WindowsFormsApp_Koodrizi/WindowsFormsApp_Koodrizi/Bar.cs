@@ -32,20 +32,43 @@ namespace WindowsFormsApp_Koodrizi
                 var a = token[1].ToString();
                 string[] token2 = a.Split(']');
                 a = token2[0].ToString();
-                personId =_personRepository.People(a);
+                personId = _personRepository.People(a);
+
+                if (txtPercent.Text == "")
+                    bar.DhanBast = 0.0;
+                else
+                    bar.DhanBast = double.Parse(txtPercent.Text);
+
+                if (txtOunce.Text == "")
+                    bar.Ounce = 0.0;
+                else
+                    bar.Ounce = double.Parse(txtOunce.Text);
 
 
-                bar.DhanBast = double.Parse(txtPercent.Text);
-                bar.Ounce = double.Parse(txtOunce.Text);
-                bar.Adl = double.Parse(txtAdl.Text);
-                bar.AdlRem = double.Parse(txtAdl.Text);
+                if (txtAdl.Text == "")
+                {
+                    bar.Adl = 0.0;
+                    bar.AdlRem = 0.0;
+                }
+                else
+                {
+                    bar.Adl = double.Parse(txtAdl.Text);
+                    bar.AdlRem = double.Parse(txtAdl.Text);
+                }
+
+
+
                 bar.Remaining = double.Parse(txtWeight.Text);
                 bar.TotalWeight = double.Parse(txtWeight.Text);
                 bar.CreateDate = faDataTimeCreateDate.SelectedDateTime;
                 bar.IdPerson = personId;
                 bar.PistachioName = comboType.Text;
                 bar.PistachioType = radioKhandan.Checked;
-                bar.Gram = double.Parse(txtGrams.Text);
+
+                if (txtGrams.Text == "")
+                    bar.Gram = 0.0;
+                else
+                    bar.Gram = double.Parse(txtGrams.Text);
 
                 var result = _barRepo.Insert(bar);
 
@@ -82,6 +105,8 @@ namespace WindowsFormsApp_Koodrizi
 
         private void Bar_Load(object sender, EventArgs e)
         {
+            txtGrams.Text = "0";
+            txtGrams.Enabled = false;
             try
             {
                 if (radioKhandan.Checked == true)
@@ -93,7 +118,7 @@ namespace WindowsFormsApp_Koodrizi
                     txtPercent.Enabled = false;
                 }
 
-                var listPeople = _personRepository?.Peoples()??new List<Models.PersonModel>();
+                var listPeople = _personRepository?.Peoples() ?? new List<Models.PersonModel>();
 
                 foreach (var person in listPeople)
                 {
@@ -129,12 +154,16 @@ namespace WindowsFormsApp_Koodrizi
         {
             txtPercent.Enabled = true;
             txtPercent.Text = "0";
+            txtGrams.Text = "0";
+            txtGrams.Enabled = false;
         }
 
         private void RadioDahanBast_CheckedChanged(object sender, EventArgs e)
         {
             txtPercent.Enabled = false;
             txtPercent.Text = "100";
+            txtGrams.Enabled = true;
+
         }
     }
 }

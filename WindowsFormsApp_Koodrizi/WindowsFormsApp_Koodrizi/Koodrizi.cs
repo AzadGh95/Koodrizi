@@ -51,6 +51,7 @@ namespace WindowsFormsApp_Koodrizi
             {
                 string[] token = comCustomerBar.Text.Split('>');
                 var a = token[0].ToString();
+
                 Koodrizi_model = new Models.DKood()
                 {
                     BarId = int.Parse(a),
