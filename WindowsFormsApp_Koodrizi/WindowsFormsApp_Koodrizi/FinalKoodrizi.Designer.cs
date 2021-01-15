@@ -162,7 +162,7 @@
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Vazir FD", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(802, 491);
+            this.label5.Location = new System.Drawing.Point(795, 474);
             this.label5.Name = "label5";
             this.label5.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.label5.Size = new System.Drawing.Size(50, 19);
@@ -173,7 +173,7 @@
             // btnSave
             // 
             this.btnSave.Font = new System.Drawing.Font("Vazir FD", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSave.Location = new System.Drawing.Point(103, 483);
+            this.btnSave.Location = new System.Drawing.Point(103, 476);
             this.btnSave.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnSave.Name = "btnSave";
             this.btnSave.Size = new System.Drawing.Size(183, 34);
@@ -185,7 +185,7 @@
             // btnCancel
             // 
             this.btnCancel.Font = new System.Drawing.Font("Vazir FD", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCancel.Location = new System.Drawing.Point(22, 483);
+            this.btnCancel.Location = new System.Drawing.Point(22, 476);
             this.btnCancel.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnCancel.Name = "btnCancel";
             this.btnCancel.Size = new System.Drawing.Size(75, 34);
@@ -208,7 +208,7 @@
             // 
             this.lblTotalPrice.AutoSize = true;
             this.lblTotalPrice.Font = new System.Drawing.Font("Vazir FD", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTotalPrice.Location = new System.Drawing.Point(741, 491);
+            this.lblTotalPrice.Location = new System.Drawing.Point(734, 474);
             this.lblTotalPrice.Name = "lblTotalPrice";
             this.lblTotalPrice.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.lblTotalPrice.Size = new System.Drawing.Size(39, 19);
@@ -291,7 +291,7 @@
             // 
             this.lblTtalOunce.AutoSize = true;
             this.lblTtalOunce.Font = new System.Drawing.Font("Vazir FD", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTtalOunce.Location = new System.Drawing.Point(741, 450);
+            this.lblTtalOunce.Location = new System.Drawing.Point(734, 433);
             this.lblTtalOunce.Name = "lblTtalOunce";
             this.lblTtalOunce.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.lblTtalOunce.Size = new System.Drawing.Size(39, 19);
@@ -302,7 +302,7 @@
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Vazir FD", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(802, 450);
+            this.label7.Location = new System.Drawing.Point(795, 433);
             this.label7.Name = "label7";
             this.label7.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.label7.Size = new System.Drawing.Size(51, 19);
@@ -348,12 +348,14 @@
             this.Saledate.HeaderText = "تاریخ فروش";
             this.Saledate.Name = "Saledate";
             this.Saledate.ReadOnly = true;
+            this.Saledate.Visible = false;
             // 
             // DateDue
             // 
             this.DateDue.HeaderText = "تاریخ سررسید";
             this.DateDue.Name = "DateDue";
             this.DateDue.ReadOnly = true;
+            this.DateDue.Visible = false;
             // 
             // adl
             // 
@@ -380,7 +382,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 19F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(860, 541);
+            this.ClientSize = new System.Drawing.Size(860, 528);
             this.Controls.Add(this.lblTtalOunce);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.txtDahanBastprice);
