@@ -37,6 +37,7 @@
             this.avgdate = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.btnDelete = new System.Windows.Forms.DataGridViewButtonColumn();
             this.CalculateAvg = new System.Windows.Forms.DataGridViewButtonColumn();
+            this.editGrid = new System.Windows.Forms.DataGridViewButtonColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridListCustomer)).BeginInit();
             this.SuspendLayout();
             // 
@@ -53,13 +54,14 @@
             this.Column1,
             this.avgdate,
             this.btnDelete,
-            this.CalculateAvg});
+            this.CalculateAvg,
+            this.editGrid});
             this.dataGridListCustomer.Location = new System.Drawing.Point(22, 12);
             this.dataGridListCustomer.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.dataGridListCustomer.Name = "dataGridListCustomer";
             this.dataGridListCustomer.ReadOnly = true;
             this.dataGridListCustomer.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.dataGridListCustomer.Size = new System.Drawing.Size(699, 264);
+            this.dataGridListCustomer.Size = new System.Drawing.Size(860, 264);
             this.dataGridListCustomer.TabIndex = 0;
             this.dataGridListCustomer.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DataGridListCustomer_CellContentClick_1);
             // 
@@ -108,6 +110,7 @@
             this.btnDelete.Name = "btnDelete";
             this.btnDelete.ReadOnly = true;
             this.btnDelete.Visible = false;
+            this.btnDelete.Width = 38;
             // 
             // CalculateAvg
             // 
@@ -115,11 +118,19 @@
             this.CalculateAvg.Name = "CalculateAvg";
             this.CalculateAvg.ReadOnly = true;
             // 
+            // editGrid
+            // 
+            this.editGrid.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader;
+            this.editGrid.HeaderText = "ویرایش";
+            this.editGrid.Name = "editGrid";
+            this.editGrid.ReadOnly = true;
+            this.editGrid.Width = 49;
+            // 
             // ListCustomer
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 19F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(733, 296);
+            this.ClientSize = new System.Drawing.Size(894, 296);
             this.Controls.Add(this.dataGridListCustomer);
             this.Font = new System.Drawing.Font("Vazir FD", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
@@ -142,5 +153,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn avgdate;
         private System.Windows.Forms.DataGridViewButtonColumn btnDelete;
         private System.Windows.Forms.DataGridViewButtonColumn CalculateAvg;
+        private System.Windows.Forms.DataGridViewButtonColumn editGrid;
     }
 }

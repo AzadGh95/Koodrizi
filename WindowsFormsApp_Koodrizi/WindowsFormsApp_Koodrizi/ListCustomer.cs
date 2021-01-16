@@ -15,6 +15,7 @@ namespace WindowsFormsApp_Koodrizi
 {
     public partial class ListCustomer : Form
     {
+
         private PersonRepository _personRepository = new PersonRepository();
         private KoodriziRepository _koodriziRepository = new KoodriziRepository();
         private decimal totalBedehi;
@@ -76,6 +77,17 @@ namespace WindowsFormsApp_Koodrizi
                     dataGridListCustomer.Rows[e.RowIndex].Cells[4].Value = PersianDateConverter.ToPersianDate(Basetime).ToString("yyyy/MM/dd");//تاریخ مبنا
                     dataGridListCustomer.Rows[e.RowIndex].Cells[5].Value = PersianDateConverter.ToPersianDate(avgdate).ToString("yyyy/MM/dd");//راس تاریخ
                 }
+            }
+            if (e.ColumnIndex == 8)
+            {
+                var pId = int.Parse(dataGridListCustomer.Rows[e.RowIndex].Cells[0].Value.ToString());
+    Program.PersonId = pId;
+
+                Customer_Edit formCustomer = new Customer_Edit();
+                formCustomer.Show();
+              
+            
+                Close();
             }
 
         }

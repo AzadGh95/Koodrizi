@@ -69,11 +69,23 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Bar-Edit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Bar-Edit.Designer.cs">
+      <DependentUpon>Bar-Edit.cs</DependentUpon>
+    </Compile>
     <Compile Include="Bar.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Bar.Designer.cs">
       <DependentUpon>Bar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Customer-Edit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Customer-Edit.Designer.cs">
+      <DependentUpon>Customer-Edit.cs</DependentUpon>
     </Compile>
     <Compile Include="Customer.cs">
       <SubType>Form</SubType>
@@ -166,8 +178,14 @@
     <Compile Include="ShowFinalKoodRizi.Designer.cs">
       <DependentUpon>ShowFinalKoodRizi.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Bar-Edit.resx">
+      <DependentUpon>Bar-Edit.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Bar.resx">
       <DependentUpon>Bar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Customer-Edit.resx">
+      <DependentUpon>Customer-Edit.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Customer.resx">
       <DependentUpon>Customer.cs</DependentUpon>

@@ -59,30 +59,42 @@ namespace WindowsFormsApp_Koodrizi
                 Properties.Settings.Default.Save();
             }
         }
-        public static DateTime SellDate
+        public static int PersonId
         {
             get
             {
-                return Properties.Settings.Default.SellDate;
+                return Properties.Settings.Default.PersonId;
             }
             set
             {
-                Properties.Settings.Default["SellDate"] = value;
+                Properties.Settings.Default["PersonId"] = value;
                 Properties.Settings.Default.Save();
             }
         }
-        public static DateTime DueDate
-        {
-            get
-            {
-                return Properties.Settings.Default.DueDate;
-            }
-            set
-            {
-                Properties.Settings.Default["DueDate"] = value;
-                Properties.Settings.Default.Save();
-            }
-        }
+        //public static DateTime SellDate
+        //{
+        //    get
+        //    {
+        //        return Properties.Settings.Default.SellDate;
+        //    }
+        //    set
+        //    {
+        //        Properties.Settings.Default["SellDate"] = value;
+        //        Properties.Settings.Default.Save();
+        //    }
+        //}
+        //public static DateTime DueDate
+        //{
+        //    get
+        //    {
+        //        return Properties.Settings.Default.DueDate;
+        //    }
+        //    set
+        //    {
+        //        Properties.Settings.Default["DueDate"] = value;
+        //        Properties.Settings.Default.Save();
+        //    }
+        //}
 
     }
 }

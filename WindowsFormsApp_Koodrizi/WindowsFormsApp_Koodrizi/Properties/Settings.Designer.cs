@@ -61,23 +61,13 @@ namespace WindowsFormsApp_Koodrizi.Properties {
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        public global::System.DateTime SellDate {
+        [global::System.Configuration.DefaultSettingValueAttribute("0")]
+        public int PersonId {
             get {
-                return ((global::System.DateTime)(this["SellDate"]));
+                return ((int)(this["PersonId"]));
             }
             set {
-                this["SellDate"] = value;
-            }
-        }
-        
-        [global::System.Configuration.UserScopedSettingAttribute()]
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        public global::System.DateTime DueDate {
-            get {
-                return ((global::System.DateTime)(this["DueDate"]));
-            }
-            set {
-                this["DueDate"] = value;
+                this["PersonId"] = value;
             }
         }
     }

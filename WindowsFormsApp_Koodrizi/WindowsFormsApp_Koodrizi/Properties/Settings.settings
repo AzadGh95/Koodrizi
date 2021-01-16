@@ -11,11 +11,8 @@
     <Setting Name="BarId" Type="System.Int32" Scope="User">
       <Value Profile="(Default)">0</Value>
     </Setting>
-    <Setting Name="SellDate" Type="System.DateTime" Scope="User">
-      <Value Profile="(Default)" />
-    </Setting>
-    <Setting Name="DueDate" Type="System.DateTime" Scope="User">
-      <Value Profile="(Default)" />
+    <Setting Name="PersonId" Type="System.Int32" Scope="User">
+      <Value Profile="(Default)">0</Value>
     </Setting>
   </Settings>
 </SettingsFile>
