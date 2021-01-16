@@ -43,7 +43,6 @@ namespace WindowsFormsApp_Koodrizi.Models
         /// false:دهن بست
         /// </summary>
         public bool PistachioType { get; set; }
-
         public double Gram { get; set; }
 
     }

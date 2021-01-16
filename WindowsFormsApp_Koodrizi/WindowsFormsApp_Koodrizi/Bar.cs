@@ -165,5 +165,10 @@ namespace WindowsFormsApp_Koodrizi
             txtGrams.Enabled = true;
 
         }
+
+        private void FaDataTimeCreateDate_SelectedDateTimeChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

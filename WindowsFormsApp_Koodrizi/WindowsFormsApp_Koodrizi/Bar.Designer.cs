@@ -243,6 +243,7 @@
             this.faDataTimeCreateDate.Size = new System.Drawing.Size(132, 20);
             this.faDataTimeCreateDate.TabIndex = 30;
             this.faDataTimeCreateDate.Theme = FarsiLibrary.Win.Enums.ThemeTypes.WindowsXP;
+            this.faDataTimeCreateDate.SelectedDateTimeChanged += new System.EventHandler(this.FaDataTimeCreateDate_SelectedDateTimeChanged);
             // 
             // Bar
             // 

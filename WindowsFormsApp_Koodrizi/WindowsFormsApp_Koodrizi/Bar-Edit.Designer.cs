@@ -58,6 +58,7 @@
             this.faDataTimeCreateDate.Size = new System.Drawing.Size(132, 20);
             this.faDataTimeCreateDate.TabIndex = 49;
             this.faDataTimeCreateDate.Theme = FarsiLibrary.Win.Enums.ThemeTypes.WindowsXP;
+            this.faDataTimeCreateDate.SelectedDateTimeChanged += new System.EventHandler(this.FaDataTimeCreateDate_SelectedDateTimeChanged);
             // 
             // label7
             // 
@@ -98,6 +99,7 @@
             this.btnSave.TabIndex = 43;
             this.btnSave.Text = "ویرایش";
             this.btnSave.UseVisualStyleBackColor = true;
+            this.btnSave.Click += new System.EventHandler(this.BtnSave_Click);
             // 
             // txtAdl
             // 
@@ -153,6 +155,7 @@
             this.radioDahanBast.TabIndex = 46;
             this.radioDahanBast.Text = "دهن بست";
             this.radioDahanBast.UseVisualStyleBackColor = true;
+            this.radioDahanBast.CheckedChanged += new System.EventHandler(this.RadioDahanBast_CheckedChanged_1);
             // 
             // radioKhandan
             // 
@@ -167,6 +170,7 @@
             this.radioKhandan.TabStop = true;
             this.radioKhandan.Text = "خندان";
             this.radioKhandan.UseVisualStyleBackColor = true;
+            this.radioKhandan.CheckedChanged += new System.EventHandler(this.RadioKhandan_CheckedChanged_1);
             // 
             // txtWeight
             // 
