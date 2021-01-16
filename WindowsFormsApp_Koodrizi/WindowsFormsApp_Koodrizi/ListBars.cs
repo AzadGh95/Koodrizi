@@ -32,6 +32,14 @@ namespace WindowsFormsApp_Koodrizi
                 {
                 }
             }
+            if (e.ColumnIndex == 10)
+            {
+                Program.BarId = int.Parse(dataGridListBars.Rows[e.RowIndex].Cells[1].Value.ToString());
+                if (Program.BarId != 0)
+                {
+                    _barRepository.Bar(Program.BarId);
+                }
+            }
         }
 
         private void ListBars_Load(object sender, EventArgs e)

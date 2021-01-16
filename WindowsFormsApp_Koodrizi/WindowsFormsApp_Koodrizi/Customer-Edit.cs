@@ -24,14 +24,20 @@ namespace WindowsFormsApp_Koodrizi
 
         private void BtnSave_Click(object sender, EventArgs e)
         {
-           var result = _personRepo.Update(oldPersonInfo, Program.PersonId);
+            oldPersonInfo.Name = txtName.Text;
+            oldPersonInfo.PhoneNumber = txtPhone.Text;
+            oldPersonInfo.Code = txtCod.Text;
+            var result = _personRepo.Update(oldPersonInfo, Program.PersonId);
             if (result)
             {
                 MessageBox.Show("ویرایش با موفقیت انجام شد");
+                ListCustomer listCustomer = new ListCustomer();
+                listCustomer.Show();
+                Close();
             }
             else
             {
-                MessageBox.Show("ویرایش با خظا مواجه شد","هشدار");
+                MessageBox.Show("ویرایش با خظا مواجه شد", "هشدار");
             }
         }
 

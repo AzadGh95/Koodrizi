@@ -263,6 +263,7 @@
             this.Controls.Add(this.label1);
             this.Name = "Bar_Edit";
             this.Text = "ویرایش بار";
+            this.Load += new System.EventHandler(this.Bar_Edit_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

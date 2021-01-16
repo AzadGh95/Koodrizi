@@ -39,6 +39,7 @@
             this.Ounce = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Adl = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.btnDelete = new System.Windows.Forms.DataGridViewButtonColumn();
+            this.EditBar = new System.Windows.Forms.DataGridViewButtonColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridListBars)).BeginInit();
             this.SuspendLayout();
             // 
@@ -57,13 +58,14 @@
             this.Gram,
             this.Ounce,
             this.Adl,
-            this.btnDelete});
+            this.btnDelete,
+            this.EditBar});
             this.dataGridListBars.Location = new System.Drawing.Point(12, 13);
             this.dataGridListBars.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.dataGridListBars.Name = "dataGridListBars";
             this.dataGridListBars.ReadOnly = true;
             this.dataGridListBars.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.dataGridListBars.Size = new System.Drawing.Size(909, 456);
+            this.dataGridListBars.Size = new System.Drawing.Size(1003, 456);
             this.dataGridListBars.TabIndex = 0;
             this.dataGridListBars.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DataGridListBars_CellContentClick);
             // 
@@ -77,11 +79,10 @@
             // 
             // Customer
             // 
-            this.Customer.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.Customer.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
             this.Customer.HeaderText = "مشتری";
             this.Customer.Name = "Customer";
             this.Customer.ReadOnly = true;
-            this.Customer.Width = 66;
             // 
             // DateEnter
             // 
@@ -109,21 +110,27 @@
             // 
             // Gram
             // 
+            this.Gram.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader;
             this.Gram.HeaderText = "گرم";
             this.Gram.Name = "Gram";
             this.Gram.ReadOnly = true;
+            this.Gram.Width = 50;
             // 
             // Ounce
             // 
+            this.Ounce.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader;
             this.Ounce.HeaderText = "انس";
             this.Ounce.Name = "Ounce";
             this.Ounce.ReadOnly = true;
+            this.Ounce.Width = 54;
             // 
             // Adl
             // 
+            this.Adl.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader;
             this.Adl.HeaderText = "عدل";
             this.Adl.Name = "Adl";
             this.Adl.ReadOnly = true;
+            this.Adl.Width = 54;
             // 
             // btnDelete
             // 
@@ -135,11 +142,19 @@
             this.btnDelete.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
             this.btnDelete.Width = 57;
             // 
+            // EditBar
+            // 
+            this.EditBar.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader;
+            this.EditBar.HeaderText = "ویرایش";
+            this.EditBar.Name = "EditBar";
+            this.EditBar.ReadOnly = true;
+            this.EditBar.Width = 49;
+            // 
             // ListBars
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 19F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(933, 485);
+            this.ClientSize = new System.Drawing.Size(1027, 485);
             this.Controls.Add(this.dataGridListBars);
             this.Font = new System.Drawing.Font("Vazir FD", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
@@ -164,5 +179,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Ounce;
         private System.Windows.Forms.DataGridViewTextBoxColumn Adl;
         private System.Windows.Forms.DataGridViewButtonColumn btnDelete;
+        private System.Windows.Forms.DataGridViewButtonColumn EditBar;
     }
 }
