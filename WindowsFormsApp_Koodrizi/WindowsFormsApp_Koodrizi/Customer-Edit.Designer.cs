@@ -47,6 +47,7 @@
             this.btnCancel.TabIndex = 15;
             this.btnCancel.Text = "لغو";
             this.btnCancel.UseVisualStyleBackColor = true;
+            this.btnCancel.Click += new System.EventHandler(this.BtnCancel_Click);
             // 
             // btnSave
             // 

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using FarsiLibrary.Utils;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -23,16 +24,24 @@ namespace WindowsFormsApp_Koodrizi
         private BarModel oldBar { get; set; }
         private void Bar_Edit_Load(object sender, EventArgs e)
         {
+
+
+
             if (Program.BarId != 0)
             {
+                faDataTimeCreateDate.Text =
+                     PersianDateConverter.ToPersianDate(DateTime.UtcNow).ToString("yyyy/MM/dd");
+
                 oldBar = _barRepository.Bar(Program.BarId);
-                comCustomerSelection.Text = oldBar.Person.Name;
+                txtPerson.Text = oldBar.Person.Name + " [" + oldBar.Person.Code + "] ";
+                txtPerson.Enabled = false;
                 txtAdl.Text = oldBar.Adl.ToString();
                 txtGrams.Text = oldBar.Gram.ToString();
                 txtPercent.Text = oldBar.DhanBast.ToString();
                 txtWeight.Text = oldBar.TotalWeight.ToString();
                 txtOunce.Text = oldBar.Ounce.ToString();
-                comboType.Text = oldBar.PistachioName;
+                txtPitachioType.Text = oldBar.PistachioName;
+                txtPitachioType.Enabled = false;
                 if (oldBar.PistachioType)
                 {
                     radioKhandan.Checked = true;
@@ -49,9 +58,7 @@ namespace WindowsFormsApp_Koodrizi
 
         private void BtnSave_Click(object sender, EventArgs e)
         {
-
-
-            string[] token = comCustomerSelection.Text.Split('[');
+            string[] token = txtPerson.Text.Split('[');
             var a = token[1].ToString();
             string[] token2 = a.Split(']');
             a = token2[0].ToString();
@@ -84,7 +91,7 @@ namespace WindowsFormsApp_Koodrizi
             oldBar.Remaining = double.Parse(txtWeight.Text);
             oldBar.TotalWeight = double.Parse(txtWeight.Text);
             oldBar.CreateDate = faDataTimeCreateDate.SelectedDateTime;
-            oldBar.PistachioName = comboType.Text;
+            oldBar.PistachioName = txtPitachioType.Text;
             oldBar.PistachioType = radioKhandan.Checked;
 
             if (txtGrams.Text == "")
@@ -92,7 +99,19 @@ namespace WindowsFormsApp_Koodrizi
             else
                 oldBar.Gram = double.Parse(txtGrams.Text);
 
-            _barRepository.Update(oldBar, Program.BarId);
+            var result = _barRepository.Update(oldBar, Program.BarId);
+            if (result)
+            {
+                MessageBox.Show("ویرایش با موفقیت انجام شد .");
+                ListBars listBars = new ListBars();
+                listBars.Show();
+                Close();
+            }
+            else
+            {
+                MessageBox.Show("خطا در انجام عملیات");
+            }
+
 
         }
 
@@ -125,6 +144,13 @@ namespace WindowsFormsApp_Koodrizi
             txtPercent.Text = "0";
             txtGrams.Text = "0";
             txtGrams.Enabled = false;
+        }
+
+        private void BtnCancel_Click(object sender, EventArgs e)
+        {
+            ListBars listBars = new ListBars();
+            listBars.Show();
+            Close();
         }
     }
 }

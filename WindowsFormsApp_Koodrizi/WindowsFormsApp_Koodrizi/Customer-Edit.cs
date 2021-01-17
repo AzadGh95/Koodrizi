@@ -53,5 +53,12 @@ namespace WindowsFormsApp_Koodrizi
                 txtPhone.Text = oldPersonInfo.PhoneNumber;
             }
         }
+
+        private void BtnCancel_Click(object sender, EventArgs e)
+        {
+            ListCustomer listCustomer = new ListCustomer();
+            listCustomer.Show();
+            Close();
+        }
     }
 }

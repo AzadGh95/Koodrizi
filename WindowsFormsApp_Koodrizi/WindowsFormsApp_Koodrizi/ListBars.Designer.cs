@@ -75,6 +75,7 @@
             this.row.HeaderText = "ردیف";
             this.row.Name = "row";
             this.row.ReadOnly = true;
+            this.row.Visible = false;
             this.row.Width = 57;
             // 
             // Customer

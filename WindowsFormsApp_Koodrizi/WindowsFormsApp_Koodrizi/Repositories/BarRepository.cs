@@ -52,6 +52,7 @@ namespace WindowsFormsApp_Koodrizi.Repositories
                     .Update(x => new Models.BarModel
                     {
                         Adl = bar.Adl,
+                        AdlRem = bar.AdlRem,
                         DhanBast = bar.DhanBast,
                         Gram = bar.Gram,
                         IdPerson = bar.IdPerson,

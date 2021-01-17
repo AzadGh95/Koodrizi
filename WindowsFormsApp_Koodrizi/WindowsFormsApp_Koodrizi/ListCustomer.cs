@@ -81,12 +81,12 @@ namespace WindowsFormsApp_Koodrizi
             if (e.ColumnIndex == 8)
             {
                 var pId = int.Parse(dataGridListCustomer.Rows[e.RowIndex].Cells[0].Value.ToString());
-    Program.PersonId = pId;
+                Program.PersonId = pId;
 
                 Customer_Edit formCustomer = new Customer_Edit();
                 formCustomer.Show();
-              
-            
+
+
                 Close();
             }
 

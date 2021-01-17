@@ -43,7 +43,19 @@ namespace WindowsFormsApp_Koodrizi.Repositories
                 throw;
             }
         }
-
+        public bool Delete(string number)
+        {
+            try
+            {
+                _baseContext.FinalKoodriziModels.Where(i => i.KoodNumber == number).Delete();
+                return true;
+            }
+            catch (Exception)
+            {
+                return false;
+                throw;
+            }
+        }
         public bool Update(Models.FinalKoodriziModel finalKoodrizi, int id)
         {
             try

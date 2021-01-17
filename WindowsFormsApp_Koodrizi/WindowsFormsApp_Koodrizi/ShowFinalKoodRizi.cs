@@ -34,5 +34,31 @@ namespace WindowsFormsApp_Koodrizi
             DetailFinalKoodrizi detailFinalKoodrizi = new DetailFinalKoodrizi();
             detailFinalKoodrizi.Show();
         }
+
+        private void DataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.ColumnIndex == 5) {
+                //حذف
+                var numberFinalKood = int.Parse(dataGridView1.Rows[e.RowIndex].Cells[1].Value.ToString());
+                var text = "آیا مطمئن هستید که میخواهید " + numberFinalKood+" را حذف کنید ؟";
+                DialogResult message;
+                message = MessageBox.Show(text, "هشدار", MessageBoxButtons.YesNo);
+                if (message == DialogResult.Yes)
+                {
+                    var result = _finalKoodriziRepo.Delete(numberFinalKood);
+                    //بعد از حذف باید جزئیات هم حذف شوند .
+                    //و مقدار وزن و عدل بار ها به قبل برگردد
+                    if (result)
+                    {
+                        MessageBox.Show("حذف با موفقیت انجام شد");
+                        
+
+                    }
+                }
+            }
+            if (e.ColumnIndex == 6) {
+                //نمایش جزئیات
+            }
+        }
     }
 }

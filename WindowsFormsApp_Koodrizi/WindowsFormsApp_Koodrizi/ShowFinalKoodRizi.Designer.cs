@@ -29,12 +29,14 @@
         private void InitializeComponent()
         {
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.button1 = new System.Windows.Forms.Button();
             this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.button1 = new System.Windows.Forms.Button();
+            this.delete = new System.Windows.Forms.DataGridViewButtonColumn();
+            this.detail = new System.Windows.Forms.DataGridViewButtonColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -48,14 +50,27 @@
             this.Column2,
             this.Column3,
             this.Column5,
-            this.Column6});
+            this.Column6,
+            this.delete,
+            this.detail});
             this.dataGridView1.Location = new System.Drawing.Point(12, 13);
             this.dataGridView1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
             this.dataGridView1.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.dataGridView1.Size = new System.Drawing.Size(642, 380);
+            this.dataGridView1.Size = new System.Drawing.Size(871, 380);
             this.dataGridView1.TabIndex = 0;
+            this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DataGridView1_CellContentClick);
+            // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(13, 403);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(641, 38);
+            this.button1.TabIndex = 1;
+            this.button1.Text = "نمایش جزئیات";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.Button1_Click);
             // 
             // Column1
             // 
@@ -91,21 +106,27 @@
             this.Column6.Name = "Column6";
             this.Column6.ReadOnly = true;
             // 
-            // button1
+            // delete
             // 
-            this.button1.Location = new System.Drawing.Point(13, 403);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(641, 38);
-            this.button1.TabIndex = 1;
-            this.button1.Text = "نمایش جزئیات";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.Button1_Click);
+            this.delete.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader;
+            this.delete.HeaderText = "حذف";
+            this.delete.Name = "delete";
+            this.delete.ReadOnly = true;
+            this.delete.Width = 38;
+            // 
+            // detail
+            // 
+            this.detail.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader;
+            this.detail.HeaderText = "جزئیات";
+            this.detail.Name = "detail";
+            this.detail.ReadOnly = true;
+            this.detail.Width = 46;
             // 
             // ShowFinalKoodRizi
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 19F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(666, 460);
+            this.ClientSize = new System.Drawing.Size(895, 460);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.dataGridView1);
             this.Font = new System.Drawing.Font("Vazir FD", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -121,11 +142,13 @@
         #endregion
 
         private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.Button button1;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column5;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column6;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.DataGridViewButtonColumn delete;
+        private System.Windows.Forms.DataGridViewButtonColumn detail;
     }
 }
