@@ -29,7 +29,6 @@
         private void InitializeComponent()
         {
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.button1 = new System.Windows.Forms.Button();
             this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -37,6 +36,7 @@
             this.Column6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.delete = new System.Windows.Forms.DataGridViewButtonColumn();
             this.detail = new System.Windows.Forms.DataGridViewButtonColumn();
+            this.button1 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -58,19 +58,9 @@
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
             this.dataGridView1.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.dataGridView1.Size = new System.Drawing.Size(871, 380);
+            this.dataGridView1.Size = new System.Drawing.Size(871, 434);
             this.dataGridView1.TabIndex = 0;
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DataGridView1_CellContentClick);
-            // 
-            // button1
-            // 
-            this.button1.Location = new System.Drawing.Point(13, 403);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(641, 38);
-            this.button1.TabIndex = 1;
-            this.button1.Text = "نمایش جزئیات";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.Button1_Click);
             // 
             // Column1
             // 
@@ -121,6 +111,17 @@
             this.detail.Name = "detail";
             this.detail.ReadOnly = true;
             this.detail.Width = 46;
+            // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(13, 403);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(641, 38);
+            this.button1.TabIndex = 1;
+            this.button1.Text = "نمایش جزئیات";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Visible = false;
+            this.button1.Click += new System.EventHandler(this.Button1_Click);
             // 
             // ShowFinalKoodRizi
             // 
