@@ -71,6 +71,18 @@ namespace WindowsFormsApp_Koodrizi
                 Properties.Settings.Default.Save();
             }
         }
+        public static string numberFinalKood
+        {
+            get
+            {
+                return Properties.Settings.Default.numberFinalKood;
+            }
+            set
+            {
+                Properties.Settings.Default["numberFinalKood"] = value;
+                Properties.Settings.Default.Save();
+            }
+        }
         //public static DateTime SellDate
         //{
         //    get

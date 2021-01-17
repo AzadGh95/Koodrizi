@@ -21,12 +21,12 @@ namespace WindowsFormsApp_Koodrizi
 
         private void ShowFinalKoodRizi_Load(object sender, EventArgs e)
         {
-         var collection=   _finalKoodriziRepo.FinalKoodrizis();
+            var collection = _finalKoodriziRepo.FinalKoodrizis();
             foreach (var item in collection)
             {
                 dataGridView1.Rows.Add(item.KoodNumber, item.KoodName, item.TotalOunce, item.TotalWeight, item.TotalPrice.ToString("#,###"));
             }
-           
+
         }
 
         private void Button1_Click(object sender, EventArgs e)
@@ -37,10 +37,11 @@ namespace WindowsFormsApp_Koodrizi
 
         private void DataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-            if (e.ColumnIndex == 5) {
+            if (e.ColumnIndex == 5)
+            {
                 //حذف
                 var numberFinalKood = int.Parse(dataGridView1.Rows[e.RowIndex].Cells[1].Value.ToString());
-                var text = "آیا مطمئن هستید که میخواهید " + numberFinalKood+" را حذف کنید ؟";
+                var text = "آیا مطمئن هستید که میخواهید " + numberFinalKood + " را حذف کنید ؟";
                 DialogResult message;
                 message = MessageBox.Show(text, "هشدار", MessageBoxButtons.YesNo);
                 if (message == DialogResult.Yes)
@@ -51,13 +52,18 @@ namespace WindowsFormsApp_Koodrizi
                     if (result)
                     {
                         MessageBox.Show("حذف با موفقیت انجام شد");
-                        
+
 
                     }
                 }
             }
-            if (e.ColumnIndex == 6) {
+            if (e.ColumnIndex == 6)
+            {
                 //نمایش جزئیات
+
+                Program.numberFinalKood = dataGridView1.Rows[e.RowIndex].Cells[1].Value.ToString();
+                
+
             }
         }
     }

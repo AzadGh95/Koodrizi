@@ -63,7 +63,6 @@ namespace WindowsFormsApp_Koodrizi
                     }
                 }
             }
-
             if (e.ColumnIndex == 6)
             {
                 var pId = int.Parse(dataGridListCustomer.Rows[e.RowIndex].Cells[0].Value.ToString());
@@ -96,7 +95,6 @@ namespace WindowsFormsApp_Koodrizi
 
                 Close();
             }
-
         }
         private DateTime AvgDateTime(DateTime dateTime, int personId)
         {

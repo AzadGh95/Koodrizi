@@ -70,5 +70,17 @@ namespace WindowsFormsApp_Koodrizi.Properties {
                 this["PersonId"] = value;
             }
         }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string numberFinalKood {
+            get {
+                return ((string)(this["numberFinalKood"]));
+            }
+            set {
+                this["numberFinalKood"] = value;
+            }
+        }
     }
 }

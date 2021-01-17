@@ -52,17 +52,28 @@ namespace WindowsFormsApp_Koodrizi
                 string[] token = comCustomerBar.Text.Split('>');
                 var a = token[0].ToString();
 
-                Koodrizi_model = new Models.DKood()
+                var bar = _barRepo.Bar(int.Parse(a));
+                if (bar.AdlRem < double.Parse(txtadlbar.Text))
                 {
-                    BarId = int.Parse(a),
-                    ArrivedDate = fadateTimeDueDate.SelectedDateTime,
-                    SellDate = fadateTimeSell.SelectedDateTime,
-                    Weight = double.Parse(txtWeightBar.Text),
-                    PercentRoyat = double.Parse(txtPercentageOfVisibility.Text),
-                    Adl = double.Parse(txtadlbar.Text),
-                };
-
-                Close();
+                    MessageBox.Show("مقدار عدل وارد شده بیشتر از مقدار عدل موجود در بار هست .", "خطا");
+                }
+                else if (bar.Remaining < double.Parse(txtWeightBar.Text))
+                {
+                    MessageBox.Show("مقدار وزن وارد شده بیشتر از مقدار وزن موجود در بار هست .", "خطا");
+                }
+                else
+                {
+                    Koodrizi_model = new Models.DKood()
+                    {
+                        BarId = int.Parse(a),
+                        ArrivedDate = fadateTimeDueDate.SelectedDateTime,
+                        SellDate = fadateTimeSell.SelectedDateTime,
+                        Weight = double.Parse(txtWeightBar.Text),
+                        PercentRoyat = double.Parse(txtPercentageOfVisibility.Text),
+                        Adl = double.Parse(txtadlbar.Text),
+                    };
+                    Close();
+                }
             }
             catch (Exception)
             {

@@ -45,6 +45,7 @@
             this.label5 = new System.Windows.Forms.Label();
             this.lblWeight = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
+            this.button1 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridDetailKoods)).BeginInit();
             this.SuspendLayout();
             // 
@@ -58,6 +59,7 @@
             this.btnShowListDetailKood.TabIndex = 1;
             this.btnShowListDetailKood.Text = "نمایش جزئیات";
             this.btnShowListDetailKood.UseVisualStyleBackColor = true;
+            this.btnShowListDetailKood.Visible = false;
             this.btnShowListDetailKood.Click += new System.EventHandler(this.BtnShowListDetailKood_Click);
             // 
             // dataGridDetailKoods
@@ -71,7 +73,7 @@
             this.Column3,
             this.Column4,
             this.Column5});
-            this.dataGridDetailKoods.Location = new System.Drawing.Point(12, 69);
+            this.dataGridDetailKoods.Location = new System.Drawing.Point(12, 22);
             this.dataGridDetailKoods.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.dataGridDetailKoods.Name = "dataGridDetailKoods";
             this.dataGridDetailKoods.ReadOnly = true;
@@ -114,28 +116,30 @@
             // txtKoodNumber
             // 
             this.txtKoodNumber.Font = new System.Drawing.Font("Vazir FD", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtKoodNumber.Location = new System.Drawing.Point(133, 15);
+            this.txtKoodNumber.Location = new System.Drawing.Point(133, -4);
             this.txtKoodNumber.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtKoodNumber.Name = "txtKoodNumber";
             this.txtKoodNumber.Size = new System.Drawing.Size(413, 26);
             this.txtKoodNumber.TabIndex = 3;
+            this.txtKoodNumber.Visible = false;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Vazir FD", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(552, 18);
+            this.label1.Location = new System.Drawing.Point(552, -1);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(74, 19);
             this.label1.TabIndex = 4;
             this.label1.Text = "شماره کودریزی";
+            this.label1.Visible = false;
             this.label1.Click += new System.EventHandler(this.Label1_Click);
             // 
             // label2
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Vazir FD", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(577, 465);
+            this.label2.Location = new System.Drawing.Point(577, 423);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(49, 19);
             this.label2.TabIndex = 5;
@@ -145,7 +149,7 @@
             // 
             this.lblOunce.AutoSize = true;
             this.lblOunce.Font = new System.Drawing.Font("Vazir FD", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblOunce.Location = new System.Drawing.Point(536, 465);
+            this.lblOunce.Location = new System.Drawing.Point(536, 423);
             this.lblOunce.Name = "lblOunce";
             this.lblOunce.Size = new System.Drawing.Size(21, 19);
             this.lblOunce.TabIndex = 6;
@@ -155,7 +159,7 @@
             // 
             this.lblBasePrice.AutoSize = true;
             this.lblBasePrice.Font = new System.Drawing.Font("Vazir FD", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblBasePrice.Location = new System.Drawing.Point(422, 465);
+            this.lblBasePrice.Location = new System.Drawing.Point(422, 423);
             this.lblBasePrice.Name = "lblBasePrice";
             this.lblBasePrice.Size = new System.Drawing.Size(21, 19);
             this.lblBasePrice.TabIndex = 8;
@@ -165,7 +169,7 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Vazir FD", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(459, 465);
+            this.label4.Location = new System.Drawing.Point(459, 423);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(54, 19);
             this.label4.TabIndex = 7;
@@ -175,7 +179,7 @@
             // 
             this.lblTotalPrice.AutoSize = true;
             this.lblTotalPrice.Font = new System.Drawing.Font("Vazir FD", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTotalPrice.Location = new System.Drawing.Point(199, 465);
+            this.lblTotalPrice.Location = new System.Drawing.Point(199, 423);
             this.lblTotalPrice.Name = "lblTotalPrice";
             this.lblTotalPrice.Size = new System.Drawing.Size(21, 19);
             this.lblTotalPrice.TabIndex = 12;
@@ -185,7 +189,7 @@
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Vazir FD", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(236, 465);
+            this.label5.Location = new System.Drawing.Point(236, 423);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(50, 19);
             this.label5.TabIndex = 11;
@@ -195,7 +199,7 @@
             // 
             this.lblWeight.AutoSize = true;
             this.lblWeight.Font = new System.Drawing.Font("Vazir FD", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblWeight.Location = new System.Drawing.Point(313, 465);
+            this.lblWeight.Location = new System.Drawing.Point(313, 423);
             this.lblWeight.Name = "lblWeight";
             this.lblWeight.Size = new System.Drawing.Size(21, 19);
             this.lblWeight.TabIndex = 10;
@@ -205,17 +209,28 @@
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Vazir FD", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(354, 465);
+            this.label7.Location = new System.Drawing.Point(354, 423);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(26, 19);
             this.label7.TabIndex = 9;
             this.label7.Text = "وزن";
             // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(12, 451);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(75, 36);
+            this.button1.TabIndex = 13;
+            this.button1.Text = "بستن";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.Button1_Click);
+            // 
             // DetailFinalKoodrizi
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 19F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(657, 525);
+            this.ClientSize = new System.Drawing.Size(657, 510);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.lblTotalPrice);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.lblWeight);
@@ -257,5 +272,6 @@
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label lblWeight;
         private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Button button1;
     }
 }

@@ -27,11 +27,8 @@ namespace WindowsFormsApp_Koodrizi
 
         private void BtnShowListDetailKood_Click(object sender, EventArgs e)
         {
-            string search = txtKoodNumber.Text;
-            var finalListKood = _finalKoodriziRepository.FinalKoodrizi(search);
+            var finalListKood = _finalKoodriziRepository.FinalKoodrizi(Program.numberFinalKood);
 
-            if (finalListKood != null)
-            {
                 foreach (var item in finalListKood.DetailKoodrizis)
                 {
                     dataGridDetailKoods.Rows.Add(item.Bar.Person.Name,
@@ -43,11 +40,6 @@ namespace WindowsFormsApp_Koodrizi
                 lblOunce.Text = finalListKood.TotalOunce.ToString();
                 lblWeight.Text = finalListKood.TotalWeight.ToString();
                 lblTotalPrice.Text = finalListKood.TotalPrice.ToString("#,###");
-            }
-            else
-            {
-                MessageBox.Show("هیچ کودریزی با این شماره پیدا نشد");
-            }
         }
 
         private void DataGridDetailKoods_CellContentClick(object sender, DataGridViewCellEventArgs e)
@@ -57,6 +49,11 @@ namespace WindowsFormsApp_Koodrizi
         private void Label1_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void Button1_Click(object sender, EventArgs e)
+        {
+            Close();
         }
     }
 }
