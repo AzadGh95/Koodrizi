@@ -18,6 +18,8 @@ namespace WindowsFormsApp_Koodrizi
             InitializeComponent();
         }
         private FinalKoodriziRepository _finalKoodriziRepo = new FinalKoodriziRepository();
+        private BarRepository _barRepo = new BarRepository();
+        private KoodriziRepository _koodRepo = new KoodriziRepository();
 
         private void ShowFinalKoodRizi_Load(object sender, EventArgs e)
         {
@@ -46,14 +48,35 @@ namespace WindowsFormsApp_Koodrizi
                 message = MessageBox.Show(text, "هشدار", MessageBoxButtons.YesNo);
                 if (message == DialogResult.Yes)
                 {
-                    var result = _finalKoodriziRepo.Delete(numberFinalKood);
                     //بعد از حذف باید جزئیات هم حذف شوند .
                     //و مقدار وزن و عدل بار ها به قبل برگردد
-                    if (result)
+                    var finalKood = _finalKoodriziRepo.FinalKoodrizi(numberFinalKood);
+                    foreach (var item in finalKood.DetailKoodrizis)
                     {
+                        var bar = item.Bar;
+                        bar.AdlRem=bar.AdlRem + item.Adl;
+                        bar.Remaining=bar.Remaining + item.Weight;
+                        //update
+                        var result1 = _barRepo.Update(bar, bar.BarId);
+                        if (!result1)
+                        {
+                            MessageBox.Show("حذف با مشکل مواجه شد" , "خطا");
+                        }
+
+                        //حذف جزئیات
+                        var result2 = _koodRepo.Delete(item.DId);
+                        if (!result2)
+                        {
+                            MessageBox.Show("حذف با مشکل مواجه شد", "خطا");
+                        }
+
+                    }
+                    var result3 = _finalKoodriziRepo.Delete(numberFinalKood);
+
+                    if (result3)
+                    {
+                        dataGridView1.Rows.RemoveAt(e.RowIndex);
                         MessageBox.Show("حذف با موفقیت انجام شد");
-
-
                     }
                 }
             }
@@ -66,6 +89,11 @@ namespace WindowsFormsApp_Koodrizi
                 detailFinalKoodrizi.Show();
 
             }
+        }
+
+        private void Button2_Click(object sender, EventArgs e)
+        {
+            Close();
         }
     }
 }
