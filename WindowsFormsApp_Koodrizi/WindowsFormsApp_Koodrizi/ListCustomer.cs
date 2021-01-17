@@ -41,23 +41,30 @@ namespace WindowsFormsApp_Koodrizi
 
         private void DataGridListCustomer_CellContentClick_1(object sender, DataGridViewCellEventArgs e)
         {
-            if (e.ColumnIndex == 6)
+            if (e.ColumnIndex == 7)
             {
-                DialogResult message;
-                string text = "آیا می خواهید ، " + dataGridListCustomer.Rows[e.RowIndex].Cells[2].Value + " را حذف کنید؟";
-                message = MessageBox.Show(text, "هشدار", MessageBoxButtons.YesNo);
 
-                if (message == DialogResult.Yes)
+                DialogResult message1;
+                string text = "آبا می خواهید   " + dataGridListCustomer.Rows[e.RowIndex].Cells[2].Value + " را حذف کنید؟";
+                message1 = MessageBox.Show(text, "هشدار", MessageBoxButtons.YesNo);
+
+                if (message1 == DialogResult.Yes)
                 {
-                    _personRepository.Delete(int.Parse(dataGridListCustomer.Rows[e.RowIndex].Cells[0].Value.ToString()));
-                    dataGridListCustomer.Rows.RemoveAt(e.RowIndex);
-                }
-                else
-                {
+                    var result = _personRepository.Delete(int.Parse(dataGridListCustomer.Rows[e.RowIndex].Cells[0].Value.ToString()));
+                    if (result)
+                    {
+                        dataGridListCustomer.Rows.RemoveAt(e.RowIndex);
+                        MessageBox.Show("حذف با موفقیت انجام شد");
+                    }
+                    else
+                    {
+                        MessageBox.Show("امکان حذف وجود ندارد ");
+
+                    }
                 }
             }
 
-            if (e.ColumnIndex == 7)
+            if (e.ColumnIndex == 6)
             {
                 var pId = int.Parse(dataGridListCustomer.Rows[e.RowIndex].Cells[0].Value.ToString());
                 var person = _personRepository.People(pId);

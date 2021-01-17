@@ -35,8 +35,8 @@
             this.bedehi = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.avgdate = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.btnDelete = new System.Windows.Forms.DataGridViewButtonColumn();
             this.CalculateAvg = new System.Windows.Forms.DataGridViewButtonColumn();
+            this.delete = new System.Windows.Forms.DataGridViewButtonColumn();
             this.editGrid = new System.Windows.Forms.DataGridViewButtonColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridListCustomer)).BeginInit();
             this.SuspendLayout();
@@ -53,8 +53,8 @@
             this.bedehi,
             this.Column1,
             this.avgdate,
-            this.btnDelete,
             this.CalculateAvg,
+            this.delete,
             this.editGrid});
             this.dataGridListCustomer.Location = new System.Drawing.Point(14, 12);
             this.dataGridListCustomer.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
@@ -103,19 +103,19 @@
             this.avgdate.Name = "avgdate";
             this.avgdate.ReadOnly = true;
             // 
-            // btnDelete
-            // 
-            this.btnDelete.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader;
-            this.btnDelete.HeaderText = "حذف";
-            this.btnDelete.Name = "btnDelete";
-            this.btnDelete.ReadOnly = true;
-            this.btnDelete.Visible = false;
-            // 
             // CalculateAvg
             // 
             this.CalculateAvg.HeaderText = "محاسبه راس گیری";
             this.CalculateAvg.Name = "CalculateAvg";
             this.CalculateAvg.ReadOnly = true;
+            // 
+            // delete
+            // 
+            this.delete.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader;
+            this.delete.HeaderText = "حذف";
+            this.delete.Name = "delete";
+            this.delete.ReadOnly = true;
+            this.delete.Width = 38;
             // 
             // editGrid
             // 
@@ -150,8 +150,8 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn bedehi;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
         private System.Windows.Forms.DataGridViewTextBoxColumn avgdate;
-        private System.Windows.Forms.DataGridViewButtonColumn btnDelete;
         private System.Windows.Forms.DataGridViewButtonColumn CalculateAvg;
+        private System.Windows.Forms.DataGridViewButtonColumn delete;
         private System.Windows.Forms.DataGridViewButtonColumn editGrid;
     }
 }
