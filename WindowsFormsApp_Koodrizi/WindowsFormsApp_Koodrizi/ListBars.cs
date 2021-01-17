@@ -25,8 +25,19 @@ namespace WindowsFormsApp_Koodrizi
 
                 if (message == DialogResult.Yes)
                 {
-                    _barRepository.Delete(int.Parse(dataGridListBars.Rows[e.RowIndex].Cells[0].Value.ToString()));
-                    dataGridListBars.Rows.RemoveAt(e.RowIndex);
+                    var result = _barRepository.Delete(int.Parse(dataGridListBars.Rows[e.RowIndex].Cells[0].Value.ToString()));
+                    if (result)
+                    {
+                        dataGridListBars.Rows.RemoveAt(e.RowIndex);
+                        MessageBox.Show("حذف با موفقیت انجام شد");
+                    }
+                    else
+                    {
+                        MessageBox.Show("امکان حذف وجود ندارد ");
+
+                    }
+
+           
                 }
                 else
                 {
