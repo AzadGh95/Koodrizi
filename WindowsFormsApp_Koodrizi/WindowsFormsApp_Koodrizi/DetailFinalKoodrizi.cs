@@ -22,24 +22,24 @@ namespace WindowsFormsApp_Koodrizi
 
         private void DetailFinalKoodrizi_Load(object sender, EventArgs e)
         {
+            var finalListKood = _finalKoodriziRepository.FinalKoodrizi(Program.numberFinalKood);
 
+            foreach (var item in finalListKood.DetailKoodrizis)
+            {
+                dataGridDetailKoods.Rows.Add(item.Bar.Person.Name,
+                    item.Bar.Ounce, item.Weight, item.Price.ToString("#,###")
+                    , (item.Weight * (double)item.Price).ToString("#,###"));
+
+            }
+            lblBasePrice.Text = finalListKood.BasePrice.ToString("#,###");
+            lblOunce.Text = finalListKood.TotalOunce.ToString();
+            lblWeight.Text = finalListKood.TotalWeight.ToString();
+            lblTotalPrice.Text = finalListKood.TotalPrice.ToString("#,###");
         }
 
         private void BtnShowListDetailKood_Click(object sender, EventArgs e)
         {
-            var finalListKood = _finalKoodriziRepository.FinalKoodrizi(Program.numberFinalKood);
-
-                foreach (var item in finalListKood.DetailKoodrizis)
-                {
-                    dataGridDetailKoods.Rows.Add(item.Bar.Person.Name,
-                        item.Bar.Ounce, item.Weight, item.Price.ToString("#,###")
-                        , (item.Weight * (double)item.Price).ToString("#,###"));
-
-                }
-                lblBasePrice.Text = finalListKood.BasePrice.ToString("#,###");
-                lblOunce.Text = finalListKood.TotalOunce.ToString();
-                lblWeight.Text = finalListKood.TotalWeight.ToString();
-                lblTotalPrice.Text = finalListKood.TotalPrice.ToString("#,###");
+           
         }
 
         private void DataGridDetailKoods_CellContentClick(object sender, DataGridViewCellEventArgs e)
