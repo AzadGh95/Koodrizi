@@ -83,11 +83,9 @@ namespace WindowsFormsApp_Koodrizi
             if (e.ColumnIndex == 6)
             {
                 //نمایش جزئیات
-
                 Program.numberFinalKood = dataGridView1.Rows[e.RowIndex].Cells[0].Value.ToString();
                 DetailFinalKoodrizi detailFinalKoodrizi = new DetailFinalKoodrizi();
                 detailFinalKoodrizi.Show();
-
             }
         }
 

@@ -43,6 +43,7 @@
             this.lblWeight = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
+            this.btnPrint = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridDetailKoods)).BeginInit();
             this.SuspendLayout();
             // 
@@ -187,11 +188,22 @@
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.Button1_Click);
             // 
+            // btnPrint
+            // 
+            this.btnPrint.Location = new System.Drawing.Point(93, 451);
+            this.btnPrint.Name = "btnPrint";
+            this.btnPrint.Size = new System.Drawing.Size(75, 36);
+            this.btnPrint.TabIndex = 14;
+            this.btnPrint.Text = "چاپ";
+            this.btnPrint.UseVisualStyleBackColor = true;
+            this.btnPrint.Click += new System.EventHandler(this.BtnPrint_Click);
+            // 
             // DetailFinalKoodrizi
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 19F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(657, 510);
+            this.ClientSize = new System.Drawing.Size(648, 510);
+            this.Controls.Add(this.btnPrint);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.lblTotalPrice);
             this.Controls.Add(this.label5);
@@ -229,5 +241,6 @@
         private System.Windows.Forms.Label lblWeight;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btnPrint;
     }
 }

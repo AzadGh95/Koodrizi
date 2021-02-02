@@ -1,4 +1,6 @@
-﻿using System;
+﻿using FarsiLibrary.Utils;
+using Stimulsoft.Report;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -22,19 +24,19 @@ namespace WindowsFormsApp_Koodrizi
 
         private void DetailFinalKoodrizi_Load(object sender, EventArgs e)
         {
-            var finalListKood = _finalKoodriziRepository.FinalKoodrizi(Program.numberFinalKood);
+             var finalListKood = _finalKoodriziRepository.FinalKoodrizi(Program.numberFinalKood);
 
-            foreach (var item in finalListKood.DetailKoodrizis)
-            {
-                dataGridDetailKoods.Rows.Add(item.Bar.Person.Name,
-                    item.Bar.Ounce, item.Weight, item.Price.ToString("#,###")
-                    , (item.Weight * (double)item.Price).ToString("#,###"));
+                foreach (var item in finalListKood.DetailKoodrizis)
+                {
+                    dataGridDetailKoods.Rows.Add(item.Bar.Person.Name,
+                        item.Bar.Ounce, item.Weight, item.Price.ToString("#,###")
+                        , (item.Weight * (double)item.Price).ToString("#,###"));
 
-            }
-            lblBasePrice.Text = finalListKood.BasePrice.ToString("#,###");
-            lblOunce.Text = finalListKood.TotalOunce.ToString();
-            lblWeight.Text = finalListKood.TotalWeight.ToString();
-            lblTotalPrice.Text = finalListKood.TotalPrice.ToString("#,###");
+                }
+                lblBasePrice.Text = finalListKood.BasePrice.ToString("#,###");
+                lblOunce.Text = finalListKood.TotalOunce.ToString();
+                lblWeight.Text = finalListKood.TotalWeight.ToString();
+                lblTotalPrice.Text = finalListKood.TotalPrice.ToString("#,###");
         }
 
         private void BtnShowListDetailKood_Click(object sender, EventArgs e)
@@ -54,6 +56,21 @@ namespace WindowsFormsApp_Koodrizi
         private void Button1_Click(object sender, EventArgs e)
         {
             Close();
+        }
+
+        private void BtnPrint_Click(object sender, EventArgs e)
+        {
+            var finalKoodrizi = _finalKoodriziRepository.FinalKoodrizi(Program.numberFinalKood);
+
+
+            StiReport report = new StiReport();
+            report.Load(Application.StartupPath + @"\report.mrt");
+
+            report.Dictionary.Variables["DateTimeNow"].Value =
+                PersianDateConverter.ToPersianDate(DateTime.UtcNow).ToString("yyyy/MM/dd");
+           // report.RegBusinessObject("DetailFinalKoodrizi", detailFinalKoodrizi);
+            report.Compile();
+            report.Show();
         }
     }
 }
