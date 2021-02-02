@@ -1,0 +1,1871 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<StiSerializer version="1.02" type="Net" application="StiReport">
+  <Dictionary Ref="1" type="Dictionary" isKey="true">
+    <BusinessObjects isList="true" count="2">
+      <ExpSellPistachioDetailReportModel Ref="2" type="Stimulsoft.Report.Dictionary.StiBusinessObject" isKey="true">
+        <Alias>ExpSellPistachioDetailReportModel</Alias>
+        <BusinessObjects isList="true" count="0" />
+        <Category>Reports</Category>
+        <Columns isList="true" count="10">
+          <value>packtyp,System.String</value>
+          <value>doc_code,System.String</value>
+          <value>weight_bridg,System.String</value>
+          <value>ounce,System.Double</value>
+          <value>adl,System.Double</value>
+          <value>weightpack,System.Double</value>
+          <value>weightnet,System.Double</value>
+          <value>name_pistachio,System.String</value>
+          <value>Price,System.Decimal</value>
+          <value>TotalPrice,System.Decimal</value>
+        </Columns>
+        <Dictionary isRef="1" />
+        <Guid>050c4bd506414e18a103c4132613bd97</Guid>
+        <Name>ExpSellPistachioDetailReportModel</Name>
+      </ExpSellPistachioDetailReportModel>
+      <ExpSellPistachioHeaderReportModel Ref="3" type="Stimulsoft.Report.Dictionary.StiBusinessObject" isKey="true">
+        <Alias>ExpSellPistachioHeaderReportModel</Alias>
+        <BusinessObjects isList="true" count="0" />
+        <Category>Reports</Category>
+        <Columns isList="true" count="24">
+          <value>DateTimeEnter,System.String</value>
+          <value>Description,System.String</value>
+          <value>buyer_fullname,System.String</value>
+          <value>buyer_nid,System.String</value>
+          <value>buyer_address,System.String</value>
+          <value>buyer_phone,System.String</value>
+          <value>buyer_mobile,System.String</value>
+          <value>buyer_postcode,System.String</value>
+          <value>seller_address,System.String</value>
+          <value>seller_mobile,System.String</value>
+          <value>seller_phone,System.String</value>
+          <value>seller_postcode,System.String</value>
+          <value>vehicle_fullname,System.String</value>
+          <value>vehicle_license,System.String</value>
+          <value>vehicle_waybill,System.String</value>
+          <value>vehicle_address,System.String</value>
+          <value>vehicle_phone,System.String</value>
+          <value>vehicle_mobile,System.String</value>
+          <value>Code,System.String</value>
+          <value>seller_nid,System.String</value>
+          <value>vehicle_nid,System.String</value>
+          <value>vehicle_id,System.String</value>
+          <value>StoreKeeper,System.String</value>
+          <value>Agent,System.String</value>
+        </Columns>
+        <Dictionary isRef="1" />
+        <Guid>af078eb39da04cc1aac138cee19058fe</Guid>
+        <Name>ExpSellPistachioHeaderReportModel</Name>
+      </ExpSellPistachioHeaderReportModel>
+    </BusinessObjects>
+    <Databases isList="true" count="0" />
+    <DataSources isList="true" count="0" />
+    <Relations isList="true" count="0" />
+    <Report isRef="0" />
+    <Resources isList="true" count="1">
+      <value>Name=synchronize-50, Alias=synchronize-50, Content=z_x002B_0DsWSChuAWbdIYBzv8Uax5Ihw242FtSFt9atLl4OZkF7ImLi8y_x002F_Y5YedrLwnNiG1X_x002F_PPDlvfvyQ3uZpdHGca5ls5W_x002F_FSZ_x002F_ZrxRrSyAQDRyAu_x002B_DENc_x002B_OIz_x002F_uhcmtflR88u7iwWXRKj_x002F_NXfMie2Rrfi3iQVHBP9W2Ot6yEyuK_x002F_XLl0320ffGLok9NlWZ76yRgvHZ1Gbr6lkMrGjyxLq3uliJfBQSCYAQrvtaMQx4g_x002B_HG0t0KnMsPzEjNp_x002F_U1Frkb2AUmDQYphLEXh4R2DbSrNqIrx5rxMyiepChL96X6MeGnXsFD_x002B_TJHUblY9NXsBi3Fp3dTaZ2DsK_x002B_HV_x002B_iHTFZP1_x002F_22dpGUxKeJcyhPz92XtJN6FWjDNY4gvn_x002F_jfMFZpXCbuSnY7nSDoh6kIpOjjj3TkKLK3R5CAbaTSIrM7PbMc3Aui_x002F_Jj8L5vZ8_x002F_RiGIfMhD2p9cTEj5ko2CmFGFrMHSVO76MUe8ChVGx74_x002B_Tj912wojnMp3ZEoPRXFeJl70Tu1HIlbQ6bccjcOyCMbZiwZZ57gz_x002B_iZXGYJurhV0YlXec4b71j7o3Eo8kuFooQUO2MsRP4cGilEeGZGOXTojcIrYDIkyXBZJNbyAyacfGPIm1gXlJd9779HaZfzYV6KSJhgCx_x002B_cSvV6wcoWssmaWPmEtfgYAcM5HCi1IY3akdx92e8gWde6B1L0RlVMYKbNIIBFt7px1rVBT48HhIEIdoIjLB6NZwFhaK44JLWL2c2IJwufTTGLF7C093ULqUQPLfGhBtJhC6wnFeDxlhSRENWTg1UoeKibpduvhyJVCgftCCufPGCnFD4dIWull6j4ZLwFPnKFOxfVfG2REAPZdqypmHjcD2z4uUoRUom4OS_x002B_M9jGO8pdZxGOqYoLqLZPKPobvH8bgKxyuTg0iDrnf0tLmUYcNPSq2zx5O7hzHcKA0z8kXUY2qu5_x002B_Yqz2WC2CsJU7yXj8Fw1kJaXEdm4g79YVQJOe6ZJyYpIX3rw2Pw9rKur1aMutxuHsBZzj7MH7oeVKOxE9Dlpdj4ChQbM4L6PVS4f699FO6aQ96GVpDpsCCWeZVrDtF_x002F_4WAMa20gOR5edgto2ZtXMog3CaQTZKxNemSZRkuMsqbFXlug5qH8KQKxBfQltbMNKzsXSo2AoyDgVUMG6nX2mpx_x002B_DcDox4uGnS8Zk2qumUrjVsWx7OtB4qXT5SK_x002B_Kzb9iACJwV1AbcLWFOIKW5Zz1e_x002B_6_x002B_ZnJM5240TCFRl_x002B_7t8tz1k_x002B_vikX0e2iwb4vinVymAgye8h6c8_x002F_pV3LpObuRpM_x002F_IvCTpxsW4Msp4QukBDNKrappi02z0PGJ3HQuWiWQtuAm_x002B_8px6z8kQ8ZtsW6p2pq5zrRL1VhdwhsdyNzqqLVixI9ykEzuBdZizAEp2OTjVZiEnZeTvfKP65G</value>
+    </Resources>
+    <Variables isList="true" count="12">
+      <value>,CodeEnter,CodeEnter,,System.String,,False,False,False,False</value>
+      <value>,Currency,Currency,,System.String,,False,False,False,False</value>
+      <value>,DateEnter,DateEnter,,System.String,,False,False,False,False</value>
+      <value>,DateReport,DateReport,,System.String,,False,False,False,False</value>
+      <value>,Description,Description,,System.String,,False,False,False,False</value>
+      <value>,Filter,Filter,براساس_x0020_:_x0020_._x0020_._x0020_._x0020_,System.String,,False,False,False,False</value>
+      <value>,linkwebsite,linkwebsite,,System.String,,False,False,False,False</value>
+      <value>,LogoBusiness,LogoBusiness,,System.Drawing.Image,,False,False,False,False</value>
+      <value>,NameSoft,NameSoft,,System.String,,False,False,False,False</value>
+      <value>,SubTitle,SubTitle,,System.String,,False,False,False,False</value>
+      <value>,TitleBusiness,TitleBusiness,,System.String,,False,False,False,False</value>
+      <value>,TitleReport,TitleReport,,System.String,,False,False,False,False</value>
+    </Variables>
+  </Dictionary>
+  <EngineVersion>EngineV2</EngineVersion>
+  <GlobalizationStrings isList="true" count="0" />
+  <MetaTags isList="true" count="0" />
+  <Pages isList="true" count="1">
+    <Page1 Ref="4" type="Page" isKey="true">
+      <Border>None;Black;2;Solid;False;4;Black</Border>
+      <Brush>Transparent</Brush>
+      <Components isList="true" count="6">
+        <PageHeaderBand1 Ref="5" type="PageHeaderBand" isKey="true">
+          <Border>Bottom;Silver;2;Solid;False;4;Black</Border>
+          <Brush>[223:233:234]</Brush>
+          <ClientRectangle>0,4,200,21</ClientRectangle>
+          <Components isList="true" count="5">
+            <Text1 Ref="6" type="Text" isKey="true">
+              <Brush>Transparent</Brush>
+              <ClientRectangle>50.8,2.5,90.3,9.1</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Vazir FD,12,Bold</Font>
+              <HorAlignment>Center</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text1</Name>
+              <Page isRef="4" />
+              <Parent isRef="5" />
+              <Text>{TitleReport}</Text>
+              <TextBrush>Black</TextBrush>
+              <TextOptions>,,RightToLeft=True,,,A=0</TextOptions>
+              <VertAlignment>Center</VertAlignment>
+            </Text1>
+            <Text2 Ref="7" type="Text" isKey="true">
+              <Brush>Transparent</Brush>
+              <ClientRectangle>61,12,68,6</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Vazir FD,10,Bold</Font>
+              <HorAlignment>Center</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text2</Name>
+              <Page isRef="4" />
+              <Parent isRef="5" />
+              <Text>{TitleBusiness}</Text>
+              <TextBrush>Black</TextBrush>
+              <VertAlignment>Center</VertAlignment>
+            </Text2>
+            <Text7 Ref="8" type="Text" isKey="true">
+              <Brush>Transparent</Brush>
+              <ClientRectangle>2,4,18,6</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Vazir FD,8</Font>
+              <HorAlignment>Right</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text7</Name>
+              <Page isRef="4" />
+              <Parent isRef="5" />
+              <Text>{PageNumber} از {TotalPageCount}</Text>
+              <TextBrush>[0:111:129]</TextBrush>
+              <TextOptions>,,RightToLeft=True,,,A=0</TextOptions>
+              <Type>Expression</Type>
+              <VertAlignment>Center</VertAlignment>
+            </Text7>
+            <Text11 Ref="9" type="Text" isKey="true">
+              <Brush>Transparent</Brush>
+              <ClientRectangle>2,12,24,6</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Vazir FD,12</Font>
+              <Guid>4bb4f3b5d8e34a60b53e8de8e96b4272</Guid>
+              <HorAlignment>Right</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text11</Name>
+              <Page isRef="4" />
+              <Parent isRef="5" />
+              <Text>{DateReport}</Text>
+              <TextBrush>Black</TextBrush>
+              <Type>Expression</Type>
+              <VertAlignment>Center</VertAlignment>
+            </Text11>
+            <Text18 Ref="10" type="Text" isKey="true">
+              <Brush>Transparent</Brush>
+              <ClientRectangle>26,12,26,6</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Vazir FD,12</Font>
+              <Guid>c89ca410ebe44c15b6c74eedb73d433d</Guid>
+              <HorAlignment>Right</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text18</Name>
+              <Page isRef="4" />
+              <Parent isRef="5" />
+              <Text> : تاریخ گزارش</Text>
+              <TextBrush>Black</TextBrush>
+              <Type>Expression</Type>
+              <VertAlignment>Center</VertAlignment>
+            </Text18>
+          </Components>
+          <Conditions isList="true" count="0" />
+          <Name>PageHeaderBand1</Name>
+          <Page isRef="4" />
+          <Parent isRef="4" />
+        </PageHeaderBand1>
+        <PageFooterBand1 Ref="11" type="PageFooterBand" isKey="true">
+          <Border>Top;Black;1;Solid;False;4;Black</Border>
+          <Brush>Transparent</Brush>
+          <ClientRectangle>0,353.8,200,48</ClientRectangle>
+          <Components isList="true" count="12">
+            <Text6 Ref="12" type="Text" isKey="true">
+              <Border>Top;[127:127:127];1;Solid;False;4;Black</Border>
+              <Brush>Transparent</Brush>
+              <ClientRectangle>0,42,200,6</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Vazir FD,12</Font>
+              <Guid>7f50649d043b4c1da1ecc8629a90a1f1</Guid>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text6</Name>
+              <Page isRef="4" />
+              <Parent isRef="11" />
+              <Text>({linkwebsite}) {NameSoft}</Text>
+              <TextBrush>Black</TextBrush>
+              <Type>Expression</Type>
+              <VertAlignment>Center</VertAlignment>
+            </Text6>
+            <Text68 Ref="13" type="Text" isKey="true">
+              <Brush>Transparent</Brush>
+              <ClientRectangle>138,0,62,6</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Vazir FD,12,Regular,Point,False,0</Font>
+              <Guid>90de1384a836416095c646be78643b1c</Guid>
+              <HorAlignment>Center</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text68</Name>
+              <Page isRef="4" />
+              <Parent isRef="11" />
+              <Text>توضیحات : پسته فوق الذکر در تاریخ</Text>
+              <TextBrush>Black</TextBrush>
+              <Type>Expression</Type>
+              <VertAlignment>Center</VertAlignment>
+            </Text68>
+            <Text69 Ref="14" type="Text" isKey="true">
+              <Brush>Transparent</Brush>
+              <ClientRectangle>180,15,20,6</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Vazir FD,12</Font>
+              <Guid>a1a93e27c0374f1994b75dbea90a90a4</Guid>
+              <HorAlignment>Right</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text69</Name>
+              <Page isRef="4" />
+              <Parent isRef="11" />
+              <Text>امضا راننده</Text>
+              <TextBrush>Black</TextBrush>
+              <Type>Expression</Type>
+              <VertAlignment>Center</VertAlignment>
+            </Text69>
+            <Text70 Ref="15" type="Text" isKey="true">
+              <Brush>Transparent</Brush>
+              <ClientRectangle>112,15,24,6</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Vazir FD,12</Font>
+              <Guid>749abc6e013a49d4816a24cf54f305a7</Guid>
+              <HorAlignment>Right</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text70</Name>
+              <Page isRef="4" />
+              <Parent isRef="11" />
+              <Text>امضا انباردار</Text>
+              <TextBrush>Black</TextBrush>
+              <Type>Expression</Type>
+              <VertAlignment>Center</VertAlignment>
+            </Text70>
+            <Text71 Ref="16" type="Text" isKey="true">
+              <Brush>Transparent</Brush>
+              <ClientRectangle>36,15,38,6</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Vazir FD,12</Font>
+              <Guid>232c5e6e15a9420da4dd9bd2867b9c76</Guid>
+              <HorAlignment>Right</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text71</Name>
+              <Page isRef="4" />
+              <Parent isRef="11" />
+              <Text>مهر و امضا نماینده امور ملکی</Text>
+              <TextBrush>Black</TextBrush>
+              <Type>Expression</Type>
+              <VertAlignment>Center</VertAlignment>
+            </Text71>
+            <Text22 Ref="17" type="Text" isKey="true">
+              <Brush>Transparent</Brush>
+              <ClientRectangle>112,0,26,6</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Vazir FD,12,Bold</Font>
+              <Guid>d60eb4459f164933b54c51a4b5f85b73</Guid>
+              <HorAlignment>Center</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text22</Name>
+              <Page isRef="4" />
+              <Parent isRef="11" />
+              <Text>{DateReport}</Text>
+              <TextBrush>Black</TextBrush>
+              <Type>Expression</Type>
+              <VertAlignment>Center</VertAlignment>
+            </Text22>
+            <Text23 Ref="18" type="Text" isKey="true">
+              <Brush>Transparent</Brush>
+              <ClientRectangle>66,0,46,6</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Vazir FD,12,Regular,Point,False,0</Font>
+              <Guid>0482cf8aaceb42449bd3a36c7e67fb16</Guid>
+              <HorAlignment>Center</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text23</Name>
+              <Page isRef="4" />
+              <Parent isRef="11" />
+              <Text>صحیح و سالم تحویل آقای</Text>
+              <TextBrush>Black</TextBrush>
+              <Type>Expression</Type>
+              <VertAlignment>Center</VertAlignment>
+            </Text23>
+            <Text60 Ref="19" type="Text" isKey="true">
+              <Brush>Transparent</Brush>
+              <ClientRectangle>0,0,66,6</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Vazir FD,12,Bold</Font>
+              <Guid>f8cb35e3eb3649879ccb2cc3f6a2b9ec</Guid>
+              <HorAlignment>Center</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text60</Name>
+              <Page isRef="4" />
+              <Parent isRef="11" />
+              <Text>{ExpSellPistachioHeaderReportModel.vehicle_fullname}</Text>
+              <TextBrush>Black</TextBrush>
+              <Type>Expression</Type>
+              <VertAlignment>Center</VertAlignment>
+            </Text60>
+            <Text61 Ref="20" type="Text" isKey="true">
+              <Brush>Transparent</Brush>
+              <ClientRectangle>142,8,58,6</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Vazir FD,12,Regular,Point,False,0</Font>
+              <Guid>a1a4ad9348364e52acd5bb1d97453e7d</Guid>
+              <HorAlignment>Right</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text61</Name>
+              <Page isRef="4" />
+              <Parent isRef="11" />
+              <Text> گردید تا تحویل خریدار نماید </Text>
+              <TextBrush>Black</TextBrush>
+              <Type>Expression</Type>
+              <VertAlignment>Center</VertAlignment>
+            </Text61>
+            <Text81 Ref="21" type="Text" isKey="true">
+              <Brush>Transparent</Brush>
+              <ClientRectangle>150,21,50,6</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Vazir FD,12,Bold</Font>
+              <Guid>29620fcac02043de949cd8f6a4ab14f4</Guid>
+              <HorAlignment>Right</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text81</Name>
+              <Page isRef="4" />
+              <Parent isRef="11" />
+              <Text>{ExpSellPistachioHeaderReportModel.vehicle_fullname}</Text>
+              <TextBrush>Black</TextBrush>
+              <Type>Expression</Type>
+              <VertAlignment>Center</VertAlignment>
+            </Text81>
+            <Text82 Ref="22" type="Text" isKey="true">
+              <Brush>Transparent</Brush>
+              <ClientRectangle>94,21,42,6</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Vazir FD,12,Bold</Font>
+              <Guid>a6ebfba4f3ed4b4fa2a90de51679b2b4</Guid>
+              <HorAlignment>Right</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text82</Name>
+              <Page isRef="4" />
+              <Parent isRef="11" />
+              <Text>{ExpSellPistachioHeaderReportModel.StoreKeeper}</Text>
+              <TextBrush>Black</TextBrush>
+              <Type>DataColumn</Type>
+              <VertAlignment>Center</VertAlignment>
+            </Text82>
+            <Text83 Ref="23" type="Text" isKey="true">
+              <Brush>Transparent</Brush>
+              <ClientRectangle>2,21,72,6</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Vazir FD,12,Bold</Font>
+              <Guid>c3b840ffa6eb4139b311826b91a45d61</Guid>
+              <HorAlignment>Right</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text83</Name>
+              <Page isRef="4" />
+              <Parent isRef="11" />
+              <Text>{ExpSellPistachioHeaderReportModel.Agent}</Text>
+              <TextBrush>Black</TextBrush>
+              <Type>DataColumn</Type>
+              <VertAlignment>Center</VertAlignment>
+            </Text83>
+          </Components>
+          <Conditions isList="true" count="0" />
+          <Guid>ac53474b645f431d979dad9ae36c09d2</Guid>
+          <Name>PageFooterBand1</Name>
+          <Page isRef="4" />
+          <Parent isRef="4" />
+        </PageFooterBand1>
+        <Data2 Ref="24" type="DataBand" isKey="true">
+          <Brush>Transparent</Brush>
+          <BusinessObjectGuid>af078eb39da04cc1aac138cee19058fe</BusinessObjectGuid>
+          <ClientRectangle>0,33,200,139</ClientRectangle>
+          <Components isList="true" count="49">
+            <Text13 Ref="25" type="Text" isKey="true">
+              <Brush>Transparent</Brush>
+              <ClientRectangle>174,1,26,6</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Vazir FD,12,Bold</Font>
+              <Guid>a74e6b798dcf40c6a332e7731cc9cd14</Guid>
+              <HorAlignment>Right</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text13</Name>
+              <Page isRef="4" />
+              <Parent isRef="24" />
+              <Text> : شماره‌فاکتور</Text>
+              <TextBrush>Black</TextBrush>
+              <Type>Expression</Type>
+              <VertAlignment>Center</VertAlignment>
+            </Text13>
+            <Text4 Ref="26" type="Text" isKey="true">
+              <Brush>Transparent</Brush>
+              <ClientRectangle>106,1,22,6</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Vazir FD,12,Bold</Font>
+              <Guid>839f730fe10b4625bd145023ccc61c08</Guid>
+              <HorAlignment>Right</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text4</Name>
+              <Page isRef="4" />
+              <Parent isRef="24" />
+              <Text> : تاریخ ثبت </Text>
+              <TextBrush>Black</TextBrush>
+              <Type>Expression</Type>
+              <VertAlignment>Center</VertAlignment>
+            </Text4>
+            <Text16 Ref="27" type="Text" isKey="true">
+              <Brush>Transparent</Brush>
+              <ClientRectangle>46,1,22,6</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Vazir FD,12,Bold</Font>
+              <Guid>333d1fb50c5d423fb042294dfc1585e6</Guid>
+              <HorAlignment>Right</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text16</Name>
+              <Page isRef="4" />
+              <Parent isRef="24" />
+              <Text> : شرح قبض</Text>
+              <TextBrush>Black</TextBrush>
+              <Type>Expression</Type>
+              <VertAlignment>Center</VertAlignment>
+            </Text16>
+            <Text12 Ref="28" type="Text" isKey="true">
+              <Brush>Transparent</Brush>
+              <ClientRectangle>150,1,24,6</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Vazir FD,12</Font>
+              <Guid>ab8c79b617034dc48a91e9dd80481ef7</Guid>
+              <HorAlignment>Right</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text12</Name>
+              <Page isRef="4" />
+              <Parent isRef="24" />
+              <Text>{ExpSellPistachioHeaderReportModel.Code}</Text>
+              <TextBrush>Black</TextBrush>
+              <Type>Expression</Type>
+              <VertAlignment>Center</VertAlignment>
+            </Text12>
+            <Text10 Ref="29" type="Text" isKey="true">
+              <Brush>Transparent</Brush>
+              <ClientRectangle>0,1,46,6</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Vazir FD,12</Font>
+              <Guid>2a7d81a407254be899c4f8886f48c51c</Guid>
+              <HorAlignment>Right</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text10</Name>
+              <Page isRef="4" />
+              <Parent isRef="24" />
+              <Text>{ExpSellPistachioHeaderReportModel.Description}</Text>
+              <TextBrush>Black</TextBrush>
+              <Type>Expression</Type>
+              <VertAlignment>Center</VertAlignment>
+            </Text10>
+            <Text3 Ref="30" type="Text" isKey="true">
+              <Brush>Transparent</Brush>
+              <ClientRectangle>76,1,30,6</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Vazir FD,12</Font>
+              <HorAlignment>Right</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text3</Name>
+              <Page isRef="4" />
+              <Parent isRef="24" />
+              <Text>{ExpSellPistachioHeaderReportModel.DateTimeEnter}</Text>
+              <TextBrush>Black</TextBrush>
+              <Type>DataColumn</Type>
+              <VertAlignment>Center</VertAlignment>
+            </Text3>
+            <Text20 Ref="31" type="Text" isKey="true">
+              <Border>Bottom;[127:127:127];1;Solid;False;4;Black</Border>
+              <Brush>Transparent</Brush>
+              <ClientRectangle>0,13,200,4</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Vazir FD,10</Font>
+              <Guid>d1db1cf78fb84bdebc566ef3b2ab238f</Guid>
+              <HorAlignment>Right</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text20</Name>
+              <Page isRef="4" />
+              <Parent isRef="24" />
+              <Text>مشخصات خریدار / حق العمل کار</Text>
+              <TextBrush>[127:127:127]</TextBrush>
+              <Type>Expression</Type>
+              <VertAlignment>Center</VertAlignment>
+            </Text20>
+            <Text24 Ref="32" type="Text" isKey="true">
+              <Brush>Transparent</Brush>
+              <ClientRectangle>50,21,18,6</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Vazir FD,12,Bold</Font>
+              <Guid>bd850be25da248aaa2d99ba835e0058d</Guid>
+              <HorAlignment>Right</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text24</Name>
+              <Page isRef="4" />
+              <Parent isRef="24" />
+              <Text> : کدملی</Text>
+              <TextBrush>Black</TextBrush>
+              <Type>Expression</Type>
+              <VertAlignment>Center</VertAlignment>
+            </Text24>
+            <Text25 Ref="33" type="Text" isKey="true">
+              <Brush>Transparent</Brush>
+              <ClientRectangle>12,21,38,6</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Vazir FD,12</Font>
+              <Guid>d0791664c5af499cb6695e398295b4aa</Guid>
+              <HorAlignment>Right</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text25</Name>
+              <Page isRef="4" />
+              <Parent isRef="24" />
+              <Text>{ExpSellPistachioHeaderReportModel.buyer_nid}</Text>
+              <TextBrush>Black</TextBrush>
+              <Type>Expression</Type>
+              <VertAlignment>Center</VertAlignment>
+            </Text25>
+            <Text27 Ref="34" type="Text" isKey="true">
+              <Brush>Transparent</Brush>
+              <ClientRectangle>164,21,36,6</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Vazir FD,12,Bold</Font>
+              <Guid>cd1661c1f1134822806f4df9d80ff6e2</Guid>
+              <HorAlignment>Right</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text27</Name>
+              <Page isRef="4" />
+              <Parent isRef="24" />
+              <Text>: نام و نام خانوادگی</Text>
+              <TextBrush>Black</TextBrush>
+              <Type>Expression</Type>
+              <VertAlignment>Center</VertAlignment>
+            </Text27>
+            <Text28 Ref="35" type="Text" isKey="true">
+              <Brush>Transparent</Brush>
+              <ClientRectangle>84,21,80,6</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Vazir FD,12</Font>
+              <Guid>ab51fa5bd4784a84a49c2ca54a54390c</Guid>
+              <HorAlignment>Right</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text28</Name>
+              <Page isRef="4" />
+              <Parent isRef="24" />
+              <Text>{ExpSellPistachioHeaderReportModel.buyer_fullname}</Text>
+              <TextBrush>Black</TextBrush>
+              <Type>Expression</Type>
+              <VertAlignment>Center</VertAlignment>
+            </Text28>
+            <Text29 Ref="36" type="Text" isKey="true">
+              <Brush>Transparent</Brush>
+              <ClientRectangle>176,31,24,6</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Vazir FD,12,Bold</Font>
+              <Guid>54f63fe3a521496dbb27145cfafc72ed</Guid>
+              <HorAlignment>Right</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text29</Name>
+              <Page isRef="4" />
+              <Parent isRef="24" />
+              <Text>: تلفن ثابت </Text>
+              <TextBrush>Black</TextBrush>
+              <Type>Expression</Type>
+              <VertAlignment>Center</VertAlignment>
+            </Text29>
+            <Text30 Ref="37" type="Text" isKey="true">
+              <Brush>Transparent</Brush>
+              <ClientRectangle>132,31,44,6</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Vazir FD,12</Font>
+              <Guid>1ce6d1f568aa44dd8ae7150529cc5a87</Guid>
+              <HorAlignment>Right</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text30</Name>
+              <Page isRef="4" />
+              <Parent isRef="24" />
+              <Text>{ExpSellPistachioHeaderReportModel.buyer_phone}</Text>
+              <TextBrush>Black</TextBrush>
+              <Type>Expression</Type>
+              <VertAlignment>Center</VertAlignment>
+            </Text30>
+            <Text31 Ref="38" type="Text" isKey="true">
+              <Brush>Transparent</Brush>
+              <ClientRectangle>106,31,22,6</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Vazir FD,12,Bold</Font>
+              <Guid>527afe70fbcc492ab1f8144b9c4526c1</Guid>
+              <HorAlignment>Right</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text31</Name>
+              <Page isRef="4" />
+              <Parent isRef="24" />
+              <Text>: تلفن همراه </Text>
+              <TextBrush>Black</TextBrush>
+              <Type>Expression</Type>
+              <VertAlignment>Center</VertAlignment>
+            </Text31>
+            <Text32 Ref="39" type="Text" isKey="true">
+              <Brush>Transparent</Brush>
+              <ClientRectangle>68,31,38,6</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Vazir FD,12</Font>
+              <Guid>1412b74c4e614e5085f331250b5f7a14</Guid>
+              <HorAlignment>Right</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text32</Name>
+              <Page isRef="4" />
+              <Parent isRef="24" />
+              <Text>{ExpSellPistachioHeaderReportModel.buyer_mobile}</Text>
+              <TextBrush>Black</TextBrush>
+              <Type>Expression</Type>
+              <VertAlignment>Center</VertAlignment>
+            </Text32>
+            <Text33 Ref="40" type="Text" isKey="true">
+              <Brush>Transparent</Brush>
+              <ClientRectangle>50,31,18,6</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Vazir FD,12,Bold</Font>
+              <Guid>c0066285ae2b400798167cab97a99ad1</Guid>
+              <HorAlignment>Right</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text33</Name>
+              <Page isRef="4" />
+              <Parent isRef="24" />
+              <Text> : کدپستی</Text>
+              <TextBrush>Black</TextBrush>
+              <Type>Expression</Type>
+              <VertAlignment>Center</VertAlignment>
+            </Text33>
+            <Text34 Ref="41" type="Text" isKey="true">
+              <Brush>Transparent</Brush>
+              <ClientRectangle>12,31,38,6</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Vazir FD,12</Font>
+              <Guid>af13b4b352b54653a40e696a0c5d3d19</Guid>
+              <HorAlignment>Right</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text34</Name>
+              <Page isRef="4" />
+              <Parent isRef="24" />
+              <Text>{ExpSellPistachioHeaderReportModel.buyer_postcode}</Text>
+              <TextBrush>Black</TextBrush>
+              <Type>Expression</Type>
+              <VertAlignment>Center</VertAlignment>
+            </Text34>
+            <Text35 Ref="42" type="Text" isKey="true">
+              <Brush>Transparent</Brush>
+              <ClientRectangle>184,41,16,6</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Vazir FD,12,Bold</Font>
+              <Guid>993db2b7109249beb0b4bc4848464907</Guid>
+              <HorAlignment>Right</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text35</Name>
+              <Page isRef="4" />
+              <Parent isRef="24" />
+              <Text>: آدرس</Text>
+              <TextBrush>Black</TextBrush>
+              <Type>Expression</Type>
+              <VertAlignment>Center</VertAlignment>
+            </Text35>
+            <Text36 Ref="43" type="Text" isKey="true">
+              <Brush>Transparent</Brush>
+              <ClientRectangle>0,41,184,6</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Vazir FD,12</Font>
+              <Guid>b5a026f67dce4fb0870524db1208e728</Guid>
+              <HorAlignment>Right</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text36</Name>
+              <Page isRef="4" />
+              <Parent isRef="24" />
+              <Text>{ExpSellPistachioHeaderReportModel.buyer_address}</Text>
+              <TextBrush>Black</TextBrush>
+              <Type>Expression</Type>
+              <VertAlignment>Center</VertAlignment>
+            </Text36>
+            <Text37 Ref="44" type="Text" isKey="true">
+              <Border>Bottom;[127:127:127];1;Solid;False;4;Black</Border>
+              <Brush>Transparent</Brush>
+              <ClientRectangle>0,51,200,4</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Vazir FD,10</Font>
+              <Guid>e4cf6cd0c38a49149d344e9d20db640e</Guid>
+              <HorAlignment>Right</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text37</Name>
+              <Page isRef="4" />
+              <Parent isRef="24" />
+              <Text>مشخصات فروشنده </Text>
+              <TextBrush>[127:127:127]</TextBrush>
+              <Type>Expression</Type>
+              <VertAlignment>Center</VertAlignment>
+            </Text37>
+            <Text40 Ref="45" type="Text" isKey="true">
+              <Brush>Transparent</Brush>
+              <ClientRectangle>40,59,28,6</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Vazir FD,12,Bold</Font>
+              <Guid>303c0721e21f44b7a965d9d2bcd87252</Guid>
+              <HorAlignment>Right</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text40</Name>
+              <Page isRef="4" />
+              <Parent isRef="24" />
+              <Text> : کدملی کارفرما</Text>
+              <TextBrush>Black</TextBrush>
+              <Type>Expression</Type>
+              <VertAlignment>Center</VertAlignment>
+            </Text40>
+            <Text41 Ref="46" type="Text" isKey="true">
+              <Brush>Transparent</Brush>
+              <ClientRectangle>10,59,28,6</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Vazir FD,12</Font>
+              <Guid>45290de08f534c0cb708814ecd7f9a79</Guid>
+              <HorAlignment>Right</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text41</Name>
+              <Page isRef="4" />
+              <Parent isRef="24" />
+              <Text>{ExpSellPistachioHeaderReportModel.seller_nid}</Text>
+              <TextBrush>Black</TextBrush>
+              <Type>Expression</Type>
+              <VertAlignment>Center</VertAlignment>
+            </Text41>
+            <Text42 Ref="47" type="Text" isKey="true">
+              <Brush>Transparent</Brush>
+              <ClientRectangle>72,59,128,6</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Vazir FD,12,Bold</Font>
+              <Guid>249fd0db10ee4808965ab8752e60bf28</Guid>
+              <HorAlignment>Right</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text42</Name>
+              <Page isRef="4" />
+              <Parent isRef="24" />
+              <Text>{TitleBusiness}</Text>
+              <TextBrush>Black</TextBrush>
+              <Type>Expression</Type>
+              <VertAlignment>Center</VertAlignment>
+            </Text42>
+            <Text43 Ref="48" type="Text" isKey="true">
+              <Brush>Transparent</Brush>
+              <ClientRectangle>178,69,22,6</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Vazir FD,12,Bold</Font>
+              <Guid>eba4e16691554420a3b5bbfe1f6c6511</Guid>
+              <HorAlignment>Right</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text43</Name>
+              <Page isRef="4" />
+              <Parent isRef="24" />
+              <Text>: تلفن ثابت </Text>
+              <TextBrush>Black</TextBrush>
+              <Type>Expression</Type>
+              <VertAlignment>Center</VertAlignment>
+            </Text43>
+            <Text44 Ref="49" type="Text" isKey="true">
+              <Brush>Transparent</Brush>
+              <ClientRectangle>132,69,46,6</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Vazir FD,12</Font>
+              <Guid>62ec9ac73c444e6b80d547899d08348b</Guid>
+              <HorAlignment>Right</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text44</Name>
+              <Page isRef="4" />
+              <Parent isRef="24" />
+              <Text>{ExpSellPistachioHeaderReportModel.seller_phone}</Text>
+              <TextBrush>Black</TextBrush>
+              <Type>Expression</Type>
+              <VertAlignment>Center</VertAlignment>
+            </Text44>
+            <Text45 Ref="50" type="Text" isKey="true">
+              <Brush>Transparent</Brush>
+              <ClientRectangle>106,69,22,6</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Vazir FD,12,Bold</Font>
+              <Guid>1eb4f3d456314ae988ce19af669c814f</Guid>
+              <HorAlignment>Right</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text45</Name>
+              <Page isRef="4" />
+              <Parent isRef="24" />
+              <Text>: تلفن همراه </Text>
+              <TextBrush>Black</TextBrush>
+              <Type>Expression</Type>
+              <VertAlignment>Center</VertAlignment>
+            </Text45>
+            <Text46 Ref="51" type="Text" isKey="true">
+              <Brush>Transparent</Brush>
+              <ClientRectangle>68,69,38,6</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Vazir FD,12</Font>
+              <Guid>f927126b9de24e3986cd7ad7b6c97483</Guid>
+              <HorAlignment>Right</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text46</Name>
+              <Page isRef="4" />
+              <Parent isRef="24" />
+              <Text>{ExpSellPistachioHeaderReportModel.seller_mobile}</Text>
+              <TextBrush>Black</TextBrush>
+              <Type>Expression</Type>
+              <VertAlignment>Center</VertAlignment>
+            </Text46>
+            <Text47 Ref="52" type="Text" isKey="true">
+              <Brush>Transparent</Brush>
+              <ClientRectangle>46,69,18,6</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Vazir FD,12,Bold</Font>
+              <Guid>a20ec6a10ac14a17afbd0699d6a46e4c</Guid>
+              <HorAlignment>Right</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text47</Name>
+              <Page isRef="4" />
+              <Parent isRef="24" />
+              <Text> : کدپستی</Text>
+              <TextBrush>Black</TextBrush>
+              <Type>Expression</Type>
+              <VertAlignment>Center</VertAlignment>
+            </Text47>
+            <Text48 Ref="53" type="Text" isKey="true">
+              <Brush>Transparent</Brush>
+              <ClientRectangle>18,69,28,6</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Vazir FD,12</Font>
+              <Guid>055b9503b8d2470ab8083cabad1f6df3</Guid>
+              <HorAlignment>Right</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text48</Name>
+              <Page isRef="4" />
+              <Parent isRef="24" />
+              <Text>{ExpSellPistachioHeaderReportModel.seller_postcode}</Text>
+              <TextBrush>Black</TextBrush>
+              <Type>Expression</Type>
+              <VertAlignment>Center</VertAlignment>
+            </Text48>
+            <Text49 Ref="54" type="Text" isKey="true">
+              <Brush>Transparent</Brush>
+              <ClientRectangle>184,79,16,6</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Vazir FD,12,Bold</Font>
+              <Guid>43f236cbc37d41de8b77c2f487a84562</Guid>
+              <HorAlignment>Right</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text49</Name>
+              <Page isRef="4" />
+              <Parent isRef="24" />
+              <Text>: آدرس</Text>
+              <TextBrush>Black</TextBrush>
+              <Type>Expression</Type>
+              <VertAlignment>Center</VertAlignment>
+            </Text49>
+            <Text50 Ref="55" type="Text" isKey="true">
+              <Brush>Transparent</Brush>
+              <ClientRectangle>0,79,184,6</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Vazir FD,12</Font>
+              <Guid>1d109ce2db6a473a8d34c2efb3df0349</Guid>
+              <HorAlignment>Right</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text50</Name>
+              <Page isRef="4" />
+              <Parent isRef="24" />
+              <Text>{ExpSellPistachioHeaderReportModel.seller_address}</Text>
+              <TextBrush>Black</TextBrush>
+              <Type>Expression</Type>
+              <VertAlignment>Center</VertAlignment>
+            </Text50>
+            <Text38 Ref="56" type="Text" isKey="true">
+              <Border>Bottom;[127:127:127];1;Solid;False;4;Black</Border>
+              <Brush>Transparent</Brush>
+              <ClientRectangle>0,87,200,4</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Vazir FD,10</Font>
+              <Guid>f34e784fcbaf40f6929b7668c5ad9480</Guid>
+              <HorAlignment>Right</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text38</Name>
+              <Page isRef="4" />
+              <Parent isRef="24" />
+              <Text>: مشخصات محل و حمل کننده</Text>
+              <TextBrush>[127:127:127]</TextBrush>
+              <Type>Expression</Type>
+              <VertAlignment>Center</VertAlignment>
+            </Text38>
+            <Text39 Ref="57" type="Text" isKey="true">
+              <Brush>Transparent</Brush>
+              <ClientRectangle>50,95,14,6</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Vazir FD,12,Bold</Font>
+              <Guid>5ec0e88f822c448a9b320576eb0db7cf</Guid>
+              <HorAlignment>Right</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text39</Name>
+              <Page isRef="4" />
+              <Parent isRef="24" />
+              <Text>: کدملی</Text>
+              <TextBrush>Black</TextBrush>
+              <Type>Expression</Type>
+              <VertAlignment>Center</VertAlignment>
+            </Text39>
+            <Text51 Ref="58" type="Text" isKey="true">
+              <Brush>Transparent</Brush>
+              <ClientRectangle>6,95,44,6</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Vazir FD,12</Font>
+              <Guid>1b5f0352f3d749b1978dd001ec50bbe8</Guid>
+              <HorAlignment>Right</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text51</Name>
+              <Page isRef="4" />
+              <Parent isRef="24" />
+              <Text>{ExpSellPistachioHeaderReportModel.vehicle_nid}</Text>
+              <TextBrush>Black</TextBrush>
+              <Type>Expression</Type>
+              <VertAlignment>Center</VertAlignment>
+            </Text51>
+            <Text54 Ref="59" type="Text" isKey="true">
+              <Brush>Transparent</Brush>
+              <ClientRectangle>164,95,36,6</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Vazir FD,12,Bold</Font>
+              <Guid>4611ab1b013d41b2a7f8d4fa62aada67</Guid>
+              <HorAlignment>Right</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text54</Name>
+              <Page isRef="4" />
+              <Parent isRef="24" />
+              <Text>: نام و نام خانوادگی</Text>
+              <TextBrush>Black</TextBrush>
+              <Type>Expression</Type>
+              <VertAlignment>Center</VertAlignment>
+            </Text54>
+            <Text55 Ref="60" type="Text" isKey="true">
+              <Brush>Transparent</Brush>
+              <ClientRectangle>68,95,96,6</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Vazir FD,13</Font>
+              <Guid>8d8d99ee7ea54c2ebc42f45d20982294</Guid>
+              <HorAlignment>Right</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text55</Name>
+              <Page isRef="4" />
+              <Parent isRef="24" />
+              <Text>{ExpSellPistachioHeaderReportModel.vehicle_fullname}</Text>
+              <TextBrush>Black</TextBrush>
+              <Type>Expression</Type>
+              <VertAlignment>Center</VertAlignment>
+            </Text55>
+            <Text64 Ref="61" type="Text" isKey="true">
+              <Brush>Transparent</Brush>
+              <ClientRectangle>148,105,52,6</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Vazir FD,12,Bold</Font>
+              <Guid>004085ff4aba4328a350f4f47c43ce66</Guid>
+              <HorAlignment>Right</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text64</Name>
+              <Page isRef="4" />
+              <Parent isRef="24" />
+              <Text>: شماره‌ی پلاک وسیله نقلیه </Text>
+              <TextBrush>Black</TextBrush>
+              <Type>Expression</Type>
+              <VertAlignment>Center</VertAlignment>
+            </Text64>
+            <Text65 Ref="62" type="Text" isKey="true">
+              <Brush>Transparent</Brush>
+              <ClientRectangle>68,105,80,6</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Vazir FD,12</Font>
+              <Guid>8c6e54c912904b1fb031f231092deb0e</Guid>
+              <HorAlignment>Right</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text65</Name>
+              <Page isRef="4" />
+              <Parent isRef="24" />
+              <Text>{ExpSellPistachioHeaderReportModel.vehicle_id}</Text>
+              <TextBrush>Black</TextBrush>
+              <Type>Expression</Type>
+              <VertAlignment>Center</VertAlignment>
+            </Text65>
+            <Text66 Ref="63" type="Text" isKey="true">
+              <Brush>Transparent</Brush>
+              <ClientRectangle>38,105,26,6</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Vazir FD,12,Bold</Font>
+              <Guid>01e3ea5b90b34528a225652d6331a44b</Guid>
+              <HorAlignment>Right</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text66</Name>
+              <Page isRef="4" />
+              <Parent isRef="24" />
+              <Text>: شماره بارنامه</Text>
+              <TextBrush>Black</TextBrush>
+              <Type>Expression</Type>
+              <VertAlignment>Center</VertAlignment>
+            </Text66>
+            <Text52 Ref="64" type="Text" isKey="true">
+              <Brush>Transparent</Brush>
+              <ClientRectangle>34,115,32,6</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Vazir FD,12,Bold</Font>
+              <Guid>254a79cec68c4b379e4d8da46445c6be</Guid>
+              <HorAlignment>Right</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text52</Name>
+              <Page isRef="4" />
+              <Parent isRef="24" />
+              <Text>: شماره گواهینامه</Text>
+              <TextBrush>Black</TextBrush>
+              <Type>Expression</Type>
+              <VertAlignment>Center</VertAlignment>
+            </Text52>
+            <Text53 Ref="65" type="Text" isKey="true">
+              <Brush>Transparent</Brush>
+              <ClientRectangle>8,115,26,6</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Vazir FD,12</Font>
+              <Guid>c87b173bbaa448b3a8472812825c5bbe</Guid>
+              <HorAlignment>Right</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text53</Name>
+              <Page isRef="4" />
+              <Parent isRef="24" />
+              <Text>{ExpSellPistachioHeaderReportModel.vehicle_license}</Text>
+              <TextBrush>Black</TextBrush>
+              <Type>DataColumn</Type>
+              <VertAlignment>Center</VertAlignment>
+            </Text53>
+            <Text56 Ref="66" type="Text" isKey="true">
+              <Brush>Transparent</Brush>
+              <ClientRectangle>178,115,22,6</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Vazir FD,12,Bold</Font>
+              <Guid>3d142b0911fd4666b2ca97cfb02c2d63</Guid>
+              <HorAlignment>Right</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text56</Name>
+              <Page isRef="4" />
+              <Parent isRef="24" />
+              <Text>: تلفن ثابت </Text>
+              <TextBrush>Black</TextBrush>
+              <Type>Expression</Type>
+              <VertAlignment>Center</VertAlignment>
+            </Text56>
+            <Text57 Ref="67" type="Text" isKey="true">
+              <Brush>Transparent</Brush>
+              <ClientRectangle>132,115,46,6</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Vazir FD,12</Font>
+              <Guid>a621feceb4044377a1d405a52dd9c2a8</Guid>
+              <HorAlignment>Right</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text57</Name>
+              <Page isRef="4" />
+              <Parent isRef="24" />
+              <Text>{ExpSellPistachioHeaderReportModel.vehicle_phone}</Text>
+              <TextBrush>Black</TextBrush>
+              <Type>Expression</Type>
+              <VertAlignment>Center</VertAlignment>
+            </Text57>
+            <Text58 Ref="68" type="Text" isKey="true">
+              <Brush>Transparent</Brush>
+              <ClientRectangle>106,115,22,6</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Vazir FD,12,Bold</Font>
+              <Guid>af4aa74d56ee472fbf3530680d92e650</Guid>
+              <HorAlignment>Right</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text58</Name>
+              <Page isRef="4" />
+              <Parent isRef="24" />
+              <Text>: تلفن همراه </Text>
+              <TextBrush>Black</TextBrush>
+              <Type>Expression</Type>
+              <VertAlignment>Center</VertAlignment>
+            </Text58>
+            <Text59 Ref="69" type="Text" isKey="true">
+              <Brush>Transparent</Brush>
+              <ClientRectangle>68,115,38,6</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Vazir FD,12</Font>
+              <Guid>ae5d58f7f43142538376e676ee62691b</Guid>
+              <HorAlignment>Right</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text59</Name>
+              <Page isRef="4" />
+              <Parent isRef="24" />
+              <Text>{ExpSellPistachioHeaderReportModel.vehicle_mobile}</Text>
+              <TextBrush>Black</TextBrush>
+              <Type>Expression</Type>
+              <VertAlignment>Center</VertAlignment>
+            </Text59>
+            <Text80 Ref="70" type="Text" isKey="true">
+              <Border>Bottom;[127:127:127];1;Solid;False;4;Black</Border>
+              <Brush>Transparent</Brush>
+              <ClientRectangle>0,135,200,4</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Vazir FD,9.75,Regular,Point,False,0</Font>
+              <Guid>d64d4251f38747bd87aa44ff9fab6f58</Guid>
+              <HorAlignment>Right</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text80</Name>
+              <Page isRef="4" />
+              <Parent isRef="24" />
+              <Text>: مشخصات کالا</Text>
+              <TextBrush>[127:127:127]</TextBrush>
+              <Type>Expression</Type>
+              <VertAlignment>Center</VertAlignment>
+            </Text80>
+            <Text62 Ref="71" type="Text" isKey="true">
+              <Brush>Transparent</Brush>
+              <ClientRectangle>0,125,184,6</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Vazir FD,12</Font>
+              <Guid>2113b230ee314e538837496f04925701</Guid>
+              <HorAlignment>Right</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text62</Name>
+              <Page isRef="4" />
+              <Parent isRef="24" />
+              <Text>{ExpSellPistachioHeaderReportModel.vehicle_address}</Text>
+              <TextBrush>Black</TextBrush>
+              <Type>Expression</Type>
+              <VertAlignment>Center</VertAlignment>
+            </Text62>
+            <Text63 Ref="72" type="Text" isKey="true">
+              <Brush>Transparent</Brush>
+              <ClientRectangle>184,125,16,6</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Vazir FD,12,Bold</Font>
+              <Guid>d5f8a92adfe14d21986106d7e361f691</Guid>
+              <HorAlignment>Right</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text63</Name>
+              <Page isRef="4" />
+              <Parent isRef="24" />
+              <Text>: آدرس</Text>
+              <TextBrush>Black</TextBrush>
+              <Type>Expression</Type>
+              <VertAlignment>Center</VertAlignment>
+            </Text63>
+            <Text67 Ref="73" type="Text" isKey="true">
+              <Brush>Transparent</Brush>
+              <ClientRectangle>8,105,30,6</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Vazir FD,12</Font>
+              <Guid>a0d56bda5b804f09863fdc44da1cb294</Guid>
+              <HorAlignment>Right</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text67</Name>
+              <Page isRef="4" />
+              <Parent isRef="24" />
+              <Text>{ExpSellPistachioHeaderReportModel.vehicle_waybill}</Text>
+              <TextBrush>Black</TextBrush>
+              <Type>Expression</Type>
+              <VertAlignment>Center</VertAlignment>
+            </Text67>
+          </Components>
+          <Conditions isList="true" count="0" />
+          <DataSourceName isNull="true" />
+          <Filters isList="true" count="0" />
+          <Name>Data2</Name>
+          <Page isRef="4" />
+          <Parent isRef="4" />
+          <Sort isList="true" count="0" />
+        </Data2>
+        <Header Ref="74" type="HeaderBand" isKey="true">
+          <Brush>[191:191:191]</Brush>
+          <ClientRectangle>0,180,200,8</ClientRectangle>
+          <Components isList="true" count="9">
+            <HeaderJournalReportModel_DescriptionDocument Ref="75" type="Text" isKey="true">
+              <Border>All;[127:127:127];1;Solid;False;4;Black</Border>
+              <Brush>[191:191:191]</Brush>
+              <ClientRectangle>158,0,34,8</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Vazir FD,12,Bold</Font>
+              <Guid>f7fcf3add7b842529f0e53205e690f51</Guid>
+              <HorAlignment>Center</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>HeaderJournalReportModel_DescriptionDocument</Name>
+              <Page isRef="4" />
+              <Parent isRef="74" />
+              <Text>نوع پسته</Text>
+              <TextBrush>Black</TextBrush>
+              <TextOptions>,,,,WordWrap=True,A=0</TextOptions>
+              <Type>Expression</Type>
+              <VertAlignment>Center</VertAlignment>
+            </HeaderJournalReportModel_DescriptionDocument>
+            <Text17 Ref="76" type="Text" isKey="true">
+              <Border>All;[127:127:127];1;Solid;False;4;Black</Border>
+              <Brush>[191:191:191]</Brush>
+              <ClientRectangle>92,0,22,8</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Vazir FD,12,Bold</Font>
+              <Guid>2719f1e20e894cda95bb81f0594adf55</Guid>
+              <HorAlignment>Center</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text17</Name>
+              <Page isRef="4" />
+              <Parent isRef="74" />
+              <Text>نوع ظرف</Text>
+              <TextBrush>Black</TextBrush>
+              <TextOptions>,,,,WordWrap=True,A=0</TextOptions>
+              <Type>Expression</Type>
+              <VertAlignment>Center</VertAlignment>
+            </Text17>
+            <HeaderJournalReportModel_DocumentCode Ref="77" type="Text" isKey="true">
+              <Border>All;[127:127:127];1;Solid;False;4;Black</Border>
+              <Brush>[191:191:191]</Brush>
+              <ClientRectangle>114,0,22,8</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Vazir FD,12,Bold</Font>
+              <Guid>1a44e638d66e4392bb2506c6b0ef7d0a</Guid>
+              <HorAlignment>Center</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>HeaderJournalReportModel_DocumentCode</Name>
+              <Page isRef="4" />
+              <Parent isRef="74" />
+              <Text>عدل</Text>
+              <TextBrush>Black</TextBrush>
+              <TextOptions>,,,,WordWrap=True,A=0</TextOptions>
+              <Type>Expression</Type>
+              <VertAlignment>Center</VertAlignment>
+            </HeaderJournalReportModel_DocumentCode>
+            <Text5 Ref="78" type="Text" isKey="true">
+              <Border>All;[127:127:127];1;Solid;False;4;Black</Border>
+              <Brush>[191:191:191]</Brush>
+              <ClientRectangle>136,0,22,8</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Vazir FD,12,Bold</Font>
+              <Guid>532f6549eaf84eed9096ce4ea6ce654f</Guid>
+              <HorAlignment>Center</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text5</Name>
+              <Page isRef="4" />
+              <Parent isRef="74" />
+              <Text>انس</Text>
+              <TextBrush>Black</TextBrush>
+              <TextOptions>,,,,WordWrap=True,A=0</TextOptions>
+              <Type>Expression</Type>
+              <VertAlignment>Center</VertAlignment>
+            </Text5>
+            <Text8 Ref="79" type="Text" isKey="true">
+              <Border>All;[127:127:127];1;Solid;False;4;Black</Border>
+              <Brush>[191:191:191]</Brush>
+              <ClientRectangle>192,0,8,8</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Vazir FD,8.25,Bold,Point,False,0</Font>
+              <Guid>59c4e8e0b5dc4388b84afa80a26c3d54</Guid>
+              <HorAlignment>Center</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text8</Name>
+              <Page isRef="4" />
+              <Parent isRef="74" />
+              <Text>ردیف</Text>
+              <TextBrush>Black</TextBrush>
+              <TextOptions>,,,,WordWrap=True,A=0</TextOptions>
+              <Type>Expression</Type>
+              <VertAlignment>Center</VertAlignment>
+            </Text8>
+            <Text73 Ref="80" type="Text" isKey="true">
+              <Border>All;[127:127:127];1;Solid;False;4;Black</Border>
+              <Brush>[191:191:191]</Brush>
+              <ClientRectangle>70,0,22,8</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Vazir FD,12,Bold</Font>
+              <Guid>44ea8928862d480ebfb172e3418557a5</Guid>
+              <HorAlignment>Center</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text73</Name>
+              <Page isRef="4" />
+              <Parent isRef="74" />
+              <Text>وزن باظرف</Text>
+              <TextBrush>Black</TextBrush>
+              <TextOptions>,,,,WordWrap=True,A=0</TextOptions>
+              <Type>Expression</Type>
+              <VertAlignment>Center</VertAlignment>
+            </Text73>
+            <Text74 Ref="81" type="Text" isKey="true">
+              <Border>All;[127:127:127];1;Solid;False;4;Black</Border>
+              <Brush>[191:191:191]</Brush>
+              <ClientRectangle>48,0,22,8</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Vazir FD,12,Bold</Font>
+              <Guid>8aaa08a5c9434d16803a8909ee15b51e</Guid>
+              <HorAlignment>Center</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text74</Name>
+              <Page isRef="4" />
+              <Parent isRef="74" />
+              <Text>وزن خالص</Text>
+              <TextBrush>Black</TextBrush>
+              <TextOptions>,,,,WordWrap=True,A=0</TextOptions>
+              <Type>Expression</Type>
+              <VertAlignment>Center</VertAlignment>
+            </Text74>
+            <Text75 Ref="82" type="Text" isKey="true">
+              <Border>All;[127:127:127];1;Solid;False;4;Black</Border>
+              <Brush>[191:191:191]</Brush>
+              <ClientRectangle>26,0,22,8</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Vazir FD,12,Bold</Font>
+              <Guid>2f287714f22e46e196a369010a38499e</Guid>
+              <HorAlignment>Center</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text75</Name>
+              <Page isRef="4" />
+              <Parent isRef="74" />
+              <Text>قیمت</Text>
+              <TextBrush>Black</TextBrush>
+              <TextOptions>,,,,WordWrap=True,A=0</TextOptions>
+              <Type>Expression</Type>
+              <VertAlignment>Center</VertAlignment>
+            </Text75>
+            <Text76 Ref="83" type="Text" isKey="true">
+              <Border>All;[127:127:127];1;Solid;False;4;Black</Border>
+              <Brush>[191:191:191]</Brush>
+              <ClientRectangle>0,0,26,8</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Vazir FD,12,Bold</Font>
+              <Guid>166d55f069d242299851d10577861337</Guid>
+              <HorAlignment>Center</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text76</Name>
+              <Page isRef="4" />
+              <Parent isRef="74" />
+              <Text>قیمت کل</Text>
+              <TextBrush>Black</TextBrush>
+              <TextOptions>,,,,WordWrap=True,A=0</TextOptions>
+              <Type>Expression</Type>
+              <VertAlignment>Center</VertAlignment>
+            </Text76>
+          </Components>
+          <Conditions isList="true" count="0" />
+          <Guid>c231400ef71d43f48f0c5426dc45aeb7</Guid>
+          <Name>Header</Name>
+          <Page isRef="4" />
+          <Parent isRef="4" />
+        </Header>
+        <Data Ref="84" type="DataBand" isKey="true">
+          <Border>None;[12:12:12];1;Solid;False;4;Black</Border>
+          <Brush>Transparent</Brush>
+          <BusinessObjectGuid>050c4bd506414e18a103c4132613bd97</BusinessObjectGuid>
+          <ClientRectangle>0,196,200,7</ClientRectangle>
+          <Components isList="true" count="9">
+            <Text9 Ref="85" type="Text" isKey="true">
+              <Border>All;[127:127:127];1;Solid;False;4;Black</Border>
+              <Brush>[165:165:165]</Brush>
+              <ClientRectangle>192,0,8,7</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Vazir FD,8</Font>
+              <GrowToHeight>True</GrowToHeight>
+              <Guid>250c0c0b33b249ed8886d941ea156d35</Guid>
+              <HorAlignment>Center</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text9</Name>
+              <Page isRef="4" />
+              <Parent isRef="84" />
+              <Text>{Line}</Text>
+              <TextBrush>Black</TextBrush>
+              <Type>Expression</Type>
+              <VertAlignment>Center</VertAlignment>
+            </Text9>
+            <Text21 Ref="86" type="Text" isKey="true">
+              <Border>All;[191:191:191];1;Solid;False;4;Black</Border>
+              <Brush>Transparent</Brush>
+              <CanGrow>True</CanGrow>
+              <ClientRectangle>158,0,34,7</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Vazir FD,9.75,Regular,Point,False,0</Font>
+              <GrowToHeight>True</GrowToHeight>
+              <Guid>8ae4ac9dab194ef698d9d8116011c07b</Guid>
+              <HorAlignment>Center</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text21</Name>
+              <Page isRef="4" />
+              <Parent isRef="84" />
+              <Text>{ExpSellPistachioDetailReportModel.name_pistachio}</Text>
+              <TextBrush>Black</TextBrush>
+              <TextFormat Ref="87" type="NumberFormat" isKey="true">
+                <DecimalDigits>0</DecimalDigits>
+                <GroupSeparator>,</GroupSeparator>
+                <NegativePattern>1</NegativePattern>
+                <UseLocalSetting>False</UseLocalSetting>
+              </TextFormat>
+              <TextOptions>,,,,WordWrap=True,A=0</TextOptions>
+              <Type>Expression</Type>
+              <VertAlignment>Center</VertAlignment>
+            </Text21>
+            <Text19 Ref="88" type="Text" isKey="true">
+              <Border>All;[191:191:191];1;Solid;False;4;Black</Border>
+              <Brush>Transparent</Brush>
+              <CanGrow>True</CanGrow>
+              <ClientRectangle>0,0,26,7</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Vazir FD,9.75,Regular,Point,False,0</Font>
+              <GrowToHeight>True</GrowToHeight>
+              <Guid>b0b6325f4e334d72bb69916bdf047654</Guid>
+              <HorAlignment>Center</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text19</Name>
+              <Page isRef="4" />
+              <Parent isRef="84" />
+              <Text>{ExpSellPistachioDetailReportModel.TotalPrice}</Text>
+              <TextBrush>Black</TextBrush>
+              <TextFormat Ref="89" type="NumberFormat" isKey="true">
+                <DecimalDigits>0</DecimalDigits>
+                <GroupSeparator>,</GroupSeparator>
+                <NegativePattern>1</NegativePattern>
+                <UseLocalSetting>False</UseLocalSetting>
+              </TextFormat>
+              <TextOptions>,,,,WordWrap=True,A=0</TextOptions>
+              <Type>DataColumn</Type>
+              <VertAlignment>Center</VertAlignment>
+            </Text19>
+            <Text15 Ref="90" type="Text" isKey="true">
+              <Border>All;[191:191:191];1;Solid;False;4;Black</Border>
+              <Brush>Transparent</Brush>
+              <CanGrow>True</CanGrow>
+              <ClientRectangle>114,0,22,7</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Vazir FD,9.75,Regular,Point,False,0</Font>
+              <GrowToHeight>True</GrowToHeight>
+              <Guid>bdb58b858f9e432c9146fe8a4e951aa6</Guid>
+              <HorAlignment>Center</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text15</Name>
+              <Page isRef="4" />
+              <Parent isRef="84" />
+              <Text>{ExpSellPistachioDetailReportModel.adl}</Text>
+              <TextBrush>Black</TextBrush>
+              <TextOptions>,,,,WordWrap=True,A=0</TextOptions>
+              <Type>Expression</Type>
+              <VertAlignment>Center</VertAlignment>
+            </Text15>
+            <DataJournalReportModel_CoddingCode Ref="91" type="Text" isKey="true">
+              <Border>All;[191:191:191];1;Solid;False;4;Black</Border>
+              <Brush>Transparent</Brush>
+              <CanGrow>True</CanGrow>
+              <ClientRectangle>136,0,22,7</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Vazir FD,9.75,Regular,Point,False,0</Font>
+              <GrowToHeight>True</GrowToHeight>
+              <Guid>ef70dddbec614628bb07648cac7cb8d7</Guid>
+              <HorAlignment>Center</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>DataJournalReportModel_CoddingCode</Name>
+              <Page isRef="4" />
+              <Parent isRef="84" />
+              <Text>{ExpSellPistachioDetailReportModel.ounce}</Text>
+              <TextBrush>Black</TextBrush>
+              <TextOptions>,,,,WordWrap=True,A=0</TextOptions>
+              <Type>Expression</Type>
+              <VertAlignment>Center</VertAlignment>
+            </DataJournalReportModel_CoddingCode>
+            <Text72 Ref="92" type="Text" isKey="true">
+              <Border>All;[191:191:191];1;Solid;False;4;Black</Border>
+              <Brush>Transparent</Brush>
+              <CanGrow>True</CanGrow>
+              <ClientRectangle>92,0,22,7</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Vazir FD,9.75,Regular,Point,False,0</Font>
+              <GrowToHeight>True</GrowToHeight>
+              <Guid>8bd66f17fdc14459baf9ea89e30e3edf</Guid>
+              <HorAlignment>Center</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text72</Name>
+              <Page isRef="4" />
+              <Parent isRef="84" />
+              <Text>{ExpSellPistachioDetailReportModel.packtyp}</Text>
+              <TextBrush>Black</TextBrush>
+              <TextOptions>,,,,WordWrap=True,A=0</TextOptions>
+              <Type>Expression</Type>
+              <VertAlignment>Center</VertAlignment>
+            </Text72>
+            <Text77 Ref="93" type="Text" isKey="true">
+              <Border>All;[191:191:191];1;Solid;False;4;Black</Border>
+              <Brush>Transparent</Brush>
+              <CanGrow>True</CanGrow>
+              <ClientRectangle>70,0,22,7</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Vazir FD,9.75,Regular,Point,False,0</Font>
+              <GrowToHeight>True</GrowToHeight>
+              <Guid>a7f8c1b8343d4fcd93f1a1712d97498a</Guid>
+              <HorAlignment>Center</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text77</Name>
+              <Page isRef="4" />
+              <Parent isRef="84" />
+              <Text>{ExpSellPistachioDetailReportModel.weightpack}</Text>
+              <TextBrush>Black</TextBrush>
+              <TextOptions>,,,,WordWrap=True,A=0</TextOptions>
+              <Type>Expression</Type>
+              <VertAlignment>Center</VertAlignment>
+            </Text77>
+            <Text78 Ref="94" type="Text" isKey="true">
+              <Border>All;[191:191:191];1;Solid;False;4;Black</Border>
+              <Brush>Transparent</Brush>
+              <CanGrow>True</CanGrow>
+              <ClientRectangle>48,0,22,7</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Vazir FD,9.75,Regular,Point,False,0</Font>
+              <GrowToHeight>True</GrowToHeight>
+              <Guid>ae298e053baa49f9bee945d9bab87d84</Guid>
+              <HorAlignment>Center</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text78</Name>
+              <Page isRef="4" />
+              <Parent isRef="84" />
+              <Text>{ExpSellPistachioDetailReportModel.weightnet}</Text>
+              <TextBrush>Black</TextBrush>
+              <TextOptions>,,,,WordWrap=True,A=0</TextOptions>
+              <Type>Expression</Type>
+              <VertAlignment>Center</VertAlignment>
+            </Text78>
+            <Text79 Ref="95" type="Text" isKey="true">
+              <Border>All;[191:191:191];1;Solid;False;4;Black</Border>
+              <Brush>Transparent</Brush>
+              <CanGrow>True</CanGrow>
+              <ClientRectangle>26,0,22,7</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Vazir FD,9.75,Regular,Point,False,0</Font>
+              <GrowToHeight>True</GrowToHeight>
+              <Guid>8f06b85286864b47916a56bb4396257d</Guid>
+              <HorAlignment>Center</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text79</Name>
+              <Page isRef="4" />
+              <Parent isRef="84" />
+              <Text>{ExpSellPistachioDetailReportModel.Price}</Text>
+              <TextBrush>Black</TextBrush>
+              <TextOptions>,,,,WordWrap=True,A=0</TextOptions>
+              <Type>DataColumn</Type>
+              <VertAlignment>Center</VertAlignment>
+            </Text79>
+          </Components>
+          <Conditions isList="true" count="1">
+            <value>_x007B__x0028_Line_x0020__x0026__x0020_1_x0029__x0020__x003D__x003D__x0020_0_x007D_,[0:0:0],[216:216:216],Arial_x002C_8,True,False,,,None</value>
+          </Conditions>
+          <DataSourceName isNull="true" />
+          <FilterEngine>SQLQuery</FilterEngine>
+          <Filters isList="true" count="0" />
+          <Guid>616fee8967d54c9e9196256eca999481</Guid>
+          <Name>Data</Name>
+          <Page isRef="4" />
+          <Parent isRef="4" />
+          <RightToLeft>True</RightToLeft>
+          <Sort isList="true" count="2">
+            <value>ASC</value>
+            <value>Code</value>
+          </Sort>
+        </Data>
+        <Footer Ref="96" type="FooterBand" isKey="true">
+          <Border>None;[165:165:165];1;Solid;False;4;Black</Border>
+          <Brush>Transparent</Brush>
+          <ClientRectangle>0,211,200,16</ClientRectangle>
+          <Components isList="true" count="11">
+            <FooterJournalReportModel_Creditor Ref="97" type="Text" isKey="true">
+              <Border>None;[127:127:127];1;Solid;False;4;Black</Border>
+              <Brush>Transparent</Brush>
+              <ClientRectangle>20,0,48,6</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Vazir FD,12,Bold</Font>
+              <Guid>332a21b0274546a0aa8cf25cc5256b93</Guid>
+              <HorAlignment>Center</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>FooterJournalReportModel_Creditor</Name>
+              <Page isRef="4" />
+              <Parent isRef="96" />
+              <Text>{Sum(ExpSellPistachioDetailReportModel.weightnet)}</Text>
+              <TextBrush>Black</TextBrush>
+              <TextFormat Ref="98" type="CurrencyFormat" isKey="true">
+                <DecimalDigits>0</DecimalDigits>
+                <GroupSeparator>,</GroupSeparator>
+                <NegativePattern>0</NegativePattern>
+                <PositivePattern>0</PositivePattern>
+                <State>DecimalDigits, CurrencySymbol</State>
+                <Symbol />
+              </TextFormat>
+              <TextOptions>,,,,WordWrap=True,A=0</TextOptions>
+              <Type>Totals</Type>
+              <VertAlignment>Center</VertAlignment>
+            </FooterJournalReportModel_Creditor>
+            <Text14 Ref="99" type="Text" isKey="true">
+              <Border>None;[127:127:127];1;Solid;False;4;Black</Border>
+              <Brush>Transparent</Brush>
+              <ClientRectangle>68,0,36,6</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Vazir FD,12,Regular,Point,False,0</Font>
+              <Guid>aceeeaa070fc42b2a458b9ab961859ca</Guid>
+              <HorAlignment>Right</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text14</Name>
+              <Page isRef="4" />
+              <Parent isRef="96" />
+              <Text>وزن خالص قبض :</Text>
+              <TextBrush>Black</TextBrush>
+              <TextOptions>,,RightToLeft=True,,WordWrap=True,A=0</TextOptions>
+              <Type>Expression</Type>
+              <VertAlignment>Center</VertAlignment>
+            </Text14>
+            <Text26 Ref="100" type="Text" isKey="true">
+              <Border>None;[127:127:127];1;Solid;False;4;Black</Border>
+              <Brush>Transparent</Brush>
+              <ClientRectangle>0,0,20,6</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Vazir FD,12,Regular,Point,False,0</Font>
+              <Guid>0f90360cd0904968baef385edf956dd5</Guid>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text26</Name>
+              <Page isRef="4" />
+              <Parent isRef="96" />
+              <Text>کیلوگرم</Text>
+              <TextBrush>Black</TextBrush>
+              <TextOptions>,,RightToLeft=True,,WordWrap=True,A=0</TextOptions>
+              <Type>Expression</Type>
+              <VertAlignment>Center</VertAlignment>
+            </Text26>
+            <Text84 Ref="101" type="Text" isKey="true">
+              <Border>None;[127:127:127];1;Solid;False;4;Black</Border>
+              <Brush>Transparent</Brush>
+              <ClientRectangle>130,0,40,6</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Vazir FD,12,Bold</Font>
+              <Guid>24d5ae3b785746bea613201ff7b41dbd</Guid>
+              <HorAlignment>Center</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text84</Name>
+              <Page isRef="4" />
+              <Parent isRef="96" />
+              <Text>{Sum(ExpSellPistachioDetailReportModel.weightpack)}</Text>
+              <TextBrush>Black</TextBrush>
+              <TextFormat Ref="102" type="CurrencyFormat" isKey="true">
+                <DecimalDigits>0</DecimalDigits>
+                <GroupSeparator>,</GroupSeparator>
+                <NegativePattern>0</NegativePattern>
+                <PositivePattern>0</PositivePattern>
+                <State>DecimalDigits, CurrencySymbol</State>
+                <Symbol />
+              </TextFormat>
+              <TextOptions>,,,,WordWrap=True,A=0</TextOptions>
+              <Type>Totals</Type>
+              <VertAlignment>Center</VertAlignment>
+            </Text84>
+            <Text85 Ref="103" type="Text" isKey="true">
+              <Border>None;[127:127:127];1;Solid;False;4;Black</Border>
+              <Brush>Transparent</Brush>
+              <ClientRectangle>170,0,30,6</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Vazir FD,12,Regular,Point,False,0</Font>
+              <Guid>eecc49ae82e443fdaff5f161edad4935</Guid>
+              <HorAlignment>Right</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text85</Name>
+              <Page isRef="4" />
+              <Parent isRef="96" />
+              <Text>وزن ناخالص  :</Text>
+              <TextBrush>Black</TextBrush>
+              <TextOptions>,,RightToLeft=True,,WordWrap=True,A=0</TextOptions>
+              <Type>Expression</Type>
+              <VertAlignment>Center</VertAlignment>
+            </Text85>
+            <Text86 Ref="104" type="Text" isKey="true">
+              <Border>None;[127:127:127];1;Solid;False;4;Black</Border>
+              <Brush>Transparent</Brush>
+              <ClientRectangle>114,0,16,6</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Vazir FD,12,Regular,Point,False,0</Font>
+              <Guid>b16046d8e999489f9bde903fe9b99891</Guid>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text86</Name>
+              <Page isRef="4" />
+              <Parent isRef="96" />
+              <Text>کیلوگرم</Text>
+              <TextBrush>Black</TextBrush>
+              <TextOptions>,,RightToLeft=True,,WordWrap=True,A=0</TextOptions>
+              <Type>Expression</Type>
+              <VertAlignment>Center</VertAlignment>
+            </Text86>
+            <Text87 Ref="105" type="Text" isKey="true">
+              <Border>None;[127:127:127];1;Solid;False;4;Black</Border>
+              <Brush>Transparent</Brush>
+              <ClientRectangle>154,10,20,6</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Vazir FD,12,Bold</Font>
+              <Guid>54d979f9b2284fc7a9b1f311f089fdb0</Guid>
+              <HorAlignment>Center</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text87</Name>
+              <Page isRef="4" />
+              <Parent isRef="96" />
+              <Text>{Sum(ExpSellPistachioDetailReportModel.adl)}</Text>
+              <TextBrush>Black</TextBrush>
+              <TextFormat Ref="106" type="CurrencyFormat" isKey="true">
+                <DecimalDigits>0</DecimalDigits>
+                <GroupSeparator>,</GroupSeparator>
+                <NegativePattern>0</NegativePattern>
+                <PositivePattern>0</PositivePattern>
+                <State>DecimalDigits, CurrencySymbol</State>
+                <Symbol />
+              </TextFormat>
+              <TextOptions>,,,,WordWrap=True,A=0</TextOptions>
+              <Type>Totals</Type>
+              <VertAlignment>Center</VertAlignment>
+            </Text87>
+            <Text88 Ref="107" type="Text" isKey="true">
+              <Border>None;[127:127:127];1;Solid;False;4;Black</Border>
+              <Brush>Transparent</Brush>
+              <ClientRectangle>174,10,26,6</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Vazir FD,12,Regular,Point,False,0</Font>
+              <Guid>8878289f1fe743bf99312b24e9646199</Guid>
+              <HorAlignment>Right</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text88</Name>
+              <Page isRef="4" />
+              <Parent isRef="96" />
+              <Text>تعدادعدل :</Text>
+              <TextBrush>Black</TextBrush>
+              <TextOptions>,,RightToLeft=True,,WordWrap=True,A=0</TextOptions>
+              <Type>Expression</Type>
+              <VertAlignment>Center</VertAlignment>
+            </Text88>
+            <Text89 Ref="108" type="Text" isKey="true">
+              <Border>None;[127:127:127];1;Solid;False;4;Black</Border>
+              <Brush>Transparent</Brush>
+              <ClientRectangle>20,10,48,6</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Vazir FD,12,Bold</Font>
+              <Guid>bbac8ebed81540f5848dec34bbcd93b2</Guid>
+              <HorAlignment>Center</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text89</Name>
+              <Page isRef="4" />
+              <Parent isRef="96" />
+              <Text>{Sum(ExpSellPistachioDetailReportModel.TotalPrice)}</Text>
+              <TextBrush>Black</TextBrush>
+              <TextFormat Ref="109" type="CurrencyFormat" isKey="true">
+                <DecimalDigits>0</DecimalDigits>
+                <GroupSeparator>,</GroupSeparator>
+                <NegativePattern>0</NegativePattern>
+                <PositivePattern>0</PositivePattern>
+                <State>DecimalDigits, CurrencySymbol</State>
+                <Symbol />
+              </TextFormat>
+              <TextOptions>,,,,WordWrap=True,A=0</TextOptions>
+              <Type>Totals</Type>
+              <VertAlignment>Center</VertAlignment>
+            </Text89>
+            <Text90 Ref="110" type="Text" isKey="true">
+              <Border>None;[127:127:127];1;Solid;False;4;Black</Border>
+              <Brush>Transparent</Brush>
+              <ClientRectangle>68,10,36,6</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Vazir FD,12,Regular,Point,False,0</Font>
+              <Guid>662ef59e2fda4e479ea504545ad00e71</Guid>
+              <HorAlignment>Right</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text90</Name>
+              <Page isRef="4" />
+              <Parent isRef="96" />
+              <Text>  قیمت کل :</Text>
+              <TextBrush>Black</TextBrush>
+              <TextOptions>,,RightToLeft=True,,WordWrap=True,A=0</TextOptions>
+              <Type>Expression</Type>
+              <VertAlignment>Center</VertAlignment>
+            </Text90>
+            <Text91 Ref="111" type="Text" isKey="true">
+              <Border>None;[127:127:127];1;Solid;False;4;Black</Border>
+              <Brush>Transparent</Brush>
+              <ClientRectangle>0,10,20,6</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Vazir FD,12,Regular,Point,False,0</Font>
+              <Guid>ddc0b7625a5f418194d0e3fd7d70491f</Guid>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text91</Name>
+              <Page isRef="4" />
+              <Parent isRef="96" />
+              <Text>{Currency}</Text>
+              <TextBrush>Black</TextBrush>
+              <TextOptions>,,RightToLeft=True,,WordWrap=True,A=0</TextOptions>
+              <Type>Expression</Type>
+              <VertAlignment>Center</VertAlignment>
+            </Text91>
+          </Components>
+          <Conditions isList="true" count="0" />
+          <Guid>ff1ca5e1105e4710959c0b19ee09e4cb</Guid>
+          <Name>Footer</Name>
+          <Page isRef="4" />
+          <Parent isRef="4" />
+        </Footer>
+      </Components>
+      <Conditions isList="true" count="1">
+        <value>_x007B__x0028_Line_x0020__x0026__x0020_1_x0029__x0020__x003D__x003D__x0020_0_x007D_,[0:0:0],[242:242:242],Arial_x002C_8,True,False,,,None</value>
+      </Conditions>
+      <Guid>5c8f722980e246488cf81b373ba86f75</Guid>
+      <Margins>5,5,5,5</Margins>
+      <Name>Page1</Name>
+      <PageHeight>297</PageHeight>
+      <PageWidth>210</PageWidth>
+      <PaperSize>A4</PaperSize>
+      <Report isRef="0" />
+      <RightToLeft>True</RightToLeft>
+      <Watermark Ref="112" type="Stimulsoft.Report.Components.StiWatermark" isKey="true">
+        <Font>Arial,100</Font>
+        <TextBrush>[50:0:0:0]</TextBrush>
+      </Watermark>
+    </Page1>
+  </Pages>
+  <PrinterSettings Ref="113" type="Stimulsoft.Report.Print.StiPrinterSettings" isKey="true" />
+  <ReferencedAssemblies isList="true" count="8">
+    <value>System.Dll</value>
+    <value>System.Drawing.Dll</value>
+    <value>System.Windows.Forms.Dll</value>
+    <value>System.Data.Dll</value>
+    <value>System.Xml.Dll</value>
+    <value>Stimulsoft.Controls.Dll</value>
+    <value>Stimulsoft.Base.Dll</value>
+    <value>Stimulsoft.Report.Dll</value>
+  </ReferencedAssemblies>
+  <ReportAlias>Report</ReportAlias>
+  <ReportChanged>8/16/2020 10:46:13 AM</ReportChanged>
+  <ReportCreated>12/19/2018 5:08:46 PM</ReportCreated>
+  <ReportFile>G:\Projects\ElhamAccounting\src\Dualp.Elham.Web\Areas\Dualp.Elham.Plugins.Web.Pistachio\Reports\InfomationExportBill.mrt</ReportFile>
+  <ReportGuid>996d6dac69e14ea58d1517ada9d185c6</ReportGuid>
+  <ReportImage isNull="true" />
+  <ReportName>Report</ReportName>
+  <ReportUnit>Millimeters</ReportUnit>
+  <ReportVersion>2017.1.3.0</ReportVersion>
+  <Script>using System;
+using System.Drawing;
+using System.Windows.Forms;
+using System.Data;
+using Stimulsoft.Controls;
+using Stimulsoft.Base.Drawing;
+using Stimulsoft.Report;
+using Stimulsoft.Report.Dialogs;
+using Stimulsoft.Report.Components;
+
+namespace Reports
+{
+    public class Report : Stimulsoft.Report.StiReport
+    {
+        public Report()        {
+            this.InitializeComponent();
+        }
+
+        #region StiReport Designer generated code - do not modify
+		#endregion StiReport Designer generated code - do not modify
+    }
+}
+</Script>
+  <ScriptLanguage>CSharp</ScriptLanguage>
+  <Styles isList="true" count="0" />
+</StiSerializer>

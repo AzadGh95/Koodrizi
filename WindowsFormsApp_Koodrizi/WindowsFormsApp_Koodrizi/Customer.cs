@@ -71,5 +71,10 @@ namespace WindowsFormsApp_Koodrizi
 
 
         }
+
+        private void TxtName_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
