@@ -223,6 +223,7 @@ namespace WindowsFormsApp_Koodrizi
 
             lblTotalPrice.Text = sumPrice.ToString("#,###");
             lblTtalOunce.Text = sumOunce.ToString();
+            lblTotalWeight.Text = sumWeight.ToString("#.##");
 
         }
         private double Zarib(List<Models.DKood> koodmodel, double weightBar)

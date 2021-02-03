@@ -82,7 +82,6 @@ namespace WindowsFormsApp_Koodrizi
             StiReport report = new StiReport();
             report.Load(Application.StartupPath + @"\Reports\mrt\detailKoodForKeeper.mrt");
 
-
             report.Dictionary.Variables["TitleReport"].Value = "پروژه کودریزی";
             report.Dictionary.Variables["TitleBusiness"].Value = "گزارش جزئیات کودریزی مختص مسئول انبار";
             report.Dictionary.Variables["DateReport"].Value =

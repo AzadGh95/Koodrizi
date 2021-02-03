@@ -45,7 +45,7 @@
             this.btnPerson.Location = new System.Drawing.Point(444, 31);
             this.btnPerson.Name = "btnPerson";
             this.btnPerson.Size = new System.Drawing.Size(146, 39);
-            this.btnPerson.TabIndex = 0;
+            this.btnPerson.TabIndex = 1;
             this.btnPerson.Text = "افزودن مشتری";
             this.btnPerson.UseVisualStyleBackColor = false;
             this.btnPerson.Click += new System.EventHandler(this.Button1_Click);
@@ -57,7 +57,7 @@
             this.btnListPerson.Location = new System.Drawing.Point(444, 93);
             this.btnListPerson.Name = "btnListPerson";
             this.btnListPerson.Size = new System.Drawing.Size(146, 38);
-            this.btnListPerson.TabIndex = 1;
+            this.btnListPerson.TabIndex = 2;
             this.btnListPerson.Text = "لیست مشتری ها";
             this.btnListPerson.UseVisualStyleBackColor = false;
             this.btnListPerson.Click += new System.EventHandler(this.BtnListPerson_Click);
@@ -69,7 +69,7 @@
             this.btnListBar.Location = new System.Drawing.Point(255, 93);
             this.btnListBar.Name = "btnListBar";
             this.btnListBar.Size = new System.Drawing.Size(146, 38);
-            this.btnListBar.TabIndex = 3;
+            this.btnListBar.TabIndex = 4;
             this.btnListBar.Text = "لیست بارها";
             this.btnListBar.UseVisualStyleBackColor = false;
             this.btnListBar.Click += new System.EventHandler(this.BtnListBar_Click);
@@ -81,7 +81,7 @@
             this.btnBar.Location = new System.Drawing.Point(255, 31);
             this.btnBar.Name = "btnBar";
             this.btnBar.Size = new System.Drawing.Size(146, 39);
-            this.btnBar.TabIndex = 2;
+            this.btnBar.TabIndex = 3;
             this.btnBar.Text = "افزودن بار";
             this.btnBar.UseVisualStyleBackColor = false;
             this.btnBar.Click += new System.EventHandler(this.BtnBar_Click);
@@ -93,7 +93,7 @@
             this.btnFinalKoodrizi.Location = new System.Drawing.Point(70, 31);
             this.btnFinalKoodrizi.Name = "btnFinalKoodrizi";
             this.btnFinalKoodrizi.Size = new System.Drawing.Size(146, 39);
-            this.btnFinalKoodrizi.TabIndex = 4;
+            this.btnFinalKoodrizi.TabIndex = 5;
             this.btnFinalKoodrizi.Text = "افزودن کودریزی نهایی";
             this.btnFinalKoodrizi.UseVisualStyleBackColor = false;
             this.btnFinalKoodrizi.Click += new System.EventHandler(this.BtnFinalKoodrizi_Click);
@@ -105,7 +105,7 @@
             this.btnListKoodrizi.Location = new System.Drawing.Point(70, 93);
             this.btnListKoodrizi.Name = "btnListKoodrizi";
             this.btnListKoodrizi.Size = new System.Drawing.Size(146, 38);
-            this.btnListKoodrizi.TabIndex = 5;
+            this.btnListKoodrizi.TabIndex = 6;
             this.btnListKoodrizi.Text = "لیست کودریزی";
             this.btnListKoodrizi.UseVisualStyleBackColor = false;
             this.btnListKoodrizi.Click += new System.EventHandler(this.BtnListKoodrizi_Click);
