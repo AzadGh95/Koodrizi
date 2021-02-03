@@ -37,10 +37,7 @@ namespace WindowsFormsApp_Koodrizi
                     else
                     {
                         MessageBox.Show("امکان حذف وجود ندارد ");
-
                     }
-
-
                 }
                 else
                 {

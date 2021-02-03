@@ -46,6 +46,9 @@ namespace WindowsFormsApp_Koodrizi
                             txtName.Text = "";
                             txtCod.Text = "";
                             txtPhone.Text = "";
+                            Close();
+
+
                         }
                         else
                             MessageBox.Show("خطا در ذخیره سازی، لطفا مجددا تلاش کنید", "خطا");

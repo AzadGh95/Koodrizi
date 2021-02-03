@@ -38,6 +38,7 @@
             this.CalculateAvg = new System.Windows.Forms.DataGridViewButtonColumn();
             this.delete = new System.Windows.Forms.DataGridViewButtonColumn();
             this.editGrid = new System.Windows.Forms.DataGridViewButtonColumn();
+            this.btnNewCustomer = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridListCustomer)).BeginInit();
             this.SuspendLayout();
             // 
@@ -56,12 +57,12 @@
             this.CalculateAvg,
             this.delete,
             this.editGrid});
-            this.dataGridListCustomer.Location = new System.Drawing.Point(14, 12);
+            this.dataGridListCustomer.Location = new System.Drawing.Point(12, 61);
             this.dataGridListCustomer.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.dataGridListCustomer.Name = "dataGridListCustomer";
             this.dataGridListCustomer.ReadOnly = true;
             this.dataGridListCustomer.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.dataGridListCustomer.Size = new System.Drawing.Size(860, 336);
+            this.dataGridListCustomer.Size = new System.Drawing.Size(860, 418);
             this.dataGridListCustomer.TabIndex = 0;
             this.dataGridListCustomer.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DataGridListCustomer_CellContentClick_1);
             // 
@@ -125,11 +126,22 @@
             this.editGrid.ReadOnly = true;
             this.editGrid.Width = 49;
             // 
+            // btnNewCustomer
+            // 
+            this.btnNewCustomer.Location = new System.Drawing.Point(12, 12);
+            this.btnNewCustomer.Name = "btnNewCustomer";
+            this.btnNewCustomer.Size = new System.Drawing.Size(94, 32);
+            this.btnNewCustomer.TabIndex = 1;
+            this.btnNewCustomer.Text = "مشتری جدید";
+            this.btnNewCustomer.UseVisualStyleBackColor = true;
+            this.btnNewCustomer.Click += new System.EventHandler(this.BtnNewCustomer_Click);
+            // 
             // ListCustomer
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 19F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(884, 361);
+            this.ClientSize = new System.Drawing.Size(884, 492);
+            this.Controls.Add(this.btnNewCustomer);
             this.Controls.Add(this.dataGridListCustomer);
             this.Font = new System.Drawing.Font("Vazir FD", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
@@ -153,5 +165,6 @@
         private System.Windows.Forms.DataGridViewButtonColumn CalculateAvg;
         private System.Windows.Forms.DataGridViewButtonColumn delete;
         private System.Windows.Forms.DataGridViewButtonColumn editGrid;
+        private System.Windows.Forms.Button btnNewCustomer;
     }
 }

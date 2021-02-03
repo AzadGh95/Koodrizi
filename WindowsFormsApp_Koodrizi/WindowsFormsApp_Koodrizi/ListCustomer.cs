@@ -121,5 +121,19 @@ namespace WindowsFormsApp_Koodrizi
 
         }
 
+        private void BtnNewCustomer_Click(object sender, EventArgs e)
+        {
+            Customer formCustomer = new Customer();
+            if (formCustomer.ShowDialog() == DialogResult.OK)
+            {
+                dataGridListCustomer.Rows.Clear();
+
+                var people = _personRepository.Peoples();
+                foreach (var prop in people)
+                    dataGridListCustomer.Rows.Add(prop.PersonId, prop.Code, prop.Name, prop.Bedehi,
+                        PersianDateConverter.ToPersianDate(prop.BaseDate).ToString("yyyy/MM/dd"),
+                        PersianDateConverter.ToPersianDate(prop.AvgDate).ToString("yyyy/MM/dd"));
+            }
+        }
     }
 }
