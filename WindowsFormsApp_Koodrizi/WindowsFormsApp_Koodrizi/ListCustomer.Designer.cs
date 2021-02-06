@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.dataGridListCustomer = new System.Windows.Forms.DataGridView();
+            this.btnNewCustomer = new System.Windows.Forms.Button();
             this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.code = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.name = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -38,7 +39,8 @@
             this.CalculateAvg = new System.Windows.Forms.DataGridViewButtonColumn();
             this.delete = new System.Windows.Forms.DataGridViewButtonColumn();
             this.editGrid = new System.Windows.Forms.DataGridViewButtonColumn();
-            this.btnNewCustomer = new System.Windows.Forms.Button();
+            this.BarReport = new Stimulsoft.Controls.Win.DotNetBar.Controls.DataGridViewButtonXColumn();
+            this.Column3 = new System.Windows.Forms.DataGridViewButtonColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridListCustomer)).BeginInit();
             this.SuspendLayout();
             // 
@@ -56,15 +58,27 @@
             this.avgdate,
             this.CalculateAvg,
             this.delete,
-            this.editGrid});
+            this.editGrid,
+            this.BarReport,
+            this.Column3});
             this.dataGridListCustomer.Location = new System.Drawing.Point(12, 61);
             this.dataGridListCustomer.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.dataGridListCustomer.Name = "dataGridListCustomer";
             this.dataGridListCustomer.ReadOnly = true;
             this.dataGridListCustomer.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.dataGridListCustomer.Size = new System.Drawing.Size(860, 418);
+            this.dataGridListCustomer.Size = new System.Drawing.Size(1050, 418);
             this.dataGridListCustomer.TabIndex = 0;
             this.dataGridListCustomer.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DataGridListCustomer_CellContentClick_1);
+            // 
+            // btnNewCustomer
+            // 
+            this.btnNewCustomer.Location = new System.Drawing.Point(12, 12);
+            this.btnNewCustomer.Name = "btnNewCustomer";
+            this.btnNewCustomer.Size = new System.Drawing.Size(94, 32);
+            this.btnNewCustomer.TabIndex = 1;
+            this.btnNewCustomer.Text = "مشتری جدید";
+            this.btnNewCustomer.UseVisualStyleBackColor = true;
+            this.btnNewCustomer.Click += new System.EventHandler(this.BtnNewCustomer_Click);
             // 
             // Column2
             // 
@@ -126,21 +140,30 @@
             this.editGrid.ReadOnly = true;
             this.editGrid.Width = 49;
             // 
-            // btnNewCustomer
+            // BarReport
             // 
-            this.btnNewCustomer.Location = new System.Drawing.Point(12, 12);
-            this.btnNewCustomer.Name = "btnNewCustomer";
-            this.btnNewCustomer.Size = new System.Drawing.Size(94, 32);
-            this.btnNewCustomer.TabIndex = 1;
-            this.btnNewCustomer.Text = "مشتری جدید";
-            this.btnNewCustomer.UseVisualStyleBackColor = true;
-            this.btnNewCustomer.Click += new System.EventHandler(this.BtnNewCustomer_Click);
+            this.BarReport.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader;
+            this.BarReport.HeaderText = "گزارش کودریزی ها";
+            this.BarReport.Name = "BarReport";
+            this.BarReport.ReadOnly = true;
+            this.BarReport.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.BarReport.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            this.BarReport.Text = null;
+            this.BarReport.Width = 115;
+            // 
+            // Column3
+            // 
+            this.Column3.HeaderText = "گزارش بارها";
+            this.Column3.Name = "Column3";
+            this.Column3.ReadOnly = true;
+            this.Column3.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.Column3.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
             // 
             // ListCustomer
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 19F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(884, 492);
+            this.ClientSize = new System.Drawing.Size(1074, 492);
             this.Controls.Add(this.btnNewCustomer);
             this.Controls.Add(this.dataGridListCustomer);
             this.Font = new System.Drawing.Font("Vazir FD", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -156,6 +179,7 @@
         #endregion
 
         private System.Windows.Forms.DataGridView dataGridListCustomer;
+        private System.Windows.Forms.Button btnNewCustomer;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
         private System.Windows.Forms.DataGridViewTextBoxColumn code;
         private System.Windows.Forms.DataGridViewTextBoxColumn name;
@@ -165,6 +189,7 @@
         private System.Windows.Forms.DataGridViewButtonColumn CalculateAvg;
         private System.Windows.Forms.DataGridViewButtonColumn delete;
         private System.Windows.Forms.DataGridViewButtonColumn editGrid;
-        private System.Windows.Forms.Button btnNewCustomer;
+        private Stimulsoft.Controls.Win.DotNetBar.Controls.DataGridViewButtonXColumn BarReport;
+        private System.Windows.Forms.DataGridViewButtonColumn Column3;
     }
 }

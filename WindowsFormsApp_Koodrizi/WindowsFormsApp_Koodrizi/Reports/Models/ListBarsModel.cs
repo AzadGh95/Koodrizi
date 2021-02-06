@@ -17,6 +17,5 @@ namespace WindowsFormsApp_Koodrizi.Reports.Models
         public double Ounce { get; set; }
         public double Adl { get; set; }
 
-
     }
 }

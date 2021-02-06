@@ -91,10 +91,23 @@ namespace WindowsFormsApp_Koodrizi
 
                 Customer_Edit formCustomer = new Customer_Edit();
                 formCustomer.Show();
-
-
                 Close();
             }
+            if (e.ColumnIndex == 9)
+            {
+                Program.PersonId = int.Parse(dataGridListCustomer.Rows[e.RowIndex].Cells[0].Value.ToString());
+            
+                ListBarCustomer listBarCustomer = new ListBarCustomer();
+                listBarCustomer.Show();
+            }
+            if (e.ColumnIndex == 10)
+            {
+                Program.PersonId = int.Parse(dataGridListCustomer.Rows[e.RowIndex].Cells[0].Value.ToString());
+
+                ListBarPerson listBarPerson = new ListBarPerson();
+                listBarPerson.Show();
+            }
+
         }
         private DateTime AvgDateTime(DateTime dateTime, int personId)
         {

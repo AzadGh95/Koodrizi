@@ -60,7 +60,8 @@ namespace WindowsFormsApp_Koodrizi
             var bars = _barRepository.Bars();
             foreach (var prop in bars)
                 dataGridListBars.Rows.Add(prop.BarId, prop.Person.Name,
-                    PersianDateConverter.ToPersianDate(prop.CreateDate).ToString("yyyy/MM/dd"),
+                    PersianDateConverter.ToPersianDate(prop.CreateDate)
+                    .ToString("yyyy/MM/dd"),
                     prop.Remaining, prop.TotalWeight, prop.DhanBast,
                     prop.Gram, prop.Ounce, prop.Adl);
         }

@@ -150,6 +150,18 @@
     <Compile Include="Koodrizi.Designer.cs">
       <DependentUpon>Koodrizi.cs</DependentUpon>
     </Compile>
+    <Compile Include="ListBarCustomer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ListBarCustomer.Designer.cs">
+      <DependentUpon>ListBarCustomer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ListBarPerson.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ListBarPerson.Designer.cs">
+      <DependentUpon>ListBarPerson.cs</DependentUpon>
+    </Compile>
     <Compile Include="ListBars.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -200,6 +212,7 @@
     <Compile Include="Models\PersonsKood.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Reports\Models\DetailKood.cs" />
     <Compile Include="Reports\Models\ListBarsModel.cs" />
     <Compile Include="Reports\Models\listDetailFinalKoodrizi.cs" />
     <Compile Include="Repositories\BarRepository.cs" />
@@ -235,6 +248,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Koodrizi.resx">
       <DependentUpon>Koodrizi.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ListBarCustomer.resx">
+      <DependentUpon>ListBarCustomer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ListBarPerson.resx">
+      <DependentUpon>ListBarPerson.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ListBars.resx">
       <DependentUpon>ListBars.cs</DependentUpon>
