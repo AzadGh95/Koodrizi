@@ -1,6 +1,6 @@
 ﻿namespace WindowsFormsApp_Koodrizi
 {
-    partial class ListBarCustomer
+    partial class ListKoodPerson
     {
         /// <summary>
         /// Required designer variable.
@@ -30,7 +30,6 @@
         {
             this.button1 = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.lblCustomerName = new System.Windows.Forms.Label();
             this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -42,6 +41,7 @@
             this.Column9 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column10 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ColumnSelect = new System.Windows.Forms.DataGridViewCheckBoxColumn();
+            this.lblCustomerName = new System.Windows.Forms.Label();
             this.button2 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
@@ -80,17 +80,6 @@
             this.dataGridView1.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.dataGridView1.Size = new System.Drawing.Size(901, 369);
             this.dataGridView1.TabIndex = 4;
-            // 
-            // lblCustomerName
-            // 
-            this.lblCustomerName.AutoSize = true;
-            this.lblCustomerName.Location = new System.Drawing.Point(677, 18);
-            this.lblCustomerName.Name = "lblCustomerName";
-            this.lblCustomerName.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.lblCustomerName.Size = new System.Drawing.Size(37, 19);
-            this.lblCustomerName.TabIndex = 5;
-            this.lblCustomerName.Text = "label1";
-            this.lblCustomerName.Click += new System.EventHandler(this.LblCustomerName_Click);
             // 
             // Column1
             // 
@@ -177,6 +166,17 @@
             this.ColumnSelect.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
             this.ColumnSelect.Width = 64;
             // 
+            // lblCustomerName
+            // 
+            this.lblCustomerName.AutoSize = true;
+            this.lblCustomerName.Location = new System.Drawing.Point(677, 18);
+            this.lblCustomerName.Name = "lblCustomerName";
+            this.lblCustomerName.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.lblCustomerName.Size = new System.Drawing.Size(37, 19);
+            this.lblCustomerName.TabIndex = 5;
+            this.lblCustomerName.Text = "label1";
+            this.lblCustomerName.Click += new System.EventHandler(this.LblCustomerName_Click);
+            // 
             // button2
             // 
             this.button2.Location = new System.Drawing.Point(12, 444);
@@ -187,7 +187,7 @@
             this.button2.Text = "محاسبه راس گیری";
             this.button2.UseVisualStyleBackColor = true;
             // 
-            // ListBarCustomer
+            // ListKoodPerson
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 19F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -198,8 +198,8 @@
             this.Controls.Add(this.button1);
             this.Font = new System.Drawing.Font("Vazir FD", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.Name = "ListBarCustomer";
-            this.Text = "ListBarCustomer";
+            this.Name = "ListKoodPerson";
+            this.Text = "لیست کودریزی ها";
             this.Load += new System.EventHandler(this.ListBarCustomer_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);

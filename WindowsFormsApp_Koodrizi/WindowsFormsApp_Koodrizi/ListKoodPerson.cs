@@ -14,13 +14,13 @@ using WindowsFormsApp_Koodrizi.Repositories;
 
 namespace WindowsFormsApp_Koodrizi
 {
-    public partial class ListBarCustomer : Form
+    public partial class ListKoodPerson : Form
     {
         PersonRepository _personRepository = new PersonRepository();
         KoodriziRepository _koodriziRepository = new KoodriziRepository();
         FinalKoodriziRepository _finalKoodriziRepository = new FinalKoodriziRepository();
 
-        public ListBarCustomer()
+        public ListKoodPerson()
         {
             InitializeComponent();
         }

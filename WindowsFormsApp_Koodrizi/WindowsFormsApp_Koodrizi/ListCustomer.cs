@@ -97,7 +97,7 @@ namespace WindowsFormsApp_Koodrizi
             {
                 Program.PersonId = int.Parse(dataGridListCustomer.Rows[e.RowIndex].Cells[0].Value.ToString());
             
-                ListBarCustomer listBarCustomer = new ListBarCustomer();
+                ListKoodPerson listBarCustomer = new ListKoodPerson();
                 listBarCustomer.Show();
             }
             if (e.ColumnIndex == 10)
