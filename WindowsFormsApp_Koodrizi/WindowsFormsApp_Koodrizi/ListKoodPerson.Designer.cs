@@ -40,9 +40,8 @@
             this.Column7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column9 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column10 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ColumnSelect = new System.Windows.Forms.DataGridViewCheckBoxColumn();
+            this.ColumnSelect = new Stimulsoft.Controls.Win.DotNetBar.Controls.DataGridViewCheckBoxXColumn();
             this.lblCustomerName = new System.Windows.Forms.Label();
-            this.button2 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -159,6 +158,9 @@
             // ColumnSelect
             // 
             this.ColumnSelect.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader;
+            this.ColumnSelect.Checked = true;
+            this.ColumnSelect.CheckState = System.Windows.Forms.CheckState.Indeterminate;
+            this.ColumnSelect.CheckValue = "N";
             this.ColumnSelect.HeaderText = "انتخاب";
             this.ColumnSelect.Name = "ColumnSelect";
             this.ColumnSelect.ReadOnly = true;
@@ -177,22 +179,11 @@
             this.lblCustomerName.Text = "label1";
             this.lblCustomerName.Click += new System.EventHandler(this.LblCustomerName_Click);
             // 
-            // button2
-            // 
-            this.button2.Location = new System.Drawing.Point(12, 444);
-            this.button2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(108, 33);
-            this.button2.TabIndex = 6;
-            this.button2.Text = "محاسبه راس گیری";
-            this.button2.UseVisualStyleBackColor = true;
-            // 
             // ListKoodPerson
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 19F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(925, 499);
-            this.Controls.Add(this.button2);
+            this.ClientSize = new System.Drawing.Size(925, 432);
             this.Controls.Add(this.lblCustomerName);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.button1);
@@ -222,7 +213,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Column7;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column9;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column10;
-        private System.Windows.Forms.DataGridViewCheckBoxColumn ColumnSelect;
-        private System.Windows.Forms.Button button2;
+        private Stimulsoft.Controls.Win.DotNetBar.Controls.DataGridViewCheckBoxXColumn ColumnSelect;
     }
 }

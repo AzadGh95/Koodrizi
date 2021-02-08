@@ -113,6 +113,12 @@
     <Compile Include="Bar.Designer.cs">
       <DependentUpon>Bar.cs</DependentUpon>
     </Compile>
+    <Compile Include="CalculateAvgPerson.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CalculateAvgPerson.Designer.cs">
+      <DependentUpon>CalculateAvgPerson.cs</DependentUpon>
+    </Compile>
     <Compile Include="Customer-Edit.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -230,6 +236,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Bar.resx">
       <DependentUpon>Bar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CalculateAvgPerson.resx">
+      <DependentUpon>CalculateAvgPerson.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Customer-Edit.resx">
       <DependentUpon>Customer-Edit.cs</DependentUpon>
