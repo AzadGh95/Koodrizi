@@ -29,6 +29,12 @@
         private void InitializeComponent()
         {
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ArrivedDate = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.comboListDetailKoods = new System.Windows.Forms.ComboBox();
             this.button1 = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
@@ -38,12 +44,8 @@
             this.faDatePicker1 = new FarsiLibrary.Win.Controls.FADatePicker();
             this.label3 = new System.Windows.Forms.Label();
             this.btnCalculateAvg = new System.Windows.Forms.Button();
-            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ArrivedDate = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.btnCancel = new System.Windows.Forms.Button();
+            this.btnSave = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -64,6 +66,44 @@
             this.dataGridView1.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.dataGridView1.Size = new System.Drawing.Size(709, 211);
             this.dataGridView1.TabIndex = 0;
+            // 
+            // Column1
+            // 
+            this.Column1.HeaderText = "شماره کودریزی";
+            this.Column1.Name = "Column1";
+            this.Column1.ReadOnly = true;
+            // 
+            // Column5
+            // 
+            this.Column5.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.Column5.HeaderText = "نام کودریزی";
+            this.Column5.Name = "Column5";
+            this.Column5.ReadOnly = true;
+            // 
+            // ArrivedDate
+            // 
+            this.ArrivedDate.HeaderText = "ArrivedDate";
+            this.ArrivedDate.Name = "ArrivedDate";
+            this.ArrivedDate.ReadOnly = true;
+            this.ArrivedDate.Visible = false;
+            // 
+            // Column2
+            // 
+            this.Column2.HeaderText = "تاریخ سررسید";
+            this.Column2.Name = "Column2";
+            this.Column2.ReadOnly = true;
+            // 
+            // Column3
+            // 
+            this.Column3.HeaderText = "وزن";
+            this.Column3.Name = "Column3";
+            this.Column3.ReadOnly = true;
+            // 
+            // Column4
+            // 
+            this.Column4.HeaderText = "قیمت هرکیلو";
+            this.Column4.Name = "Column4";
+            this.Column4.ReadOnly = true;
             // 
             // comboListDetailKoods
             // 
@@ -149,49 +189,33 @@
             this.btnCalculateAvg.UseVisualStyleBackColor = true;
             this.btnCalculateAvg.Click += new System.EventHandler(this.BtnCalculateAvg_Click);
             // 
-            // Column1
+            // btnCancel
             // 
-            this.Column1.HeaderText = "شماره کودریزی";
-            this.Column1.Name = "Column1";
-            this.Column1.ReadOnly = true;
+            this.btnCancel.Location = new System.Drawing.Point(12, 405);
+            this.btnCancel.Name = "btnCancel";
+            this.btnCancel.Size = new System.Drawing.Size(75, 32);
+            this.btnCancel.TabIndex = 10;
+            this.btnCancel.Text = "لغو";
+            this.btnCancel.UseVisualStyleBackColor = true;
+            this.btnCancel.Click += new System.EventHandler(this.BtnCancel_Click);
             // 
-            // Column5
+            // btnSave
             // 
-            this.Column5.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.Column5.HeaderText = "نام کودریزی";
-            this.Column5.Name = "Column5";
-            this.Column5.ReadOnly = true;
-            // 
-            // ArrivedDate
-            // 
-            this.ArrivedDate.HeaderText = "ArrivedDate";
-            this.ArrivedDate.Name = "ArrivedDate";
-            this.ArrivedDate.ReadOnly = true;
-            this.ArrivedDate.Visible = false;
-            // 
-            // Column2
-            // 
-            this.Column2.HeaderText = "تاریخ سررسید";
-            this.Column2.Name = "Column2";
-            this.Column2.ReadOnly = true;
-            // 
-            // Column3
-            // 
-            this.Column3.HeaderText = "وزن";
-            this.Column3.Name = "Column3";
-            this.Column3.ReadOnly = true;
-            // 
-            // Column4
-            // 
-            this.Column4.HeaderText = "قیمت هرکیلو";
-            this.Column4.Name = "Column4";
-            this.Column4.ReadOnly = true;
+            this.btnSave.Location = new System.Drawing.Point(93, 405);
+            this.btnSave.Name = "btnSave";
+            this.btnSave.Size = new System.Drawing.Size(169, 32);
+            this.btnSave.TabIndex = 11;
+            this.btnSave.Text = "ذخیره";
+            this.btnSave.UseVisualStyleBackColor = true;
+            this.btnSave.Click += new System.EventHandler(this.BtnSave_Click);
             // 
             // CalculateAvgPerson
             // 
             this.AccessibleRole = System.Windows.Forms.AccessibleRole.None;
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.ClientSize = new System.Drawing.Size(733, 464);
+            this.Controls.Add(this.btnSave);
+            this.Controls.Add(this.btnCancel);
             this.Controls.Add(this.btnCalculateAvg);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.faDatePicker1);
@@ -230,5 +254,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
+        private System.Windows.Forms.Button btnCancel;
+        private System.Windows.Forms.Button btnSave;
     }
 }

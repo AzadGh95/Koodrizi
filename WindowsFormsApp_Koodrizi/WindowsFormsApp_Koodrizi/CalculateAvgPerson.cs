@@ -122,5 +122,23 @@ namespace WindowsFormsApp_Koodrizi
         {
 
         }
+
+        private void BtnCancel_Click(object sender, EventArgs e)
+        {
+            DialogResult dialogResult = MessageBox.Show("آیا می‌خواهید این فرم را بدون ذخیره کردن ببندید ؟", "هشدار", MessageBoxButtons.YesNo);
+            if (dialogResult == DialogResult.Yes)
+            {
+                Close();
+            }
+            else if (dialogResult == DialogResult.No)
+            {
+                //do something else
+            }
+        }
+
+        private void BtnSave_Click(object sender, EventArgs e)
+        {
+            //save in AvgPersonModel
+        }
     }
 }

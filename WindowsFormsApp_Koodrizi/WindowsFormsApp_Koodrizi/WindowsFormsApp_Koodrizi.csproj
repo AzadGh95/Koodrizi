@@ -204,6 +204,10 @@
     <Compile Include="Migrations\202102090924423_add-avdPerson.designer.cs">
       <DependentUpon>202102090924423_add-avdPerson.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202102090959216_add-avgPersonModel.cs" />
+    <Compile Include="Migrations\202102090959216_add-avgPersonModel.designer.cs">
+      <DependentUpon>202102090959216_add-avgPersonModel.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="ModalBaseTime.cs">
       <SubType>Form</SubType>
@@ -211,6 +215,7 @@
     <Compile Include="ModalBaseTime.Designer.cs">
       <DependentUpon>ModalBaseTime.cs</DependentUpon>
     </Compile>
+    <Compile Include="Models\AvgPersonModel.cs" />
     <Compile Include="Models\AvgPerson.cs" />
     <Compile Include="Models\Bar.cs" />
     <Compile Include="Models\BarModel.cs" />
@@ -292,6 +297,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202102090924423_add-avdPerson.resx">
       <DependentUpon>202102090924423_add-avdPerson.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202102090959216_add-avgPersonModel.resx">
+      <DependentUpon>202102090959216_add-avgPersonModel.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ModalBaseTime.resx">
       <DependentUpon>ModalBaseTime.cs</DependentUpon>
