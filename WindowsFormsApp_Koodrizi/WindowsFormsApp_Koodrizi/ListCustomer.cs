@@ -65,24 +65,29 @@ namespace WindowsFormsApp_Koodrizi
             }
             if (e.ColumnIndex == 6)
             {
-                var pId = int.Parse(dataGridListCustomer.Rows[e.RowIndex].Cells[0].Value.ToString());
-                var person = _personRepository.People(pId);
+                var pId = int.Parse(dataGridListCustomer.Rows[e.RowIndex].Cells[0].Value.ToString());//use in both ways
+             
+                //way-1
+                CalculateAvgPerson formCalculateAvgPerson = new CalculateAvgPerson();
+                formCalculateAvgPerson.Show();
+              
+                //way-2
+                //var person = _personRepository.People(pId);
+                //ModalBaseTime formBaseTime = new ModalBaseTime();
+                //if (formBaseTime.ShowDialog() == DialogResult.OK)
+                //{
+                //    Basetime = formBaseTime.BaseTime;
+                //    var avgdate = AvgDateTime(Basetime, pId);
 
-                ModalBaseTime formBaseTime = new ModalBaseTime();
-                if (formBaseTime.ShowDialog() == DialogResult.OK)
-                {
-                    Basetime = formBaseTime.BaseTime;
-                    var avgdate = AvgDateTime(Basetime, pId);
+                //    person.AvgDate = avgdate;
+                //    person.BaseDate = Basetime;
+                //    person.Bedehi = totalBedehi;
+                //    _personRepository.Update(person, pId);
 
-                    person.AvgDate = avgdate;
-                    person.BaseDate = Basetime;
-                    person.Bedehi = totalBedehi;
-                    _personRepository.Update(person, pId);
-
-                    dataGridListCustomer.Rows[e.RowIndex].Cells[3].Value = totalBedehi;//بدهی کل
-                    dataGridListCustomer.Rows[e.RowIndex].Cells[4].Value = PersianDateConverter.ToPersianDate(Basetime).ToString("yyyy/MM/dd");//تاریخ مبنا
-                    dataGridListCustomer.Rows[e.RowIndex].Cells[5].Value = PersianDateConverter.ToPersianDate(avgdate).ToString("yyyy/MM/dd");//راس تاریخ
-                }
+                //    dataGridListCustomer.Rows[e.RowIndex].Cells[3].Value = totalBedehi;//بدهی کل
+                //    dataGridListCustomer.Rows[e.RowIndex].Cells[4].Value = PersianDateConverter.ToPersianDate(Basetime).ToString("yyyy/MM/dd");//تاریخ مبنا
+                //    dataGridListCustomer.Rows[e.RowIndex].Cells[5].Value = PersianDateConverter.ToPersianDate(avgdate).ToString("yyyy/MM/dd");//راس تاریخ
+                //}
             }
             if (e.ColumnIndex == 8)
             {
@@ -96,7 +101,7 @@ namespace WindowsFormsApp_Koodrizi
             if (e.ColumnIndex == 9)
             {
                 Program.PersonId = int.Parse(dataGridListCustomer.Rows[e.RowIndex].Cells[0].Value.ToString());
-            
+
                 ListKoodPerson listBarCustomer = new ListKoodPerson();
                 listBarCustomer.Show();
             }

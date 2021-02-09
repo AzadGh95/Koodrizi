@@ -37,7 +37,7 @@
             this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.avgdate = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.CalculateAvg = new System.Windows.Forms.DataGridViewButtonColumn();
-            this.delete = new System.Windows.Forms.DataGridViewButtonColumn();
+            this.delete = new Stimulsoft.Controls.Win.DotNetBar.Controls.DataGridViewButtonXColumn();
             this.editGrid = new System.Windows.Forms.DataGridViewButtonColumn();
             this.BarReport = new Stimulsoft.Controls.Win.DotNetBar.Controls.DataGridViewButtonXColumn();
             this.Column3 = new System.Windows.Forms.DataGridViewButtonColumn();
@@ -66,7 +66,7 @@
             this.dataGridListCustomer.Name = "dataGridListCustomer";
             this.dataGridListCustomer.ReadOnly = true;
             this.dataGridListCustomer.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.dataGridListCustomer.Size = new System.Drawing.Size(1050, 418);
+            this.dataGridListCustomer.Size = new System.Drawing.Size(1014, 418);
             this.dataGridListCustomer.TabIndex = 0;
             this.dataGridListCustomer.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DataGridListCustomer_CellContentClick_1);
             // 
@@ -130,6 +130,8 @@
             this.delete.HeaderText = "حذف";
             this.delete.Name = "delete";
             this.delete.ReadOnly = true;
+            this.delete.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.delete.Text = null;
             this.delete.Width = 38;
             // 
             // editGrid
@@ -163,7 +165,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 19F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1074, 492);
+            this.ClientSize = new System.Drawing.Size(1041, 492);
             this.Controls.Add(this.btnNewCustomer);
             this.Controls.Add(this.dataGridListCustomer);
             this.Font = new System.Drawing.Font("Vazir FD", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -187,7 +189,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
         private System.Windows.Forms.DataGridViewTextBoxColumn avgdate;
         private System.Windows.Forms.DataGridViewButtonColumn CalculateAvg;
-        private System.Windows.Forms.DataGridViewButtonColumn delete;
+        private Stimulsoft.Controls.Win.DotNetBar.Controls.DataGridViewButtonXColumn delete;
         private System.Windows.Forms.DataGridViewButtonColumn editGrid;
         private Stimulsoft.Controls.Win.DotNetBar.Controls.DataGridViewButtonXColumn BarReport;
         private System.Windows.Forms.DataGridViewButtonColumn Column3;

@@ -30,6 +30,7 @@
         {
             this.button1 = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.lblCustomerName = new System.Windows.Forms.Label();
             this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -40,8 +41,6 @@
             this.Column7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column9 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column10 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ColumnSelect = new Stimulsoft.Controls.Win.DotNetBar.Controls.DataGridViewCheckBoxXColumn();
-            this.lblCustomerName = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -71,14 +70,24 @@
             this.Column6,
             this.Column7,
             this.Column9,
-            this.Column10,
-            this.ColumnSelect});
+            this.Column10});
             this.dataGridView1.Location = new System.Drawing.Point(12, 51);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
             this.dataGridView1.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.dataGridView1.Size = new System.Drawing.Size(901, 369);
+            this.dataGridView1.Size = new System.Drawing.Size(820, 369);
             this.dataGridView1.TabIndex = 4;
+            // 
+            // lblCustomerName
+            // 
+            this.lblCustomerName.AutoSize = true;
+            this.lblCustomerName.Location = new System.Drawing.Point(677, 18);
+            this.lblCustomerName.Name = "lblCustomerName";
+            this.lblCustomerName.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.lblCustomerName.Size = new System.Drawing.Size(37, 19);
+            this.lblCustomerName.TabIndex = 5;
+            this.lblCustomerName.Text = "label1";
+            this.lblCustomerName.Click += new System.EventHandler(this.LblCustomerName_Click);
             // 
             // Column1
             // 
@@ -155,35 +164,11 @@
             this.Column10.Name = "Column10";
             this.Column10.ReadOnly = true;
             // 
-            // ColumnSelect
-            // 
-            this.ColumnSelect.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader;
-            this.ColumnSelect.Checked = true;
-            this.ColumnSelect.CheckState = System.Windows.Forms.CheckState.Indeterminate;
-            this.ColumnSelect.CheckValue = "N";
-            this.ColumnSelect.HeaderText = "انتخاب";
-            this.ColumnSelect.Name = "ColumnSelect";
-            this.ColumnSelect.ReadOnly = true;
-            this.ColumnSelect.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.ColumnSelect.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
-            this.ColumnSelect.Width = 64;
-            // 
-            // lblCustomerName
-            // 
-            this.lblCustomerName.AutoSize = true;
-            this.lblCustomerName.Location = new System.Drawing.Point(677, 18);
-            this.lblCustomerName.Name = "lblCustomerName";
-            this.lblCustomerName.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.lblCustomerName.Size = new System.Drawing.Size(37, 19);
-            this.lblCustomerName.TabIndex = 5;
-            this.lblCustomerName.Text = "label1";
-            this.lblCustomerName.Click += new System.EventHandler(this.LblCustomerName_Click);
-            // 
             // ListKoodPerson
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 19F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(925, 432);
+            this.ClientSize = new System.Drawing.Size(843, 432);
             this.Controls.Add(this.lblCustomerName);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.button1);
@@ -213,6 +198,5 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Column7;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column9;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column10;
-        private Stimulsoft.Controls.Win.DotNetBar.Controls.DataGridViewCheckBoxXColumn ColumnSelect;
     }
 }
