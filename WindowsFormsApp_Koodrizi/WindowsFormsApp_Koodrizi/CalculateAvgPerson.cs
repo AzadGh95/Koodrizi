@@ -8,10 +8,28 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using WindowsFormsApp_Koodrizi.Models;
 using WindowsFormsApp_Koodrizi.Repositories;
 
 namespace WindowsFormsApp_Koodrizi
 {
+        //0
+        //شماره کودریزی
+
+        //1
+        //نام کودریزی
+
+        //2
+        //ArrivedDate
+
+        //3
+        //تاریخ سررسید
+
+        //4
+        //وزن
+
+        //5
+        //قیمت هرکیلو
     public partial class CalculateAvgPerson : Form
     {
         private KoodriziRepository _koodriziRepo = new KoodriziRepository();
@@ -64,6 +82,45 @@ namespace WindowsFormsApp_Koodrizi
                 PersianDateConverter.ToPersianDate(kood.ArrivedDate).ToString("yyyy/MM/dd"),
                 kood.Weight,
                 kood.Price);
+        }
+
+        private void BtnCalculateAvg_Click(object sender, EventArgs e)
+        {
+            DateTime Basetime = faDatePicker1.SelectedDateTime;//تاریخ مبدا
+            decimal totalBedehi;
+            var listPersonsKoodModel = new List<PersonsKood>();
+            totalBedehi = 0;
+            for (int i = 0; i < dataGridView1.Rows.Count; i++)
+            {
+            //}
+            var arrivedDate = DateTime.Parse(dataGridView1.Rows[i].Cells[2].Value.ToString());
+            var weight = double.Parse(dataGridView1.Rows[i].Cells[4].Value.ToString());
+            var price = decimal.Parse(dataGridView1.Rows[i].Cells[5].Value.ToString());
+
+            //foreach (var item in listPersonsKood)
+            //{
+
+                totalBedehi += (decimal)((double)price * weight);//بدهی کل برای این مشتری
+                listPersonsKoodModel.Add(new PersonsKood()
+                {
+                    DueDate = arrivedDate,
+                    Bedehi = (decimal)((double)price * weight)
+                });
+            }
+            decimal sum = 0;
+            foreach (var item in listPersonsKoodModel)
+                sum = +(decimal)(item.DueDate - Basetime).TotalDays * (item.Bedehi);
+
+            var avg = sum / totalBedehi;
+            DateTime avgdatetime = Basetime.AddDays((int)avg);
+            //show in lables
+            lblBedehi.Text = totalBedehi.ToString("#,###");
+            lblAvgDate.Text = PersianDateConverter.ToPersianDate(avgdatetime).ToString("yyyy/MM/dd");
+        }
+
+        private void LblAvgDate_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

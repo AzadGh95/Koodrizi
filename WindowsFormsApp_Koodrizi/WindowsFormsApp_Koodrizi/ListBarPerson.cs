@@ -82,5 +82,10 @@ namespace WindowsFormsApp_Koodrizi
             report.Compile();
             report.Show();
         }
+
+        private void DataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
     }
 }

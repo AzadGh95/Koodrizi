@@ -33,7 +33,7 @@
             this.button1 = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.lblTotalPrice = new System.Windows.Forms.Label();
+            this.lblBedehi = new System.Windows.Forms.Label();
             this.lblAvgDate = new System.Windows.Forms.Label();
             this.faDatePicker1 = new FarsiLibrary.Win.Controls.FADatePicker();
             this.label3 = new System.Windows.Forms.Label();
@@ -90,39 +90,41 @@
             this.label1.AutoSize = true;
             this.label1.Location = new System.Drawing.Point(671, 405);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(50, 19);
+            this.label1.Size = new System.Drawing.Size(34, 19);
             this.label1.TabIndex = 3;
-            this.label1.Text = "قیمت کل";
+            this.label1.Text = "بدهی";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(449, 405);
+            this.label2.Location = new System.Drawing.Point(434, 405);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(53, 19);
             this.label2.TabIndex = 4;
             this.label2.Text = "تاریخ راس";
             // 
-            // lblTotalPrice
+            // lblBedehi
             // 
-            this.lblTotalPrice.AutoSize = true;
-            this.lblTotalPrice.Location = new System.Drawing.Point(606, 405);
-            this.lblTotalPrice.Name = "lblTotalPrice";
-            this.lblTotalPrice.Size = new System.Drawing.Size(21, 19);
-            this.lblTotalPrice.TabIndex = 5;
-            this.lblTotalPrice.Text = "....";
+            this.lblBedehi.AutoSize = true;
+            this.lblBedehi.Location = new System.Drawing.Point(606, 405);
+            this.lblBedehi.Name = "lblBedehi";
+            this.lblBedehi.Size = new System.Drawing.Size(21, 19);
+            this.lblBedehi.TabIndex = 5;
+            this.lblBedehi.Text = "....";
             // 
             // lblAvgDate
             // 
             this.lblAvgDate.AutoSize = true;
-            this.lblAvgDate.Location = new System.Drawing.Point(375, 405);
+            this.lblAvgDate.Location = new System.Drawing.Point(322, 405);
             this.lblAvgDate.Name = "lblAvgDate";
             this.lblAvgDate.Size = new System.Drawing.Size(21, 19);
             this.lblAvgDate.TabIndex = 6;
             this.lblAvgDate.Text = "....";
+            this.lblAvgDate.Click += new System.EventHandler(this.LblAvgDate_Click);
             // 
             // faDatePicker1
             // 
+            this.faDatePicker1.Font = new System.Drawing.Font("Vazir FD", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.faDatePicker1.Location = new System.Drawing.Point(500, 335);
             this.faDatePicker1.Name = "faDatePicker1";
             this.faDatePicker1.Size = new System.Drawing.Size(154, 20);
@@ -145,6 +147,7 @@
             this.btnCalculateAvg.TabIndex = 9;
             this.btnCalculateAvg.Text = "محاسبه راس گیری";
             this.btnCalculateAvg.UseVisualStyleBackColor = true;
+            this.btnCalculateAvg.Click += new System.EventHandler(this.BtnCalculateAvg_Click);
             // 
             // Column1
             // 
@@ -193,7 +196,7 @@
             this.Controls.Add(this.label3);
             this.Controls.Add(this.faDatePicker1);
             this.Controls.Add(this.lblAvgDate);
-            this.Controls.Add(this.lblTotalPrice);
+            this.Controls.Add(this.lblBedehi);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.button1);
@@ -216,7 +219,7 @@
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label lblTotalPrice;
+        private System.Windows.Forms.Label lblBedehi;
         private System.Windows.Forms.Label lblAvgDate;
         private FarsiLibrary.Win.Controls.FADatePicker faDatePicker1;
         private System.Windows.Forms.Label label3;
