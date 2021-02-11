@@ -13,30 +13,31 @@ using WindowsFormsApp_Koodrizi.Repositories;
 
 namespace WindowsFormsApp_Koodrizi
 {
-        //0
-        //شماره کودریزی
+    //0
+    //شماره کودریزی
 
-        //1
-        //نام کودریزی
+    //1
+    //نام کودریزی
 
-        //2
-        //ArrivedDate
+    //2
+    //ArrivedDate
 
-        //3
-        //تاریخ سررسید
+    //3
+    //تاریخ سررسید
 
-        //4
-        //وزن
+    //4
+    //وزن
 
-        //5
-        //قیمت هرکیلو
+    //5
+    //قیمت هرکیلو
     public partial class CalculateAvgPerson : Form
     {
         private KoodriziRepository _koodriziRepo = new KoodriziRepository();
         private FinalKoodriziRepository _finalKoodriziRepo = new FinalKoodriziRepository();
         private PersonRepository _personRepo = new PersonRepository();
-        private BarRepository _barRepo = new BarRepository();
-        private BarRepository _barRepository = new BarRepository();
+        private AvgPersonRepository _avgPersonRepo = new AvgPersonRepository();
+        //private AvgPersonModel model = new AvgPersonModel() { };
+        public DateTime avgdatetime;
         public CalculateAvgPerson()
         {
             InitializeComponent();
@@ -92,13 +93,13 @@ namespace WindowsFormsApp_Koodrizi
             totalBedehi = 0;
             for (int i = 0; i < dataGridView1.Rows.Count; i++)
             {
-            //}
-            var arrivedDate = DateTime.Parse(dataGridView1.Rows[i].Cells[2].Value.ToString());
-            var weight = double.Parse(dataGridView1.Rows[i].Cells[4].Value.ToString());
-            var price = decimal.Parse(dataGridView1.Rows[i].Cells[5].Value.ToString());
+                //}
+                var arrivedDate = DateTime.Parse(dataGridView1.Rows[i].Cells[3].Value.ToString());
+                var weight = double.Parse(dataGridView1.Rows[i].Cells[5].Value.ToString());
+                var price = decimal.Parse(dataGridView1.Rows[i].Cells[6].Value.ToString());
 
-            //foreach (var item in listPersonsKood)
-            //{
+                //foreach (var item in listPersonsKood)
+                //{
 
                 totalBedehi += (decimal)((double)price * weight);//بدهی کل برای این مشتری
                 listPersonsKoodModel.Add(new PersonsKood()
@@ -112,10 +113,11 @@ namespace WindowsFormsApp_Koodrizi
                 sum = +(decimal)(item.DueDate - Basetime).TotalDays * (item.Bedehi);
 
             var avg = sum / totalBedehi;
-            DateTime avgdatetime = Basetime.AddDays((int)avg);
+            avgdatetime = Basetime.AddDays((int)avg);
             //show in lables
             lblBedehi.Text = totalBedehi.ToString("#,###");
             lblAvgDate.Text = PersianDateConverter.ToPersianDate(avgdatetime).ToString("yyyy/MM/dd");
+
         }
 
         private void LblAvgDate_Click(object sender, EventArgs e)
@@ -139,6 +141,22 @@ namespace WindowsFormsApp_Koodrizi
         private void BtnSave_Click(object sender, EventArgs e)
         {
             //save in AvgPersonModel
+            AvgPersonModel model = new AvgPersonModel()
+            {
+                IdPerson = Program.PersonId,
+                Bedehi = decimal.Parse(lblBedehi.Text),
+                AvgDate = avgdatetime,
+            };
+            for (int i = 0; i < dataGridView1.Rows.Count; i++)
+            {
+                model.IdDetailKood.Add(int.Parse(dataGridView1
+                    .Rows[i].Cells[0].Value.ToString()));
+            }
+            var result = _avgPersonRepo.Insert(model);
+            if (result)
+            {
+                MessageBox.Show("محاسبات با موفقیت ثبت شدند");
+            }
         }
     }
 }

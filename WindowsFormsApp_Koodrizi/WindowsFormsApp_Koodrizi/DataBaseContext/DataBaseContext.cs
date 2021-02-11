@@ -26,6 +26,7 @@ namespace WindowsFormsApp_Koodrizi.DataBaseContext
         public DbSet<Models.DKood> DKoods { get; set; }
         public DbSet<Models.FinalKoodrizi> FinalKoodrizis { get; set; }
         public DbSet<Models.FinalKoodriziModel> FinalKoodriziModels { get; set; }
+        public DbSet<Models.AvgPersonModel> AvgPersonModels { get; set; }
 
 
     }

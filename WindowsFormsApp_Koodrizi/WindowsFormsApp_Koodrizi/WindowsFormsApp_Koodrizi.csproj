@@ -208,6 +208,10 @@
     <Compile Include="Migrations\202102090959216_add-avgPersonModel.designer.cs">
       <DependentUpon>202102090959216_add-avgPersonModel.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202102110549259_edit-avg-model1.cs" />
+    <Compile Include="Migrations\202102110549259_edit-avg-model1.designer.cs">
+      <DependentUpon>202102110549259_edit-avg-model1.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="ModalBaseTime.cs">
       <SubType>Form</SubType>
@@ -231,6 +235,7 @@
     <Compile Include="Reports\Models\DetailKood.cs" />
     <Compile Include="Reports\Models\ListBarsModel.cs" />
     <Compile Include="Reports\Models\listDetailFinalKoodrizi.cs" />
+    <Compile Include="Repositories\AvgPersonRepository.cs" />
     <Compile Include="Repositories\BarRepository.cs" />
     <Compile Include="Repositories\FinalKoodriziRepository.cs" />
     <Compile Include="Repositories\KoodriziRepository.cs" />
@@ -300,6 +305,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202102090959216_add-avgPersonModel.resx">
       <DependentUpon>202102090959216_add-avgPersonModel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202102110549259_edit-avg-model1.resx">
+      <DependentUpon>202102110549259_edit-avg-model1.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ModalBaseTime.resx">
       <DependentUpon>ModalBaseTime.cs</DependentUpon>
