@@ -77,6 +77,7 @@ namespace WindowsFormsApp_Koodrizi
             var finalKood = kood.FinalKoodrizi;
 
             dataGridView1.Rows.Add(
+                kood.DId,
                 finalKood.KoodNumber,
                 finalKood.KoodName,
                 kood.ArrivedDate,
@@ -149,8 +150,9 @@ namespace WindowsFormsApp_Koodrizi
             };
             for (int i = 0; i < dataGridView1.Rows.Count; i++)
             {
-                model.IdDetailKood.Add(int.Parse(dataGridView1
-                    .Rows[i].Cells[0].Value.ToString()));
+                var a = int.Parse(dataGridView1
+                    .Rows[i].Cells[0].Value.ToString());
+                model.IdDetailKood.Add(a);
             }
             var result = _avgPersonRepo.Insert(model);
             if (result)

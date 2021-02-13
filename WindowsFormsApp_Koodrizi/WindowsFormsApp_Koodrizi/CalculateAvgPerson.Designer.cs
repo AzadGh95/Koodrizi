@@ -92,7 +92,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(671, 405);
+            this.label1.Location = new System.Drawing.Point(671, 412);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(34, 19);
             this.label1.TabIndex = 3;
@@ -101,7 +101,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(434, 405);
+            this.label2.Location = new System.Drawing.Point(434, 412);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(53, 19);
             this.label2.TabIndex = 4;
@@ -110,7 +110,7 @@
             // lblBedehi
             // 
             this.lblBedehi.AutoSize = true;
-            this.lblBedehi.Location = new System.Drawing.Point(606, 405);
+            this.lblBedehi.Location = new System.Drawing.Point(606, 412);
             this.lblBedehi.Name = "lblBedehi";
             this.lblBedehi.Size = new System.Drawing.Size(21, 19);
             this.lblBedehi.TabIndex = 5;
@@ -119,7 +119,7 @@
             // lblAvgDate
             // 
             this.lblAvgDate.AutoSize = true;
-            this.lblAvgDate.Location = new System.Drawing.Point(322, 405);
+            this.lblAvgDate.Location = new System.Drawing.Point(322, 412);
             this.lblAvgDate.Name = "lblAvgDate";
             this.lblAvgDate.Size = new System.Drawing.Size(21, 19);
             this.lblAvgDate.TabIndex = 6;
@@ -129,7 +129,7 @@
             // faDatePicker1
             // 
             this.faDatePicker1.Font = new System.Drawing.Font("Vazir FD", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.faDatePicker1.Location = new System.Drawing.Point(438, 335);
+            this.faDatePicker1.Location = new System.Drawing.Point(438, 329);
             this.faDatePicker1.Name = "faDatePicker1";
             this.faDatePicker1.Size = new System.Drawing.Size(204, 20);
             this.faDatePicker1.TabIndex = 7;
@@ -138,7 +138,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(668, 336);
+            this.label3.Location = new System.Drawing.Point(668, 330);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(53, 19);
             this.label3.TabIndex = 8;

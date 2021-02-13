@@ -24,7 +24,7 @@ namespace WindowsFormsApp_Koodrizi.Models
         public decimal Bedehi { get; set; }
         public DateTime AvgDate { get; set; }
         public DateTime CreatDate { get; set; }
-
         public List<int> IdDetailKood { get; set; }
+
     }
 }
