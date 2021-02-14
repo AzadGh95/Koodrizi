@@ -1,4 +1,5 @@
-﻿using System;
+﻿using EntityFramework.Extensions;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -6,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace WindowsFormsApp_Koodrizi.Repositories
 {
-   public class AvgPersonRepository
+    public class AvgPersonRepository
     {
         readonly private DataBaseContext.DataBaseContext _baseContext;
         public AvgPersonRepository()
@@ -54,6 +55,39 @@ namespace WindowsFormsApp_Koodrizi.Repositories
                 throw;
             }
         }
+        public List<Models.AvgPersonModel> AvgPersonModels()
+        {
+            try
+            {
+                return _baseContext.AvgPersonModels.ToList();
+            }
+            catch (Exception)
+            {
+                return null;
+                throw;
+            }
+        }
 
+        public bool DeleteAvgPerson(int avgId)
+        {
+            try
+            {
+                _baseContext.AvgPersonModels.Where(x => x.Id == avgId).Delete();
+
+                _baseContext.DKoods.Where(i => i.AvgId == avgId)
+               .Update(x => new Models.DKood
+               {
+                   AvgId = 0
+               });
+                return true;
+
+            }
+            catch (Exception)
+            {
+                return false;
+                throw;
+            }
+
+        }
     }
 }

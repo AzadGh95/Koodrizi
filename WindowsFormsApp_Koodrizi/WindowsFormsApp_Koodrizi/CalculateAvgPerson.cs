@@ -39,6 +39,7 @@ namespace WindowsFormsApp_Koodrizi
         //private AvgPersonModel model = new AvgPersonModel() { };
         public DateTime avgdatetime;
         private int koodId;
+        public DateTime Basetime;
         public CalculateAvgPerson()
         {
             InitializeComponent();
@@ -89,7 +90,7 @@ namespace WindowsFormsApp_Koodrizi
 
         private void BtnCalculateAvg_Click(object sender, EventArgs e)
         {
-            DateTime Basetime = faDatePicker1.SelectedDateTime;//تاریخ مبدا
+            Basetime = faDatePicker1.SelectedDateTime;//تاریخ مبدا
             decimal totalBedehi;
             var listPersonsKoodModel = new List<PersonsKood>();
             totalBedehi = 0;
@@ -132,6 +133,8 @@ namespace WindowsFormsApp_Koodrizi
             DialogResult dialogResult = MessageBox.Show("آیا می‌خواهید این فرم را بدون ذخیره کردن ببندید ؟", "هشدار", MessageBoxButtons.YesNo);
             if (dialogResult == DialogResult.Yes)
             {
+                AvgPersonModelList avgPersonModelList = new AvgPersonModelList();
+                avgPersonModelList.Show();
                 Close();
             }
             else if (dialogResult == DialogResult.No)
@@ -148,6 +151,7 @@ namespace WindowsFormsApp_Koodrizi
                 //IdPerson = Program.PersonId,
                 Bedehi = decimal.Parse(lblBedehi.Text),
                 AvgDate = avgdatetime,
+                CreatDate = Basetime
             };
             for (int i = 0; i < dataGridView1.Rows.Count; i++)
             {
@@ -163,6 +167,8 @@ namespace WindowsFormsApp_Koodrizi
             if (result)
             {
                 MessageBox.Show("محاسبات با موفقیت ثبت شدند");
+                AvgPersonModelList avgPersonModelList = new AvgPersonModelList();
+                avgPersonModelList.Show();
                 Close();
             }
         }

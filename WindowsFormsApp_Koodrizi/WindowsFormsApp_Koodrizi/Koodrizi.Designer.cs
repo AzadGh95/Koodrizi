@@ -214,6 +214,8 @@
             // 
             // comCustomerBar
             // 
+            this.comCustomerBar.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
+            this.comCustomerBar.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
             this.comCustomerBar.BackColor = System.Drawing.SystemColors.ScrollBar;
             this.comCustomerBar.Enabled = false;
             this.comCustomerBar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -293,6 +295,7 @@
             // 
             // btnCancel
             // 
+            this.btnCancel.DialogResult = System.Windows.Forms.DialogResult.Cancel;
             this.btnCancel.Font = new System.Drawing.Font("Vazir FD", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCancel.Location = new System.Drawing.Point(33, 387);
             this.btnCancel.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);

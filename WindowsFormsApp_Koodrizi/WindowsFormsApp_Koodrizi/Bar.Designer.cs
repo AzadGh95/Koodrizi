@@ -160,6 +160,8 @@
             // 
             // comboType
             // 
+            this.comboType.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
+            this.comboType.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
             this.comboType.Font = new System.Drawing.Font("Vazir FD", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.comboType.FormattingEnabled = true;
             this.comboType.Location = new System.Drawing.Point(36, 100);

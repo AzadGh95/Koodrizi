@@ -13,6 +13,7 @@ namespace WindowsFormsApp_Koodrizi.Models
         public DKood()
         {
             CreateDate = DateTime.UtcNow;
+            AvgId = 0;
         }
 
         [Key]

@@ -109,7 +109,21 @@ namespace WindowsFormsApp_Koodrizi.Repositories
             }
 
         }
+        public List<DKood> PersonsKoodNotUsed(int personId)
+        {
+            try
+            {
+                var list = _baseContext.DKoods
+                    .Where(i => i.Bar.Person.PersonId == personId && i.AvgId==0).ToList();
+                return list;
+            }
+            catch (Exception ex)
+            {
 
+                throw;
+            }
+
+        }
         public bool AddAvg(int detailKoodId, int avgPersonId)
         {
             try
@@ -124,6 +138,18 @@ namespace WindowsFormsApp_Koodrizi.Repositories
             catch (Exception)
             {
                 return false;
+                throw;
+            }
+        }
+        public List<DKood> KoodrizisByAvgId(int avgId)
+        {
+            try
+            {
+                return _baseContext.DKoods.Where(x=>x.AvgId==avgId).ToList();
+            }
+            catch (Exception)
+            {
+                return null;
                 throw;
             }
         }
