@@ -101,6 +101,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AvgPersonModelList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AvgPersonModelList.Designer.cs">
+      <DependentUpon>AvgPersonModelList.cs</DependentUpon>
+    </Compile>
     <Compile Include="Bar-Edit.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -240,6 +246,14 @@
     <Compile Include="Migrations\202102140635213_add-avgId-to-dkood.designer.cs">
       <DependentUpon>202102140635213_add-avgId-to-dkood.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202102140924494_de-add-avgId-to-dkood.cs" />
+    <Compile Include="Migrations\202102140924494_de-add-avgId-to-dkood.designer.cs">
+      <DependentUpon>202102140924494_de-add-avgId-to-dkood.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202102140927415_add-avgId-to-dkood-no-fk.cs" />
+    <Compile Include="Migrations\202102140927415_add-avgId-to-dkood-no-fk.designer.cs">
+      <DependentUpon>202102140927415_add-avgId-to-dkood-no-fk.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="ModalBaseTime.cs">
       <SubType>Form</SubType>
@@ -275,6 +289,9 @@
     <Compile Include="ShowFinalKoodRizi.Designer.cs">
       <DependentUpon>ShowFinalKoodRizi.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="AvgPersonModelList.resx">
+      <DependentUpon>AvgPersonModelList.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Bar-Edit.resx">
       <DependentUpon>Bar-Edit.cs</DependentUpon>
     </EmbeddedResource>
@@ -358,6 +375,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202102140635213_add-avgId-to-dkood.resx">
       <DependentUpon>202102140635213_add-avgId-to-dkood.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202102140924494_de-add-avgId-to-dkood.resx">
+      <DependentUpon>202102140924494_de-add-avgId-to-dkood.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202102140927415_add-avgId-to-dkood-no-fk.resx">
+      <DependentUpon>202102140927415_add-avgId-to-dkood-no-fk.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ModalBaseTime.resx">
       <DependentUpon>ModalBaseTime.cs</DependentUpon>

@@ -15,7 +15,7 @@ namespace WindowsFormsApp_Koodrizi.Repositories
         {
             _baseContext = new DataBaseContext.DataBaseContext();
         }
-        public bool Insert(Models.DKood koodrizi)
+        public bool Insert(DKood koodrizi)
         {
             try
             {
@@ -45,7 +45,7 @@ namespace WindowsFormsApp_Koodrizi.Repositories
             }
         }
 
-        public bool Update(Models.DKood koodrizi, int id)
+        public bool Update(DKood koodrizi, int id)
         {
             try
             {
@@ -69,7 +69,7 @@ namespace WindowsFormsApp_Koodrizi.Repositories
             }
         }
 
-        public Models.DKood Koodrizi(int id)
+        public DKood Koodrizi(int id)
         {
             try
             {
@@ -82,7 +82,7 @@ namespace WindowsFormsApp_Koodrizi.Repositories
             }
         }
 
-        public List<Models.DKood> Koodrizis()
+        public List<DKood> Koodrizis()
         {
             try
             {
@@ -95,7 +95,7 @@ namespace WindowsFormsApp_Koodrizi.Repositories
             }
         }
 
-        public List<Models.DKood> PersonsKood(int personId)
+        public List<DKood> PersonsKood(int personId)
         {
             try
             {
@@ -108,6 +108,24 @@ namespace WindowsFormsApp_Koodrizi.Repositories
                 throw;
             }
 
+        }
+
+        public bool AddAvg(int detailKoodId, int avgPersonId)
+        {
+            try
+            {
+                _baseContext.DKoods.Where(i => i.DId == detailKoodId)
+                    .Update(x => new Models.DKood
+                    {
+                        AvgId = avgPersonId
+                    });
+                return true;
+            }
+            catch (Exception)
+            {
+                return false;
+                throw;
+            }
         }
     }
 }

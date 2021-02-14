@@ -66,10 +66,10 @@ namespace WindowsFormsApp_Koodrizi
             if (e.ColumnIndex == 6)
             {
                 var pId = int.Parse(dataGridListCustomer.Rows[e.RowIndex].Cells[0].Value.ToString());//use in both ways
-             
+
                 //way-1
-                CalculateAvgPerson formCalculateAvgPerson = new CalculateAvgPerson();
-                formCalculateAvgPerson.Show();
+                AvgPersonModelList form = new AvgPersonModelList();
+                form.Show();
               
                 //way-2
                 //var person = _personRepository.People(pId);

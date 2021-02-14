@@ -46,10 +46,9 @@ namespace WindowsFormsApp_Koodrizi.Models
         public double BasePercentRoyat { get; set; }
         public string extra { get; set; }
         public double Adl { get; set; }
-
-        public int AvgPersonId {get;set;}
-        [ForeignKey("AvgPersonId")]
-        public AvgPersonModel AvgPersonModel {get;set;}
+        public int AvgId {get;set;}
+        //[ForeignKey("AvgPersonId")]
+        //public AvgPersonModel AvgPersonModel {get;set;}
 
     }
 }

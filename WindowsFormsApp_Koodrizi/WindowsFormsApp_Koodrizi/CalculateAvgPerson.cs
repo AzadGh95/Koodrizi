@@ -38,6 +38,7 @@ namespace WindowsFormsApp_Koodrizi
         private AvgPersonRepository _avgPersonRepo = new AvgPersonRepository();
         //private AvgPersonModel model = new AvgPersonModel() { };
         public DateTime avgdatetime;
+        private int koodId;
         public CalculateAvgPerson()
         {
             InitializeComponent();
@@ -46,8 +47,8 @@ namespace WindowsFormsApp_Koodrizi
         private void CalculateAvgPerson_Load(object sender, EventArgs e)
         {
             var person = _personRepo.People(Program.PersonId);
-            // lblCustomerName.Text = person.Name + " - " + person.Code;
             var koods = _finalKoodriziRepo.FinalKoodrizis();
+
             koods.Where(x => x.DetailKoodrizis
             .Any(y => y.Bar.Person.PersonId == Program.PersonId));
 
@@ -75,7 +76,7 @@ namespace WindowsFormsApp_Koodrizi
 
             var kood = _koodriziRepo.Koodrizi(int.Parse(a));
             var finalKood = kood.FinalKoodrizi;
-
+            koodId = kood.DId;
             dataGridView1.Rows.Add(
                 kood.DId,
                 finalKood.KoodNumber,
@@ -152,12 +153,17 @@ namespace WindowsFormsApp_Koodrizi
             {
                 var a = int.Parse(dataGridView1
                     .Rows[i].Cells[0].Value.ToString());
-              //  model.IdDetailKood.Add(a);
+               bool r = _koodriziRepo.AddAvg(koodId, Program.PersonId);
+                if (!r)
+                {
+                    MessageBox.Show("خطا در انجام ذخیره سازی");
+                }
             }
             var result = _avgPersonRepo.Insert(model);
             if (result)
             {
                 MessageBox.Show("محاسبات با موفقیت ثبت شدند");
+                Close();
             }
         }
     }
