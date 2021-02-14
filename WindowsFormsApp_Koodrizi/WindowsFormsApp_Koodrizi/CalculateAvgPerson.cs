@@ -144,7 +144,7 @@ namespace WindowsFormsApp_Koodrizi
             //save in AvgPersonModel
             AvgPersonModel model = new AvgPersonModel()
             {
-                IdPerson = Program.PersonId,
+                //IdPerson = Program.PersonId,
                 Bedehi = decimal.Parse(lblBedehi.Text),
                 AvgDate = avgdatetime,
             };
@@ -152,7 +152,7 @@ namespace WindowsFormsApp_Koodrizi
             {
                 var a = int.Parse(dataGridView1
                     .Rows[i].Cells[0].Value.ToString());
-                model.IdDetailKood.Add(a);
+              //  model.IdDetailKood.Add(a);
             }
             var result = _avgPersonRepo.Insert(model);
             if (result)

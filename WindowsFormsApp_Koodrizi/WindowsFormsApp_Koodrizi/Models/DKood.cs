@@ -47,5 +47,9 @@ namespace WindowsFormsApp_Koodrizi.Models
         public string extra { get; set; }
         public double Adl { get; set; }
 
+        public int AvgPersonId {get;set;}
+        [ForeignKey("AvgPersonId")]
+        public AvgPersonModel AvgPersonModel {get;set;}
+
     }
 }

@@ -212,6 +212,34 @@
     <Compile Include="Migrations\202102110549259_edit-avg-model1.designer.cs">
       <DependentUpon>202102110549259_edit-avg-model1.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202102130805386_mig1.cs" />
+    <Compile Include="Migrations\202102130805386_mig1.designer.cs">
+      <DependentUpon>202102130805386_mig1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202102130810019_add-dkood-to-avgModel.cs" />
+    <Compile Include="Migrations\202102130810019_add-dkood-to-avgModel.designer.cs">
+      <DependentUpon>202102130810019_add-dkood-to-avgModel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202102130833471_dell-avgModel.cs" />
+    <Compile Include="Migrations\202102130833471_dell-avgModel.designer.cs">
+      <DependentUpon>202102130833471_dell-avgModel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202102130950129_dkood1.cs" />
+    <Compile Include="Migrations\202102130950129_dkood1.designer.cs">
+      <DependentUpon>202102130950129_dkood1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202102130952011_dkood2.cs" />
+    <Compile Include="Migrations\202102130952011_dkood2.designer.cs">
+      <DependentUpon>202102130952011_dkood2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202102140634020_dell-avg1.cs" />
+    <Compile Include="Migrations\202102140634020_dell-avg1.designer.cs">
+      <DependentUpon>202102140634020_dell-avg1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202102140635213_add-avgId-to-dkood.cs" />
+    <Compile Include="Migrations\202102140635213_add-avgId-to-dkood.designer.cs">
+      <DependentUpon>202102140635213_add-avgId-to-dkood.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="ModalBaseTime.cs">
       <SubType>Form</SubType>
@@ -220,7 +248,6 @@
       <DependentUpon>ModalBaseTime.cs</DependentUpon>
     </Compile>
     <Compile Include="Models\AvgPersonModel.cs" />
-    <Compile Include="Models\AvgPerson.cs" />
     <Compile Include="Models\Bar.cs" />
     <Compile Include="Models\BarModel.cs" />
     <Compile Include="Models\DKood.cs" />
@@ -310,6 +337,27 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202102110549259_edit-avg-model1.resx">
       <DependentUpon>202102110549259_edit-avg-model1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202102130805386_mig1.resx">
+      <DependentUpon>202102130805386_mig1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202102130810019_add-dkood-to-avgModel.resx">
+      <DependentUpon>202102130810019_add-dkood-to-avgModel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202102130833471_dell-avgModel.resx">
+      <DependentUpon>202102130833471_dell-avgModel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202102130950129_dkood1.resx">
+      <DependentUpon>202102130950129_dkood1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202102130952011_dkood2.resx">
+      <DependentUpon>202102130952011_dkood2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202102140634020_dell-avg1.resx">
+      <DependentUpon>202102140634020_dell-avg1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202102140635213_add-avgId-to-dkood.resx">
+      <DependentUpon>202102140635213_add-avgId-to-dkood.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ModalBaseTime.resx">
       <DependentUpon>ModalBaseTime.cs</DependentUpon>
