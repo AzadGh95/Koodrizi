@@ -1,4 +1,5 @@
 ﻿using FarsiLibrary.Utils;
+using Stimulsoft.Report;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -8,6 +9,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using WindowsFormsApp_Koodrizi.Reports.Models;
 using WindowsFormsApp_Koodrizi.Repositories;
 
 namespace WindowsFormsApp_Koodrizi
@@ -17,6 +19,7 @@ namespace WindowsFormsApp_Koodrizi
 
         AvgPersonRepository _avgPersonRepository = new AvgPersonRepository();
         PersonRepository _personRepository = new PersonRepository();
+        KoodriziRepository _koodriziRepository = new KoodriziRepository();
         public AvgPersonModelList()
         {
             InitializeComponent();
@@ -74,6 +77,52 @@ namespace WindowsFormsApp_Koodrizi
                     }
                 }
             }
+            if (e.ColumnIndex == 5)
+            {
+                int avgId = int.Parse(dataGridViewAvg.Rows[e.RowIndex].Cells[0].Value.ToString());
+                var avgPerson = _avgPersonRepository.AvgPersonModel(avgId);
+
+                var listDeailKood = _koodriziRepository.KoodrizisByAvgId(avgId);
+
+                List<DetailKood> detailKoods = new List<DetailKood>();
+                foreach (var item in listDeailKood)
+                {
+                    detailKoods.Add(new DetailKood()
+                    {
+                        KoodName = item.FinalKoodrizi.KoodName,
+                        KoodNumber = item.FinalKoodrizi.KoodNumber,
+                        ArrivedDate =
+                        PersianDateConverter.ToPersianDate(item.ArrivedDate).ToString("yyyy/MM/dd"),
+                        Weight = item.Weight,
+                        Price = item.Price,
+                        TotalPrice = item.Weight * (double)item.Price
+                    });
+                }
+
+                StiReport report = new StiReport();
+                report.Load(Application.StartupPath + @"\Reports\mrt\avgPerson.mrt");
+
+                report.Dictionary.Variables["TitleReport"].Value = "پروژه کودریزی";
+                report.Dictionary.Variables["TitleBusiness"].Value = "گزارش راس گیری کودریزی ها";
+                report.Dictionary.Variables["PersonName"].Value = listDeailKood.FirstOrDefault().Bar.Person.Name;
+                report.Dictionary.Variables["Bedehi"].Value = avgPerson.Bedehi.ToString("#,###");
+                report.Dictionary.Variables["AvgDate"].Value =
+                     PersianDateConverter.ToPersianDate(avgPerson.AvgDate).ToString("yyyy/MM/dd");
+                report.Dictionary.Variables["CreateDate"].Value =
+                     PersianDateConverter.ToPersianDate(avgPerson.CreatDate).ToString("yyyy/MM/dd");
+                report.Dictionary.Variables["DateReport"].Value =
+                    PersianDateConverter.ToPersianDate(DateTime.UtcNow).ToString("yyyy/MM/dd");
+
+                report.RegBusinessObject("AvgPersonModel", detailKoods);
+                report.Compile();
+                report.Show();
+            }
+
+        }
+
+        private void Button2_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

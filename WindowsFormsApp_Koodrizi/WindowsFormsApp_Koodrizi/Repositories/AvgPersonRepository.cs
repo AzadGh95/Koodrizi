@@ -67,7 +67,18 @@ namespace WindowsFormsApp_Koodrizi.Repositories
                 throw;
             }
         }
-
+        public Models.AvgPersonModel AvgPersonModel(int id)
+        {
+            try
+            {
+                return _baseContext.AvgPersonModels.FirstOrDefault(i=>i.Id==id);
+            }
+            catch (Exception ex)
+            {
+                return null;
+                throw;
+            }
+        }
         public bool DeleteAvgPerson(int avgId)
         {
             try

@@ -20,7 +20,9 @@ namespace WindowsFormsApp_Koodrizi.Reports.Models
         public double Ounce { get; set; }
         public double Adl { get; set; }
         public double TotalPrice { get; set; }
-
+        ////
+        public string KoodName { get; set; }
+        public string KoodNumber { get; set; }
 
     }
 }

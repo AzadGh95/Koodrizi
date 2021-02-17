@@ -38,6 +38,7 @@
             this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column5 = new System.Windows.Forms.DataGridViewButtonColumn();
+            this.Column6 = new System.Windows.Forms.DataGridViewButtonColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewAvg)).BeginInit();
             this.SuspendLayout();
             // 
@@ -51,13 +52,14 @@
             this.Column2,
             this.Column3,
             this.Column4,
-            this.Column5});
+            this.Column5,
+            this.Column6});
             this.dataGridViewAvg.Location = new System.Drawing.Point(12, 46);
             this.dataGridViewAvg.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.dataGridViewAvg.Name = "dataGridViewAvg";
             this.dataGridViewAvg.ReadOnly = true;
             this.dataGridViewAvg.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.dataGridViewAvg.Size = new System.Drawing.Size(452, 398);
+            this.dataGridViewAvg.Size = new System.Drawing.Size(536, 398);
             this.dataGridViewAvg.TabIndex = 0;
             this.dataGridViewAvg.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DataGridViewAvg_CellContentClick);
             // 
@@ -69,6 +71,7 @@
             this.button2.TabIndex = 2;
             this.button2.Text = "چاپ";
             this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.Button2_Click);
             // 
             // btnNewAvg
             // 
@@ -136,11 +139,19 @@
             this.Column5.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
             this.Column5.Width = 57;
             // 
+            // Column6
+            // 
+            this.Column6.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader;
+            this.Column6.HeaderText = "چاپ";
+            this.Column6.Name = "Column6";
+            this.Column6.ReadOnly = true;
+            this.Column6.Width = 35;
+            // 
             // AvgPersonModelList
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 19F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(476, 490);
+            this.ClientSize = new System.Drawing.Size(560, 490);
             this.Controls.Add(this.lblPersonName);
             this.Controls.Add(this.btnCancel);
             this.Controls.Add(this.btnNewAvg);
@@ -168,5 +179,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
         private System.Windows.Forms.DataGridViewButtonColumn Column5;
+        private System.Windows.Forms.DataGridViewButtonColumn Column6;
     }
 }
