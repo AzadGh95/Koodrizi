@@ -27,6 +27,7 @@ namespace WindowsFormsApp_Koodrizi.Repositories
             }
             catch (Exception ex)
             {
+                var a = ex.Message;
                 throw;
             }
         }

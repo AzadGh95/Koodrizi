@@ -89,7 +89,7 @@ namespace WindowsFormsApp_Koodrizi
                 BasePrice = decimal.Parse(txPriceperkilo.Text),
                 PriceOunce = decimal.Parse(txtOuncePrice.Text),
                 PriceDahanBast = decimal.Parse(txtDahanBastprice.Text),
-
+                
             };
             _finalKoodriziRepo.Insert(finalkood);
 
@@ -103,7 +103,7 @@ namespace WindowsFormsApp_Koodrizi
                 _barRepository.Update(bar, item.BarId);
             }
 
-            MessageBox.Show("کود ریزی نهایی با موفقیت ثبت شد .");
+            MessageBox.Show("کودریزی نهایی با موفقیت ثبت شد .");
             Close();
 
         }
