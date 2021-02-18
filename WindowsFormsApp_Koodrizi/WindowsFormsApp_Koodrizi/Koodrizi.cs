@@ -30,11 +30,11 @@ namespace WindowsFormsApp_Koodrizi
 
         private void Button1_Click(object sender, EventArgs e)
         {
-            txtAdl.Text = "";
+            txtTaAdl.Text = "";
             txtAsOunce.Text = "";
             txtAsWeight.Text = "";
-            txtDahanBast.Text = "";
-            txtGrams.Text = "";
+            txtTaDahanBast.Text = "";
+            txtTaGrams.Text = "";
             txtToOunce.Text = "";
             txtToOunce.Text = "";
 
@@ -89,10 +89,16 @@ namespace WindowsFormsApp_Koodrizi
         {
             try
             {
+                var personName = comboPersonList.Text;
+                string[] token = comboPersonList.Text.Split('*');
+                var a = token[1].ToString();
+
                 comCustomerBar.Items.Clear();
                 var bars = _barRepo.SearchBar(double.Parse(txtAsWeight.Text), double.Parse(txtToWeight.Text),
                     double.Parse(txtAsOunce.Text), double.Parse(txtToOunce.Text),
-                    double.Parse(txtAdl.Text), double.Parse(txtGrams.Text), double.Parse(txtDahanBast.Text));
+                   double.Parse(txtAzAdl.Text), double.Parse(txtTaAdl.Text),
+                   double.Parse(txtAzGrams.Text), double.Parse(txtTaGrams.Text),
+                 double.Parse(txtAzDahanBast.Text),  double.Parse(txtTaDahanBast.Text),a);
                 if (bars.Count == 0)
                 {
                     MessageBox.Show("هیچ باری با این مشخصات موجود نیست.");
@@ -112,8 +118,6 @@ namespace WindowsFormsApp_Koodrizi
                     //dateTimeDueDate.Enabled = true;
                     btnSave.Enabled = true;
                 }
-
-
             }
             catch (Exception ex)
             {
@@ -134,6 +138,11 @@ namespace WindowsFormsApp_Koodrizi
 
         private void Koodrizi_Load(object sender, EventArgs e)
         {
+            var listPersons = _personRepo.Peoples();
+            foreach (var item in listPersons)
+            {
+                comboPersonList.Items.Add(item.Name + "*" + item.Code );
+            }
 
         }
 

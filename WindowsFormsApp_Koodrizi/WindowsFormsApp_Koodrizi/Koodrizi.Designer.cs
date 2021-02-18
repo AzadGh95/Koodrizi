@@ -38,11 +38,11 @@
             this.label4 = new System.Windows.Forms.Label();
             this.txtToOunce = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
-            this.txtDahanBast = new System.Windows.Forms.TextBox();
+            this.txtTaDahanBast = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
-            this.txtAdl = new System.Windows.Forms.TextBox();
+            this.txtTaAdl = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
-            this.txtGrams = new System.Windows.Forms.TextBox();
+            this.txtTaGrams = new System.Windows.Forms.TextBox();
             this.btnSearch = new System.Windows.Forms.Button();
             this.comCustomerBar = new System.Windows.Forms.ComboBox();
             this.label9 = new System.Windows.Forms.Label();
@@ -58,13 +58,20 @@
             this.fadateTimeDueDate = new FarsiLibrary.Win.Controls.FADatePicker();
             this.txtadlbar = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
+            this.comboPersonList = new System.Windows.Forms.ComboBox();
+            this.txtAzAdl = new System.Windows.Forms.TextBox();
+            this.label13 = new System.Windows.Forms.Label();
+            this.txtAzGrams = new System.Windows.Forms.TextBox();
+            this.label14 = new System.Windows.Forms.Label();
+            this.label15 = new System.Windows.Forms.Label();
+            this.txtAzDahanBast = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Vazir FD", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(606, 27);
+            this.label1.Location = new System.Drawing.Point(427, 32);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(26, 19);
             this.label1.TabIndex = 0;
@@ -73,18 +80,18 @@
             // txtAsWeight
             // 
             this.txtAsWeight.Font = new System.Drawing.Font("Vazir FD", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtAsWeight.Location = new System.Drawing.Point(500, 27);
+            this.txtAsWeight.Location = new System.Drawing.Point(361, 28);
             this.txtAsWeight.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtAsWeight.Name = "txtAsWeight";
-            this.txtAsWeight.Size = new System.Drawing.Size(103, 26);
-            this.txtAsWeight.TabIndex = 1;
+            this.txtAsWeight.Size = new System.Drawing.Size(60, 26);
+            this.txtAsWeight.TabIndex = 2;
             this.txtAsWeight.Text = "0.0";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Vazir FD", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(479, 31);
+            this.label2.Location = new System.Drawing.Point(339, 32);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(16, 19);
             this.label2.TabIndex = 2;
@@ -93,18 +100,18 @@
             // txtToWeight
             // 
             this.txtToWeight.Font = new System.Drawing.Font("Vazir FD", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtToWeight.Location = new System.Drawing.Point(370, 27);
+            this.txtToWeight.Location = new System.Drawing.Point(270, 28);
             this.txtToWeight.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtToWeight.Name = "txtToWeight";
-            this.txtToWeight.Size = new System.Drawing.Size(103, 26);
-            this.txtToWeight.TabIndex = 2;
+            this.txtToWeight.Size = new System.Drawing.Size(63, 26);
+            this.txtToWeight.TabIndex = 3;
             this.txtToWeight.Text = "0.0";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Vazir FD", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(266, 31);
+            this.label3.Location = new System.Drawing.Point(195, 32);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(29, 19);
             this.label3.TabIndex = 4;
@@ -113,18 +120,18 @@
             // txtAsOunce
             // 
             this.txtAsOunce.Font = new System.Drawing.Font("Vazir FD", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtAsOunce.Location = new System.Drawing.Point(160, 27);
+            this.txtAsOunce.Location = new System.Drawing.Point(126, 28);
             this.txtAsOunce.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtAsOunce.Name = "txtAsOunce";
-            this.txtAsOunce.Size = new System.Drawing.Size(100, 26);
-            this.txtAsOunce.TabIndex = 3;
+            this.txtAsOunce.Size = new System.Drawing.Size(63, 26);
+            this.txtAsOunce.TabIndex = 4;
             this.txtAsOunce.Text = "0.0";
             // 
             // label4
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Vazir FD", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(139, 31);
+            this.label4.Location = new System.Drawing.Point(104, 32);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(16, 19);
             this.label4.TabIndex = 6;
@@ -133,72 +140,72 @@
             // txtToOunce
             // 
             this.txtToOunce.Font = new System.Drawing.Font("Vazir FD", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtToOunce.Location = new System.Drawing.Point(33, 27);
+            this.txtToOunce.Location = new System.Drawing.Point(33, 28);
             this.txtToOunce.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtToOunce.Name = "txtToOunce";
-            this.txtToOunce.Size = new System.Drawing.Size(100, 26);
-            this.txtToOunce.TabIndex = 4;
+            this.txtToOunce.Size = new System.Drawing.Size(63, 26);
+            this.txtToOunce.TabIndex = 5;
             this.txtToOunce.Text = "0.0";
             // 
             // label5
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Vazir FD", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(550, 85);
+            this.label5.Location = new System.Drawing.Point(587, 88);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(83, 19);
+            this.label5.Size = new System.Drawing.Size(55, 19);
             this.label5.TabIndex = 8;
-            this.label5.Text = "میزان دهن بست";
+            this.label5.Text = "دهن بست";
             // 
-            // txtDahanBast
+            // txtTaDahanBast
             // 
-            this.txtDahanBast.Font = new System.Drawing.Font("Vazir FD", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtDahanBast.Location = new System.Drawing.Point(433, 81);
-            this.txtDahanBast.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.txtDahanBast.Name = "txtDahanBast";
-            this.txtDahanBast.Size = new System.Drawing.Size(115, 26);
-            this.txtDahanBast.TabIndex = 5;
-            this.txtDahanBast.Text = "0.0";
+            this.txtTaDahanBast.Font = new System.Drawing.Font("Vazir FD", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtTaDahanBast.Location = new System.Drawing.Point(469, 84);
+            this.txtTaDahanBast.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.txtTaDahanBast.Name = "txtTaDahanBast";
+            this.txtTaDahanBast.Size = new System.Drawing.Size(45, 26);
+            this.txtTaDahanBast.TabIndex = 7;
+            this.txtTaDahanBast.Text = "0.0";
             // 
             // label6
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Vazir FD", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(359, 87);
+            this.label6.Location = new System.Drawing.Point(424, 88);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(29, 19);
             this.label6.TabIndex = 10;
             this.label6.Text = "عدل";
             // 
-            // txtAdl
+            // txtTaAdl
             // 
-            this.txtAdl.Font = new System.Drawing.Font("Vazir FD", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtAdl.Location = new System.Drawing.Point(253, 83);
-            this.txtAdl.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.txtAdl.Name = "txtAdl";
-            this.txtAdl.Size = new System.Drawing.Size(100, 26);
-            this.txtAdl.TabIndex = 6;
-            this.txtAdl.Text = "0.0";
+            this.txtTaAdl.Font = new System.Drawing.Font("Vazir FD", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtTaAdl.Location = new System.Drawing.Point(270, 84);
+            this.txtTaAdl.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.txtTaAdl.Name = "txtTaAdl";
+            this.txtTaAdl.Size = new System.Drawing.Size(63, 26);
+            this.txtTaAdl.TabIndex = 9;
+            this.txtTaAdl.Text = "0.0";
             // 
             // label7
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Vazir FD", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(156, 86);
+            this.label7.Location = new System.Drawing.Point(195, 88);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(45, 19);
             this.label7.TabIndex = 12;
             this.label7.Text = "گرم مغز";
             // 
-            // txtGrams
+            // txtTaGrams
             // 
-            this.txtGrams.Font = new System.Drawing.Font("Vazir FD", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtGrams.Location = new System.Drawing.Point(33, 83);
-            this.txtGrams.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.txtGrams.Name = "txtGrams";
-            this.txtGrams.Size = new System.Drawing.Size(117, 26);
-            this.txtGrams.TabIndex = 7;
-            this.txtGrams.Text = "0.0";
+            this.txtTaGrams.Font = new System.Drawing.Font("Vazir FD", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtTaGrams.Location = new System.Drawing.Point(33, 84);
+            this.txtTaGrams.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.txtTaGrams.Name = "txtTaGrams";
+            this.txtTaGrams.Size = new System.Drawing.Size(63, 26);
+            this.txtTaGrams.TabIndex = 10;
+            this.txtTaGrams.Text = "0.0";
             // 
             // btnSearch
             // 
@@ -207,7 +214,7 @@
             this.btnSearch.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnSearch.Name = "btnSearch";
             this.btnSearch.Size = new System.Drawing.Size(524, 34);
-            this.btnSearch.TabIndex = 8;
+            this.btnSearch.TabIndex = 11;
             this.btnSearch.Text = "جستجو";
             this.btnSearch.UseVisualStyleBackColor = true;
             this.btnSearch.Click += new System.EventHandler(this.BtnSearch_Click);
@@ -226,7 +233,7 @@
             this.comCustomerBar.Name = "comCustomerBar";
             this.comCustomerBar.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.comCustomerBar.Size = new System.Drawing.Size(599, 27);
-            this.comCustomerBar.TabIndex = 10;
+            this.comCustomerBar.TabIndex = 12;
             this.comCustomerBar.Text = "انتخاب بار مشتری";
             this.comCustomerBar.SelectedIndexChanged += new System.EventHandler(this.ComCustomerBar_SelectedIndexChanged);
             // 
@@ -248,7 +255,7 @@
             this.txtWeightBar.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtWeightBar.Name = "txtWeightBar";
             this.txtWeightBar.Size = new System.Drawing.Size(108, 26);
-            this.txtWeightBar.TabIndex = 11;
+            this.txtWeightBar.TabIndex = 13;
             // 
             // label10
             // 
@@ -268,7 +275,7 @@
             this.txtPercentageOfVisibility.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtPercentageOfVisibility.Name = "txtPercentageOfVisibility";
             this.txtPercentageOfVisibility.Size = new System.Drawing.Size(108, 26);
-            this.txtPercentageOfVisibility.TabIndex = 13;
+            this.txtPercentageOfVisibility.TabIndex = 15;
             this.txtPercentageOfVisibility.Text = "0";
             this.txtPercentageOfVisibility.TextChanged += new System.EventHandler(this.TxtPercentageOfVisibility_TextChanged);
             // 
@@ -327,7 +334,7 @@
             this.btnClearSearch.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnClearSearch.Name = "btnClearSearch";
             this.btnClearSearch.Size = new System.Drawing.Size(63, 34);
-            this.btnClearSearch.TabIndex = 9;
+            this.btnClearSearch.TabIndex = 12;
             this.btnClearSearch.Text = "پاک کردن";
             this.btnClearSearch.UseVisualStyleBackColor = true;
             this.btnClearSearch.Click += new System.EventHandler(this.Button1_Click);
@@ -359,7 +366,7 @@
             this.txtadlbar.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtadlbar.Name = "txtadlbar";
             this.txtadlbar.Size = new System.Drawing.Size(108, 26);
-            this.txtadlbar.TabIndex = 12;
+            this.txtadlbar.TabIndex = 14;
             // 
             // label8
             // 
@@ -371,11 +378,90 @@
             this.label8.TabIndex = 32;
             this.label8.Text = "عدل";
             // 
+            // comboPersonList
+            // 
+            this.comboPersonList.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
+            this.comboPersonList.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
+            this.comboPersonList.FormattingEnabled = true;
+            this.comboPersonList.Location = new System.Drawing.Point(469, 28);
+            this.comboPersonList.Name = "comboPersonList";
+            this.comboPersonList.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.comboPersonList.Size = new System.Drawing.Size(163, 27);
+            this.comboPersonList.TabIndex = 1;
+            this.comboPersonList.Text = "مشتریان";
+            // 
+            // txtAzAdl
+            // 
+            this.txtAzAdl.Font = new System.Drawing.Font("Vazir FD", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtAzAdl.Location = new System.Drawing.Point(358, 84);
+            this.txtAzAdl.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.txtAzAdl.Name = "txtAzAdl";
+            this.txtAzAdl.Size = new System.Drawing.Size(63, 26);
+            this.txtAzAdl.TabIndex = 8;
+            this.txtAzAdl.Text = "0.0";
+            // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.Font = new System.Drawing.Font("Vazir FD", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label13.Location = new System.Drawing.Point(336, 88);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(16, 19);
+            this.label13.TabIndex = 35;
+            this.label13.Text = "تا";
+            // 
+            // txtAzGrams
+            // 
+            this.txtAzGrams.Font = new System.Drawing.Font("Vazir FD", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtAzGrams.Location = new System.Drawing.Point(126, 84);
+            this.txtAzGrams.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.txtAzGrams.Name = "txtAzGrams";
+            this.txtAzGrams.Size = new System.Drawing.Size(63, 26);
+            this.txtAzGrams.TabIndex = 9;
+            this.txtAzGrams.Text = "0.0";
+            // 
+            // label14
+            // 
+            this.label14.AutoSize = true;
+            this.label14.Font = new System.Drawing.Font("Vazir FD", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label14.Location = new System.Drawing.Point(102, 88);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(16, 19);
+            this.label14.TabIndex = 37;
+            this.label14.Text = "تا";
+            // 
+            // label15
+            // 
+            this.label15.AutoSize = true;
+            this.label15.Font = new System.Drawing.Font("Vazir FD", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label15.Location = new System.Drawing.Point(520, 88);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(16, 19);
+            this.label15.TabIndex = 38;
+            this.label15.Text = "تا";
+            // 
+            // txtAzDahanBast
+            // 
+            this.txtAzDahanBast.Font = new System.Drawing.Font("Vazir FD", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtAzDahanBast.Location = new System.Drawing.Point(542, 84);
+            this.txtAzDahanBast.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.txtAzDahanBast.Name = "txtAzDahanBast";
+            this.txtAzDahanBast.Size = new System.Drawing.Size(45, 26);
+            this.txtAzDahanBast.TabIndex = 6;
+            this.txtAzDahanBast.Text = "0.0";
+            // 
             // Koodrizi
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 19F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(666, 444);
+            this.Controls.Add(this.txtAzDahanBast);
+            this.Controls.Add(this.label15);
+            this.Controls.Add(this.label14);
+            this.Controls.Add(this.txtAzGrams);
+            this.Controls.Add(this.label13);
+            this.Controls.Add(this.txtAzAdl);
+            this.Controls.Add(this.comboPersonList);
             this.Controls.Add(this.txtadlbar);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.fadateTimeDueDate);
@@ -391,11 +477,11 @@
             this.Controls.Add(this.label9);
             this.Controls.Add(this.comCustomerBar);
             this.Controls.Add(this.btnSearch);
-            this.Controls.Add(this.txtGrams);
+            this.Controls.Add(this.txtTaGrams);
             this.Controls.Add(this.label7);
-            this.Controls.Add(this.txtAdl);
+            this.Controls.Add(this.txtTaAdl);
             this.Controls.Add(this.label6);
-            this.Controls.Add(this.txtDahanBast);
+            this.Controls.Add(this.txtTaDahanBast);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.txtToOunce);
             this.Controls.Add(this.label4);
@@ -429,11 +515,11 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.TextBox txtToOunce;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.TextBox txtDahanBast;
+        private System.Windows.Forms.TextBox txtTaDahanBast;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.TextBox txtAdl;
+        private System.Windows.Forms.TextBox txtTaAdl;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.TextBox txtGrams;
+        private System.Windows.Forms.TextBox txtTaGrams;
         private System.Windows.Forms.Button btnSearch;
         private System.Windows.Forms.ComboBox comCustomerBar;
         private System.Windows.Forms.Label label9;
@@ -449,5 +535,12 @@
         private FarsiLibrary.Win.Controls.FADatePicker fadateTimeDueDate;
         private System.Windows.Forms.TextBox txtadlbar;
         private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.ComboBox comboPersonList;
+        private System.Windows.Forms.TextBox txtAzAdl;
+        private System.Windows.Forms.Label label13;
+        private System.Windows.Forms.TextBox txtAzGrams;
+        private System.Windows.Forms.Label label14;
+        private System.Windows.Forms.Label label15;
+        private System.Windows.Forms.TextBox txtAzDahanBast;
     }
 }
