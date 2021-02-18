@@ -98,13 +98,13 @@ namespace WindowsFormsApp_Koodrizi
                         TotalPrice = item.Weight * (double)item.Price
                     });
                 }
-
+                var pn=listDeailKood.FirstOrDefault().Bar.Person.Name;
                 StiReport report = new StiReport();
                 report.Load(Application.StartupPath + @"\Reports\mrt\avgPerson.mrt");
 
                 report.Dictionary.Variables["TitleReport"].Value = "پروژه کودریزی";
                 report.Dictionary.Variables["TitleBusiness"].Value = "گزارش راس گیری کودریزی ها";
-                report.Dictionary.Variables["PersonName"].Value = listDeailKood.FirstOrDefault().Bar.Person.Name;
+                report.Dictionary.Variables["PersonName"].Value = pn;
                 report.Dictionary.Variables["Bedehi"].Value = avgPerson.Bedehi.ToString("#,###");
                 report.Dictionary.Variables["AvgDate"].Value =
                      PersianDateConverter.ToPersianDate(avgPerson.AvgDate).ToString("yyyy/MM/dd");
@@ -113,11 +113,10 @@ namespace WindowsFormsApp_Koodrizi
                 report.Dictionary.Variables["DateReport"].Value =
                     PersianDateConverter.ToPersianDate(DateTime.UtcNow).ToString("yyyy/MM/dd");
 
-                report.RegBusinessObject("AvgPersonModel", detailKoods);
+                report.RegBusinessObject("ListDetailsKoodAvg", detailKoods);
                 report.Compile();
                 report.Show();
             }
-
         }
 
         private void Button2_Click(object sender, EventArgs e)
