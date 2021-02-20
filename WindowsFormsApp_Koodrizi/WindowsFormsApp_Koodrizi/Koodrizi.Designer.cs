@@ -224,7 +224,7 @@
             this.comCustomerBar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.comCustomerBar.Font = new System.Drawing.Font("Vazir FD", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.comCustomerBar.FormattingEnabled = true;
-            this.comCustomerBar.Location = new System.Drawing.Point(33, 237);
+            this.comCustomerBar.Location = new System.Drawing.Point(33, 208);
             this.comCustomerBar.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.comCustomerBar.Name = "comCustomerBar";
             this.comCustomerBar.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
@@ -237,7 +237,7 @@
             // 
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Vazir FD", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(591, 298);
+            this.label9.Location = new System.Drawing.Point(606, 269);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(26, 19);
             this.label9.TabIndex = 18;
@@ -247,7 +247,7 @@
             // 
             this.txtWeightBar.Enabled = false;
             this.txtWeightBar.Font = new System.Drawing.Font("Vazir FD", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtWeightBar.Location = new System.Drawing.Point(469, 294);
+            this.txtWeightBar.Location = new System.Drawing.Point(492, 265);
             this.txtWeightBar.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtWeightBar.Name = "txtWeightBar";
             this.txtWeightBar.Size = new System.Drawing.Size(108, 26);
@@ -257,7 +257,7 @@
             // 
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("Vazir FD", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.Location = new System.Drawing.Point(147, 298);
+            this.label10.Location = new System.Drawing.Point(147, 269);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(58, 19);
             this.label10.TabIndex = 20;
@@ -267,7 +267,7 @@
             // 
             this.txtPercentageOfVisibility.Enabled = false;
             this.txtPercentageOfVisibility.Font = new System.Drawing.Font("Vazir FD", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtPercentageOfVisibility.Location = new System.Drawing.Point(33, 294);
+            this.txtPercentageOfVisibility.Location = new System.Drawing.Point(33, 265);
             this.txtPercentageOfVisibility.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtPercentageOfVisibility.Name = "txtPercentageOfVisibility";
             this.txtPercentageOfVisibility.Size = new System.Drawing.Size(108, 26);
@@ -279,7 +279,7 @@
             // 
             this.btnCancel.DialogResult = System.Windows.Forms.DialogResult.Cancel;
             this.btnCancel.Font = new System.Drawing.Font("Vazir FD", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCancel.Location = new System.Drawing.Point(33, 370);
+            this.btnCancel.Location = new System.Drawing.Point(33, 324);
             this.btnCancel.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnCancel.Name = "btnCancel";
             this.btnCancel.Size = new System.Drawing.Size(63, 33);
@@ -293,7 +293,7 @@
             this.btnSave.DialogResult = System.Windows.Forms.DialogResult.OK;
             this.btnSave.Enabled = false;
             this.btnSave.Font = new System.Drawing.Font("Vazir FD", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSave.Location = new System.Drawing.Point(108, 370);
+            this.btnSave.Location = new System.Drawing.Point(108, 324);
             this.btnSave.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnSave.Name = "btnSave";
             this.btnSave.Size = new System.Drawing.Size(106, 33);
@@ -317,7 +317,7 @@
             // txtadlbar
             // 
             this.txtadlbar.Font = new System.Drawing.Font("Vazir FD", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtadlbar.Location = new System.Drawing.Point(261, 294);
+            this.txtadlbar.Location = new System.Drawing.Point(270, 265);
             this.txtadlbar.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtadlbar.Name = "txtadlbar";
             this.txtadlbar.Size = new System.Drawing.Size(108, 26);
@@ -327,7 +327,7 @@
             // 
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Vazir FD", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(375, 298);
+            this.label8.Location = new System.Drawing.Point(392, 269);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(29, 19);
             this.label8.TabIndex = 32;
@@ -409,7 +409,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 19F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(666, 427);
+            this.ClientSize = new System.Drawing.Size(666, 382);
             this.Controls.Add(this.txtAzDahanBast);
             this.Controls.Add(this.label15);
             this.Controls.Add(this.label14);

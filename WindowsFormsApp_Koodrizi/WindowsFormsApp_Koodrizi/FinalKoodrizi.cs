@@ -78,7 +78,6 @@ namespace WindowsFormsApp_Koodrizi
         private void BtnSave_Click(object sender, EventArgs e)
         {
             //save to db
-
             var finalkood = new Models.FinalKoodriziModel()
             {
                 KoodNumber = txtKoodNumber.Text,
@@ -89,8 +88,8 @@ namespace WindowsFormsApp_Koodrizi
                 BasePrice = decimal.Parse(txPriceperkilo.Text),
                 PriceOunce = decimal.Parse(txtOuncePrice.Text),
                 PriceDahanBast = decimal.Parse(txtDahanBastprice.Text),
-                
             };
+
             _finalKoodriziRepo.Insert(finalkood);
 
             foreach (var item in detailkoods)
@@ -110,7 +109,9 @@ namespace WindowsFormsApp_Koodrizi
 
         private void BtnCancel_Click(object sender, EventArgs e)
         {
-            DialogResult dialogResult = MessageBox.Show("آیا می‌خواهید این فرم را بدون ذخیره کردن ببندید ؟", "هشدار", MessageBoxButtons.YesNo);
+            DialogResult dialogResult = MessageBox.Show(
+                "آیا می‌خواهید این فرم را بدون ذخیره کردن ببندید ؟",
+                "هشدار", MessageBoxButtons.YesNo);
             if (dialogResult == DialogResult.Yes)
             {
                 Close();
@@ -125,7 +126,6 @@ namespace WindowsFormsApp_Koodrizi
         {
             Koodrizi formKoodrizi = new Koodrizi();
 
-
             if (formKoodrizi.ShowDialog() == DialogResult.OK)
             {
                 var bar = _barRepository.Bar(formKoodrizi.Koodrizi_model.BarId);
@@ -133,14 +133,15 @@ namespace WindowsFormsApp_Koodrizi
                 newRow.CreateCells(dataGridFinalKood);
                 newRow.Cells[0].Value = formKoodrizi.Koodrizi_model.BarId;
                 newRow.Cells[1].Value = bar.Person.Name + " [" + bar.Person.Code + "] ";
-                newRow.Cells[2].Value = formKoodrizi.Koodrizi_model.Weight;
-                newRow.Cells[3].Value = bar.Ounce;
-                newRow.Cells[4].Value = formKoodrizi.Koodrizi_model.PercentRoyat;
+                newRow.Cells[2].Value = bar.DhanBast;
+                newRow.Cells[3].Value = formKoodrizi.Koodrizi_model.Weight;//e
+                newRow.Cells[4].Value = bar.Ounce;//e
+                newRow.Cells[5].Value = formKoodrizi.Koodrizi_model.PercentRoyat;//e
                 //newRow.Cells[5].Value = formKoodrizi.Koodrizi_model.SellDate;
-                newRow.Cells[5].Value = fadateTimeSell.SelectedDateTime;
-                newRow.Cells[6].Value = formKoodrizi.Koodrizi_model.ArrivedDate;
-                newRow.Cells[6].Value = fadateTimeDueDate.SelectedDateTime;
-                newRow.Cells[7].Value = formKoodrizi.Koodrizi_model.Adl;
+                newRow.Cells[6].Value = fadateTimeSell.SelectedDateTime;//e
+                newRow.Cells[7].Value = formKoodrizi.Koodrizi_model.ArrivedDate;//e
+                newRow.Cells[7].Value = fadateTimeDueDate.SelectedDateTime;//e
+                newRow.Cells[8].Value = formKoodrizi.Koodrizi_model.Adl;//e
                 dataGridFinalKood.Rows.Add(newRow);
             }
         }
@@ -175,11 +176,11 @@ namespace WindowsFormsApp_Koodrizi
                 detailkoods.Add(new Models.DKood()
                 {
                     BarId = int.Parse(dataGridFinalKood.Rows[i].Cells[0].Value.ToString()),
-                    Weight = double.Parse(dataGridFinalKood.Rows[i].Cells[2].Value.ToString()),
-                    PercentRoyat = double.Parse(dataGridFinalKood.Rows[i].Cells[4].Value.ToString()),
-                    SellDate = DateTime.Parse(dataGridFinalKood.Rows[i].Cells[5].Value.ToString()),
-                    ArrivedDate = DateTime.Parse(dataGridFinalKood.Rows[i].Cells[6].Value.ToString()),
-                    Adl = double.Parse(dataGridFinalKood.Rows[i].Cells[7].Value.ToString()),
+                    Weight = double.Parse(dataGridFinalKood.Rows[i].Cells[3].Value.ToString()),//e
+                    PercentRoyat = double.Parse(dataGridFinalKood.Rows[i].Cells[5].Value.ToString()),//e
+                    SellDate = DateTime.Parse(dataGridFinalKood.Rows[i].Cells[6].Value.ToString()),//e
+                    ArrivedDate = DateTime.Parse(dataGridFinalKood.Rows[i].Cells[7].Value.ToString()),//e
+                    Adl = double.Parse(dataGridFinalKood.Rows[i].Cells[8].Value.ToString()),//e
                 });
             }
             ////////محاسبه
@@ -212,8 +213,8 @@ namespace WindowsFormsApp_Koodrizi
                 var priceElement = CalculateKoodRizi(basePriceCalculate, item.PercentRoyat, sumOunce,
                      sumDahanBst, bar.Ounce, bar.DhanBast, priceOunce, priceDahanBast);
                 item.Price = (decimal)priceElement;
-                dataGridFinalKood.Rows[j].Cells[8].Value = priceElement.ToString("#,###0");
-                dataGridFinalKood.Rows[j].Cells[9].Value = (item.Weight * priceElement).ToString("#,###0");
+                dataGridFinalKood.Rows[j].Cells[9].Value = priceElement.ToString("#,###0");//e
+                dataGridFinalKood.Rows[j].Cells[10].Value = (item.Weight * priceElement).ToString("#,###0");//e
                 j++;
 
 

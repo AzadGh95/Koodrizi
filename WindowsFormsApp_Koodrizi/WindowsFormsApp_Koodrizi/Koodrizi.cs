@@ -92,7 +92,10 @@ namespace WindowsFormsApp_Koodrizi
             {
                 var personName = comboPersonList.Text;
                 string[] token = comboPersonList.Text.Split('*');
-                var a = token[1].ToString();
+                string a = "";
+                if (token.Length > 1)
+                    a = token[1].ToString();
+
 
                 comCustomerBar.Items.Clear();
                 var bars = _barRepo.SearchBar(double.Parse(txtAsWeight.Text), double.Parse(txtToWeight.Text),
