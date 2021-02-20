@@ -66,8 +66,10 @@ namespace WindowsFormsApp_Koodrizi
                     Koodrizi_model = new Models.DKood()
                     {
                         BarId = int.Parse(a),
-                        ArrivedDate = fadateTimeDueDate.SelectedDateTime,
-                        SellDate = fadateTimeSell.SelectedDateTime,
+                        ArrivedDate = DateTime.Now,
+                        //ArrivedDate = fadateTimeDueDate.SelectedDateTime,
+                        SellDate = DateTime.Now,
+                        //SellDate = fadateTimeSell.SelectedDateTime,
                         Weight = double.Parse(txtWeightBar.Text),
                         PercentRoyat = double.Parse(txtPercentageOfVisibility.Text),
                         Adl = double.Parse(txtadlbar.Text),
@@ -82,7 +84,6 @@ namespace WindowsFormsApp_Koodrizi
             }
         }
 
-
         public Models.DKood Koodrizi_model { get; set; }
 
         private void BtnSearch_Click(object sender, EventArgs e)
@@ -96,9 +97,9 @@ namespace WindowsFormsApp_Koodrizi
                 comCustomerBar.Items.Clear();
                 var bars = _barRepo.SearchBar(double.Parse(txtAsWeight.Text), double.Parse(txtToWeight.Text),
                     double.Parse(txtAsOunce.Text), double.Parse(txtToOunce.Text),
-                   double.Parse(txtAzAdl.Text), double.Parse(txtTaAdl.Text),
-                   double.Parse(txtAzGrams.Text), double.Parse(txtTaGrams.Text),
-                 double.Parse(txtAzDahanBast.Text),  double.Parse(txtTaDahanBast.Text),a);
+                    double.Parse(txtAzAdl.Text), double.Parse(txtTaAdl.Text),
+                    double.Parse(txtAzGrams.Text), double.Parse(txtTaGrams.Text),
+                    double.Parse(txtAzDahanBast.Text), double.Parse(txtTaDahanBast.Text), a);
                 if (bars.Count == 0)
                 {
                     MessageBox.Show("هیچ باری با این مشخصات موجود نیست.");
@@ -141,7 +142,7 @@ namespace WindowsFormsApp_Koodrizi
             var listPersons = _personRepo.Peoples();
             foreach (var item in listPersons)
             {
-                comboPersonList.Items.Add(item.Name + "*" + item.Code );
+                comboPersonList.Items.Add(item.Name + "*" + item.Code);
             }
 
         }

@@ -49,13 +49,9 @@
             this.txtWeightBar = new System.Windows.Forms.TextBox();
             this.label10 = new System.Windows.Forms.Label();
             this.txtPercentageOfVisibility = new System.Windows.Forms.TextBox();
-            this.label11 = new System.Windows.Forms.Label();
-            this.label12 = new System.Windows.Forms.Label();
             this.btnCancel = new System.Windows.Forms.Button();
             this.btnSave = new System.Windows.Forms.Button();
             this.btnClearSearch = new System.Windows.Forms.Button();
-            this.fadateTimeSell = new FarsiLibrary.Win.Controls.FADatePicker();
-            this.fadateTimeDueDate = new FarsiLibrary.Win.Controls.FADatePicker();
             this.txtadlbar = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
             this.comboPersonList = new System.Windows.Forms.ComboBox();
@@ -228,7 +224,7 @@
             this.comCustomerBar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.comCustomerBar.Font = new System.Drawing.Font("Vazir FD", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.comCustomerBar.FormattingEnabled = true;
-            this.comCustomerBar.Location = new System.Drawing.Point(33, 215);
+            this.comCustomerBar.Location = new System.Drawing.Point(33, 237);
             this.comCustomerBar.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.comCustomerBar.Name = "comCustomerBar";
             this.comCustomerBar.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
@@ -241,7 +237,7 @@
             // 
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Vazir FD", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(591, 276);
+            this.label9.Location = new System.Drawing.Point(591, 298);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(26, 19);
             this.label9.TabIndex = 18;
@@ -251,7 +247,7 @@
             // 
             this.txtWeightBar.Enabled = false;
             this.txtWeightBar.Font = new System.Drawing.Font("Vazir FD", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtWeightBar.Location = new System.Drawing.Point(469, 272);
+            this.txtWeightBar.Location = new System.Drawing.Point(469, 294);
             this.txtWeightBar.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtWeightBar.Name = "txtWeightBar";
             this.txtWeightBar.Size = new System.Drawing.Size(108, 26);
@@ -261,7 +257,7 @@
             // 
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("Vazir FD", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.Location = new System.Drawing.Point(147, 276);
+            this.label10.Location = new System.Drawing.Point(147, 298);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(58, 19);
             this.label10.TabIndex = 20;
@@ -271,7 +267,7 @@
             // 
             this.txtPercentageOfVisibility.Enabled = false;
             this.txtPercentageOfVisibility.Font = new System.Drawing.Font("Vazir FD", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtPercentageOfVisibility.Location = new System.Drawing.Point(33, 272);
+            this.txtPercentageOfVisibility.Location = new System.Drawing.Point(33, 294);
             this.txtPercentageOfVisibility.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtPercentageOfVisibility.Name = "txtPercentageOfVisibility";
             this.txtPercentageOfVisibility.Size = new System.Drawing.Size(108, 26);
@@ -279,32 +275,11 @@
             this.txtPercentageOfVisibility.Text = "0";
             this.txtPercentageOfVisibility.TextChanged += new System.EventHandler(this.TxtPercentageOfVisibility_TextChanged);
             // 
-            // label11
-            // 
-            this.label11.AutoSize = true;
-            this.label11.Font = new System.Drawing.Font("Vazir FD", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.Location = new System.Drawing.Point(580, 328);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(62, 19);
-            this.label11.TabIndex = 24;
-            this.label11.Text = "تاریخ فروش";
-            // 
-            // label12
-            // 
-            this.label12.AutoSize = true;
-            this.label12.Font = new System.Drawing.Font("Vazir FD", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label12.Location = new System.Drawing.Point(232, 328);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(70, 19);
-            this.label12.TabIndex = 25;
-            this.label12.Text = "تاریخ سررسید";
-            this.label12.Click += new System.EventHandler(this.Label12_Click);
-            // 
             // btnCancel
             // 
             this.btnCancel.DialogResult = System.Windows.Forms.DialogResult.Cancel;
             this.btnCancel.Font = new System.Drawing.Font("Vazir FD", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCancel.Location = new System.Drawing.Point(33, 387);
+            this.btnCancel.Location = new System.Drawing.Point(33, 370);
             this.btnCancel.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnCancel.Name = "btnCancel";
             this.btnCancel.Size = new System.Drawing.Size(63, 33);
@@ -318,7 +293,7 @@
             this.btnSave.DialogResult = System.Windows.Forms.DialogResult.OK;
             this.btnSave.Enabled = false;
             this.btnSave.Font = new System.Drawing.Font("Vazir FD", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSave.Location = new System.Drawing.Point(108, 387);
+            this.btnSave.Location = new System.Drawing.Point(108, 370);
             this.btnSave.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnSave.Name = "btnSave";
             this.btnSave.Size = new System.Drawing.Size(106, 33);
@@ -339,30 +314,10 @@
             this.btnClearSearch.UseVisualStyleBackColor = true;
             this.btnClearSearch.Click += new System.EventHandler(this.Button1_Click);
             // 
-            // fadateTimeSell
-            // 
-            this.fadateTimeSell.IsNull = false;
-            this.fadateTimeSell.Location = new System.Drawing.Point(395, 327);
-            this.fadateTimeSell.Name = "fadateTimeSell";
-            this.fadateTimeSell.SelectedDateTime = new System.DateTime(2021, 1, 4, 0, 0, 0, 0);
-            this.fadateTimeSell.Size = new System.Drawing.Size(182, 20);
-            this.fadateTimeSell.TabIndex = 29;
-            this.fadateTimeSell.Theme = FarsiLibrary.Win.Enums.ThemeTypes.WindowsXP;
-            // 
-            // fadateTimeDueDate
-            // 
-            this.fadateTimeDueDate.IsNull = false;
-            this.fadateTimeDueDate.Location = new System.Drawing.Point(33, 327);
-            this.fadateTimeDueDate.Name = "fadateTimeDueDate";
-            this.fadateTimeDueDate.SelectedDateTime = new System.DateTime(2021, 1, 4, 0, 0, 0, 0);
-            this.fadateTimeDueDate.Size = new System.Drawing.Size(182, 20);
-            this.fadateTimeDueDate.TabIndex = 30;
-            this.fadateTimeDueDate.Theme = FarsiLibrary.Win.Enums.ThemeTypes.WindowsXP;
-            // 
             // txtadlbar
             // 
             this.txtadlbar.Font = new System.Drawing.Font("Vazir FD", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtadlbar.Location = new System.Drawing.Point(261, 272);
+            this.txtadlbar.Location = new System.Drawing.Point(261, 294);
             this.txtadlbar.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtadlbar.Name = "txtadlbar";
             this.txtadlbar.Size = new System.Drawing.Size(108, 26);
@@ -372,7 +327,7 @@
             // 
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Vazir FD", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(375, 276);
+            this.label8.Location = new System.Drawing.Point(375, 298);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(29, 19);
             this.label8.TabIndex = 32;
@@ -454,7 +409,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 19F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(666, 444);
+            this.ClientSize = new System.Drawing.Size(666, 427);
             this.Controls.Add(this.txtAzDahanBast);
             this.Controls.Add(this.label15);
             this.Controls.Add(this.label14);
@@ -464,13 +419,9 @@
             this.Controls.Add(this.comboPersonList);
             this.Controls.Add(this.txtadlbar);
             this.Controls.Add(this.label8);
-            this.Controls.Add(this.fadateTimeDueDate);
-            this.Controls.Add(this.fadateTimeSell);
             this.Controls.Add(this.btnClearSearch);
             this.Controls.Add(this.btnSave);
             this.Controls.Add(this.btnCancel);
-            this.Controls.Add(this.label12);
-            this.Controls.Add(this.label11);
             this.Controls.Add(this.txtPercentageOfVisibility);
             this.Controls.Add(this.label10);
             this.Controls.Add(this.txtWeightBar);
@@ -526,13 +477,9 @@
         private System.Windows.Forms.TextBox txtWeightBar;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.TextBox txtPercentageOfVisibility;
-        private System.Windows.Forms.Label label11;
-        private System.Windows.Forms.Label label12;
         private System.Windows.Forms.Button btnCancel;
         private System.Windows.Forms.Button btnSave;
         private System.Windows.Forms.Button btnClearSearch;
-        private FarsiLibrary.Win.Controls.FADatePicker fadateTimeSell;
-        private FarsiLibrary.Win.Controls.FADatePicker fadateTimeDueDate;
         private System.Windows.Forms.TextBox txtadlbar;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.ComboBox comboPersonList;

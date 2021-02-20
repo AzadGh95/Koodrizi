@@ -136,13 +136,13 @@ namespace WindowsFormsApp_Koodrizi
                 newRow.Cells[2].Value = formKoodrizi.Koodrizi_model.Weight;
                 newRow.Cells[3].Value = bar.Ounce;
                 newRow.Cells[4].Value = formKoodrizi.Koodrizi_model.PercentRoyat;
-                newRow.Cells[5].Value = formKoodrizi.Koodrizi_model.SellDate;
+                //newRow.Cells[5].Value = formKoodrizi.Koodrizi_model.SellDate;
+                newRow.Cells[5].Value = fadateTimeSell.SelectedDateTime;
                 newRow.Cells[6].Value = formKoodrizi.Koodrizi_model.ArrivedDate;
+                newRow.Cells[6].Value = fadateTimeDueDate.SelectedDateTime;
                 newRow.Cells[7].Value = formKoodrizi.Koodrizi_model.Adl;
                 dataGridFinalKood.Rows.Add(newRow);
-
             }
-
         }
 
 
