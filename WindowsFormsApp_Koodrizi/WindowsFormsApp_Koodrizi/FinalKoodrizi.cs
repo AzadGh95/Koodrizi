@@ -159,9 +159,17 @@ namespace WindowsFormsApp_Koodrizi
 
         private void BtnCalculateKood_Click(object sender, EventArgs e)
         {
+            //صفر کردن تمامی داده ها و محاسبه از اول
+            sumPrice = 0;
+            sumWeight = 0;
+            sumOunce = 0;
+            sumPercentRoyat = 0;
+            sumDahanBst = 0;
+
             btnSave.Enabled = true;
             detailkoods.Clear();
-            btnCalculateKood.Enabled = false;
+            btnCalculateKood.Enabled = true;
+            //btnCalculateKood.Enabled = false;
             btnClear.Enabled = false;
             double priceOunce = double.Parse(txtOuncePrice.Text);
             double priceDahanBast = double.Parse(txtDahanBastprice.Text);
@@ -169,7 +177,7 @@ namespace WindowsFormsApp_Koodrizi
             numberKood = txtKoodNumber.Text;
             dateTimeKood = faDateKoodFinal.SelectedDateTime;
             //ounceKood = double.Parse(txtKoodOnc.Text);
-            priceKood = decimal.Parse(txPriceperkilo.Text);
+            priceKood = decimal.Parse(txPriceperkilo.Text);//****
 
             for (int i = 0; i < dataGridFinalKood.RowCount; i++)
             {
