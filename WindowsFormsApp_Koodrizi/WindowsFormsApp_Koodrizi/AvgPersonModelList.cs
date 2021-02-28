@@ -14,6 +14,9 @@ using WindowsFormsApp_Koodrizi.Repositories;
 
 namespace WindowsFormsApp_Koodrizi
 {
+    /// <summary>
+    /// نمایش لیست راس گیری براساس کودریزی های انتخاب شده
+    /// </summary>
     public partial class AvgPersonModelList : Form
     {
 

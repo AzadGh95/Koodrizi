@@ -14,6 +14,9 @@ using WindowsFormsApp_Koodrizi.Repositories;
 
 namespace WindowsFormsApp_Koodrizi
 {
+    /// <summary>
+    /// لیست بار مشتریان
+    /// </summary>
     public partial class ListBarPerson : Form
     {
         PersonRepository _personRepository = new PersonRepository();

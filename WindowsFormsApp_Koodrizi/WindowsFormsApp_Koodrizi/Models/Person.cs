@@ -9,6 +9,10 @@ using System.ComponentModel.DataAnnotations.Schema;
 
 namespace WindowsFormsApp_Koodrizi.Models
 {
+
+    /// <summary>
+    /// Delete
+    /// </summary>
     public class Person
     {
         public Person()

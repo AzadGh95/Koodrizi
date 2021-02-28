@@ -9,6 +9,9 @@ using System.ComponentModel.DataAnnotations.Schema;
 
 namespace WindowsFormsApp_Koodrizi.Models
 {
+    /// <summary>
+    /// مشتری ها
+    /// </summary>
     public class PersonModel
     {
         public PersonModel()

@@ -9,6 +9,9 @@ using System.Threading.Tasks;
 
 namespace WindowsFormsApp_Koodrizi.Models
 {
+    /// <summary>
+    /// Delete
+    /// </summary>
     public class Bar
     {
         public Bar()

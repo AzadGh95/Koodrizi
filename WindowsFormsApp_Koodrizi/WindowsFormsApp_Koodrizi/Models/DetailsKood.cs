@@ -8,6 +8,9 @@ using System.Threading.Tasks;
 
 namespace WindowsFormsApp_Koodrizi.Models
 {
+    /// <summary>
+    /// Delete
+    /// </summary>
     public class DetailsKood
     {
         public DetailsKood()

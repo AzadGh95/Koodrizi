@@ -14,7 +14,9 @@ using WindowsFormsApp_Koodrizi.Repositories;
 
 namespace WindowsFormsApp_Koodrizi
 {
-
+    /// <summary>
+    /// لیست جزئیات کودریزی
+    /// </summary>
     public partial class DetailFinalKoodrizi : Form
     {
         FinalKoodriziRepository _finalKoodriziRepository = new FinalKoodriziRepository();

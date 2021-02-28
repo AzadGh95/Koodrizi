@@ -6,6 +6,9 @@ using System.Threading.Tasks;
 
 namespace WindowsFormsApp_Koodrizi.Models
 {
+    /// <summary>
+    /// مدل موقت برای محاسبات کودریزی
+    /// </summary>
     public class PersonsKood
     {
         public DateTime DueDate { get; set; }

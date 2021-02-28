@@ -9,6 +9,9 @@ using System.Threading.Tasks;
 
 namespace WindowsFormsApp_Koodrizi.Models
 {
+    /// <summary>
+    /// لیست بار های مشتریان
+    /// </summary>
     public class BarModel
     {
         public BarModel()

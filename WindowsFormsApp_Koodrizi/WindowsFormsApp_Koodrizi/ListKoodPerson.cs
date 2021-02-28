@@ -14,6 +14,9 @@ using WindowsFormsApp_Koodrizi.Repositories;
 
 namespace WindowsFormsApp_Koodrizi
 {
+    /// <summary>
+    /// لیست کودهای متعلق به مشتریان
+    /// </summary>
     public partial class ListKoodPerson : Form
     {
         PersonRepository _personRepository = new PersonRepository();

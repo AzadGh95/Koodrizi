@@ -5,6 +5,9 @@ using WindowsFormsApp_Koodrizi.Repositories;
 
 namespace WindowsFormsApp_Koodrizi
 {
+    /// <summary>
+    /// مشتری جدید
+    /// </summary>
     public partial class Customer : Form
     {
 

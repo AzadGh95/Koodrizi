@@ -8,6 +8,9 @@ using System.Threading.Tasks;
 
 namespace WindowsFormsApp_Koodrizi.Models
 {
+    /// <summary>
+    /// کودریزی نهایی
+    /// </summary>
     public class FinalKoodriziModel
     {
         public FinalKoodriziModel()

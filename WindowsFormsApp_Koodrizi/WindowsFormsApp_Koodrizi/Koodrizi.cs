@@ -11,6 +11,9 @@ using WindowsFormsApp_Koodrizi.Repositories;
 
 namespace WindowsFormsApp_Koodrizi
 {
+    /// <summary>
+    /// افزودن جزئیات برای کودریزی
+    /// </summary>
     public partial class Koodrizi : Form
     {
         private KoodriziRepository _koodriziRepo = new KoodriziRepository();

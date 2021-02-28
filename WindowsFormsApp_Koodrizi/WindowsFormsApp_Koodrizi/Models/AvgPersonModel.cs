@@ -10,6 +10,9 @@ namespace WindowsFormsApp_Koodrizi.Models
 {
     public class AvgPersonModel
     {
+        /// <summary>
+        /// نمایش لیست راس گیری بر اساس کودریزی ها انتخاب شده
+        /// </summary>
         public AvgPersonModel()
         {
             CreatDate = DateTime.UtcNow;

@@ -10,6 +10,9 @@ using System.Windows.Forms;
 
 namespace WindowsFormsApp_Koodrizi
 {
+    /// <summary>
+    /// خانه
+    /// </summary>
     public partial class Home : Form
     {
         public Home()

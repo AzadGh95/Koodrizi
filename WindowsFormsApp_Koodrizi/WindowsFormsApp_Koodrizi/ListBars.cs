@@ -8,6 +8,9 @@ using WindowsFormsApp_Koodrizi.Repositories;
 
 namespace WindowsFormsApp_Koodrizi
 {
+    /// <summary>
+    /// لیست بارها
+    /// </summary>
     public partial class ListBars : Form
     {
         private PersonRepository _personRepository = new PersonRepository();

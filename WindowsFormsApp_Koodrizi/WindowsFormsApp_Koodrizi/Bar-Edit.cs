@@ -13,6 +13,9 @@ using WindowsFormsApp_Koodrizi.Repositories;
 
 namespace WindowsFormsApp_Koodrizi
 {
+    /// <summary>
+    /// ویرایش بار مشتریان
+    /// </summary>
     public partial class Bar_Edit : Form
     {
         public Bar_Edit()

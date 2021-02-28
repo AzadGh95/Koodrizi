@@ -12,6 +12,9 @@ using WindowsFormsApp_Koodrizi.Repositories;
 
 namespace WindowsFormsApp_Koodrizi
 {
+    /// <summary>
+    /// ویرایش مشتری
+    /// </summary>
     public partial class Customer_Edit : Form
     {
         public int PersonID { get; set; }

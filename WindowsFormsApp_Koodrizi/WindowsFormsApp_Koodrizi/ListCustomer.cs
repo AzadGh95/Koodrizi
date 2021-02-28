@@ -13,6 +13,9 @@ using WindowsFormsApp_Koodrizi.Repositories;
 
 namespace WindowsFormsApp_Koodrizi
 {
+    /// <summary>
+    /// لیست مشتریان
+    /// </summary>
     public partial class ListCustomer : Form
     {
 

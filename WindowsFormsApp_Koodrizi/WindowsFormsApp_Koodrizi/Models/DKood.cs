@@ -8,6 +8,9 @@ using System.Threading.Tasks;
 
 namespace WindowsFormsApp_Koodrizi.Models
 {
+    /// <summary>
+    /// جزئیات کودریزی
+    /// </summary>
     public class DKood
     {
         public DKood()

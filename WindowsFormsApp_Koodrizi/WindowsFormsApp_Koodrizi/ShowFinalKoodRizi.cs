@@ -11,6 +11,9 @@ using WindowsFormsApp_Koodrizi.Repositories;
 
 namespace WindowsFormsApp_Koodrizi
 {
+    /// <summary>
+    /// نمایش کودریزی 
+    /// </summary>
     public partial class ShowFinalKoodRizi : Form
     {
         public ShowFinalKoodRizi()

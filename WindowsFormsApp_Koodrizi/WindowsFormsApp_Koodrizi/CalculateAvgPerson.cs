@@ -13,23 +13,9 @@ using WindowsFormsApp_Koodrizi.Repositories;
 
 namespace WindowsFormsApp_Koodrizi
 {
-    //0
-    //شماره کودریزی
-
-    //1
-    //نام کودریزی
-
-    //2
-    //ArrivedDate
-
-    //3
-    //تاریخ سررسید
-
-    //4
-    //وزن
-
-    //5
-    //قیمت هرکیلو
+    /// <summary>
+    /// محاسبه ی کودریزی براساس به کودریزی انتخابی
+    /// </summary>
     public partial class CalculateAvgPerson : Form
     {
         private KoodriziRepository _koodriziRepo = new KoodriziRepository();
@@ -157,7 +143,7 @@ namespace WindowsFormsApp_Koodrizi
             {
                 var a = int.Parse(dataGridView1
                     .Rows[i].Cells[0].Value.ToString());
-               bool r = _koodriziRepo.AddAvg(koodId, Program.PersonId);
+                bool r = _koodriziRepo.AddAvg(koodId, Program.PersonId);
                 if (!r)
                 {
                     MessageBox.Show("خطا در انجام ذخیره سازی");

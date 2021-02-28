@@ -8,6 +8,7 @@ using System.Threading.Tasks;
 
 namespace WindowsFormsApp_Koodrizi.Models
 {
+    //Delete
     public class FinalKoodrizi
     {
         public FinalKoodrizi()

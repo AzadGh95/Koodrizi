@@ -13,6 +13,9 @@ using WindowsFormsApp_Koodrizi.Repositories;
 
 namespace WindowsFormsApp_Koodrizi
 {
+    /// <summary>
+    /// کودریزی نهایی
+    /// </summary>
     public partial class FinallKoodrizi : Form
     {
         public int BarId;
