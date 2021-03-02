@@ -36,14 +36,14 @@ namespace WindowsFormsApp_Koodrizi
             var person = _personRepo.People(Program.PersonId);
             var koods = _finalKoodriziRepo.FinalKoodrizis();
 
-            koods.Where(x => x.DetailKoodrizis
+          var kooddetai=  koods.Where(x => x.DetailKoodrizis
             .Any(y => y.Bar.Person.PersonId == Program.PersonId));
 
-            foreach (var item in koods)
+            foreach (var item in kooddetai)
             {
                 foreach (var item2 in item.DetailKoodrizis)
                 {
-                    var listDetailsKood = comboListDetailKoods.Items.Add(
+                    comboListDetailKoods.Items.Add(
                     item2.DId + "-" +
                     "شماره : " + item.KoodNumber +
                     " , نام کودریزی: " + item.KoodName +

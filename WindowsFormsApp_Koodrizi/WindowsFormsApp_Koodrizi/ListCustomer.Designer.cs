@@ -74,7 +74,7 @@
             // 
             this.btnNewCustomer.Location = new System.Drawing.Point(12, 12);
             this.btnNewCustomer.Name = "btnNewCustomer";
-            this.btnNewCustomer.Size = new System.Drawing.Size(94, 32);
+            this.btnNewCustomer.Size = new System.Drawing.Size(215, 32);
             this.btnNewCustomer.TabIndex = 1;
             this.btnNewCustomer.Text = "مشتری جدید";
             this.btnNewCustomer.UseVisualStyleBackColor = true;
@@ -89,9 +89,11 @@
             // 
             // code
             // 
+            this.code.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader;
             this.code.HeaderText = "کدمشتری";
             this.code.Name = "code";
             this.code.ReadOnly = true;
+            this.code.Width = 77;
             // 
             // name
             // 
@@ -165,7 +167,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 19F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1041, 492);
+            this.ClientSize = new System.Drawing.Size(1037, 492);
             this.Controls.Add(this.btnNewCustomer);
             this.Controls.Add(this.dataGridListCustomer);
             this.Font = new System.Drawing.Font("Vazir FD", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));

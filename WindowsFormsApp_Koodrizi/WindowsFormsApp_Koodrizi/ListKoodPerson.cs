@@ -36,11 +36,11 @@ namespace WindowsFormsApp_Koodrizi
         private void ListBarCustomer_Load(object sender, EventArgs e)
         {
             var person = _personRepository.People(Program.PersonId);
-            lblCustomerName.Text = person.Name + " - " + person.Code ;
+            lblCustomerName.Text = person.Name + " - " + person.Code;
             var koods = _finalKoodriziRepository.FinalKoodrizis();
-            koods.Where(x => x.DetailKoodrizis
-            .Any(y => y.Bar.Person.PersonId == Program.PersonId));
-            foreach (var item1 in koods)
+            var kooddetail = koods.Where(x => x.DetailKoodrizis
+              .Any(y => y.Bar.Person.PersonId == Program.PersonId));
+            foreach (var item1 in kooddetail)
             {
                 foreach (var item2 in item1.DetailKoodrizis)
                 {

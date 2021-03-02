@@ -29,7 +29,6 @@ namespace WindowsFormsApp_Koodrizi
             InitializeComponent();
         }
 
-
         private void ListCustomer_Load(object sender, EventArgs e)
         {
             //int row = 1;
@@ -39,8 +38,6 @@ namespace WindowsFormsApp_Koodrizi
                     PersianDateConverter.ToPersianDate(prop.BaseDate).ToString("yyyy/MM/dd"),
                     PersianDateConverter.ToPersianDate(prop.AvgDate).ToString("yyyy/MM/dd"));
         }
-
-
 
         private void DataGridListCustomer_CellContentClick_1(object sender, DataGridViewCellEventArgs e)
         {
@@ -68,7 +65,7 @@ namespace WindowsFormsApp_Koodrizi
             }
             if (e.ColumnIndex == 6)
             {
-                var pId = int.Parse(dataGridListCustomer.Rows[e.RowIndex].Cells[0].Value.ToString());//use in both ways
+                Program.PersonId = int.Parse(dataGridListCustomer.Rows[e.RowIndex].Cells[0].Value.ToString());//use in both ways
 
                 //way-1
                 AvgPersonModelList form = new AvgPersonModelList();
@@ -94,8 +91,8 @@ namespace WindowsFormsApp_Koodrizi
             }
             if (e.ColumnIndex == 8)
             {
-                var pId = int.Parse(dataGridListCustomer.Rows[e.RowIndex].Cells[0].Value.ToString());
-                Program.PersonId = pId;
+               
+                Program.PersonId = int.Parse(dataGridListCustomer.Rows[e.RowIndex].Cells[0].Value.ToString());
 
                 Customer_Edit formCustomer = new Customer_Edit();
                 formCustomer.Show();
@@ -105,15 +102,15 @@ namespace WindowsFormsApp_Koodrizi
             {
                 Program.PersonId = int.Parse(dataGridListCustomer.Rows[e.RowIndex].Cells[0].Value.ToString());
 
-                ListKoodPerson listBarCustomer = new ListKoodPerson();
-                listBarCustomer.Show();
+                ListKoodPerson form = new ListKoodPerson();
+                form.Show();
             }
             if (e.ColumnIndex == 10)
             {
                 Program.PersonId = int.Parse(dataGridListCustomer.Rows[e.RowIndex].Cells[0].Value.ToString());
 
-                ListBarPerson listBarPerson = new ListBarPerson();
-                listBarPerson.Show();
+                ListBarPerson form = new ListBarPerson();
+                form.Show();
             }
 
         }
