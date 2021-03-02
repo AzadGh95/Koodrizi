@@ -234,7 +234,7 @@ namespace WindowsFormsApp_Koodrizi
             }
 
             lblTotalPrice.Text = sumPrice.ToString("#,###");
-            lblTtalOunce.Text = sumOunce.ToString();
+            lblTtalOunce.Text = sumOunce.ToString("#.##");
             lblTotalWeight.Text = sumWeight.ToString("#.##");
 
         }

@@ -170,6 +170,7 @@
             this.comboType.Size = new System.Drawing.Size(121, 27);
             this.comboType.TabIndex = 4;
             this.comboType.Text = "نوع پسته";
+            this.comboType.SelectedIndexChanged += new System.EventHandler(this.ComboType_SelectedIndexChanged);
             // 
             // txtGrams
             // 

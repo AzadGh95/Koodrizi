@@ -29,7 +29,9 @@ namespace WindowsFormsApp_Koodrizi
             var collection = _finalKoodriziRepo.FinalKoodrizis();
             foreach (var item in collection)
             {
-                dataGridView1.Rows.Add(item.KoodNumber, item.KoodName, item.TotalOunce, item.TotalWeight, item.TotalPrice.ToString("#,###"));
+                var o = decimal.Parse(item.TotalOunce).ToString("#.##");
+                dataGridView1.Rows.Add(item.KoodNumber, item.KoodName, o
+                    , item.TotalWeight, item.TotalPrice.ToString("#,###"));
             }
 
         }
@@ -57,13 +59,13 @@ namespace WindowsFormsApp_Koodrizi
                     foreach (var item in finalKood.DetailKoodrizis)
                     {
                         var bar = item.Bar;
-                        bar.AdlRem=bar.AdlRem + item.Adl;
-                        bar.Remaining=bar.Remaining + item.Weight;
+                        bar.AdlRem = bar.AdlRem + item.Adl;
+                        bar.Remaining = bar.Remaining + item.Weight;
                         //update
                         var result1 = _barRepo.Update(bar, bar.BarId);
                         if (!result1)
                         {
-                            MessageBox.Show("حذف با مشکل مواجه شد" , "خطا");
+                            MessageBox.Show("حذف با مشکل مواجه شد", "خطا");
                         }
 
                         //حذف جزئیات

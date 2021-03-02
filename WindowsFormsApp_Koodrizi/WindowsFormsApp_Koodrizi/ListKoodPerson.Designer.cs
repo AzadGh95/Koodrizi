@@ -75,7 +75,7 @@
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
             this.dataGridView1.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.dataGridView1.Size = new System.Drawing.Size(820, 369);
+            this.dataGridView1.Size = new System.Drawing.Size(873, 369);
             this.dataGridView1.TabIndex = 4;
             // 
             // lblCustomerName
@@ -168,7 +168,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 19F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(843, 432);
+            this.ClientSize = new System.Drawing.Size(897, 432);
             this.Controls.Add(this.lblCustomerName);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.button1);

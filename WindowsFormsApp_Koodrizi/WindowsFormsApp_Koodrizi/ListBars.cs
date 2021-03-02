@@ -77,7 +77,7 @@ namespace WindowsFormsApp_Koodrizi
                 dataGridListBars.Rows.Add(prop.BarId, prop.Person.Name,
                     PersianDateConverter.ToPersianDate(prop.CreateDate).ToString("yyyy/MM/dd"),
                     prop.Remaining, prop.TotalWeight, prop.DhanBast,
-                    prop.Gram, prop.Ounce, prop.Adl);
+                    prop.Gram, prop.Ounce.ToString("#.##"), prop.Adl);
         }
 
         private void BtnShwKhandan_Click(object sender, EventArgs e)
@@ -90,7 +90,7 @@ namespace WindowsFormsApp_Koodrizi
                     dataGridListBars.Rows.Add(prop.BarId, prop.Person.Name,
                         PersianDateConverter.ToPersianDate(prop.CreateDate).ToString("yyyy/MM/dd"),
                         prop.Remaining, prop.TotalWeight, prop.DhanBast,
-                        prop.Gram, prop.Ounce, prop.Adl);
+                        prop.Gram, prop.Ounce.ToString("#.##"), prop.Adl);
                 }
         }
 
@@ -104,7 +104,7 @@ namespace WindowsFormsApp_Koodrizi
                     dataGridListBars.Rows.Add(prop.BarId, prop.Person.Name,
                         PersianDateConverter.ToPersianDate(prop.CreateDate).ToString("yyyy/MM/dd"),
                         prop.Remaining, prop.TotalWeight, prop.DhanBast,
-                        prop.Gram, prop.Ounce, prop.Adl);
+                        prop.Gram, prop.Ounce.ToString("#.##"), prop.Adl);
                 }
         }
 
@@ -122,7 +122,7 @@ namespace WindowsFormsApp_Koodrizi
                         DateTime = PersianDateConverter.ToPersianDate(prop.CreateDate).ToString("yyyy/MM/dd"),
                         Gram = prop.Gram,
                         Ounce = prop.Ounce,
-                        RemWeight = prop.Ounce,
+                        RemWeight = prop.Remaining,
                         Weight = prop.TotalWeight,
 
                     });
@@ -157,7 +157,7 @@ namespace WindowsFormsApp_Koodrizi
                         DateTime = PersianDateConverter.ToPersianDate(prop.CreateDate).ToString("yyyy/MM/dd"),
                         Gram = prop.Gram,
                         Ounce = prop.Ounce,
-                        RemWeight = prop.Ounce,
+                        RemWeight = prop.Remaining,
                         Weight = prop.TotalWeight,
 
                     });
@@ -192,7 +192,7 @@ namespace WindowsFormsApp_Koodrizi
                         DateTime = PersianDateConverter.ToPersianDate(prop.CreateDate).ToString("yyyy/MM/dd") ,
                         Gram = prop.Gram,
                         Ounce = prop.Ounce,
-                        RemWeight = prop.Ounce,
+                        RemWeight = prop.Remaining,
                         Weight = prop.TotalWeight,
 
                     });

@@ -130,6 +130,7 @@ namespace WindowsFormsApp_Koodrizi
                 "احمدآقایی",
                 "فندقی",
                 "اکبری",
+                "بادامی",
             };
 
                 foreach (var pistah in listPistachio)
@@ -167,6 +168,11 @@ namespace WindowsFormsApp_Koodrizi
         }
 
         private void FaDataTimeCreateDate_SelectedDateTimeChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void ComboType_SelectedIndexChanged(object sender, EventArgs e)
         {
 
         }

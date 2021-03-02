@@ -42,7 +42,7 @@ namespace WindowsFormsApp_Koodrizi
                 dataGridView1.Rows.Add(
                        PersianDateConverter.ToPersianDate(item2.CreateDate).ToString("yyyy/MM/dd"),
                        item2.TotalWeight , item2.Remaining , item2.DhanBast , item2.Gram,
-                       item2.Ounce , item2.Adl
+                       item2.Ounce.ToString("#.##"), item2.Adl
                     );
             }
         }

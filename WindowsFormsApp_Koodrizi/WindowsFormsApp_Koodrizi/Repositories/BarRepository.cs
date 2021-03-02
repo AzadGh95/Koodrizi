@@ -99,12 +99,13 @@ namespace WindowsFormsApp_Koodrizi.Repositories
         }
         public List<BarModel> SearchBar(double weight1,
             double weight2, double ounce1, double ounce2,
-            double adl1,double adl2, double gram1,double gram2,
-             double dahanbast1,double dahanbast2, string code)
+            double adl1, double adl2, double gram1, double gram2,
+             double dahanbast1, double dahanbast2, string code)
         {
             var bars =
             _baseContext.BarModels
                 .Where(x => x.IsLock == false)
+                .Where(x => x.Remaining != 0)
                 .Where(x => weight2 == 0 || (x.Remaining >= weight1 && x.Remaining <= weight2))
                 .Where(x => ounce2 == 0 || (x.Ounce >= ounce1 && x.Ounce <= ounce2))
                 .Where(x => gram2 == 0 || (x.Gram >= gram1 && x.Gram <= gram2))

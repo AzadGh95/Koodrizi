@@ -50,7 +50,7 @@ namespace WindowsFormsApp_Koodrizi
                         PersianDateConverter.ToPersianDate(item2.ArrivedDate)
                         .ToString("yyyy/MM/dd"),
                         item2.Weight, item2.PercentRoyat, item2.Bar.DhanBast,
-                        item2.Bar.Gram, item2.Bar.Ounce, item2.Bar.Adl,
+                        item2.Bar.Gram, item2.Bar.Ounce.ToString("#.##"), item2.Bar.Adl,
                         item2.Price.ToString("#,###"), ((double)item2.Price * item2.Weight).ToString("#,###"));
                 }
             }

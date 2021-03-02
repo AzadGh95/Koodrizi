@@ -381,9 +381,11 @@
             // 
             // IdBar
             // 
+            this.IdBar.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader;
             this.IdBar.HeaderText = "شماره بار";
             this.IdBar.Name = "IdBar";
             this.IdBar.ReadOnly = true;
+            this.IdBar.Width = 73;
             // 
             // Customer
             // 
