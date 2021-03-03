@@ -47,7 +47,7 @@ namespace WindowsFormsApp_Koodrizi
             if (e.ColumnIndex == 5)
             {
                 //حذف
-                var numberFinalKood = int.Parse(dataGridView1.Rows[e.RowIndex].Cells[1].Value.ToString());
+                var numberFinalKood = dataGridView1.Rows[e.RowIndex].Cells["gridNumber"].Value.ToString();
                 var text = "آیا مطمئن هستید که میخواهید " + numberFinalKood + " را حذف کنید ؟";
                 DialogResult message;
                 message = MessageBox.Show(text, "هشدار", MessageBoxButtons.YesNo);
