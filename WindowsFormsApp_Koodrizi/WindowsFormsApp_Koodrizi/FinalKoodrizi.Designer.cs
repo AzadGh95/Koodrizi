@@ -57,15 +57,15 @@
             this.fadateTimeSell = new FarsiLibrary.Win.Controls.FADatePicker();
             this.label12 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
-            this.IdBar = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Customer = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Weight = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Onc = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.PercentRoyat = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Saledate = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.DateDue = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.adl = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.GridIdBar = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.GridCustomer = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.GridDahanBast = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.GridWeight = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.GridOnc = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.GridPercentRoyat = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.GridSaledate = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.GridDateDue = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.GridAdl = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.gridElementPrice = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.GridTotalPrice = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridFinalKood)).BeginInit();
@@ -146,15 +146,15 @@
             this.dataGridFinalKood.AllowUserToAddRows = false;
             this.dataGridFinalKood.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridFinalKood.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.IdBar,
-            this.Customer,
-            this.Column1,
-            this.Weight,
-            this.Onc,
-            this.PercentRoyat,
-            this.Saledate,
-            this.DateDue,
-            this.adl,
+            this.GridIdBar,
+            this.GridCustomer,
+            this.GridDahanBast,
+            this.GridWeight,
+            this.GridOnc,
+            this.GridPercentRoyat,
+            this.GridSaledate,
+            this.GridDateDue,
+            this.GridAdl,
             this.gridElementPrice,
             this.GridTotalPrice});
             this.dataGridFinalKood.Location = new System.Drawing.Point(22, 136);
@@ -379,69 +379,69 @@
             this.label11.TabIndex = 33;
             this.label11.Text = "تاریخ فروش";
             // 
-            // IdBar
+            // GridIdBar
             // 
-            this.IdBar.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader;
-            this.IdBar.HeaderText = "شماره بار";
-            this.IdBar.Name = "IdBar";
-            this.IdBar.ReadOnly = true;
-            this.IdBar.Width = 73;
+            this.GridIdBar.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader;
+            this.GridIdBar.HeaderText = "شماره بار";
+            this.GridIdBar.Name = "GridIdBar";
+            this.GridIdBar.ReadOnly = true;
+            this.GridIdBar.Width = 73;
             // 
-            // Customer
+            // GridCustomer
             // 
-            this.Customer.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.Customer.HeaderText = "مشتری";
-            this.Customer.Name = "Customer";
-            this.Customer.ReadOnly = true;
+            this.GridCustomer.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.GridCustomer.HeaderText = "مشتری";
+            this.GridCustomer.Name = "GridCustomer";
+            this.GridCustomer.ReadOnly = true;
             // 
-            // Column1
+            // GridDahanBast
             // 
-            this.Column1.HeaderText = "دهن بست";
-            this.Column1.Name = "Column1";
-            this.Column1.ReadOnly = true;
+            this.GridDahanBast.HeaderText = "دهن بست";
+            this.GridDahanBast.Name = "GridDahanBast";
+            this.GridDahanBast.ReadOnly = true;
             // 
-            // Weight
+            // GridWeight
             // 
-            this.Weight.HeaderText = "وزن";
-            this.Weight.Name = "Weight";
-            this.Weight.ReadOnly = true;
+            this.GridWeight.HeaderText = "وزن";
+            this.GridWeight.Name = "GridWeight";
+            this.GridWeight.ReadOnly = true;
             // 
-            // Onc
+            // GridOnc
             // 
-            this.Onc.HeaderText = "انس";
-            this.Onc.Name = "Onc";
-            this.Onc.ReadOnly = true;
-            this.Onc.Width = 50;
+            this.GridOnc.HeaderText = "انس";
+            this.GridOnc.Name = "GridOnc";
+            this.GridOnc.ReadOnly = true;
+            this.GridOnc.Width = 50;
             // 
-            // PercentRoyat
+            // GridPercentRoyat
             // 
-            this.PercentRoyat.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader;
-            this.PercentRoyat.HeaderText = "درصد رویت";
-            this.PercentRoyat.Name = "PercentRoyat";
-            this.PercentRoyat.ReadOnly = true;
-            this.PercentRoyat.Width = 83;
+            this.GridPercentRoyat.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader;
+            this.GridPercentRoyat.HeaderText = "درصد رویت";
+            this.GridPercentRoyat.Name = "GridPercentRoyat";
+            this.GridPercentRoyat.ReadOnly = true;
+            this.GridPercentRoyat.Width = 83;
             // 
-            // Saledate
+            // GridSaledate
             // 
-            this.Saledate.HeaderText = "تاریخ فروش";
-            this.Saledate.Name = "Saledate";
-            this.Saledate.ReadOnly = true;
-            this.Saledate.Visible = false;
+            this.GridSaledate.HeaderText = "تاریخ فروش";
+            this.GridSaledate.Name = "GridSaledate";
+            this.GridSaledate.ReadOnly = true;
+            this.GridSaledate.Visible = false;
             // 
-            // DateDue
+            // GridDateDue
             // 
-            this.DateDue.HeaderText = "تاریخ سررسید";
-            this.DateDue.Name = "DateDue";
-            this.DateDue.ReadOnly = true;
-            this.DateDue.Visible = false;
+            this.GridDateDue.HeaderText = "تاریخ سررسید";
+            this.GridDateDue.Name = "GridDateDue";
+            this.GridDateDue.ReadOnly = true;
+            this.GridDateDue.Visible = false;
             // 
-            // adl
+            // GridAdl
             // 
-            this.adl.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader;
-            this.adl.HeaderText = "عدل";
-            this.adl.Name = "adl";
-            this.adl.ReadOnly = true;
-            this.adl.Width = 54;
+            this.GridAdl.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader;
+            this.GridAdl.HeaderText = "عدل";
+            this.GridAdl.Name = "GridAdl";
+            this.GridAdl.ReadOnly = true;
+            this.GridAdl.Width = 54;
             // 
             // gridElementPrice
             // 
@@ -530,15 +530,15 @@
         private FarsiLibrary.Win.Controls.FADatePicker fadateTimeSell;
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.Label label11;
-        private System.Windows.Forms.DataGridViewTextBoxColumn IdBar;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Customer;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Weight;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Onc;
-        private System.Windows.Forms.DataGridViewTextBoxColumn PercentRoyat;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Saledate;
-        private System.Windows.Forms.DataGridViewTextBoxColumn DateDue;
-        private System.Windows.Forms.DataGridViewTextBoxColumn adl;
+        private System.Windows.Forms.DataGridViewTextBoxColumn GridIdBar;
+        private System.Windows.Forms.DataGridViewTextBoxColumn GridCustomer;
+        private System.Windows.Forms.DataGridViewTextBoxColumn GridDahanBast;
+        private System.Windows.Forms.DataGridViewTextBoxColumn GridWeight;
+        private System.Windows.Forms.DataGridViewTextBoxColumn GridOnc;
+        private System.Windows.Forms.DataGridViewTextBoxColumn GridPercentRoyat;
+        private System.Windows.Forms.DataGridViewTextBoxColumn GridSaledate;
+        private System.Windows.Forms.DataGridViewTextBoxColumn GridDateDue;
+        private System.Windows.Forms.DataGridViewTextBoxColumn GridAdl;
         private System.Windows.Forms.DataGridViewTextBoxColumn gridElementPrice;
         private System.Windows.Forms.DataGridViewTextBoxColumn GridTotalPrice;
     }

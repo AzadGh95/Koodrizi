@@ -186,12 +186,12 @@ namespace WindowsFormsApp_Koodrizi
             {
                 detailkoods.Add(new Models.DKood()
                 {
-                    BarId = int.Parse(dataGridFinalKood.Rows[i].Cells[0].Value.ToString()),
-                    Weight = double.Parse(dataGridFinalKood.Rows[i].Cells[3].Value.ToString()),//e
-                    PercentRoyat = double.Parse(dataGridFinalKood.Rows[i].Cells[5].Value.ToString()),//e
-                    SellDate = DateTime.Parse(dataGridFinalKood.Rows[i].Cells[6].Value.ToString()),//e
-                    ArrivedDate = DateTime.Parse(dataGridFinalKood.Rows[i].Cells[7].Value.ToString()),//e
-                    Adl = double.Parse(dataGridFinalKood.Rows[i].Cells[8].Value.ToString()),//e
+                    BarId = int.Parse(dataGridFinalKood.Rows[i].Cells["GridIdBar"].Value.ToString()),
+                    Weight = double.Parse(dataGridFinalKood.Rows[i].Cells["GridWeight"].Value.ToString()),//e
+                    PercentRoyat = double.Parse(dataGridFinalKood.Rows[i].Cells["GridPercentRoyat"].Value.ToString()),//e
+                    SellDate = DateTime.Parse(dataGridFinalKood.Rows[i].Cells["GridSaledate"].Value.ToString()),//e
+                    ArrivedDate = DateTime.Parse(dataGridFinalKood.Rows[i].Cells["GridDateDue"].Value.ToString()),//e
+                    Adl = double.Parse(dataGridFinalKood.Rows[i].Cells["GridAdl"].Value.ToString()),//e
                 });
             }
             ////////محاسبه
@@ -224,8 +224,8 @@ namespace WindowsFormsApp_Koodrizi
                 var priceElement = CalculateKoodRizi(basePriceCalculate, item.PercentRoyat, sumOunce,
                      sumDahanBst, bar.Ounce, bar.DhanBast, priceOunce, priceDahanBast);
                 item.Price = (decimal)priceElement;
-                dataGridFinalKood.Rows[j].Cells[9].Value = priceElement.ToString("#,###0");//e
-                dataGridFinalKood.Rows[j].Cells[10].Value = (item.Weight * priceElement).ToString("#,###0");//e
+                dataGridFinalKood.Rows[j].Cells["gridElementPrice"].Value = priceElement.ToString("#,###0");//e
+                dataGridFinalKood.Rows[j].Cells["GridTotalPrice"].Value = (item.Weight * priceElement).ToString("#,###0");//e
                 j++;
 
 
