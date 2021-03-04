@@ -257,6 +257,7 @@ namespace WindowsFormsApp_Koodrizi
                 ((double)bacePriceCalculate - ((ounce - baceOunce) * priceOunce)
                 +
                 ((baseDahanBast - dahanBast) * priceDahanBast));
+
             return price;
         }
     }
