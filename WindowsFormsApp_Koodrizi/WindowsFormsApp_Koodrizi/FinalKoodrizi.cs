@@ -70,7 +70,7 @@ namespace WindowsFormsApp_Koodrizi
             txtKoodNumber.Text = "K-" + DateTime.UtcNow.ToString("dMmss");
             btnSave.Enabled = false;
             txtKoodNumber.Enabled = false;
-            
+
         }
 
         private void Label5_Click(object sender, EventArgs e)
@@ -204,10 +204,10 @@ namespace WindowsFormsApp_Koodrizi
             foreach (var item in detailkoods)
             {
                 var bar = _barRepository.Bar(item.BarId);
-                item.Zarib = Zarib(detailkoods, item.Weight);
-                item.BaseOunce = bar.Ounce * item.Zarib;
-                item.BaseDahanBast = bar.DhanBast * item.Zarib;
-                item.BasePercentRoyat = item.PercentRoyat * item.Zarib;
+                item.Zarib = Math.Round(Zarib(detailkoods, item.Weight) * 100) / 100;
+                item.BaseOunce = Math.Round(bar.Ounce * item.Zarib * 100) / 100;
+                item.BaseDahanBast = Math.Round(bar.DhanBast * item.Zarib * 100) / 100;
+                item.BasePercentRoyat = Math.Round(item.PercentRoyat * item.Zarib * 100) / 100;
 
                 sumPercentRoyat += item.BasePercentRoyat;
                 sumWeight += item.Weight;
@@ -228,9 +228,7 @@ namespace WindowsFormsApp_Koodrizi
                 dataGridFinalKood.Rows[j].Cells["GridTotalPrice"].Value = (item.Weight * priceElement).ToString("#,###0");//e
                 j++;
 
-
                 sumPrice += (item.Weight * priceElement);
-
             }
 
             lblTotalPrice.Text = sumPrice.ToString("#,###");
