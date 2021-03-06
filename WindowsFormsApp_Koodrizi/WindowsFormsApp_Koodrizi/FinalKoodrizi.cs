@@ -199,15 +199,13 @@ namespace WindowsFormsApp_Koodrizi
             //انس پایه
 
             int j = 0;
-
-
             foreach (var item in detailkoods)
             {
                 var bar = _barRepository.Bar(item.BarId);
-                item.Zarib = Math.Round(Zarib(detailkoods, item.Weight) * 100) / 100;
-                item.BaseOunce = Math.Round(bar.Ounce * item.Zarib * 100) / 100;
-                item.BaseDahanBast = Math.Round(bar.DhanBast * item.Zarib * 100) / 100;
-                item.BasePercentRoyat = Math.Round(item.PercentRoyat * item.Zarib * 100) / 100;
+                item.Zarib = Zarib(detailkoods, item.Weight);
+                item.BaseOunce = bar.Ounce * item.Zarib;
+                item.BaseDahanBast = bar.DhanBast * item.Zarib;
+                item.BasePercentRoyat = item.PercentRoyat * item.Zarib;
 
                 sumPercentRoyat += item.BasePercentRoyat;
                 sumWeight += item.Weight;
@@ -256,7 +254,7 @@ namespace WindowsFormsApp_Koodrizi
                 +
                 ((baseDahanBast - dahanBast) * priceDahanBast));
 
-            return price;
+            return Math.Ceiling(price);
         }
     }
 }

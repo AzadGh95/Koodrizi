@@ -37,6 +37,17 @@
             this.txPriceperkilo = new System.Windows.Forms.TextBox();
             this.btnAdd = new System.Windows.Forms.Button();
             this.dataGridFinalKood = new System.Windows.Forms.DataGridView();
+            this.GridIdBar = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.GridCustomer = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.GridDahanBast = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.GridWeight = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.GridOnc = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.GridPercentRoyat = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.GridSaledate = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.GridDateDue = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.GridAdl = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.gridElementPrice = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.GridTotalPrice = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.label5 = new System.Windows.Forms.Label();
             this.btnSave = new System.Windows.Forms.Button();
             this.btnCancel = new System.Windows.Forms.Button();
@@ -57,17 +68,6 @@
             this.fadateTimeSell = new FarsiLibrary.Win.Controls.FADatePicker();
             this.label12 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
-            this.GridIdBar = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.GridCustomer = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.GridDahanBast = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.GridWeight = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.GridOnc = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.GridPercentRoyat = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.GridSaledate = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.GridDateDue = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.GridAdl = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.gridElementPrice = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.GridTotalPrice = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridFinalKood)).BeginInit();
             this.SuspendLayout();
             // 
@@ -166,11 +166,88 @@
             this.dataGridFinalKood.TabIndex = 10;
             this.dataGridFinalKood.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DataGridView1_CellContentClick_1);
             // 
+            // GridIdBar
+            // 
+            this.GridIdBar.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader;
+            this.GridIdBar.HeaderText = "شماره بار";
+            this.GridIdBar.Name = "GridIdBar";
+            this.GridIdBar.ReadOnly = true;
+            this.GridIdBar.Width = 73;
+            // 
+            // GridCustomer
+            // 
+            this.GridCustomer.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.GridCustomer.HeaderText = "مشتری";
+            this.GridCustomer.Name = "GridCustomer";
+            this.GridCustomer.ReadOnly = true;
+            // 
+            // GridDahanBast
+            // 
+            this.GridDahanBast.HeaderText = "دهن بست";
+            this.GridDahanBast.Name = "GridDahanBast";
+            this.GridDahanBast.ReadOnly = true;
+            // 
+            // GridWeight
+            // 
+            this.GridWeight.HeaderText = "وزن";
+            this.GridWeight.Name = "GridWeight";
+            this.GridWeight.ReadOnly = true;
+            // 
+            // GridOnc
+            // 
+            this.GridOnc.HeaderText = "انس";
+            this.GridOnc.Name = "GridOnc";
+            this.GridOnc.ReadOnly = true;
+            this.GridOnc.Width = 50;
+            // 
+            // GridPercentRoyat
+            // 
+            this.GridPercentRoyat.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader;
+            this.GridPercentRoyat.HeaderText = "درصد رویت";
+            this.GridPercentRoyat.Name = "GridPercentRoyat";
+            this.GridPercentRoyat.ReadOnly = true;
+            this.GridPercentRoyat.Width = 83;
+            // 
+            // GridSaledate
+            // 
+            this.GridSaledate.HeaderText = "تاریخ فروش";
+            this.GridSaledate.Name = "GridSaledate";
+            this.GridSaledate.ReadOnly = true;
+            this.GridSaledate.Visible = false;
+            // 
+            // GridDateDue
+            // 
+            this.GridDateDue.HeaderText = "تاریخ سررسید";
+            this.GridDateDue.Name = "GridDateDue";
+            this.GridDateDue.ReadOnly = true;
+            this.GridDateDue.Visible = false;
+            // 
+            // GridAdl
+            // 
+            this.GridAdl.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader;
+            this.GridAdl.HeaderText = "عدل";
+            this.GridAdl.Name = "GridAdl";
+            this.GridAdl.ReadOnly = true;
+            this.GridAdl.Width = 54;
+            // 
+            // gridElementPrice
+            // 
+            this.gridElementPrice.HeaderText = "قیمت هرکیلو";
+            this.gridElementPrice.Name = "gridElementPrice";
+            this.gridElementPrice.ReadOnly = true;
+            // 
+            // GridTotalPrice
+            // 
+            this.GridTotalPrice.HeaderText = "قیمت کل بار";
+            this.GridTotalPrice.Name = "GridTotalPrice";
+            this.GridTotalPrice.ReadOnly = true;
+            this.GridTotalPrice.Width = 130;
+            // 
             // label5
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Vazir FD", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(520, 454);
+            this.label5.Location = new System.Drawing.Point(503, 454);
             this.label5.Name = "label5";
             this.label5.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.label5.Size = new System.Drawing.Size(50, 19);
@@ -216,7 +293,7 @@
             // 
             this.lblTotalPrice.AutoSize = true;
             this.lblTotalPrice.Font = new System.Drawing.Font("Vazir FD", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTotalPrice.Location = new System.Drawing.Point(459, 454);
+            this.lblTotalPrice.Location = new System.Drawing.Point(402, 454);
             this.lblTotalPrice.Name = "lblTotalPrice";
             this.lblTotalPrice.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.lblTotalPrice.Size = new System.Drawing.Size(39, 19);
@@ -321,7 +398,7 @@
             // 
             this.lblTotalWeight.AutoSize = true;
             this.lblTotalWeight.Font = new System.Drawing.Font("Vazir FD", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTotalWeight.Location = new System.Drawing.Point(626, 454);
+            this.lblTotalWeight.Location = new System.Drawing.Point(614, 454);
             this.lblTotalWeight.Name = "lblTotalWeight";
             this.lblTotalWeight.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.lblTotalWeight.Size = new System.Drawing.Size(39, 19);
@@ -378,83 +455,6 @@
             this.label11.Size = new System.Drawing.Size(62, 19);
             this.label11.TabIndex = 33;
             this.label11.Text = "تاریخ فروش";
-            // 
-            // GridIdBar
-            // 
-            this.GridIdBar.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader;
-            this.GridIdBar.HeaderText = "شماره بار";
-            this.GridIdBar.Name = "GridIdBar";
-            this.GridIdBar.ReadOnly = true;
-            this.GridIdBar.Width = 73;
-            // 
-            // GridCustomer
-            // 
-            this.GridCustomer.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.GridCustomer.HeaderText = "مشتری";
-            this.GridCustomer.Name = "GridCustomer";
-            this.GridCustomer.ReadOnly = true;
-            // 
-            // GridDahanBast
-            // 
-            this.GridDahanBast.HeaderText = "دهن بست";
-            this.GridDahanBast.Name = "GridDahanBast";
-            this.GridDahanBast.ReadOnly = true;
-            // 
-            // GridWeight
-            // 
-            this.GridWeight.HeaderText = "وزن";
-            this.GridWeight.Name = "GridWeight";
-            this.GridWeight.ReadOnly = true;
-            // 
-            // GridOnc
-            // 
-            this.GridOnc.HeaderText = "انس";
-            this.GridOnc.Name = "GridOnc";
-            this.GridOnc.ReadOnly = true;
-            this.GridOnc.Width = 50;
-            // 
-            // GridPercentRoyat
-            // 
-            this.GridPercentRoyat.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader;
-            this.GridPercentRoyat.HeaderText = "درصد رویت";
-            this.GridPercentRoyat.Name = "GridPercentRoyat";
-            this.GridPercentRoyat.ReadOnly = true;
-            this.GridPercentRoyat.Width = 83;
-            // 
-            // GridSaledate
-            // 
-            this.GridSaledate.HeaderText = "تاریخ فروش";
-            this.GridSaledate.Name = "GridSaledate";
-            this.GridSaledate.ReadOnly = true;
-            this.GridSaledate.Visible = false;
-            // 
-            // GridDateDue
-            // 
-            this.GridDateDue.HeaderText = "تاریخ سررسید";
-            this.GridDateDue.Name = "GridDateDue";
-            this.GridDateDue.ReadOnly = true;
-            this.GridDateDue.Visible = false;
-            // 
-            // GridAdl
-            // 
-            this.GridAdl.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader;
-            this.GridAdl.HeaderText = "عدل";
-            this.GridAdl.Name = "GridAdl";
-            this.GridAdl.ReadOnly = true;
-            this.GridAdl.Width = 54;
-            // 
-            // gridElementPrice
-            // 
-            this.gridElementPrice.HeaderText = "قیمت هرکیلو";
-            this.gridElementPrice.Name = "gridElementPrice";
-            this.gridElementPrice.ReadOnly = true;
-            // 
-            // GridTotalPrice
-            // 
-            this.GridTotalPrice.HeaderText = "قیمت کل بار";
-            this.GridTotalPrice.Name = "GridTotalPrice";
-            this.GridTotalPrice.ReadOnly = true;
-            this.GridTotalPrice.Width = 130;
             // 
             // FinallKoodrizi
             // 
