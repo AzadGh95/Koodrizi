@@ -80,33 +80,43 @@ namespace WindowsFormsApp_Koodrizi
 
         private void BtnSave_Click(object sender, EventArgs e)
         {
-            //save to db
-            var finalkood = new Models.FinalKoodriziModel()
+            try
             {
-                KoodNumber = txtKoodNumber.Text,
-                KoodName = txtKoodName.Text,
-                TotalOunce = lblTtalOunce.Text,
-                TotalWeight = sumWeight,
-                TotalPrice = (decimal)sumPrice,
-                BasePrice = decimal.Parse(txPriceperkilo.Text),
-                PriceOunce = decimal.Parse(txtOuncePrice.Text),
-                PriceDahanBast = decimal.Parse(txtDahanBastprice.Text),
-            };
+                //save to db
+                var finalkood = new Models.FinalKoodriziModel()
+                {
+                    KoodNumber = txtKoodNumber.Text,
+                    KoodName = txtKoodName.Text,
+                    TotalOunce = lblTtalOunce.Text,
+                    TotalWeight = sumWeight,
+                    TotalPrice = (decimal)sumPrice,
+                    BasePrice = decimal.Parse(txPriceperkilo.Text),
+                    PriceOunce = decimal.Parse(txtOuncePrice.Text),
+                    PriceDahanBast = decimal.Parse(txtDahanBastprice.Text),
+                };
 
-            _finalKoodriziRepo.Insert(finalkood);
+                _finalKoodriziRepo.Insert(finalkood);
 
-            foreach (var item in detailkoods)
-            {
-                item.FinalKoodId = _finalKoodriziRepo.LastIdFinalKoodrizi() /*+ 1*/;
-                _koodriziRepo.Insert(item);
-                var bar = _barRepository.Bar(item.BarId);
-                bar.Remaining -= item.Weight;
-                bar.AdlRem -= item.Adl;
-                _barRepository.Update(bar, item.BarId);
+                foreach (var item in detailkoods)
+                {
+                    item.FinalKoodId = _finalKoodriziRepo.LastIdFinalKoodrizi(txtKoodNumber.Text) /*+ 1*/;
+                    _koodriziRepo.Insert(item);
+                    var bar = _barRepository.Bar(item.BarId);
+                    bar.Remaining -= item.Weight;
+                    bar.AdlRem -= item.Adl;
+                    _barRepository.Update(bar, item.BarId);
+                }
+
+                MessageBox.Show("کودریزی نهایی با موفقیت ثبت شد .");
+                Close();
+
             }
-
-            MessageBox.Show("کودریزی نهایی با موفقیت ثبت شد .");
-            Close();
+            catch (Exception ex)
+            {
+               
+                MessageBox.Show("خطا در ثبت");
+                throw;
+            }
 
         }
 
@@ -214,7 +224,7 @@ namespace WindowsFormsApp_Koodrizi
                 sumDahanBst += item.BaseDahanBast;
             }
             //sumPrice *= sumWeight;
-            basePriceCalculate = (decimal)(double.Parse(txPriceperkilo.Text) * (1 - sumPercentRoyat));
+            basePriceCalculate = (decimal)(double.Parse(txPriceperkilo.Text) * (1 - (sumPercentRoyat / 100)));
 
             foreach (var item in detailkoods)
             {

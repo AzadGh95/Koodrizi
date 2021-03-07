@@ -92,11 +92,11 @@ namespace WindowsFormsApp_Koodrizi.Repositories
                 throw;
             }
         }
-        public int LastIdFinalKoodrizi()
+        public int LastIdFinalKoodrizi(string txtKoodNumber)
         {
             try
             {
-                var f = _baseContext.FinalKoodriziModels.Count();
+                var f = _baseContext.FinalKoodriziModels.Where(x=>x.KoodNumber==txtKoodNumber).FirstOrDefault().FinalKoodId;
                 return f;
             }
             catch (Exception ex)
