@@ -106,7 +106,7 @@ namespace WindowsFormsApp_Koodrizi
             double per = 0;
             foreach (var item in listPersonsKoodModel)
             {
-                per = Math.Ceiling((item.DueDate - Basetime).TotalDays);
+                per = Math.Round((item.DueDate - Basetime).TotalDays);
                 if (per == 0 || per < 0)
                 {
                     per = 1;
@@ -115,7 +115,7 @@ namespace WindowsFormsApp_Koodrizi
                 sum += ((decimal)per * (item.Bedehi));
             }
 
-            var avg = Math.Ceiling(sum / totalBedehi);
+            var avg = Math.Floor(sum / totalBedehi);
             avgdatetime = Basetime.AddDays((int)avg);
             //show in lables
             lblBedehi.Text = totalBedehi.ToString("#,###");
