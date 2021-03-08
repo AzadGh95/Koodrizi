@@ -65,12 +65,13 @@ namespace WindowsFormsApp_Koodrizi
             }
             if (e.ColumnIndex == 6)
             {
+                //محاسبه راس گیری
                 Program.PersonId = int.Parse(dataGridListCustomer.Rows[e.RowIndex].Cells[0].Value.ToString());//use in both ways
 
                 //way-1
                 AvgPersonModelList form = new AvgPersonModelList();
                 form.Show();
-              
+
                 //way-2
                 //var person = _personRepository.People(pId);
                 //ModalBaseTime formBaseTime = new ModalBaseTime();
@@ -91,7 +92,7 @@ namespace WindowsFormsApp_Koodrizi
             }
             if (e.ColumnIndex == 8)
             {
-               
+
                 Program.PersonId = int.Parse(dataGridListCustomer.Rows[e.RowIndex].Cells[0].Value.ToString());
 
                 Customer_Edit formCustomer = new Customer_Edit();

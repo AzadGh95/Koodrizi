@@ -40,13 +40,13 @@
             this.btnCalculateAvg = new System.Windows.Forms.Button();
             this.btnCancel = new System.Windows.Forms.Button();
             this.btnSave = new System.Windows.Forms.Button();
-            this.Column6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.IdDeailKood = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.KoodNumber = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.KoodName = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ArrivedDate = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Weight = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Price = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -55,18 +55,18 @@
             this.dataGridView1.AllowUserToAddRows = false;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.Column6,
-            this.Column1,
-            this.Column5,
+            this.IdDeailKood,
+            this.KoodNumber,
+            this.KoodName,
             this.ArrivedDate,
             this.Column2,
-            this.Column3,
-            this.Column4});
+            this.Weight,
+            this.Price});
             this.dataGridView1.Location = new System.Drawing.Point(12, 91);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
             this.dataGridView1.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.dataGridView1.Size = new System.Drawing.Size(709, 211);
+            this.dataGridView1.Size = new System.Drawing.Size(764, 211);
             this.dataGridView1.TabIndex = 0;
             // 
             // comboListDetailKoods
@@ -75,7 +75,7 @@
             this.comboListDetailKoods.Location = new System.Drawing.Point(93, 34);
             this.comboListDetailKoods.Name = "comboListDetailKoods";
             this.comboListDetailKoods.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.comboListDetailKoods.Size = new System.Drawing.Size(628, 27);
+            this.comboListDetailKoods.Size = new System.Drawing.Size(683, 27);
             this.comboListDetailKoods.TabIndex = 1;
             this.comboListDetailKoods.Text = "کودریزی مورد نظر را انتخاب کنید";
             // 
@@ -92,7 +92,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(671, 412);
+            this.label1.Location = new System.Drawing.Point(742, 412);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(34, 19);
             this.label1.TabIndex = 3;
@@ -101,7 +101,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(434, 412);
+            this.label2.Location = new System.Drawing.Point(489, 412);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(53, 19);
             this.label2.TabIndex = 4;
@@ -110,7 +110,7 @@
             // lblBedehi
             // 
             this.lblBedehi.AutoSize = true;
-            this.lblBedehi.Location = new System.Drawing.Point(606, 412);
+            this.lblBedehi.Location = new System.Drawing.Point(661, 412);
             this.lblBedehi.Name = "lblBedehi";
             this.lblBedehi.Size = new System.Drawing.Size(21, 19);
             this.lblBedehi.TabIndex = 5;
@@ -119,7 +119,7 @@
             // lblAvgDate
             // 
             this.lblAvgDate.AutoSize = true;
-            this.lblAvgDate.Location = new System.Drawing.Point(322, 412);
+            this.lblAvgDate.Location = new System.Drawing.Point(377, 412);
             this.lblAvgDate.Name = "lblAvgDate";
             this.lblAvgDate.Size = new System.Drawing.Size(21, 19);
             this.lblAvgDate.TabIndex = 6;
@@ -129,8 +129,10 @@
             // faDatePicker1
             // 
             this.faDatePicker1.Font = new System.Drawing.Font("Vazir FD", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.faDatePicker1.Location = new System.Drawing.Point(438, 329);
+            this.faDatePicker1.IsNull = false;
+            this.faDatePicker1.Location = new System.Drawing.Point(461, 329);
             this.faDatePicker1.Name = "faDatePicker1";
+            this.faDatePicker1.SelectedDateTime = new System.DateTime(2021, 3, 7, 9, 39, 10, 0);
             this.faDatePicker1.Size = new System.Drawing.Size(204, 20);
             this.faDatePicker1.TabIndex = 7;
             this.faDatePicker1.Theme = FarsiLibrary.Win.Enums.ThemeTypes.WindowsXP;
@@ -138,7 +140,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(668, 330);
+            this.label3.Location = new System.Drawing.Point(723, 330);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(53, 19);
             this.label3.TabIndex = 8;
@@ -174,25 +176,25 @@
             this.btnSave.UseVisualStyleBackColor = true;
             this.btnSave.Click += new System.EventHandler(this.BtnSave_Click);
             // 
-            // Column6
+            // IdDeailKood
             // 
-            this.Column6.HeaderText = "IdDetailKood";
-            this.Column6.Name = "Column6";
-            this.Column6.ReadOnly = true;
-            this.Column6.Visible = false;
+            this.IdDeailKood.HeaderText = "IdDetailKood";
+            this.IdDeailKood.Name = "IdDeailKood";
+            this.IdDeailKood.ReadOnly = true;
+            this.IdDeailKood.Visible = false;
             // 
-            // Column1
+            // KoodNumber
             // 
-            this.Column1.HeaderText = "شماره کودریزی";
-            this.Column1.Name = "Column1";
-            this.Column1.ReadOnly = true;
+            this.KoodNumber.HeaderText = "شماره کودریزی";
+            this.KoodNumber.Name = "KoodNumber";
+            this.KoodNumber.ReadOnly = true;
             // 
-            // Column5
+            // KoodName
             // 
-            this.Column5.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.Column5.HeaderText = "نام کودریزی";
-            this.Column5.Name = "Column5";
-            this.Column5.ReadOnly = true;
+            this.KoodName.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.KoodName.HeaderText = "نام کودریزی";
+            this.KoodName.Name = "KoodName";
+            this.KoodName.ReadOnly = true;
             // 
             // ArrivedDate
             // 
@@ -207,23 +209,24 @@
             this.Column2.Name = "Column2";
             this.Column2.ReadOnly = true;
             // 
-            // Column3
+            // Weight
             // 
-            this.Column3.HeaderText = "وزن";
-            this.Column3.Name = "Column3";
-            this.Column3.ReadOnly = true;
+            this.Weight.HeaderText = "وزن";
+            this.Weight.Name = "Weight";
+            this.Weight.ReadOnly = true;
             // 
-            // Column4
+            // Price
             // 
-            this.Column4.HeaderText = "قیمت هرکیلو";
-            this.Column4.Name = "Column4";
-            this.Column4.ReadOnly = true;
+            this.Price.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.Price.HeaderText = "قیمت هرکیلو";
+            this.Price.Name = "Price";
+            this.Price.ReadOnly = true;
             // 
             // CalculateAvgPerson
             // 
             this.AccessibleRole = System.Windows.Forms.AccessibleRole.None;
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
-            this.ClientSize = new System.Drawing.Size(738, 464);
+            this.ClientSize = new System.Drawing.Size(788, 464);
             this.Controls.Add(this.btnSave);
             this.Controls.Add(this.btnCancel);
             this.Controls.Add(this.btnCalculateAvg);
@@ -260,12 +263,12 @@
         private System.Windows.Forms.Button btnCalculateAvg;
         private System.Windows.Forms.Button btnCancel;
         private System.Windows.Forms.Button btnSave;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column6;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column5;
+        private System.Windows.Forms.DataGridViewTextBoxColumn IdDeailKood;
+        private System.Windows.Forms.DataGridViewTextBoxColumn KoodNumber;
+        private System.Windows.Forms.DataGridViewTextBoxColumn KoodName;
         private System.Windows.Forms.DataGridViewTextBoxColumn ArrivedDate;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Weight;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Price;
     }
 }

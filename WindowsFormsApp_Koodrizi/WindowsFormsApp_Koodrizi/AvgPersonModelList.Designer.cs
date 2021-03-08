@@ -110,7 +110,7 @@
             // 
             // btnNewAvg
             // 
-            this.btnNewAvg.Location = new System.Drawing.Point(12, 8);
+            this.btnNewAvg.Location = new System.Drawing.Point(12, 12);
             this.btnNewAvg.Name = "btnNewAvg";
             this.btnNewAvg.Size = new System.Drawing.Size(141, 27);
             this.btnNewAvg.TabIndex = 3;
@@ -126,11 +126,12 @@
             this.btnCancel.TabIndex = 4;
             this.btnCancel.Text = "بستن";
             this.btnCancel.UseVisualStyleBackColor = true;
+            this.btnCancel.Click += new System.EventHandler(this.BtnCancel_Click);
             // 
             // lblPersonName
             // 
             this.lblPersonName.AutoSize = true;
-            this.lblPersonName.Location = new System.Drawing.Point(326, 16);
+            this.lblPersonName.Location = new System.Drawing.Point(260, 16);
             this.lblPersonName.Name = "lblPersonName";
             this.lblPersonName.Size = new System.Drawing.Size(37, 19);
             this.lblPersonName.TabIndex = 5;

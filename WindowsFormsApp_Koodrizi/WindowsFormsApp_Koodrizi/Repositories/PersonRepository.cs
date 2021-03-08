@@ -96,7 +96,7 @@ namespace WindowsFormsApp_Koodrizi.Repositories
         {
             try
             {
-                return _baseContext.PersonModels.AsNoTracking().ToList();
+                return _baseContext.PersonModels.ToList();
             }
             catch (Exception)
             {

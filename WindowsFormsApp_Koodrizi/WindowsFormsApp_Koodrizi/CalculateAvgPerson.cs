@@ -36,21 +36,25 @@ namespace WindowsFormsApp_Koodrizi
             var person = _personRepo.People(Program.PersonId);
             var koods = _finalKoodriziRepo.FinalKoodrizis();
 
-          var kooddetai=  koods.Where(x => x.DetailKoodrizis
-            .Any(y => y.Bar.Person.PersonId == Program.PersonId));
+            var kooddetai = koods.Where(x => x.DetailKoodrizis
+              .Any(y => y.Bar.Person.PersonId == Program.PersonId)).ToList();
 
             foreach (var item in kooddetai)
             {
                 foreach (var item2 in item.DetailKoodrizis)
                 {
-                    comboListDetailKoods.Items.Add(
-                    item2.DId + "-" +
-                    "شماره : " + item.KoodNumber +
-                    " , نام کودریزی: " + item.KoodName +
-                    ", وزن: " + item2.Weight +
-                    ", تاریخ سررسید:" + PersianDateConverter.ToPersianDate(item2.ArrivedDate).ToString("yyyy/MM/dd") +
-                    ", قیمت هرکیلو:" + item2.Price
-                    );
+                    if (item2.Bar.IdPerson == Program.PersonId)
+                    {
+                        comboListDetailKoods.Items.Add(
+                        item2.DId + "-" +
+                        //       " مشتری: " + item2.Bar.Person.Name +
+                        " شماره : " + item.KoodNumber +
+                        " , نام کودریزی: " + item.KoodName +
+                        ", وزن: " + item2.Weight +
+                        ", تاریخ سررسید:" + PersianDateConverter.ToPersianDate(item2.ArrivedDate).ToString("yyyy/MM/dd") +
+                        ", قیمت هرکیلو:" + item2.Price
+                        );
+                    }
                 }
             }
         }
@@ -63,12 +67,13 @@ namespace WindowsFormsApp_Koodrizi
 
             var kood = _koodriziRepo.Koodrizi(int.Parse(a));
             var finalKood = kood.FinalKoodrizi;
-            koodId = kood.DId;
+            //  koodId = int.Parse(a);//==
+            //  koodId = kood.DId;
             dataGridView1.Rows.Add(
                 kood.DId,
                 finalKood.KoodNumber,
                 finalKood.KoodName,
-                kood.ArrivedDate,
+                kood.ArrivedDate,//تاریخ سررسید
                 PersianDateConverter.ToPersianDate(kood.ArrivedDate).ToString("yyyy/MM/dd"),
                 kood.Weight,
                 kood.Price);
@@ -93,15 +98,24 @@ namespace WindowsFormsApp_Koodrizi
                 totalBedehi += (decimal)((double)price * weight);//بدهی کل برای این مشتری
                 listPersonsKoodModel.Add(new PersonsKood()
                 {
-                    DueDate = arrivedDate,
-                    Bedehi = (decimal)((double)price * weight)
+                    DueDate = arrivedDate,//تاریخ سررسید
+                    Bedehi = (decimal)((double)price * weight)//بدهی
                 });
             }
             decimal sum = 0;
+            double per = 0;
             foreach (var item in listPersonsKoodModel)
-                sum = +(decimal)(item.DueDate - Basetime).TotalDays * (item.Bedehi);
+            {
+                per = Math.Ceiling((item.DueDate - Basetime).TotalDays);
+                if (per == 0 || per < 0)
+                {
+                    per = 1;
+                }
 
-            var avg = sum / totalBedehi;
+                sum += ((decimal)per * (item.Bedehi));
+            }
+
+            var avg = Math.Ceiling(sum / totalBedehi);
             avgdatetime = Basetime.AddDays((int)avg);
             //show in lables
             lblBedehi.Text = totalBedehi.ToString("#,###");

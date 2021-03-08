@@ -126,5 +126,10 @@ namespace WindowsFormsApp_Koodrizi
         {
 
         }
+
+        private void BtnCancel_Click(object sender, EventArgs e)
+        {
+            Close();
+        }
     }
 }
