@@ -101,6 +101,7 @@ namespace WindowsFormsApp_Koodrizi
             }
             if (e.ColumnIndex == 9)
             {
+                //گزارش کودریزی ها
                 Program.PersonId = int.Parse(dataGridListCustomer.Rows[e.RowIndex].Cells[0].Value.ToString());
 
                 ListKoodPerson form = new ListKoodPerson();

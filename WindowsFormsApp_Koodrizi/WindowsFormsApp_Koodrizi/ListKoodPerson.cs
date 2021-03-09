@@ -44,7 +44,9 @@ namespace WindowsFormsApp_Koodrizi
             {
                 foreach (var item2 in item1.DetailKoodrizis)
                 {
-                    dataGridView1.Rows.Add(
+                    if (item2.Bar.IdPerson == Program.PersonId)
+                    {
+                        dataGridView1.Rows.Add(
                         PersianDateConverter.ToPersianDate(item2.CreateDate)
                         .ToString("yyyy/MM/dd"),
                         PersianDateConverter.ToPersianDate(item2.ArrivedDate)
@@ -52,6 +54,7 @@ namespace WindowsFormsApp_Koodrizi
                         item2.Weight, item2.PercentRoyat, item2.Bar.DhanBast,
                         item2.Bar.Gram, item2.Bar.Ounce.ToString("#.##"), item2.Bar.Adl,
                         item2.Price.ToString("#,###"), ((double)item2.Price * item2.Weight).ToString("#,###"));
+                    }
                 }
             }
         }
