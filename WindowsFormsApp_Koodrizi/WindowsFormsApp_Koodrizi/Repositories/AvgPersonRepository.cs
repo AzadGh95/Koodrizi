@@ -15,14 +15,15 @@ namespace WindowsFormsApp_Koodrizi.Repositories
             _baseContext = new DataBaseContext.DataBaseContext();
         }
 
-        public bool Insert(Models.AvgPersonModel avgModel)
+        public int Insert(Models.AvgPersonModel avgModel)
         {
             try
             {
-                _baseContext.AvgPersonModels.Add(avgModel);
-                _baseContext.SaveChanges();
+               var p = _baseContext.AvgPersonModels.Add(avgModel);
+               _baseContext.SaveChanges();
 
-                return true;
+                return p.Id;
+                //return true;
             }
             catch (Exception)
             {
@@ -47,7 +48,26 @@ namespace WindowsFormsApp_Koodrizi.Repositories
         {
             try
             {
-                return _baseContext.AvgPersonModels.Where(i => i.Id == personId).ToList();
+                var listAvgPerson = new List<Models.AvgPersonModel>();
+                var listDetailKoods = _baseContext.DKoods.Where(i => i.Bar.IdPerson == personId).ToList();
+                foreach (var item in listDetailKoods)
+                {
+                    var avglist = _baseContext.AvgPersonModels.Where(i => i.Id == item.AvgId).ToList();
+                    foreach (var item2 in avglist)
+                    {
+                        listAvgPerson.Add(
+                            new Models.AvgPersonModel()
+                            {
+                                Id = item2.Id,
+                                AvgDate = item2.AvgDate,
+                                Bedehi = item2.Bedehi,
+                                CreatDate = item2.CreatDate
+                            }
+                            );
+                    }
+
+                }
+                return listAvgPerson;
             }
             catch (Exception)
             {
@@ -71,7 +91,7 @@ namespace WindowsFormsApp_Koodrizi.Repositories
         {
             try
             {
-                return _baseContext.AvgPersonModels.FirstOrDefault(i=>i.Id==id);
+                return _baseContext.AvgPersonModels.FirstOrDefault(i => i.Id == id);
             }
             catch (Exception ex)
             {

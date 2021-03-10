@@ -153,18 +153,19 @@ namespace WindowsFormsApp_Koodrizi
                 AvgDate = avgdatetime,
                 CreatDate = Basetime
             };
+            var avgId = _avgPersonRepo.Insert(model);
             for (int i = 0; i < dataGridView1.Rows.Count; i++)
             {
-                var a = int.Parse(dataGridView1
-                    .Rows[i].Cells[0].Value.ToString());
-                bool r = _koodriziRepo.AddAvg(koodId, Program.PersonId);
+                bool r = _koodriziRepo.AddAvg(
+                    int.Parse(dataGridView1.Rows[i].Cells[0].Value.ToString()),
+                    avgId);
                 if (!r)
                 {
                     MessageBox.Show("خطا در انجام ذخیره سازی");
                 }
             }
-            var result = _avgPersonRepo.Insert(model);
-            if (result)
+
+            if (avgId != 0)
             {
                 MessageBox.Show("محاسبات با موفقیت ثبت شدند");
                 AvgPersonModelList avgPersonModelList = new AvgPersonModelList();
